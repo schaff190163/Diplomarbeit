@@ -1,0 +1,31 @@
+<template>
+  <div class="grid-container">
+    <AuszeichnungsCard></AuszeichnungsCard>
+  </div>
+</template>
+
+<script lang="ts">
+  import AuszeichnungsCard from './AuszeichnungsCard.vue';
+
+export default {
+  name: 'AuszeichnungsRow',
+  components: {
+    AuszeichnungsCard
+  },
+};
+</script>
+
+<style>
+/* Styles for this component */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Three columns */
+  gap: 20px;
+  /* Gap between cards */
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  position: relative; /* Set the container as a reference for positioning */
+}
+</style>
