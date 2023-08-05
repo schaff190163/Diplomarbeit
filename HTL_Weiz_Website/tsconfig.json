@@ -10,5 +10,9 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "types": ["vite/client"]
+    // Other compiler options as needed
+  }
 }

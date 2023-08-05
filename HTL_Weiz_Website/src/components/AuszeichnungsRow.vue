@@ -1,6 +1,10 @@
 <template>
   <div class="grid-container">
-    <AuszeichnungsCard></AuszeichnungsCard>
+    <AuszeichnungsCard azname="Mint Gütesiegel" imgsrc="src\assets\images\mint.jpg"></AuszeichnungsCard>
+    <AuszeichnungsCard azname="Umweltzeichen" imgsrc="src\assets\images\umwelt.jpg"></AuszeichnungsCard>
+    <AuszeichnungsCard azname="Erasmus+ Projektschule" imgsrc="src\assets\images\erasmus.jpg"></AuszeichnungsCard>
+    <AuszeichnungsCard azname="Innovativste Schule" imgsrc="src\assets\images\inno.jpg"></AuszeichnungsCard>
+    <AuszeichnungsCard azname="Förderangebote" imgsrc="src\assets\images\förder.png"></AuszeichnungsCard>
   </div>
 </template>
 

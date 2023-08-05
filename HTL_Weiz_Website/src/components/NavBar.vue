@@ -17,6 +17,7 @@
                       <ul class="uk-nav uk-navbar-dropdown-nav">
                         <li><a href="#">Schulveranstaltungen</a></li>
                         <li><a href="#">News</a></li>
+                        <li><a href="#">Erasmus+</a></li>
                       </ul>
                     </div>
                   </li>
@@ -24,27 +25,19 @@
                     <a href="#">Ausbildung</a>
                     <div class="uk-navbar-dropdown">
                       <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="#">Wirtschaftsingenieure</a></li>
                         <li><a href="#">Elektrotechnik</a></li>
                         <li><a href="#">Informationstechnologie</a></li>
+                        <li><a href="#">Maschinenbau - Umwelttechnik</a></li>
                         <li><a href="#">Maschinenbau - Anlagentechnik</a></li>
                         <li><a href="#">Maschinenbau - Automatisierungstechnik</a></li>
-                        <li><a href="#">Maschinenbau - Umwelttechnik</a></li>
-                        <li><a href="#">Mechatronik</a></li>
-                        <li><a href="#">Wirtschaft</a></li>
-                        <li><a href="#">HTL für Berufstätige (Abendschule)</a></li>
-                        <li><a href="#">Kolleg Informatik</a></li>
+                        <li><a href="#">Abendschule - Wirtschaftsingenieure</a></li>
+                        <li><a href="#">Kolleg - Informatik</a></li>
+                        <li><a href="#">Fachschule - Mechatronik</a></li>
                       </ul>
                     </div>
                   </li>
-                  <li>
-                    <a href="#">Schule</a>
-                    <div class="uk-navbar-dropdown">
-                      <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li><a href="#">Schulveranstaltungen</a></li>
-                        <li><a href="#">News</a></li>
-                      </ul>
-                    </div>
-                  </li>
+                  <li><a href="#">Schule</a></li>
                   <li><a href="#">Ansprechpartner</a></li>
                   <li>
                     <a href="#">Services</a>

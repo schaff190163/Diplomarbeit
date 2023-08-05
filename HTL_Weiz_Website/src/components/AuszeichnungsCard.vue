@@ -3,11 +3,9 @@
     <div class="uk-card-header">
       <div class="uk-grid-small uk-flex-middle " uk-grid>
         <div class="uk-width-auto">
-          <img class="" width="40" height="40" src="/src/assets/images/mint.jpg">
+          <img class="uk-card-media-top" width="40" height="40" :src="imgsrc">
         </div>
-        <div class="uk-width-expand">
-          <h3 class="uk-card-title uk-margin-remove-bottom">Mint Gütesiegel</h3>
-        </div>
+        <h3 class="uk-card-title"> {{ azname }} </h3>
       </div>
     </div>
   </div>
@@ -18,6 +16,10 @@
 
 export default {
   name: 'AuszeichnungsCard',
+    props: {
+    imgsrc: String,
+    azname: String,
+  },
   components: {
     /*,*/
   },
