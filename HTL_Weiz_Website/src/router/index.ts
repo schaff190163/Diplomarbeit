@@ -5,16 +5,16 @@ import AnmeldungView from '../views/AnmeldungView.vue';
 import AnsprechpartnerView from '../views/AnsprechpartnerView.vue';
 import AtView from '../views/AtView.vue';
 import AwiView from '../views/AwiView.vue';
-import ElternView from '../views/ElternView.vue';
+import ParentsView from '../views/ParentsView.vue';
 import ErasmusView from '../views/ErasmusView.vue';
 import EtView from '../views/EtView.vue';
 import ItkView from '../views/ItkView.vue';
 import ItView from '../views/ItView.vue';
-import LehrerinnenView from '../views/LehrerinnenView.vue';
+import TeachersView from '../views/TeachersView.vue';
 import MtView from '../views/MtView.vue';
 import MbView from '../views/MbView.vue';
 import NewsView from '../views/NewsView.vue';
-import SchuelerinnenView from '../views/SchuelerinnenView.vue';
+import StudentsView from '../views/StudentsView.vue';
 import TeamView from '../views/TeamView.vue';
 import SearchView from '../views/SearchView.vue';
 import UtView from '../views/UtView.vue';
@@ -99,19 +99,19 @@ const router = createRouter({
       component: AnsprechpartnerView,
     },
     {
-      path: '/SchülerInnen',
-      name: 'schülerinnen',
-      component: SchuelerinnenView,
+      path: '/Students',
+      name: 'students',
+      component: StudentsView,
     },
     {
-      path: '/LehrerInnen',
-      name: 'lehrerinnen',
-      component: LehrerinnenView,
+      path: '/Teachers',
+      name: 'teachers',
+      component: TeachersView,
     },
     {
-      path: '/Eltern',
-      name: 'eltern',
-      component: ElternView,
+      path: '/Parents',
+      name: 'parents',
+      component: ParentsView,
     },
     {
       path: '/Anmeldung',

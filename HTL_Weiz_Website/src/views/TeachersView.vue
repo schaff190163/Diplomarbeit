@@ -12,7 +12,7 @@ import Imprint from "@/components/Imprint.vue";
 import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 
 export default {
-  name: 'ElternView',
+  name: 'TeachersView',
   components: {
     NavBar,
     Imprint,
