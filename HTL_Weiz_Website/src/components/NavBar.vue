@@ -10,15 +10,16 @@
               <div uk-navbar>
                 <div class=".uk-navbar-center">
                   <ul class="uk-navbar-nav">
-                    <li>
-                      <a class="uk-logo"
-                        ><img
-                          src="src\assets\images\Logo_HTL_2013_Small.png"
-                          width="100"
-                          height=""
-                          alt="" /><router-link to="/"></router-link
-                      ></a>
-                    </li>
+                      <li>
+                        <router-link class="uk-logo" to="/">
+                          <img
+                            src="/src/assets/images/Logo_HTL_2013_Small.png"
+                            width="100"
+                            height=""
+                            alt="HTL Logo"
+                          />
+                        </router-link>
+                      </li>
                     <li>
                       <a href="#">Aktuelles</a>
                       <div class="uk-navbar-dropdown">
@@ -156,8 +157,5 @@ export default {
 /* Styles for this component */
 .img-logo {
   max-height: 5%;
-}
-.rounded {
-  border-radius: 20px; /* Adjust the value as needed */
 }
 </style>
