@@ -1,5 +1,5 @@
 <template>
-  <div class="image-container">
+  <div class="image-container uk-box-shadow-medium">
     <img class="image" :src="imgsrc" :alt="azname" />
   </div>
 </template>
@@ -15,18 +15,15 @@ export default {
 </script>
 
 <style scoped>
-/* Styles for this component */
 .image-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
-  /* Adjust the height as needed */
+  width: 100px;
 }
-
 .image {
   width: 100px;
-  /* Adjust the width as needed */
   height: 100px;
-  /* Adjust the height as needed */
-}</style>
+}
+</style>

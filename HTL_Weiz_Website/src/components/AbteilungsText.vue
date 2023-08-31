@@ -37,6 +37,7 @@ export default {
 .textgrid {
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 </style>

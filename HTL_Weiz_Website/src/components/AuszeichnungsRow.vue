@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-container">
+  <div class="grid-container uk-background-muted">
     <AuszeichnungsCard azname="Mint Gütesiegel" imgsrc="src/assets/images/mint.jpg"></AuszeichnungsCard>
     <AuszeichnungsCard azname="Umweltzeichen" imgsrc="src/assets/images/umwelt.jpg"></AuszeichnungsCard>
     <AuszeichnungsCard azname="Erasmus+ Projektschule" imgsrc="src/assets/images/erasmus.jpg"></AuszeichnungsCard>
@@ -23,13 +23,12 @@ export default {
 /* Styles for this component */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5);
-  /* Five columns */
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   position: relative;
-  /* Set the container as a reference for positioning */
 }
 </style>

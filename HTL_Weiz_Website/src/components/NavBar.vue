@@ -2,9 +2,7 @@
   <div>
     <div class="uk-position-relative">
       <div class="uk-position-top">
-        <div
-          uk-sticky="start: 200; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light"
-        >
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
           <nav class="uk-navbar-container" uk-navbar>
             <div class="uk-container">
               <div uk-navbar>

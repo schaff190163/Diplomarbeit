@@ -1,7 +1,6 @@
 <template>
-  <template>
   <div>
-    <h1>EmptyComponent</h1>
+    <a class="uk-text-center uk-position-z-index uk-totop uk-scroll" uk-sticky="end: !.uk-height-large; offset: 200"></a>
   </div>
 </template>
 
@@ -9,7 +8,7 @@
 /* import ... from ...; */
 
 export default {
-  name: 'EmptyComponent',
+  name: 'ScrollTop',
   components: {
     /*,*/
   },

@@ -1,6 +1,7 @@
 <template>
   <div>
     <NavBar></NavBar>
+    <DirektionCard></DirektionCard>
     <AuszeichnungsRow></AuszeichnungsRow>
     <Imprint></Imprint>
   </div>
@@ -9,6 +10,7 @@
 <script lang="ts">
 import NavBar from "@/components/NavBar.vue";
 import Imprint from "@/components/Imprint.vue";
+import DirektionCard from "@/components/DirektionCard.vue";
 import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 
 export default {
@@ -16,8 +18,9 @@ export default {
   components: {
     NavBar,
     Imprint,
-    AuszeichnungsRow,
-  },
+    DirektionCard,
+    AuszeichnungsRow
+},
 };
 </script>
 
