@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-container">
+  <div>
     <table class="uk-table">
       <thead>
           <tr>
@@ -35,11 +35,4 @@ export default {
 </script>
 
 <style>
-.grid-container {
-  display: grid;
-  gap: 20px;
-  /* Gap between cards */
-  padding-left: 100px;
-  padding-right: 100px;
-}
 </style>

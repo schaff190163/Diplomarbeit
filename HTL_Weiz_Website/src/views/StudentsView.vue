@@ -1,6 +1,7 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
+    <div class="studentsimage"></div>
     <div class="st-cont">
       <h1>Informationen für Schülerinnen und Schüler</h1>
       <div class="sw einr">
@@ -66,4 +67,13 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   /* 2 rows of 4 columns */
   gap: 10px;
-}</style>
+}
+.studentsimage {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-image: url("/src/assets/images/students.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+</style>
