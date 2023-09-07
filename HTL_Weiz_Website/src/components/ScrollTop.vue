@@ -1,6 +1,9 @@
 <template>
   <div>
-    <a class="uk-text-center uk-position-z-index uk-totop uk-scroll" uk-sticky="end: !.uk-height-large; offset: 200"></a>
+    
+      <div class="uk-position-z-index" uk-sticky="position: bottom; end: !.uk-height-large">
+        <a href="#" uk-totop uk-scroll></a>
+      </div>
   </div>
 </template>
 

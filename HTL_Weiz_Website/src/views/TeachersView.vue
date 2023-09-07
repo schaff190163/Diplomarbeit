@@ -1,7 +1,7 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <div class="teachersimage"></div>
+    <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/src/assets/images/teachers.png" uk-img></div>
     <div class="st-cont">
       <h1>Informationen für Lehrerinnen und Lehrer</h1>
       <p>Startpunkt mit den wichtigsten Links und Informationen für Lehrerinnen und Lehrer der HTL Weiz. Für die Verwendung von eingeschränkten Bereichen wie dem Schulverwaltungstool müssen sich Lehrer zuerst registrieren und ein Benutzerkonto angelegt und vom Administrator aktiviert werden.</p>
@@ -51,13 +51,5 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   /* 2 rows of 4 columns */
   gap: 10px;
-}
-.teachersimage {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  background-image: url("/src/assets/images/teachers.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 </style>

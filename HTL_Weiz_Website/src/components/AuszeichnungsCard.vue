@@ -1,6 +1,6 @@
 <template>
-  <div class="image-container uk-box-shadow-medium">
-    <img class="image" :src="imgsrc" :alt="azname" />
+  <div class="image-container">
+    <img class="image uk-box-shadow-medium" :src="imgsrc" :alt="azname" />
   </div>
 </template>
 
@@ -19,11 +19,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
 }
 .image {
-  width: 100px;
-  height: 100px;
-}
-</style>
+  width: 120px;
+  height: 120px;
+}</style>
+

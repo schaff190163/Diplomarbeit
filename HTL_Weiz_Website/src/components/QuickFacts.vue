@@ -12,11 +12,11 @@
       </thead>
       <tbody>
           <tr>
-              <td>HTL Tagesschule</td>
-              <td>5 Jahre</td>
-              <td>Reife- und Diplomprüfung</td>
-              <td>Abschluss der 8. Schulstufe</td>
-              <td>Weiz</td>
+              <td>{{typ}}</td>
+              <td>{{dauer}}</td>
+              <td>{{abschluss}}</td>
+              <td>{{vorraussetzungen}}</td>
+              <td>{{standort}}</td>
           </tr>
       </tbody>
   </table>
@@ -30,6 +30,28 @@ export default {
   name: 'QuickFacts',
   components: {
     /*,*/
+  },
+  props: {
+    typ: {
+      type: String,
+      required: true,
+    },
+    dauer: {
+      type: String,
+      required: true,
+    },
+    abschluss: {
+      type: String,
+      required: true,
+    },
+    vorraussetzungen: {
+      type: String,
+      required: true,
+    },
+    standort: {
+      type: String,
+      required: true,
+    }
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-container uk-background-muted">
+  <div class="uk-grid-large uk-flex-center uk-width-auto@m azstyle" uk-grid>
     <AuszeichnungsCard azname="Mint Gütesiegel" imgsrc="src/assets/images/mint.jpg"></AuszeichnungsCard>
     <AuszeichnungsCard azname="Umweltzeichen" imgsrc="src/assets/images/umwelt.jpg"></AuszeichnungsCard>
     <AuszeichnungsCard azname="Erasmus+ Projektschule" imgsrc="src/assets/images/erasmus.jpg"></AuszeichnungsCard>
@@ -21,14 +21,10 @@ export default {
 
 <style>
 /* Styles for this component */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+.azstyle {
   padding-left: 100px;
   padding-right: 100px;
   padding-bottom: 50px;
   padding-top: 50px;
-  position: relative;
 }
 </style>

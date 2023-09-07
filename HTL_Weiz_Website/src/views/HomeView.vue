@@ -44,15 +44,12 @@ export default {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* Three columns */
   gap: 20px;
-  /* Gap between cards */
   padding-left: 100px;
   padding-right: 100px;
   padding-bottom: 50px;
   padding-top: 50px;
   position: relative;
-  /* Set the container as a reference for positioning */
 }
 .hero-image {
   width: 100vw;

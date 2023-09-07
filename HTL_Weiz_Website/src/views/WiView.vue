@@ -1,19 +1,10 @@
 <template>
-  <div>
+  <div class="uk-background-muted">
     <NavBar></NavBar>
-    <div class="wihero"></div>
+    <div class="wihero uk-background-width-1-1"></div>
+    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/src/assets/images/wi_hero.png" uk-img></div>
     <h1 class="uk-text-lead zweigheading">Wirtschaftsingenieure</h1>
-    <div class="grid-container">
-      <div class="uk-grid uk-text-center">
-        <div class="uk-width-auto@m">
-          <QuickFacts></QuickFacts>
-        </div>
-        <div class="uk-width-1-3@m uk-flex uk-flex-middle">
-          <AvCard avtitle="Harald Macher" avdesc="Abteilungsvorstand Wirtschaft"
-            avimgsrc="src\assets\images\team\Macher.jpg"></AvCard>
-        </div>
-      </div>
-    </div>
+    <QuickFacts class="zweigpadding" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts>
     <AbteilungsText></AbteilungsText>
     <AuszeichnungsRow></AuszeichnungsRow>
     <Imprint></Imprint>
@@ -44,16 +35,12 @@ export default {
 </script>
 
 <style>
-.wihero {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("/src/assets/images/wi_hero.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .zweigheading {
   font-size: 40px;
   padding-left: 100px;
+}
+.zweigpadding {
+  padding-left: 100px;
+  padding-right: 100px;
 }
 </style>
