@@ -18,7 +18,7 @@
 
 <script lang="ts">
 export default {
-  name: "AvCard",
+  name: "StaffCard",
   props: {
     imgsrc: String,
     azname: String,
