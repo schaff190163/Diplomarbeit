@@ -1,5 +1,5 @@
 <template>
-    <div class="imprint-container uk-background-muted">
+    <div class="imprint-container uk-background-muted ">
     <div class="uk-child-width-expand@s" uk-grid>
 
         <div>
