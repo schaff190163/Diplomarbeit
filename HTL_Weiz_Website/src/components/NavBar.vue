@@ -2,23 +2,22 @@
   <div>
     <div class="uk-position-relative">
       <div class="uk-position-top">
-        <div
-          uk-sticky="start: 200; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light"
-        >
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
           <nav class="uk-navbar-container" uk-navbar>
             <div class="uk-container">
               <div uk-navbar>
                 <div class=".uk-navbar-center">
                   <ul class="uk-navbar-nav">
-                    <li>
-                      <a class="uk-logo"
-                        ><img
-                          src="src\assets\images\Logo_HTL_2013_Small.png"
-                          width="100"
-                          height=""
-                          alt="" /><router-link to="/"></router-link
-                      ></a>
-                    </li>
+                      <li>
+                        <router-link class="uk-logo" to="/">
+                          <img
+                            src="/src/assets/images/Logo_HTL_2013_Small.png"
+                            width="100"
+                            height=""
+                            alt="HTL Logo"
+                          />
+                        </router-link>
+                      </li>
                     <li>
                       <a href="#">Aktuelles</a>
                       <div class="uk-navbar-dropdown">
@@ -156,8 +155,5 @@ export default {
 /* Styles for this component */
 .img-logo {
   max-height: 5%;
-}
-.rounded {
-  border-radius: 20px; /* Adjust the value as needed */
 }
 </style>

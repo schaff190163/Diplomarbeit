@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="uk-background-muted">
     <NavBar></NavBar>
     <AuszeichnungsRow></AuszeichnungsRow>
     <Imprint></Imprint>

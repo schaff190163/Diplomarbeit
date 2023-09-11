@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-card uk-card-default uk-width-1-1 rounded">
+  <div class="uk-card uk-card-default uk-width-1-1">
     <div class="uk-card-header">
       <div class="uk-grid-small uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
@@ -14,20 +14,35 @@
       <p>{{ description }}</p>
     </div>
     <div class="uk-card-footer">
-      <a href="#" class="uk-button uk-button-text">Details</a>
+      <router-link :to="detailsrc" class="uk-button uk-button-text">Details</router-link>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'AbteilungsCard',
   props: {
-    title: String,
-    description: String,
-    imgsrc: String,
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    imgsrc: {
+      type: String,
+      required: true,
+    },
+    detailsrc: {
+      type: String,
+      required: true,
+    },
   },
-};
+});
 </script>
 
 <style>
