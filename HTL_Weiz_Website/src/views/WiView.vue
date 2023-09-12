@@ -43,4 +43,14 @@ export default {
   padding-left: 100px;
   padding-right: 100px;
 }
+@media (max-width: 640px) {
+  .zweigheading {
+  font-size: 30px;
+  padding-left: 35px;
+  }
+  .zweigpadding {
+  padding-left: 35px;
+  padding-right: 35px;
+  }
+}
 </style>
