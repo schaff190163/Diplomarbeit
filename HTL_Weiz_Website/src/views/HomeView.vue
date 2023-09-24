@@ -1,7 +1,7 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light pad"
+    <div class="uk-height-max-large uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-background-cover uk-background-center-center uk-light pad"
       data-src="/src/assets/images/hero-bg.jpg" uk-img>
     </div>
     <div class="grid-container uk-background-muted">
@@ -56,6 +56,13 @@ export default {
 .pad {
   padding-bottom: 50px;
 }
-
-
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+}
 </style>

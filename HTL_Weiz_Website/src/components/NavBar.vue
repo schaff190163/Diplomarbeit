@@ -8,31 +8,15 @@
               <div uk-navbar>
                 <div class=".uk-navbar-center">
                   <ul class="uk-navbar-nav">
-                      <li>
-                        <router-link class="uk-logo" to="/">
-                          <img
-                            src="/src/assets/images/Logo_HTL_2013_Small.png"
-                            width="100"
-                            height=""
-                            alt="HTL Logo"
-                          />
-                        </router-link>
-                      </li>
                     <li>
-                      <a href="#">Aktuelles</a>
-                      <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                          <li>
-                            <router-link to="/schulveranstaltungen"
-                              >Schulveranstaltungen</router-link
-                            >
-                          </li>
-                          <li><router-link to="/news">News</router-link></li>
-                          <li>
-                            <router-link to="/erasmus">Erasmus+</router-link>
-                          </li>
-                        </ul>
-                      </div>
+                      <router-link class="uk-logo" to="/">
+                        <img
+                          src="/src/assets/images/htl_logo.svg"
+                          width="100"
+                          height=""
+                          alt="HTL Logo"
+                        />
+                      </router-link>
                     </li>
                     <li>
                       <a href="#">Ausbildung</a>
@@ -87,11 +71,6 @@
                     </li>
                     <li><router-link to="/team">Team</router-link></li>
                     <li>
-                      <router-link to="/ansprechpartner"
-                        >AnsprechpartnerInnen</router-link
-                      >
-                    </li>
-                    <li>
                       <a href="#">Services</a>
                       <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -109,26 +88,10 @@
                             <router-link to="/parents">Eltern</router-link>
                           </li>
                           <li>
-                            <router-link to="/anmeldung">Anmeldung</router-link>
                           </li>
                         </ul>
                       </div>
                     </li>
-                    <div class="uk-margin">
-                      <form class="uk-search uk-search-default">
-                        <a
-                          href=""
-                          class="uk-search-icon-flip"
-                          uk-search-icon
-                        ></a>
-                        <input
-                          class="uk-search-input rounded uk-margin-left"
-                          type="search"
-                          placeholder="Search"
-                          aria-label="Search"
-                        />
-                      </form>
-                    </div>
                   </ul>
                 </div>
               </div>
@@ -154,6 +117,11 @@ export default {
 <style>
 /* Styles for this component */
 .img-logo {
-  max-height: 5%;
+  height: auto;
+}
+@media (max-width: 640px){
+  .img-logo{
+    height: 400px;
+  }
 }
 </style>

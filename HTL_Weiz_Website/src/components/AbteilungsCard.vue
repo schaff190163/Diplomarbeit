@@ -46,9 +46,9 @@ export default defineComponent({
 </script>
 
 <style>
-/* Styles for this component */
-.rounded {
-  border-radius: 20px;
-  /* Adjust the value as needed */
+@media (max-width: 350px){
+  .uk-card-title{
+    font-size:1rem;
+  }
 }
 </style>

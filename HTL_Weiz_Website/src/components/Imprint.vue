@@ -70,4 +70,12 @@ export default {
     padding-bottom: 50px;
     padding-top: 50px;
 }
+@media (max-width: 640px) {
+  .imprint-container {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  }
+}
 </style>

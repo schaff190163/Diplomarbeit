@@ -40,9 +40,13 @@ export default {
 <style>
 .st-cont {
   padding-top: 100px;
-  margin-bottom: 50px;
-  margin-right: 100px;
-  margin-left: 100px;
+  padding-bottom: 50px;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 .einr {
   margin-left: 20px;
@@ -50,7 +54,20 @@ export default {
 .button-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* 2 rows of 4 columns */
   gap: 10px;
+}
+@media (max-width: 640px) {
+  .st-cont {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .button-grid {
+  grid-template-columns: repeat(1, 1fr);
+}
+  .einr {
+    margin-left: 0;
+  }
 }
 </style>
