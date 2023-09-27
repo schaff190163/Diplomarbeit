@@ -20,7 +20,22 @@ export default defineComponent({
 <style lang="less">
 @import "../node_modules/uikit/src/less/uikit.less";
 
-.navbarspace {
+.padtopbot {
+  padding-bottom: 50px;
   padding-top: 50px;
+}
+.padleftright {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+@media (max-width: 640px) {
+  .padtopbot {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  }
+  .padleftright {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-grid-large uk-flex-center uk-width-auto@m azstyle" uk-grid>
+  <div class="uk-grid-large uk-flex-center uk-width-auto@m padtopbot padleftright" uk-grid>
     <AuszeichnungsCard azname="Mint Gütesiegel" imgsrc="src/assets/images/mint.jpg"></AuszeichnungsCard>
     <AuszeichnungsCard azname="Umweltzeichen" imgsrc="src/assets/images/umwelt.jpg"></AuszeichnungsCard>
     <AuszeichnungsCard azname="Erasmus+ Projektschule" imgsrc="src/assets/images/erasmus.jpg"></AuszeichnungsCard>
@@ -21,18 +21,4 @@ export default {
 
 <style>
 /* Styles for this component */
-.azstyle {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-@media (max-width: 640px) {
-  .azstyle {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  }
-}
 </style>

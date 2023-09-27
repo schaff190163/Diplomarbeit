@@ -2,7 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/src/assets/images/teachers.png" uk-img></div>
-    <div class="st-cont">
+    <div class="st-cont padleftright padtopbot">
       <h1>Informationen für Lehrerinnen und Lehrer</h1>
       <p>Startpunkt mit den wichtigsten Links und Informationen für Lehrerinnen und Lehrer der HTL Weiz. Für die Verwendung von eingeschränkten Bereichen wie dem Schulverwaltungstool müssen sich Lehrer zuerst registrieren und ein Benutzerkonto angelegt und vom Administrator aktiviert werden.</p>
         <div class="button-grid">
@@ -38,10 +38,6 @@ export default {
 
 <style>
 .st-cont {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  padding-right: 100px;
-  padding-left: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
@@ -56,12 +52,6 @@ export default {
   gap: 10px;
 }
 @media (max-width: 640px) {
-  .st-cont {
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
   .button-grid {
   grid-template-columns: repeat(1, 1fr);
 }

@@ -2,7 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
       <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/src/assets/images/students.png" uk-img></div>
-    <div class="st-cont">
+    <div class="st-cont padleftright padtopbot">
       <h1>Informationen für Schülerinnen und Schüler</h1>
       <div class="sw einr">
         <h2>Software für Schülerinnen und Schüler</h2>
@@ -52,10 +52,6 @@ export default {
 
 <style>
 .st-cont {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  padding-right: 100px;
-  padding-left: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
@@ -70,12 +66,6 @@ export default {
   gap: 10px;
 }
 @media (max-width: 640px) {
-  .st-cont {
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
   .button-grid {
   grid-template-columns: repeat(1, 1fr);
 }

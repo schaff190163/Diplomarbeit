@@ -4,9 +4,9 @@
     
     <NavBarSpace class="navbarspace"></NavBarSpace>
     <h1 class="teamheading">Direktion</h1>
-    <DirektionCard class="space"></DirektionCard>
+    <DirektionCard class="padleftright padtopbot"></DirektionCard>
     <h1 class="teamheading">Abteilungsvorstände</h1>
-    <div class="grid-containerav space">
+    <div class="grid-containerav padleftright padtopbot">
       <AvCard avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc="src\assets\images\team\Macher.jpg"></AvCard>
       <AvCard avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc="src\assets\images\team\Deimel.jpg"></AvCard>
       <AvCard avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc="src\assets\images\team\Hierz.jpg"></AvCard>
@@ -15,7 +15,7 @@
       <AvCard avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc="src\assets\images\team\Hoellerbauer.jpg"></AvCard>
     </div>
     <h1 class="teamheading nodarstello">Lehrpersonal</h1>
-    <div class="grid-containerstaff space nodarstello">
+    <div class="grid-containerstaff padleftright padtopbot nodarstello">
       <StaffCard></StaffCard>
       <StaffCard></StaffCard>
       <StaffCard></StaffCard>
@@ -52,12 +52,6 @@ export default {
 </script>
 
 <style>
-.space {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
 .teamheading {
   font-size: 40px;
   padding-left: 100px;
@@ -78,12 +72,6 @@ export default {
   display:none;
 }
 @media only screen and (max-width : 640px) {
-  .space{
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  }
   .grid-containerav {
   grid-template-columns: repeat(1, 1fr);
   }

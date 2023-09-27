@@ -28,7 +28,7 @@ export async function fetchPosts(): Promise<Posts[]> {
       content: {
         rendered: item.content.rendered,
       },
-    }));
+    }));  
     return posts;
   } catch (error) {
     // Handle errors here

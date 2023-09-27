@@ -1,5 +1,5 @@
 <template>
-    <div class="imprint-container uk-background-muted ">
+    <div class="padtopbot padleftright uk-background-muted ">
     <div class="uk-child-width-expand@s" uk-grid>
 
         <div>
@@ -64,18 +64,4 @@ export default {
 
 <style>
 /* Styles for this component */
-.imprint-container {
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-@media (max-width: 640px) {
-  .imprint-container {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  }
-}
 </style>
