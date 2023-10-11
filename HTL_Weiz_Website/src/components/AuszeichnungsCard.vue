@@ -21,7 +21,7 @@ export default {
   justify-content: center;
 }
 .image {
-  width: 120px;
-  height: 120px;
-}</style>
-
+  width: 125px;
+  height: 125px;
+}
+</style>

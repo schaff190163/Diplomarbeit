@@ -1,15 +1,15 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <!-- Render the fetched data here -->
-    <div v-if="posts.length > 0">
-      <div v-for="post in posts" :key="post.id">
-        <h2>{{ post.title.rendered }}</h2>
-        <div v-html="post.content.rendered"></div>
-      </div>
+    <div class="padleftright padtopbot padnav grid-containersv">
+      <PostCard v-for="post in posts" :key="post.title"
+        :title="post.title"
+        :content="post.content"
+        :imageSrc="post.featuredImageURL"
+        ></PostCard>
     </div>
-    <PostCard></PostCard>
     <AuszeichnungsRow></AuszeichnungsRow>
+    <GeoRow></GeoRow>
     <Imprint></Imprint>
   </div>
 </template>
@@ -19,32 +19,54 @@ import NavBar from "@/components/NavBar.vue";
 import Imprint from "@/components/Imprint.vue";
 import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 import PostCard from "@/components/PostCard.vue";
-import { fetchPosts } from "@/api"; // Import your fetchPosts function
+import { ref, onMounted } from "vue";
+import { fetchData } from "@/api";
+import GeoRow from "@/components/GeoRow.vue";
+
+interface Post {
+  id?: number;
+  title: string;
+  content: string;
+  featuredImageURL: string;
+}
 
 export default {
-  name: 'NewsView',
+  name: "NewsView",
   components: {
     NavBar,
     Imprint,
     AuszeichnungsRow,
-    PostCard
-},
-  data() {
-    return {
-      posts: [] as Posts[], // Explicitly define the type as Posts[]
-    };
+    PostCard,
+    GeoRow,
   },
-  async mounted() {
-    try {
-      const posts = await fetchPosts() as Posts[]; // Type assertion here
-      this.posts = posts;
-    } catch (error) {
-      console.error(error);
-    }
+  setup() {
+    const posts = ref<Post[]>([]);
+
+    onMounted(async () => {
+      try {
+        const data = await fetchData();
+        posts.value = data;
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    });
+
+    return {
+      posts,
+    };
   },
 };
 </script>
 
 <style>
-/* Styles for this component */
+.padnav {
+  padding-top: 100px;
+}
+
+.grid-containersv {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 50px;
+  position: relative;
+}
 </style>

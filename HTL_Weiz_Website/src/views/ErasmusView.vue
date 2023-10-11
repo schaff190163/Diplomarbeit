@@ -2,6 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <AuszeichnungsRow></AuszeichnungsRow>
+    <GeoRow></GeoRow>
     <Imprint></Imprint>
   </div>
 </template>
@@ -10,6 +11,7 @@
 import NavBar from "@/components/NavBar.vue";
 import Imprint from "@/components/Imprint.vue";
 import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
+import GeoRow from "@/components/GeoRow.vue";
 
 export default {
   name: 'ErasmusView',
@@ -17,6 +19,7 @@ export default {
     NavBar,
     Imprint,
     AuszeichnungsRow,
+    GeoRow,
   },
 };
 </script>

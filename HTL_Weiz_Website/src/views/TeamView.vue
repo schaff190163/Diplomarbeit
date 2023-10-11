@@ -1,8 +1,6 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    
-    <NavBarSpace class="navbarspace"></NavBarSpace>
     <h1 class="teamheading">Direktion</h1>
     <DirektionCard class="padleftright padtopbot"></DirektionCard>
     <h1 class="teamheading">Abteilungsvorstände</h1>
@@ -24,6 +22,7 @@
       <StaffCard></StaffCard>
     </div>
     <AuszeichnungsRow></AuszeichnungsRow>
+    <GeoRow></GeoRow>
     <Imprint></Imprint>
   </div>
 </template>
@@ -69,7 +68,7 @@ export default {
   position: relative;
 }
 .nodarstello {
-  display:none;
+  display: none;
 }
 @media only screen and (max-width : 640px) {
   .grid-containerav {

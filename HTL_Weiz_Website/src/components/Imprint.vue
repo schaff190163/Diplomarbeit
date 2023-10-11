@@ -1,5 +1,5 @@
 <template>
-    <div class="padtopbot padleftright uk-background-muted ">
+    <div class="padtopbot padleftright darkbg uk-background-muted">
     <div class="uk-child-width-expand@s" uk-grid>
 
         <div>

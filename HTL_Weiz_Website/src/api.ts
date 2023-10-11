@@ -1,38 +1,38 @@
 import axios from "axios";
 
-export interface Posts {
-  id: number;
-  date: string;
-  title: {
-    rendered: string;
-  };
-  content: {
-    rendered: string;
-  };
-}
-
+// Define the base URL for the API
 const baseURL = "https://dev.htlweiz.at/wp-json/wp/v2/posts/";
 
+// Define your username and password for authentication
 const username = "vue_js";
 const password = "6OceAv#$81v7S27qCH1FPQMu";
 
-export async function fetchPosts(): Promise<Posts[]> {
+// Function to fetch data from the API
+export async function fetchData() {
   try {
-    const response = await axios.get(baseURL);
-    const posts: Posts[] = response.data.map((item: any) => ({
-      id: item.id,
-      date: item.date,
-      title: {
-        rendered: item.title.rendered,
+    // Create an Axios instance with the basic authentication headers
+    const axiosInstance = axios.create({
+      baseURL,
+      auth: {
+        username,
+        password,
       },
-      content: {
-        rendered: item.content.rendered,
-      },
-    }));  
-    return posts;
+    });
+
+    // Make a GET request to the API
+    const response = await axiosInstance.get<any[]>(``);
+
+    // Check if the response status is 200 (OK) and return the data
+    if (response.status === 200) {
+      return response.data.map((post) => ({
+        title: post.title.rendered,
+        content: post.content.rendered,
+        featuredImageURL: post._links["wp:attachment"][0].href,
+      }));
+    } else {
+      throw new Error("Failed to fetch data from the API");
+    }
   } catch (error) {
-    // Handle errors here
-    console.error("Error fetching posts:", error);
     throw error;
   }
 }

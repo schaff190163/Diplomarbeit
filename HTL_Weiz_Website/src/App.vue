@@ -28,6 +28,9 @@ export default defineComponent({
   padding-left: 100px;
   padding-right: 100px;
 }
+.darkbg {
+  background-color: #E8E8E8;
+}
 @media (max-width: 640px) {
   .padtopbot {
   padding-bottom: 15px;

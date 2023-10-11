@@ -9,6 +9,7 @@
     <QuickFacts class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts>
     <AbteilungsText></AbteilungsText>
     <AuszeichnungsRow></AuszeichnungsRow>
+    <GeoRow></GeoRow>
     <Imprint></Imprint>
   </div>
 </template>
@@ -20,6 +21,7 @@ import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 import QuickFacts from "@/components/QuickFacts.vue";
 import AbteilungsText from "@/components/AbteilungsText.vue";
 import AvCard from "@/components/AvCard.vue";
+import GeoRow from "@/components/GeoRow.vue";
 
 export default {
   name: 'ItView',
@@ -30,6 +32,7 @@ export default {
     QuickFacts,
     AbteilungsText,
     AvCard,
+    GeoRow,
   },
 };
 </script>

@@ -8,6 +8,7 @@
     <QuickFacts class="padleftright" typ="Abendschule für Berufstätige" dauer="6 bzw. 8 Semester" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Reifeprüfung AHS/BHS oder BRP oder Abschlussprüfung einer facheinschlägigen 3,5 oder 4 jährigen Fachschule oder Werkmeisterschule oder LAP" standort="Weiz"></QuickFacts>
     <AbteilungsText></AbteilungsText>
     <AuszeichnungsRow></AuszeichnungsRow>
+    <GeoRow></GeoRow>
     <Imprint></Imprint>
   </div>
 </template>
@@ -19,6 +20,7 @@ import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 import QuickFacts from "@/components/QuickFacts.vue";
 import AbteilungsText from "@/components/AbteilungsText.vue";
 import AvCard from "@/components/AvCard.vue";
+import GeoRow from "@/components/GeoRow.vue";
 
 export default {
   name: 'AwiView',
@@ -29,6 +31,7 @@ export default {
     QuickFacts,
     AbteilungsText,
     AvCard,
+    GeoRow,
   },
 };
 </script>
