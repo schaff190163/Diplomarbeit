@@ -12,7 +12,7 @@
 import AuszeichnungsCard from './AuszeichnungsCard.vue';
 
 export default {
-  name: 'AuszeichnungsRow',
+  name: 'GeoRow',
   components: {
     AuszeichnungsCard,
   },

@@ -3,37 +3,42 @@
     <div class="uk-card-header">
       <div class="uk-grid-small uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
-          <!-- Display the post title -->
-          <img class="uk-border-circle" width="40" height="40" :src="post.authorAvatar" alt="Author Avatar" />
-        </div>
-        <div class="uk-width-expand">
-          <!-- Display the post title -->
-          <h3 class="uk-card-title uk-text-default uk-margin-remove-bottom">{{ post.title }}</h3>
+          <h3 class="uk-card-title uk-text-large">{{ title }}</h3>
         </div>
       </div>
     </div>
     <div class="uk-card-body">
-      <!-- Display the post content -->
-      <div v-html="post.content"></div>
+      <div>{{ content }}</div>
+    </div>
+    <div class="uk-position-relative uk-visible-toggle uk-light padbotpost" tabindex="-1" uk-slider="center: true">
+      <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
+        <li class="uk-width-3-4">
+          <div class="uk-cover-container">
+            <img :src="imageSrc" alt="" uk-cover>
+            <div class="uk-position-center uk-panel"></div>
+          </div>
+        </li>
+      </ul>
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous
+        uk-slider-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next uk-slider-item="next"></a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineProps } from 'vue';
-
 export default {
   name: 'PostCard',
   props: {
-    // Define props for the post data
-    post: {
-      type: Object,
-      required: true,
-    },
+    title: String,
+    content: String,
+    imageSrc: String,
   },
 };
 </script>
 
 <style>
-/* Styles for this component */
+.padbotpost {
+  padding-bottom: 20px;
+}
 </style>

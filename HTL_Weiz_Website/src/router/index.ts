@@ -8,7 +8,6 @@ import AwiView from '../views/AwiView.vue';
 import ParentsView from '../views/ParentsView.vue';
 import ErasmusView from '../views/ErasmusView.vue';
 import EtView from '../views/EtView.vue';
-import ItkView from '../views/ItkView.vue';
 import ItView from '../views/ItView.vue';
 import TeachersView from '../views/TeachersView.vue';
 import MtView from '../views/MtView.vue';
@@ -82,11 +81,6 @@ const router = createRouter({
       path: '/mt',
       name: 'mt',
       component: MtView,
-    },
-    {
-      path: '/itk',
-      name: 'itk',
-      component: ItkView,
     },
     {
       path: '/Team',
