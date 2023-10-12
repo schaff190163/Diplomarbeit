@@ -29,7 +29,11 @@ export default defineComponent({
   padding-right: 100px;
 }
 .darkbg {
+<<<<<<< HEAD
   background-color: #E8E8E8;
+=======
+  background-color: #EEEEEE;
+>>>>>>> 1587bd6066a1cb61487bd5a3a6bba51c5bee93a3
 }
 @media (max-width: 640px) {
   .padtopbot {
