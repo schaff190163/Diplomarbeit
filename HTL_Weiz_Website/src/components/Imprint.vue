@@ -1,5 +1,5 @@
 <template>
-    <div class="padtopbot padleftright darkbg uk-background-muted">
+    <div class="padtopbot padleftright">
     <div class="uk-child-width-expand@s" uk-grid>
 
         <div>
@@ -64,4 +64,10 @@ export default {
 
 <style>
 /* Styles for this component */
+h4 {
+    color: #F8F8F8;
+}
+li {
+    color: #e6e3e3;
+}
 </style>

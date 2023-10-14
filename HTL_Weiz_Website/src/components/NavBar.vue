@@ -110,14 +110,14 @@
                         </div>
                       </li>
                       <div class="uk-margin">
-                        <form class="uk-search uk-search-default">
+                        <form class="uk-search uk-search-default ">
                           <a
                             href=""
                             class="uk-search-icon-flip"
                             uk-search-icon
                           ></a>
                           <input
-                            class="uk-search-input rounded uk-margin-left"
+                            class="uk-search-input nbrounded uk-margin-left roundedl"
                             type="search"
                             placeholder="Search"
                             aria-label="Search"
@@ -132,6 +132,7 @@
           </div>
         </div>
       </div>
+      <div style="height: 80px;"></div>
     </div>
 </template>
 
@@ -150,6 +151,9 @@ export default {
 /* Styles for this component */
 .img-logo {
   height: auto;
+}
+.nbrounded {
+  border-radius: 50px;
 }
 @media (max-width: 640px){
   .img-logo{

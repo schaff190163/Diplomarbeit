@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
-  <div class="uk-card uk-card-default uk-card-hover uk-width-1-1 uk-link-toggle">
-=======
-  <div class="uk-card uk-card-default uk-width-1-1 uk-link-toggle">
->>>>>>> 1587bd6066a1cb61487bd5a3a6bba51c5bee93a3
+  <div class="uk-card uk-card-default uk-width-1-1 uk-link-toggle roundedl">
     <div class="uk-card-header">
       <div class="uk-grid-small uk-flex-middle" uk-grid>
         <div class="uk-width-auto">

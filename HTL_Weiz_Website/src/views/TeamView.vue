@@ -12,8 +12,8 @@
       <AvCard avname="Heimo T. Blattner" avsubtitle="Abteilungsvorstand " imgsrc="src\assets\images\team\Blattner.jpg"></AvCard>
       <AvCard avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc="src\assets\images\team\Hoellerbauer.jpg"></AvCard>
     </div>
-    <h1 class="teamheading nodarstello">Lehrpersonal</h1>
-    <div class="grid-containerstaff padleftright padtopbot nodarstello">
+    <h1 class="teamheading">Lehrpersonal</h1>
+    <div class="grid-containerstaff padleftright padtopbot">
       <StaffCard></StaffCard>
       <StaffCard></StaffCard>
       <StaffCard></StaffCard>
@@ -54,6 +54,7 @@ export default {
 .teamheading {
   font-size: 40px;
   padding-left: 100px;
+  padding-top: 90px;
 }
 .grid-containerav {
   display: grid;

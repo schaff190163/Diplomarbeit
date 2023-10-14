@@ -1,6 +1,6 @@
 <template>
   <div class="image-container">
-    <img class="image uk-box-shadow-medium" :src="imgsrc" :alt="azname" />
+    <img class="image uk-box-shadow-medium roundedl" :src="imgsrc" :alt="azname" />
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
   justify-content: center;
 }
 .image {
-  width: 125px;
-  height: 125px;
+  max-width: 125px;
+  max-height: 125px;
 }
 </style>
