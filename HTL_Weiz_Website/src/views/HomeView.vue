@@ -61,12 +61,19 @@ export default {
   text-align: center;
   color: #F8F8F8;
 }
+.lape {
+  background-image: url('@/assets/images/laype.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 250px;
+}
 @media (max-width: 640px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }

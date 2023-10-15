@@ -42,4 +42,9 @@ export default {
 </script>
 
 <style>
+@media (max-width: 640px) {
+    thead {
+        display: none;
+    }
+}
 </style>

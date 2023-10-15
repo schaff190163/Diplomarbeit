@@ -21,4 +21,9 @@ export default {
 
 <style>
 /* Styles for this component */
+@media (max-width: 960px) {
+  .uk-grid {
+    grid-template-columns: 1fr; /* Display in a single column */
+  }
+}
 </style>

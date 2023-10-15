@@ -1,25 +1,19 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <AuszeichnungsRow></AuszeichnungsRow>
-    <GeoRow></GeoRow>
-    <Imprint></Imprint>
+    <FooterMerge></FooterMerge>
   </div>
 </template>
 
 <script lang="ts">
 import NavBar from "@/components/NavBar.vue";
-import Imprint from "@/components/Imprint.vue";
-import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
-import GeoRow from "@/components/GeoRow.vue";
+import FooterMerge from "@/components/FooterMerge.vue";
 
 export default {
   name: 'AnsprechpartnerView',
   components: {
     NavBar,
-    Imprint,
-    AuszeichnungsRow,
-    GeoRow,
+    FooterMerge,
   },
 };
 </script>

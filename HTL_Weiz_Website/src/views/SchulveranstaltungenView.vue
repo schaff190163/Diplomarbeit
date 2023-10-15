@@ -6,28 +6,22 @@
       <PostCard></PostCard>
       <PostCard></PostCard>
     </div>
-    <AuszeichnungsRow></AuszeichnungsRow>
-    <GeoRow></GeoRow>
-    <Imprint></Imprint>
+    <FooterMerge></FooterMerge>
   </div>
 </template>
 
 <script lang="ts">
+import FooterMerge from "@/components/FooterMerge.vue";
 import NavBar from "@/components/NavBar.vue";
-import Imprint from "@/components/Imprint.vue";
-import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 import PostCard from "@/components/PostCard.vue";
-import GeoRow from "@/components/GeoRow.vue";
 
 export default {
   name: 'SchulveranstaltungenView',
   components: {
     NavBar,
-    Imprint,
-    AuszeichnungsRow,
     PostCard,
-    GeoRow,
-  },
+    FooterMerge,
+},
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <table class="uk-table">
+    <table>
       <tbody>
         <tr>
           <th>Typ:</th>

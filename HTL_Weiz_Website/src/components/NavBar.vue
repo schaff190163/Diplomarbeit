@@ -8,17 +8,18 @@
               <div uk-navbar>
                 <div class=".uk-navbar-center">
                   <ul class="uk-navbar-nav">
-                        <li>
-                          <router-link class="uk-logo" to="/">
-                            <img
-                              src="/src/assets/images/htl_logo.svg"
-                              width="100"
-                              height=""
-                              alt="HTL Logo"
-                            />
-                          </router-link>
-                        </li>
+                      <button class="uk-button uk-button-default navsmallscreen" type="button" uk-toggle="target: #offcanvas-nav"><span uk-icon="icon: menu; ratio: 2"></span></button>
                       <li>
+                        <router-link class="uk-logo" to="/">
+                          <img
+                            src="/src/assets/images/htl_logo.svg"
+                            width="100"
+                            height=""
+                            alt="HTL Logo"
+                          />
+                        </router-link>
+                      </li>
+                      <li class="navbigscreen">
                         <a href="#">Aktuelles</a>
                         <div class="uk-navbar-dropdown">
                           <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -34,7 +35,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li>
+                      <li class="navbigscreen">
                         <a href="#">Ausbildung</a>
                         <div class="uk-navbar-dropdown">
                           <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -80,13 +81,13 @@
                           </ul>
                         </div>
                       </li>
-                      <li><router-link to="/team">Team</router-link></li>
-                      <li>
+                      <li class="navbigscreen"><router-link to="/team">Team</router-link></li>
+                      <li class="navbigscreen">
                         <router-link to="/ansprechpartner"
                           >AnsprechpartnerInnen</router-link
                         >
                       </li>
-                      <li>
+                      <li class="navbigscreen">
                         <a href="#">Services</a>
                         <div class="uk-navbar-dropdown">
                           <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -109,7 +110,7 @@
                           </ul>
                         </div>
                       </li>
-                      <div class="uk-margin">
+                      <div class="uk-margin navbigscreen">
                         <form class="uk-search uk-search-default ">
                           <a
                             href=""
@@ -132,6 +133,112 @@
           </div>
         </div>
       </div>
+      <div id="offcanvas-nav" uk-offcanvas="mode: push" class="navsmallscreen">
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-navbar-nav">
+                          <div class="uk-margin">
+                            <form class="uk-search uk-search-default ">
+                              <a
+                                href=""
+                                class="uk-search-icon-flip"
+                                uk-search-icon
+                              ></a>
+                              <input
+                                class="uk-search-input nbrounded uk-margin-left roundedl"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                              />
+                            </form>
+                          </div>
+                        <li>
+                          <a href="#">Aktuelles</a>
+                            <ul class="uk-nav uk-dropdown-nav">
+                              <li>
+                                <router-link to="/schulveranstaltungen"
+                                  >Schulveranstaltungen</router-link
+                                >
+                              </li>
+                              <li><router-link to="/news">News</router-link></li>
+                              <li>
+                                <router-link to="/erasmus">Erasmus+</router-link>
+                              </li>
+                            </ul>
+                        </li>
+                        <li>
+                          <a href="#">Ausbildung</a>
+                            <ul class="uk-nav uk-dropdown-nav">
+                              <li>
+                                <router-link to="/wi"
+                                  >Wirtschaftsingenieure</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/et">Elektrotechnik</router-link>
+                              </li>
+                              <li>
+                                <router-link to="/it"
+                                  >Informationstechnologie</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/ut"
+                                  >Maschinenbau - Umwelttechnik</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/mb"
+                                  >Maschinenbau - Anlagentechnik</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/at"
+                                  >Maschinenbau -
+                                  Automatisierungstechnik</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/awi"
+                                  >Abendschule - Wirtschaftsingenieure</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/mt"
+                                  >Fachschule - Mechatronik</router-link
+                                >
+                              </li>
+                            </ul>
+                        </li>
+                        <li><router-link to="/team">Team</router-link></li>
+                        <li>
+                          <router-link to="/ansprechpartner"
+                            >AnsprechpartnerInnen</router-link
+                          >
+                        </li>
+                        <li>
+                          <a href="#">Services</a>
+                            <ul class="uk-nav uk-dropdown-nav">
+                              <li>
+                                <router-link to="/students"
+                                  >SchülerInnen</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/teachers"
+                                  >LehrerInnen</router-link
+                                >
+                              </li>
+                              <li>
+                                <router-link to="/parents">Eltern</router-link>
+                              </li>
+                              <li>
+                                <router-link to="/anmeldung">Anmeldung</router-link>
+                              </li>
+                            </ul>
+                        </li>
+                      </ul>
+      </div>
+  </div>
       <div style="height: 80px;"></div>
     </div>
 </template>
@@ -155,9 +262,23 @@ export default {
 .nbrounded {
   border-radius: 50px;
 }
+.navsmallscreen {
+  background-color: #E8E8E8;
+}
 @media (max-width: 640px){
   .img-logo{
     height: 400px;
+  }
+}
+@media (max-width: 960px){
+  .navbigscreen {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .navsmallscreen {
+    display: none;
   }
 }
 </style>

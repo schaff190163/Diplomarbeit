@@ -7,21 +7,17 @@
         :content="post.content"
         :imageSrc="post.featuredImageURL"
         ></PostCard>
+      <FooterMerge></FooterMerge>
     </div>
-    <AuszeichnungsRow></AuszeichnungsRow>
-    <GeoRow></GeoRow>
-    <Imprint></Imprint>
   </div>
 </template>
 
 <script lang="ts">
 import NavBar from "@/components/NavBar.vue";
-import Imprint from "@/components/Imprint.vue";
-import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 import PostCard from "@/components/PostCard.vue";
+import FooterMerge from "@/components/FooterMerge.vue";
 import { ref, onMounted } from "vue";
 import { fetchData } from "@/api";
-import GeoRow from "@/components/GeoRow.vue";
 
 interface Post {
   id?: number;
@@ -34,10 +30,8 @@ export default {
   name: "NewsView",
   components: {
     NavBar,
-    Imprint,
-    AuszeichnungsRow,
     PostCard,
-    GeoRow,
+    FooterMerge,
   },
   setup() {
     const posts = ref<Post[]>([]);
