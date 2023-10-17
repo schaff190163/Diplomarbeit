@@ -48,7 +48,7 @@
         </div>
     </div>
     </div>
-    <div class="ifoot">Copyright HTL Weiz 2023</div>
+    <div class="ifoot"><div class="padleftright">Copyright HTL Weiz 2023   |   <u>Impressum und Datenschutz</u></div></div>
     </div>
 </template>
 
@@ -67,6 +67,7 @@ export default {
 /* Styles for this component */
 .ifooter {
     background-color: #065272ff;
+    color: #065272ff;
     height: 10px;
     width: 100vw;
 }

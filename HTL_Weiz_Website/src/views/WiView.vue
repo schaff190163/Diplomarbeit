@@ -26,6 +26,26 @@ export default {
     AvCard,
     FooterMerge,
   },
+  data() {
+    return {
+      isInitialLoad: true,
+    };
+  },
+  mounted() {
+    // Check if it's the initial load
+    if (this.isInitialLoad) {
+      // Disable transitions during the initial load
+      this.disableTransitions();
+    }
+  },
+  methods: {
+    disableTransitions() {
+      // Your logic to disable transitions
+      // This might involve setting CSS classes or manipulating the DOM
+      // You can, for example, add a class to your main container to disable transitions
+      this.isInitialLoad = false; // Mark the initial load as complete
+    },
+  },
 };
 </script>
 
