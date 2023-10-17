@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div class="centered-row">
+    <div class="centered-row padleftright">
       <div class="element">
         <h1 style="color: #f8f8f8;">900+</h1>
-        <p style="color: #f8f8f8;">Schüler</p>
+        <p style="color: #f8f8f8;" class="uk-text-light">Schüler</p>
       </div>
-      <div class="separator"></div>
-      <div class="element">
+      <div class="separator"><hr class="uk-divider-vertical"></div>
+      <div class="element mid">
         <h1 style="color: #f8f8f8;">100+</h1>
-        <p style="color: #f8f8f8;">Lehrer</p>
+        <p style="color: #f8f8f8;" class="uk-text-light">Lehrer</p>
       </div>
-      <div class="separator"></div>
+      <div class="separator"><hr class="uk-divider-vertical"></div>
       <div class="element">
         <h1 style="color: #f8f8f8;">8</h1>
-        <p style="color: #f8f8f8;">Ausbildungszweige</p>
+        <p style="color: #f8f8f8;" class="uk-text-light">Ausbildungszweige</p>
       </div>
     </div>
   </div>
@@ -29,23 +29,16 @@ export default {
 <style>
 .centered-row {
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1BA373ff;
   padding-top: 20px;
   padding-bottom: 20px;
+  justify-content: center;
+  align-content: center;
 }
-
 .element {
   text-align: center;
-  padding: 0 15px;
-  /* Adjust this value for spacing between elements */
-}
-
-.separator {
-  width: 23%;
-  height: 100%;
-  /* Add margin to the separator if needed */
+  margin-left: 12vw;
+  margin-right: 12vw;
 }
 </style>
 

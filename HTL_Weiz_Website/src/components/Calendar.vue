@@ -1,29 +1,29 @@
 <template>
     <div class="padtopbot padleftright">
-    <table class="uk-table uk-table-divider">
+    <table class="uk-table uk-table-justify uk-table-divider">
         <thead>
             <tr>
-                <th>Datum:</th>
-                <th>Event:</th>
-                <th>Betrifft:</th>
+                <th class="cdate">Datum:</th>
+                <th class="cevent">Event:</th>
+                <th class="cconc">Betrifft:</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td class="uk-text-bold">05.11.2023</td>
-                <td>Random Event</td>
-                <td>HTL Weiz</td>
+                <td class="uk-text-bold cdate">05.11.2023</td>
+                <td class="cevent">Random Event</td>
+                <td class="cconc">HTL Weiz</td>
             </tr>
             <tr>
-                <td class="uk-text-bold">2.12.2023</td>
-                <td>Diplomarbeits-Zwischenpräsentationen</td>
-                <td>Maturaklassen</td>
+                <td class="uk-text-bold cdate">2.12.2023</td>
+                <td class="cevent">Diplomarbeits-Zwischenpräsentationen</td>
+                <td class="cconc">Maturaklassen</td>
                 
             </tr>
             <tr>
-                <td class="uk-text-bold">22.12.2022</td>
-                <td>Start der Weihnachtsferien</td>
-                <td>HTL Weiz</td>
+                <td class="uk-text-bold cdate">22.12.2022</td>
+                <td class="cevent">Start der Weihnachtsferien</td>
+                <td class="cconc">HTL Weiz</td>
             </tr>
         </tbody>
     </table>
@@ -43,8 +43,14 @@ export default {
 
 <style>
 @media (max-width: 640px) {
-    thead {
+    .cconc {
         display: none;
+    }
+    .cevent {
+        text-align: right;
+    }
+    .cdate {
+        text-align: left;
     }
 }
 </style>

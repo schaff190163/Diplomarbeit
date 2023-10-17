@@ -1,7 +1,7 @@
 <template>
+    <div>
     <div class="padtopbot padleftright">
     <div class="uk-child-width-expand@s" uk-grid>
-
         <div>
             <h4>Kontakt</h4>
             <ul class="uk-list uk-list-collapse">
@@ -46,8 +46,9 @@
                 <li>Vertrauenslehrer</li>
             </ul>
         </div>
-
     </div>
+    </div>
+    <div class="ifoot">Copyright HTL Weiz 2023</div>
     </div>
 </template>
 
@@ -64,10 +65,9 @@ export default {
 
 <style>
 /* Styles for this component */
-h4 {
-    color: #F8F8F8;
-}
-li {
-    color: #e6e3e3;
+.ifooter {
+    background-color: #065272ff;
+    height: 10px;
+    width: 100vw;
 }
 </style>

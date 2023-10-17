@@ -16,6 +16,7 @@
       <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom" title="Fachschule - Mechatronik" description="Im Maschinen-, Anlagen- und Gerätebau spielen vermehrt mechanisch-elektronische (= mechatronische) Systeme (z. B. Steuerung von Werkzeugmaschinen, ..." imgsrc = "/src/assets/images/logo_mt_250.png" detailsrc = "/mt"></AbteilungsCard>
     </div>
     </div>
+
     <FooterMerge></FooterMerge>
   </div>
 </template>
@@ -66,16 +67,17 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 250px;
 }
-@media (max-width: 640px) {
+@media (max-width: 880px) {
   .grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
   }
 }
 @media (max-width: 1200px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 }
 </style>

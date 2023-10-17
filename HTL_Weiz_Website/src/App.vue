@@ -34,6 +34,7 @@ export default defineComponent({
 .roundedl {
   border-radius: 18px;
 }
+
 @media (max-width: 640px) {
   .padtopbot {
   padding-bottom: 15px;

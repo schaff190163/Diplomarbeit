@@ -2,11 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <div class="padleftright padtopbot padnav grid-containersv">
-      <PostCard v-for="post in posts" :key="post.title"
-        :title="post.title"
-        :content="post.content"
-        :imageSrc="post.featuredImageURL"
-        ></PostCard>
+      <PostCard></PostCard>
       <FooterMerge></FooterMerge>
     </div>
   </div>
@@ -16,15 +12,6 @@
 import NavBar from "@/components/NavBar.vue";
 import PostCard from "@/components/PostCard.vue";
 import FooterMerge from "@/components/FooterMerge.vue";
-import { ref, onMounted } from "vue";
-import { fetchData } from "@/api";
-
-interface Post {
-  id?: number;
-  title: string;
-  content: string;
-  featuredImageURL: string;
-}
 
 export default {
   name: "NewsView",
@@ -32,24 +19,8 @@ export default {
     NavBar,
     PostCard,
     FooterMerge,
-  },
-  setup() {
-    const posts = ref<Post[]>([]);
-
-    onMounted(async () => {
-      try {
-        const data = await fetchData();
-        posts.value = data;
-      } catch (error) {
-        console.error("An error occurred:", error);
-      }
-    });
-
-    return {
-      posts,
-    };
-  },
-};
+  }
+}
 </script>
 
 <style>
