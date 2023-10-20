@@ -6,14 +6,11 @@
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import FooterMerge from "@/components/FooterMerge.vue";
-
 export default {
   name: 'ErasmusView',
   components: {
-    NavBar,
-    FooterMerge,
+    NavBar: () => import(/* webpackChunkName: "navbar" */ "@/components/NavBar.vue"),
+    FooterMerge: () => import(/* webpackChunkName: "footermerge" */ "@/components/FooterMerge.vue"),
   },
 };
 </script>

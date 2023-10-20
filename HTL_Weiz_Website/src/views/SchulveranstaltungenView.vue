@@ -11,16 +11,12 @@
 </template>
 
 <script lang="ts">
-import FooterMerge from "@/components/FooterMerge.vue";
-import NavBar from "@/components/NavBar.vue";
-import PostCard from "@/components/PostCard.vue";
-
 export default {
   name: 'SchulveranstaltungenView',
   components: {
-    NavBar,
-    PostCard,
-    FooterMerge,
+    NavBar: () => import(/* webpackChunkName: "navbar" */ "@/components/NavBar.vue"),
+    PostCard: () => import(/* webpackChunkName: "postcard" */ "@/components/PostCard.vue"),
+    FooterMerge: () => import(/* webpackChunkName: "footermerge" */ "@/components/FooterMerge.vue"),
 },
 };
 </script>

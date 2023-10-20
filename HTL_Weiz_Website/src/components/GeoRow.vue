@@ -6,13 +6,9 @@
 </template>
 
 <script lang="ts">
-import AuszeichnungsCard from './AuszeichnungsCard.vue';
 
 export default {
   name: 'GeoRow',
-  components: {
-    AuszeichnungsCard,
-  },
 };
 </script>
 

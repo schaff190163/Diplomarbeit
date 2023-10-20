@@ -11,40 +11,14 @@
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import QuickFacts from "@/components/QuickFacts.vue";
-import AbteilungsText from "@/components/AbteilungsText.vue";
-import AvCard from "@/components/AvCard.vue";
-import FooterMerge from "@/components/FooterMerge.vue";
-
 export default {
   name: 'WiView',
   components: {
-    NavBar,
-    QuickFacts,
-    AbteilungsText,
-    AvCard,
-    FooterMerge,
-  },
-  data() {
-    return {
-      isInitialLoad: true,
-    };
-  },
-  mounted() {
-    // Check if it's the initial load
-    if (this.isInitialLoad) {
-      // Disable transitions during the initial load
-      this.disableTransitions();
-    }
-  },
-  methods: {
-    disableTransitions() {
-      // Your logic to disable transitions
-      // This might involve setting CSS classes or manipulating the DOM
-      // You can, for example, add a class to your main container to disable transitions
-      this.isInitialLoad = false; // Mark the initial load as complete
-    },
+    NavBar: () => import(/* webpackChunkName: "navbar" */ "@/components/NavBar.vue"),
+    QuickFacts: () => import(/* webpackChunkName: "quickfacts" */ "@/components/QuickFacts.vue"),
+    AbteilungsText: () => import(/* webpackChunkName: "abteilungstext" */ "@/components/AbteilungsText.vue"),
+    AvCard: () => import(/* webpackChunkName: "avcard" */ "@/components/AvCard.vue"),
+    FooterMerge: () => import(/* webpackChunkName: "footermerge" */ "@/components/FooterMerge.vue"),
   },
 };
 </script>

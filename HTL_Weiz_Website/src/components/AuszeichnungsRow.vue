@@ -9,12 +9,10 @@
 </template>
 
 <script lang="ts">
-import AuszeichnungsCard from './AuszeichnungsCard.vue';
-
 export default {
   name: 'AuszeichnungsRow',
   components: {
-    AuszeichnungsCard,
+    AuszeichnungsCard: () => import(/* webpackChunkName: "auszeichnungscard" */ "@/components/AuszeichnungsCard.vue"),
   },
 };
 </script>
