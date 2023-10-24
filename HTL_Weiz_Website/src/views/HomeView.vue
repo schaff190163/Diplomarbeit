@@ -16,7 +16,6 @@
       <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom" title="Fachschule - Mechatronik" description="Im Maschinen-, Anlagen- und Gerätebau spielen vermehrt mechanisch-elektronische (= mechatronische) Systeme (z. B. Steuerung von Werkzeugmaschinen, ..." imgsrc = "/src/assets/images/logo_mt_250.png" detailsrc = "/mt"></AbteilungsCard>
     </div>
     </div>
-
     <FooterMerge></FooterMerge>
   </div>
 </template>
