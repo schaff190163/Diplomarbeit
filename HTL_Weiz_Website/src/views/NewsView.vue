@@ -2,7 +2,9 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <div class="padleftright padtopbot padnav grid-containersv">
-      <PostCard></PostCard>
+      <div v-for="post in posts" :key="post.id">
+        <PostCard :post="post"></PostCard>
+      </div>
       <FooterMerge></FooterMerge>
     </div>
   </div>
@@ -12,6 +14,7 @@
 import NavBar from "@/components/NavBar.vue";
 import PostCard from "@/components/PostCard.vue";
 import FooterMerge from "@/components/FooterMerge.vue";
+import { Api, Post } from "@/api"; // Import the 'Post' type here
 
 export default {
   name: "NewsView",
@@ -19,8 +22,19 @@ export default {
     NavBar,
     PostCard,
     FooterMerge,
+  },
+  data() {
+    return {
+      posts: [] as Post[], // Specify the type here
+    };
+  },
+  created() {
+    const api = new Api();
+    api.getPosts().then((posts: Post[]) => {
+      this.posts = posts;
+    });
   }
-}
+};
 </script>
 
 <style>

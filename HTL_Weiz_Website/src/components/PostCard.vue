@@ -1,20 +1,20 @@
 <template>
   <div class="uk-card uk-card-default">
     <div class="uk-card-header">
-      <div class="uk-grid-small uk-flex-middle" uk-grid>
-        <div class="uk-width-auto">
-          <h3 class="uk-card-title uk-text-large">{{ title }}</h3>
-        </div>
-      </div>
+     <div class="uk-grid-small uk-flex-middle" uk-grid>
+       <div class="uk-width-auto">
+         <h3 class="uk-card-title uk-text-large">{{ post && post.title }}</h3>
+       </div>
+     </div>
     </div>
     <div class="uk-card-body">
-      <div>{{ content }}</div>
+      <div>{{ post.content }}</div>
     </div>
     <div class="uk-position-relative uk-visible-toggle uk-light padbotpost" tabindex="-1" uk-slider="center: true">
       <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
         <li class="uk-width-3-4">
           <div class="uk-cover-container">
-            <img :src="imageSrc" alt="" uk-cover>
+            <img :src="post.imageSrc" alt="" uk-cover>
             <div class="uk-position-center uk-panel"></div>
           </div>
         </li>
@@ -30,12 +30,14 @@
 export default {
   name: 'PostCard',
   props: {
-    title: String,
-    content: String,
-    imageSrc: String,
-  },
+    post: {
+      type: Object,
+      default: () => ({})
+    }
+  }
 };
 </script>
+
 
 <style>
 .padbotpost {

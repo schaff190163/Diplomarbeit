@@ -6,7 +6,7 @@
 
 <script lang="ts">
 export default {
-  name: 'AuszeichnungsCard',
+  name: 'Small',
   props: {
     imgsrc: String,
     azname: String,
@@ -21,7 +21,7 @@ export default {
   justify-content: center;
 }
 .image {
-  max-width: 125px;
-  max-height: 125px;
+  max-width: 110px;
+  max-height: 110px;
 }
 </style>

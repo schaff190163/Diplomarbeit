@@ -48,7 +48,7 @@
         </div>
     </div>
     </div>
-    <div class="ifoot"><div class="padleftright">Copyright HTL Weiz 2023   |   <u>Impressum und Datenschutz</u></div></div>
+    <div class="ifoot"><div class="padleftright">Copyright HTL Weiz 2023 | <router-link to="/imprint">Impressum und Datenschutz</router-link></div></div>
     </div>
 </template>
 

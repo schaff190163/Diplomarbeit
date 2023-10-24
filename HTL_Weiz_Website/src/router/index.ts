@@ -116,6 +116,12 @@ const router = createRouter({
       name: 'search',
 
       component: () => import(/* webpackChunkName: "search" */"../views/SearchView.vue")
+    },
+    {
+      path: '/imprint',
+      name: 'imprint',
+
+      component: () => import(/* webpackChunkName: "search" */"../views/ImprintData.vue")
     }
   ]
 })

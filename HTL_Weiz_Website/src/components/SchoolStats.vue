@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div class="centered-row padleftright">
-      <div class="element">
+    <div class="sscentered-row padleftright">
+      <div class="sselement">
         <h1 style="color: #f8f8f8;">900+</h1>
         <p style="color: #f8f8f8;" class="uk-text-light">Schüler</p>
       </div>
       <div class="separator"><hr class="uk-divider-vertical"></div>
-      <div class="element mid">
+      <div class="sselement mid">
         <h1 style="color: #f8f8f8;">100+</h1>
         <p style="color: #f8f8f8;" class="uk-text-light">Lehrer</p>
       </div>
       <div class="separator"><hr class="uk-divider-vertical"></div>
-      <div class="element">
+      <div class="sselement">
         <h1 style="color: #f8f8f8;">8</h1>
         <p style="color: #f8f8f8;" class="uk-text-light">Ausbildungszweige</p>
       </div>
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style>
-.centered-row {
+.sscentered-row {
   display: flex;
   background-color: #1BA373ff;
   padding-top: 20px;
@@ -35,7 +35,7 @@ export default {
   justify-content: center;
   align-content: center;
 }
-.element {
+.sselement {
   text-align: center;
   margin-left: 12vw;
   margin-right: 12vw;

@@ -15,7 +15,7 @@
 
 <style>
 .hei {
-  height: calc(100vh - 215px);
+  height: calc(100vh - 230px);
 }
 .spruch {
   font-size: calc(5vw + 1vh);
