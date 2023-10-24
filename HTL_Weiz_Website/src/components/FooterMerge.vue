@@ -13,9 +13,9 @@ import GeoRow from "@/components/GeoRow.vue";
 export default {
   name: 'FooterMerge',
   components: {
-  Imprint: () => import(/* webpackChunkName: "imprint" */ "@/components/Imprint.vue"),
-  AuszeichnungsRow: () => import(/* webpackChunkName: "auszeichnungsrow" */ "@/components/AuszeichnungsRow.vue"),
-  GeoRow: () => import(/* webpackChunkName: "georow" */ "@/components/GeoRow.vue"),
+  Imprint,
+  AuszeichnungsRow,
+  GeoRow,
   },
 };
 </script>

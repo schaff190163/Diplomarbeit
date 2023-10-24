@@ -12,14 +12,7 @@
     }
   ],
   "compilerOptions": {
-    "types": ["vite/client"],
+    "types": ["vite/client"]
     // Other compiler options as needed
-    "target": "ESNext",
-    "module": "ESNext",
-    "strict": true,
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
   }
 }

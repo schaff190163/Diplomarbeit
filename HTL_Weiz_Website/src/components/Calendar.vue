@@ -31,8 +31,13 @@
 </template>
 
 <script lang="ts">
+import CalendarSingleEntry from './CalendarSingleEntry.vue';
+
 export default {
     name: 'Calendar',
+    components: {
+        CalendarSingleEntry,
+    },
 };
 </script>
 

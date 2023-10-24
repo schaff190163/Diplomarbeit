@@ -20,15 +20,28 @@
   </div>
 </template>
 <script lang="ts">
+import NavBar from "@/components/NavBar.vue";
+import Imprint from "@/components/Imprint.vue";
+import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
+import AbteilungsCard from "@/components/AbteilungsCard.vue";
+import HeroSection from "@/components/HeroSection.vue"
+import GeoRow from "@/components/GeoRow.vue";
+import Calendar from "@/components/Calendar.vue";
+import SchoolStats from "@/components/SchoolStats.vue";
+import FooterMerge from "@/components/FooterMerge.vue";
+
 export default {
   name: 'HomeView',
   components: {
-    NavBar: () => import(/* webpackChunkName: "navbar" */ "@/components/NavBar.vue"),
-    AbteilungsCard: () => import(/* webpackChunkName: "abteilungscard" */ "@/components/AbteilungsCard.vue"),
-    HeroSection: () => import(/* webpackChunkName: "herosection" */ "@/components/HeroSection.vue"),
-    Calendar: () => import(/* webpackChunkName: "calendar" */ "@/components/Calendar.vue"),
-    SchoolStats: () => import(/* webpackChunkName: "schoolstats" */ "@/components/SchoolStats.vue"),
-    FooterMerge: () => import(/* webpackChunkName: "footermerge" */ "@/components/FooterMerge.vue"),
+    NavBar,
+    Imprint,
+    AuszeichnungsRow,
+    AbteilungsCard,
+    HeroSection,
+    GeoRow,
+    Calendar,
+    SchoolStats,
+    FooterMerge,
   },
 };
 </script>

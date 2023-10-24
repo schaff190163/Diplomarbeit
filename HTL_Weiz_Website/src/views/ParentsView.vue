@@ -29,11 +29,14 @@
 </template>
 
 <script lang="ts">
+import NavBar from "@/components/NavBar.vue";
+import FooterMerge from "@/components/FooterMerge.vue";
+
 export default {
   name: 'ParentsView',
   components: {
-    NavBar: () => import(/* webpackChunkName: "navbar" */ "@/components/NavBar.vue"),
-    FooterMerge: () => import(/* webpackChunkName: "footermerge" */ "@/components/FooterMerge.vue"),
+    NavBar,
+    FooterMerge,
   },
 };
 </script>

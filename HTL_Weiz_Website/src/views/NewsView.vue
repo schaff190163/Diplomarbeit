@@ -9,12 +9,16 @@
 </template>
 
 <script lang="ts">
+import NavBar from "@/components/NavBar.vue";
+import PostCard from "@/components/PostCard.vue";
+import FooterMerge from "@/components/FooterMerge.vue";
+
 export default {
   name: "NewsView",
   components: {
-    NavBar: () => import(/* webpackChunkName: "navbar" */ "@/components/NavBar.vue"),
-    PostCard: () => import(/* webpackChunkName: "postcard" */ "@/components/PostCard.vue"),
-    FooterMerge: () => import(/* webpackChunkName: "footermerge" */ "@/components/FooterMerge.vue"),
+    NavBar,
+    PostCard,
+    FooterMerge,
   }
 }
 </script>
