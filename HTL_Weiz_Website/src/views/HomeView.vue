@@ -16,16 +16,14 @@
       <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom" title="Fachschule - Mechatronik" description="Im Maschinen-, Anlagen- und Gerätebau spielen vermehrt mechanisch-elektronische (= mechatronische) Systeme (z. B. Steuerung von Werkzeugmaschinen, ..." imgsrc = "/src/assets/images/logo_mt_250.png" detailsrc = "/mt"></AbteilungsCard>
     </div>
     </div>
+    <Calendar></Calendar>
     <FooterMerge></FooterMerge>
   </div>
 </template>
 <script lang="ts">
 import NavBar from "@/components/NavBar.vue";
-import Imprint from "@/components/Imprint.vue";
-import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
 import AbteilungsCard from "@/components/AbteilungsCard.vue";
 import HeroSection from "@/components/HeroSection.vue"
-import GeoRow from "@/components/GeoRow.vue";
 import Calendar from "@/components/Calendar.vue";
 import SchoolStats from "@/components/SchoolStats.vue";
 import FooterMerge from "@/components/FooterMerge.vue";
@@ -35,11 +33,8 @@ export default {
   name: 'HomeView',
   components: {
     NavBar,
-    Imprint,
-    AuszeichnungsRow,
     AbteilungsCard,
     HeroSection,
-    GeoRow,
     Calendar,
     SchoolStats,
     FooterMerge,

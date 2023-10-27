@@ -42,15 +42,9 @@ export default {
 </script>
 
 <style>
-@media (max-width: 640px) {
+@media (max-width: 700px) {
     .cconc {
         display: none;
-    }
-    .cevent {
-        text-align: right;
-    }
-    .cdate {
-        text-align: left;
     }
 }
 </style>

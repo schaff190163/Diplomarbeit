@@ -1,5 +1,13 @@
 import axios from "axios";
 
+const authAxios = axios.create({
+  baseURL: "https://dev.htlweiz.at/wp-json/wp/v2",
+  auth: {
+    username: 'vue_js',
+    password: 'Qz9H02D8g5Z37av8ToxTJX5k',
+  },
+});
+
 export interface Post {
   id: number;
   date: string;
@@ -30,17 +38,15 @@ export interface Post {
 
 
 export class Api {
-  private baseUrl = "https://dev.htlweiz.at/wp-json/wp/v2/";
-
-  constructor() {}
+  private axiosInstance = authAxios;
 
   async getPosts(): Promise<Post[]> {
-    const response = await axios.get(`${this.baseUrl}/posts`);
+    const response = await this.axiosInstance.get("/posts");
     return response.data as Post[];
   }
 
   async getPostById(id: number): Promise<Post> {
-    const response = await axios.get(`${this.baseUrl}/posts/${id}`);
+    const response = await this.axiosInstance.get(`/posts/${id}`);
     return response.data as Post;
   }
 }
