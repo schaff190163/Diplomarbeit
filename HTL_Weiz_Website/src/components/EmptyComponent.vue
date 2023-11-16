@@ -1,5 +1,4 @@
 <template>
-  <template>
   <div>
     <h1>EmptyComponent</h1>
   </div>

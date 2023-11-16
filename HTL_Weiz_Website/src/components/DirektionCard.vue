@@ -5,7 +5,7 @@
     uk-grid
   >
     <div class="uk-card-media-left uk-cover-container">
-      <img src="src/assets/images/team/Gottfried_Purkarthofer.jpg" alt="" uk-cover />
+      <img src="" alt="" uk-cover />
       <canvas width="600" height="400"></canvas>
     </div>
     <div>

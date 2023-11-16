@@ -18,8 +18,14 @@
   height: calc(100vh - 230px);
 }
 .spruch {
-  font-size: calc(5vw + 1vh);
+  font-size: calc(5vw + 2vh - 20px);
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media (min-width: 1500px) {
+  .spruch {
+    font-size: calc(4vw + 1vh - 20px);
+  }
 }
 </style>

@@ -43,7 +43,6 @@ export default {
 <style>/* Styles for this component */
 .qldiv {
   display: flex;
-  background-color: #1BA373ff;
   padding-top: 20px;
   padding-bottom: 20px;
 }

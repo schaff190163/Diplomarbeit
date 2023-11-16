@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-grid-large padtopbot padleftright" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" uk-grid>
+  <div class="uk-grid-large padleftright padtopbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" uk-grid>
   <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom" azname="Mint Gütesiegel" imgsrc="src/assets/images/mint.jpg"></SmallCard>
   <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz führt seit 2002 das österreichische Umweltzeichen.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom" azname="Umweltzeichen" imgsrc="src/assets/images/umwelt.jpg"></SmallCard>
   <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz ist regelmäßig an Erasmus+ Projekten beteiligt.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom" azname="Erasmus+ Projektschule" imgsrc="src/assets/images/erasmus.jpg"></SmallCard>
@@ -21,5 +21,4 @@ export default {
 
 <style>
 /* Styles for this component */
-
 </style>

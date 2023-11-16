@@ -6,6 +6,7 @@
     <h1 class="uk-text-lead zweigheading">Wirtschaftsingenieure</h1>
     <QuickFacts class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts>
     <AbteilungsText></AbteilungsText>
+    <Curriculum></Curriculum>
     <FooterMerge></FooterMerge>
   </div>
 </template>
@@ -16,6 +17,7 @@ import QuickFacts from "@/components/QuickFacts.vue";
 import AbteilungsText from "@/components/AbteilungsText.vue";
 import AvCard from "@/components/AvCard.vue";
 import FooterMerge from "@/components/FooterMerge.vue";
+import Curriculum from "@/components/Curriculum.vue";
 
 export default {
   name: 'WiView',
@@ -25,26 +27,12 @@ export default {
     AbteilungsText,
     AvCard,
     FooterMerge,
+    Curriculum,
   },
   data() {
     return {
       isInitialLoad: true,
     };
-  },
-  mounted() {
-    // Check if it's the initial load
-    if (this.isInitialLoad) {
-      // Disable transitions during the initial load
-      this.disableTransitions();
-    }
-  },
-  methods: {
-    disableTransitions() {
-      // Your logic to disable transitions
-      // This might involve setting CSS classes or manipulating the DOM
-      // You can, for example, add a class to your main container to disable transitions
-      this.isInitialLoad = false; // Mark the initial load as complete
-    },
   },
 };
 </script>

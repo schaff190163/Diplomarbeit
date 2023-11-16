@@ -2,8 +2,8 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <HeroSection></HeroSection>
-    <QuickLinks></QuickLinks>
     <div class="lape">
+      <QuickLinks></QuickLinks>
       <h1 class="head padleftright">Ausbildungsmöglichkeiten an der HTL Weiz</h1>
     <div class="grid-container padleftright padtopbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
       <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom" title="Wirtschaftsingineure" description="Die Wirtschaft braucht Persönlichkeiten, die sowohl den Markt als auch die Produkte von morgen mitgestalten. Hierfür sind folgende Anforderungen..." imgsrc = "/src/assets/images/logo_wi_250.png" detailsrc = "/wi"></AbteilungsCard>
@@ -59,7 +59,7 @@ export default {
   color: #F8F8F8;
 }
 .lape {
-  background-image: url('@/assets/images/laype.svg');
+  background-image: url('src/assets/images/laype.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -70,7 +70,7 @@ export default {
     gap: 10px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;

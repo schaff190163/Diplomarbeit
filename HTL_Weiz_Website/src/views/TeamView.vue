@@ -5,12 +5,12 @@
     <DirektionCard class="padleftright padtopbot"></DirektionCard>
     <h1 class="teamheading">Abteilungsvorstände</h1>
     <div class="grid-containerav padleftright padtopbot">
-      <AvCard avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc="src\assets\images\team\Macher.jpg"></AvCard>
-      <AvCard avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc="src\assets\images\team\Deimel.jpg"></AvCard>
-      <AvCard avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc="src\assets\images\team\Hierz.jpg"></AvCard>
-      <AvCard avname="Bernhard Pertl" avsubtitle="Abteilungsvorstand " imgsrc="src\assets\images\team\Pertl.jpg"></AvCard>
-      <AvCard avname="Heimo T. Blattner" avsubtitle="Abteilungsvorstand " imgsrc="src\assets\images\team\Blattner.jpg"></AvCard>
-      <AvCard avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc="src\assets\images\team\Hoellerbauer.jpg"></AvCard>
+      <AvCard avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc=""></AvCard>
+      <AvCard avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc=""></AvCard>
+      <AvCard avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc=""></AvCard>
+      <AvCard avname="Bernhard Pertl" avsubtitle="Abteilungsvorstand " imgsrc=""></AvCard>
+      <AvCard avname="Heimo T. Blattner" avsubtitle="Abteilungsvorstand " imgsrc=""></AvCard>
+      <AvCard avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc=""></AvCard>
     </div>
     <h1 class="teamheading">Lehrpersonal</h1>
     <div class="grid-containerstaff padleftright padtopbot">
@@ -28,7 +28,6 @@
 <script lang="ts">
 import NavBar from "@/components/NavBar.vue";
 import DirektionCard from "@/components/DirektionCard.vue";
-import NavBarSpace from '@/components/NavBarSpace.vue'
 import AvCard from "@/components/AvCard.vue";
 import StaffCard from "@/components/StaffCard.vue" 
 import FooterMerge from "@/components/FooterMerge.vue";
@@ -38,7 +37,6 @@ export default {
   components: {
     NavBar,
     DirektionCard,
-    NavBarSpace,
     AvCard,
     StaffCard,
     FooterMerge,

@@ -1,6 +1,5 @@
 <template>
-    <div>
-    <div class="padtopbot padleftright">
+    <div class="padleftright">
     <div class="uk-child-width-expand@s" uk-grid>
         <div>
             <h4>Kontakt</h4>
@@ -48,8 +47,7 @@
         </div>
     </div>
     </div>
-    <div class="ifoot"><div class="padleftright">Copyright HTL Weiz 2023 | <router-link to="/imprint">Impressum und Datenschutz</router-link></div></div>
-    </div>
+    <div class="padleftright ifoot">Copyright HTL Weiz 2023 | <router-link to="/imprint">Impressum und Datenschutz</router-link></div>
 </template>
 
 <script lang="ts">
@@ -66,9 +64,6 @@ export default {
 <style>
 /* Styles for this component */
 .ifooter {
-    background-color: #065272ff;
-    color: #065272ff;
     height: 10px;
-    width: 100vw;
 }
 </style>
