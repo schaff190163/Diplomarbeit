@@ -14,7 +14,8 @@
 import NavBar from "@/components/NavBar.vue";
 import PostCard from "@/components/PostCard.vue";
 import FooterMerge from "@/components/FooterMerge.vue";
-import { Api, Post } from "@/api"; // Import the 'Post' type here
+import { Api } from "@/api";
+import type { Post } from "@/api";
 
 export default {
   name: "NewsView",
