@@ -1,5 +1,5 @@
 <template>
-    <div class="padtopbot padleftright">
+    <div class="padtopbotsmall padleftright">
     <table class="uk-table uk-table-justify uk-table-divider">
         <thead>
             <tr>

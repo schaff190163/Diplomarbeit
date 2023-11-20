@@ -8,7 +8,7 @@
 import { defineComponent } from 'vue';
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
-import 'uikit/dist/css/uikit.css'; // Import the UIkit CSS file
+import 'uikit/dist/css/uikit.css';
 
 UIkit.use(Icons);
 
@@ -28,6 +28,12 @@ export default defineComponent({
   padding-left: 100px;
   padding-right: 100px;
 }
+
+.padtopbotsmall {
+  padding-bottom: 12.5px;
+  padding-top: 12.5px;
+}
+
 .darkbg {
   background-color: #E8E8E8;
 }
@@ -37,23 +43,31 @@ export default defineComponent({
 
 @media (max-width: 640px) {
   .padtopbot {
-  padding-bottom: 10px;
-  padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
   .padleftright {
     padding-left: 35px;
     padding-right: 35px;
   }
+  .padtopbotsmall {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 }
 
 @media (min-width: 1500px) {
   .padtopbot {
-  padding-bottom: 110px;
-  padding-top: 110px;
+    padding-bottom: 110px;
+    padding-top: 110px;
   }
+  .padtopbotsmall {
+    padding-bottom: 55px;
+    padding-top: 55px;
   .padleftright {
     padding-left: calc(20% - 150px);
     padding-right: calc(20% - 150px);
+  }
   }
 }
 </style>

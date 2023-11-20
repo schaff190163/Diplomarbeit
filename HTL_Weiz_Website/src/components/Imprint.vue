@@ -1,6 +1,6 @@
 <template>
-    <div class="padleftright">
-    <div class="uk-child-width-expand@s" uk-grid>
+    <div class="padtopbotsmall">
+    <div class="padleftright imprinttable uk-width-auto" uk-grid>
         <div>
             <h4>Kontakt</h4>
             <ul class="uk-list uk-list-collapse">
@@ -46,8 +46,8 @@
             </ul>
         </div>
     </div>
+    <div class="padleftright ifooter">Copyright HTL Weiz 2023 | <router-link to="/imprint" class="imprintlink">Impressum und Datenschutz</router-link></div>
     </div>
-    <div class="padleftright ifoot">Copyright HTL Weiz 2023 | <router-link to="/imprint">Impressum und Datenschutz</router-link></div>
 </template>
 
 <script lang="ts">
@@ -64,6 +64,13 @@ export default {
 <style>
 /* Styles for this component */
 .ifooter {
-    height: 10px;
+    background-color: #1BA373ff;
+    color: #F8F8F8ff;
+}
+.imprintlink {
+    color: #D7D7D7ff;
+}
+.imprinttable {
+    padding-bottom: calc(2vh - 1vw);
 }
 </style>
