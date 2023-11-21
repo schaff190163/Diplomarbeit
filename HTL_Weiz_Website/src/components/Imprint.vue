@@ -1,5 +1,5 @@
 <template>
-    <div class="padtopbotsmall">
+    <div class="padtop padbot">
     <div class="padleftright imprinttable uk-width-auto" uk-grid>
         <div>
             <h4>Kontakt</h4>

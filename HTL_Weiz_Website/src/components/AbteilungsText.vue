@@ -1,5 +1,5 @@
 <template>
-  <div class="padtopbot padleftright">
+  <div class="padtop padbot padleftright">
     <div>
       <h2 class="uk-text-large">Inhaltliche Schwerpunkte</h2>
       <p class="uk-text-default">

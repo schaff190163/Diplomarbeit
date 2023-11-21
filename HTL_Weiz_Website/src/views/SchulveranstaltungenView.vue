@@ -1,7 +1,7 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <div class="padleftright padtopbot padnav grid-containersv">
+    <div class="padleftright padtop padbot padnav grid-containersv">
       <PostCard></PostCard>
       <PostCard></PostCard>
       <PostCard></PostCard>

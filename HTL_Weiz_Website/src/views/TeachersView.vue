@@ -2,7 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/src/assets/images/teachers.png" uk-img></div>
-    <div class="padleftright padtopbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+    <div class="padleftright padtop padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
       <h1 uk-scrollspy-class="uk-animation-slide-bottom">Informationen für Lehrerinnen und Lehrer</h1>
       <p uk-scrollspy-class="uk-animation-slide-bottom">Startpunkt mit den wichtigsten Links und Informationen für Lehrerinnen und Lehrer der HTL Weiz. Für die Verwendung von eingeschränkten Bereichen wie dem Schulverwaltungstool müssen sich Lehrer zuerst registrieren und ein Benutzerkonto angelegt und vom Administrator aktiviert werden.</p>
         <div class="button-grid gridtopsp" uk-scrollspy-class="uk-animation-slide-bottom">

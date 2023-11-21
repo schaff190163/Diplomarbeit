@@ -2,9 +2,9 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <h1 class="teamheading">Direktion</h1>
-    <DirektionCard class="padleftright padtopbot"></DirektionCard>
+    <DirektionCard class="padleftright padtop padbot"></DirektionCard>
     <h1 class="teamheading">Abteilungsvorstände</h1>
-    <div class="grid-containerav padleftright padtopbot">
+    <div class="grid-containerav padleftright padtop padbot">
       <AvCard avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc=""></AvCard>
       <AvCard avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc=""></AvCard>
       <AvCard avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc=""></AvCard>
@@ -13,7 +13,7 @@
       <AvCard avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc=""></AvCard>
     </div>
     <h1 class="teamheading">Lehrpersonal</h1>
-    <div class="grid-containerstaff padleftright padtopbot">
+    <div class="grid-containerstaff padleftright padtop padbot">
       <StaffCard></StaffCard>
       <StaffCard></StaffCard>
       <StaffCard></StaffCard>

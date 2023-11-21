@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar></NavBar>
-        <div class="padtopbot padleftright">
+        <div class="padtop padbot padleftright">
             <h1>Impressum</h1>
             <h2>Höhere Technische Bundeslehranstalt Weiz</h2>
             <p>Dr.Karl Widdmannstraße 40 <br>A-8160 Weiz</p>

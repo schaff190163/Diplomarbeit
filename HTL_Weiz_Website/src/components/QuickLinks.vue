@@ -1,5 +1,5 @@
 <template>
-    <div class="uk-grid-large padtopbot padleftright qldiv" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500"
+    <div class="uk-grid-large padtop padbot padleftright qldiv" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500"
         uk-grid>
         <SmallCard class="uk-width-expand"
             uk-tooltip="title: Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet; delay: 500"
