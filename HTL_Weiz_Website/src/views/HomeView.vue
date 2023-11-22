@@ -59,7 +59,7 @@ export default {
   color: #F8F8F8;
 }
 .lape {
-  background-image: url('src/assets/images/laype.svg');
+  background-image: url('/rc/assets/images/laype.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
