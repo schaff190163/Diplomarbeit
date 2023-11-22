@@ -1,5 +1,5 @@
 <template>
-    <div class="uk-grid-large padtop padbot padleftright qldiv" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500"
+    <div class="uk-grid-large padtop padleftright qldiv" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500"
         uk-grid>
         <SmallCard class="uk-width-expand"
             uk-tooltip="title: Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet; delay: 500"
@@ -43,7 +43,5 @@ export default {
 <style>/* Styles for this component */
 .qldiv {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
       <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/src/assets/images/students.png" uk-img></div>
-    <div class="st-cont padleftright padtop padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+      <div class="st-cont padleftright padtop padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
       <h1 uk-scrollspy-class="uk-animation-slide-bottom">Informationen für Schülerinnen und Schüler</h1>
       <div uk-scrollspy-class="uk-animation-slide-bottom">
         <h2>Software für Schülerinnen und Schüler</h2>
@@ -35,8 +35,8 @@
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import FooterMerge from "@/components/FooterMerge.vue";
+import NavBar from "../components/NavBar.vue";
+import FooterMerge from "../components/FooterMerge.vue";
 
 export default {
   name: 'StudentsView',

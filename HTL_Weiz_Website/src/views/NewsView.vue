@@ -11,11 +11,11 @@
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import PostCard from "@/components/PostCard.vue";
-import FooterMerge from "@/components/FooterMerge.vue";
-import { Api } from "@/api";
-import type { Post } from "@/api";
+import NavBar from "../components/NavBar.vue";
+import PostCard from "../components/PostCard.vue";
+import FooterMerge from "../components/FooterMerge.vue";
+import { Api } from "../api";
+import type { Post } from "../api";
 
 export default {
   name: "NewsView",

@@ -26,11 +26,11 @@
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import DirektionCard from "@/components/DirektionCard.vue";
-import AvCard from "@/components/AvCard.vue";
-import StaffCard from "@/components/StaffCard.vue" 
-import FooterMerge from "@/components/FooterMerge.vue";
+import NavBar from "../components/NavBar.vue";
+import DirektionCard from "../components/DirektionCard.vue";
+import AvCard from "../components/AvCard.vue";
+import StaffCard from "../components/StaffCard.vue" 
+import FooterMerge from "../components/FooterMerge.vue";
 
 export default {
   name: 'TeamView',

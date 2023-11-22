@@ -1,6 +1,6 @@
 <template>
-    <div class="padtop padbot">
-    <div class="padleftright imprinttable uk-width-auto" uk-grid>
+    <div class="padtop">
+    <div class="padleftright padbot uk-child-width-expand@s" uk-grid>
         <div>
             <h4>Kontakt</h4>
             <ul class="uk-list uk-list-collapse">
@@ -69,8 +69,5 @@ export default {
 }
 .imprintlink {
     color: #D7D7D7ff;
-}
-.imprinttable {
-    padding-bottom: calc(2vh - 1vw);
 }
 </style>

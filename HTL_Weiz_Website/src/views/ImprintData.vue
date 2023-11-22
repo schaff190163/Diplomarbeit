@@ -37,8 +37,8 @@
 </div></template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import FooterMerge from "@/components/FooterMerge.vue";
+import NavBar from "../components/NavBar.vue";
+import FooterMerge from "../components/FooterMerge.vue";
 
 export default {
     name: 'ImprintData',

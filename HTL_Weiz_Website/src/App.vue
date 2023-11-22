@@ -6,14 +6,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
+import uk from 'uikit'
 import 'uikit/dist/css/uikit.css';
-
-UIkit.use(Icons);
+import Icons from 'uikit/dist/js/uikit-icons';
 
 export default defineComponent({
   name: 'App',
+  mounted() {
+    uk.use(Icons);
+  },
 });
 </script>
 
@@ -27,6 +28,7 @@ export default defineComponent({
   padding-bottom: 25px;
 }
 .padleftright {
+  padding-left: 100px;
   padding-right: 100px;
 }
 .roundedl {
@@ -41,17 +43,12 @@ export default defineComponent({
   padding-bottom: 10px;
 }
 .padleftright {
+  padding-left: 35px;
   padding-right: 35px;
 }
 }
 
 @media (min-width: 1500px) {
-.padtop {
-  padding-top: 110px;
-}
-.padbot {
-  padding-bottom: 110px;
-}
 .padleftright {
   padding-left: calc(20% - 150px);
   padding-right: calc(20% - 150px);

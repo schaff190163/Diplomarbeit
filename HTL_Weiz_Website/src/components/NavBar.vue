@@ -14,8 +14,6 @@
                           <img
                             src="/src/assets/images/htl_logo.svg"
                             width="100"
-                            height=""
-                            alt="HTL Logo"
                           />
                         </router-link>
                       </li>
@@ -270,13 +268,13 @@ export default {
     height: 400px;
   }
 }
-@media (max-width: 960px){
+@media (max-width: 1075px){
   .navbigscreen {
     display: none;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1075px) {
   .navsmallscreen {
     display: none;
   }

@@ -6,9 +6,9 @@
 </template>
 
 <script lang="ts">
-import Imprint from "@/components/Imprint.vue";
-import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
-import GeoRow from "@/components/GeoRow.vue";
+import Imprint from "../components/Imprint.vue";
+import AuszeichnungsRow from "../components/AuszeichnungsRow.vue";
+import GeoRow from "../components/GeoRow.vue";
 
 export default {
   name: 'FooterMerge',

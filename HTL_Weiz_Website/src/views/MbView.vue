@@ -12,11 +12,11 @@
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import QuickFacts from "@/components/QuickFacts.vue";
-import AbteilungsText from "@/components/AbteilungsText.vue";
-import AvCard from "@/components/AvCard.vue";
-import FooterMerge from "@/components/FooterMerge.vue";
+import NavBar from "../components/NavBar.vue";
+import QuickFacts from "../components/QuickFacts.vue";
+import AbteilungsText from "../components/AbteilungsText.vue";
+import AvCard from "../components/AvCard.vue";
+import FooterMerge from "../components/FooterMerge.vue";
 
 export default {
   name: 'MbView',

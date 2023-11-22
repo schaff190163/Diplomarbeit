@@ -5,7 +5,7 @@
     <div class="lape">
       <QuickLinks></QuickLinks>
       <h1 class="head padleftright">Ausbildungsmöglichkeiten an der HTL Weiz</h1>
-    <div class="grid-container padleftright padtop padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
+    <div class="grid-container padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
       <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom" title="Wirtschaftsingineure" description="Die Wirtschaft braucht Persönlichkeiten, die sowohl den Markt als auch die Produkte von morgen mitgestalten. Hierfür sind folgende Anforderungen..." imgsrc = "/src/assets/images/logo_wi_250.png" detailsrc = "/wi"></AbteilungsCard>
       <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom" title="Elektrotechnik" description="Die Bedeutung der Elektrotechnik ist mittlerweile in allen Bereichen der Industrie,  der Wirtschaft und im Bereich Dienstleistungen sehr groß geworden..." imgsrc = "/src/assets/images/logo_et_250.png" detailsrc = "/et"></AbteilungsCard>
       <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom" title="Informationstechnologie" description="Die Informationstechnologie stellt das Bindeglied zwischen Benutzer und Maschine sowie Mensch und Technik dar. Sie steht damit auch zwischen der..." imgsrc = "/src/assets/images/logo_it_250.png" detailsrc = "/it"></AbteilungsCard>
@@ -21,13 +21,13 @@
   </div>
 </template>
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import AbteilungsCard from "@/components/AbteilungsCard.vue";
-import HeroSection from "@/components/HeroSection.vue"
-import Calendar from "@/components/Calendar.vue";
-import SchoolStats from "@/components/SchoolStats.vue";
-import FooterMerge from "@/components/FooterMerge.vue";
-import QuickLinks from "@/components/QuickLinks.vue";
+import NavBar from "../components/NavBar.vue";
+import AbteilungsCard from "../components/AbteilungsCard.vue";
+import HeroSection from "../components/HeroSection.vue"
+import Calendar from "../components/Calendar.vue";
+import SchoolStats from "../components/SchoolStats.vue";
+import FooterMerge from "../components/FooterMerge.vue";
+import QuickLinks from "../components/QuickLinks.vue";
 
 export default {
   name: 'HomeView',
