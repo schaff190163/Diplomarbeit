@@ -21,14 +21,52 @@
                 <td>2</td>
             </tr>
             <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
+                <td>Deutsch</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
             </tr>
             <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
+                <td>Englisch</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>GGP</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Bewegung und Sport</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Angewandte Mathematik</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Naturwissenschaften</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+                <td>-</td>
             </tr>
         </tbody>
     </table>

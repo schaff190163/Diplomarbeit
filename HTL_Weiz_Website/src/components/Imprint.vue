@@ -1,6 +1,6 @@
 <template>
     <div class="padtop">
-    <div class="padleftright padbot uk-child-width-expand@s" uk-grid>
+    <div class="padleftright padbot uk-child-width-expand@s" uk-grid uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
         <div>
             <h4>Kontakt</h4>
             <ul class="uk-list uk-list-collapse">

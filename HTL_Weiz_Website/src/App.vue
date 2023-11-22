@@ -6,20 +6,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import uk from 'uikit'
-import 'uikit/dist/css/uikit.css';
-import Icons from 'uikit/dist/js/uikit-icons';
 
 export default defineComponent({
   name: 'App',
   mounted() {
-    uk.use(Icons);
   },
 });
 </script>
 
-<style lang="less">
-@import "../node_modules/uikit/src/less/uikit.less";
+<style>
 
 .padtop {
   padding-top: 25px;
