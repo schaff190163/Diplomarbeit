@@ -7,6 +7,51 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  * 3. Style
  */
+/*
+ * THIS SECTION IS FOR SELF-CREATED STYLING
+ */
+.padtop {
+  padding-top: 25px;
+}
+
+.padbot {
+  padding-bottom: 25px;
+}
+
+.padleftright {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.roundedl {
+  border-radius: 18px;
+}
+
+@media (max-width: 640px) {
+  .padtop {
+    padding-top: 10px;
+  }
+
+  .padbot {
+    padding-bottom: 10px;
+  }
+
+  .padleftright {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .padleftright {
+    padding-left: calc(20% - 150px);
+    padding-right: calc(20% - 150px);
+  }
+}
+/*
+ * ========================================================================
+ */
+
 html {
   /* 1 */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -16,7 +61,7 @@ html {
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 3 */
-  background: #fff;
+  background: #F8F8F8;
   color: #666;
 }
 /*
@@ -32,14 +77,14 @@ body {
  */
 a,
 .uk-link {
-  color: #1e87f0;
+  color: #1BA373;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover,
 .uk-link:hover,
 .uk-link-toggle:hover .uk-link {
-  color: #0f6ecd;
+  color: #1BA373;
   text-decoration: underline;
 }
 /* Text-level semantics
@@ -74,7 +119,7 @@ strong {
   /* 2 */
   font-size: 0.875rem;
   /* 3 */
-  color: #f0506e;
+  color: #E63023;
   white-space: nowrap;
   padding: 2px 6px;
   background: #f8f8f8;
@@ -83,13 +128,13 @@ strong {
  * Emphasize
  */
 em {
-  color: #f0506e;
+  color: #E63023;
 }
 /*
  * Insert
  */
 ins {
-  background: #ffd;
+  background: #a2f2d6;
   color: #666;
   text-decoration: none;
 }
@@ -97,7 +142,7 @@ ins {
  * Mark
  */
 mark {
-  background: #ffd;
+  background: #a2f2d6;
   color: #666;
 }
 /*
@@ -402,7 +447,7 @@ pre code {
 /* Selection pseudo-element
  ========================================================================== */
 ::selection {
-  background: #39f;
+  background: #1BA373;
   color: #fff;
   text-shadow: none;
 }
@@ -477,7 +522,7 @@ a.uk-link-heading,
 a.uk-link-heading:hover,
 .uk-link-heading a:hover,
 .uk-link-toggle:hover .uk-link-heading {
-  color: #1e87f0;
+  color: #1BA373;
   text-decoration: none;
 }
 /* Reset
@@ -1492,7 +1537,7 @@ button.uk-icon:not(:disabled) {
   outline: none;
   background-color: #fff;
   color: #666;
-  border-color: #1e87f0;
+  border-color: #1BA373;
 }
 /* Disabled */
 .uk-input:disabled,
@@ -1691,7 +1736,7 @@ select.uk-form-width-xsmall {
 .uk-checkbox:focus {
   background-color: rgba(0, 0, 0, 0);
   outline: none;
-  border-color: #1e87f0;
+  border-color: #1BA373;
 }
 /*
  * Checked
@@ -1699,14 +1744,14 @@ select.uk-form-width-xsmall {
 .uk-radio:checked,
 .uk-checkbox:checked,
 .uk-checkbox:indeterminate {
-  background-color: #1e87f0;
+  background-color: #1BA373;
   border-color: transparent;
 }
 /* Focus */
 .uk-radio:checked:focus,
 .uk-checkbox:checked:focus,
 .uk-checkbox:indeterminate:focus {
-  background-color: #0e6dcd;
+  background-color: #1BA373;
 }
 /*
  * Icons
@@ -1987,19 +2032,19 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-button-primary {
-  background-color: #1e87f0;
+  background-color: #1BA373;
   color: #fff;
   border: 1px solid transparent;
 }
 /* Hover */
 .uk-button-primary:hover {
-  background-color: #0f7ae5;
+  background-color: #1BA373;
   color: #fff;
 }
 /* OnClick + Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: #0e6dcd;
+  background-color: #1BA373;
   color: #fff;
 }
 /*
@@ -2205,11 +2250,11 @@ select.uk-form-width-xsmall {
  *    https://bugzilla.mozilla.org/show_bug.cgi?id=662351
  */
 .uk-progress::-webkit-progress-value {
-  background-color: #1e87f0;
+  background-color: #1BA373;
   transition: width 0.6s ease;
 }
 .uk-progress::-moz-progress-bar {
-  background-color: #1e87f0;
+  background-color: #1BA373;
   /* 1 */
   transition: width 0.6s ease;
 }
@@ -2303,7 +2348,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-section-primary {
-  background: #1e87f0;
+  background: #1BA373;
   --uk-navbar-color: light;
 }
 /*
@@ -2563,7 +2608,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-tile-primary {
-  background-color: #1e87f0;
+  background-color: #1BA373;
 }
 /*
  * Secondary
@@ -2643,7 +2688,7 @@ select.uk-form-width-xsmall {
   height: 22px;
   padding: 0 10px;
   /* 3 */
-  background: #1e87f0;
+  background: #1BA373;
   color: #fff;
   font-size: 0.875rem;
   /* 4 */
@@ -2694,7 +2739,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-card-primary {
-  background-color: #1e87f0;
+  background-color: #1BA373;
   color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
@@ -2702,7 +2747,7 @@ select.uk-form-width-xsmall {
   color: #fff;
 }
 .uk-card-primary.uk-card-hover:hover {
-  background-color: #1e87f0;
+  background-color: #1BA373;
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
 /*
@@ -2975,7 +3020,7 @@ select.uk-form-width-xsmall {
  */
 .uk-alert-primary {
   background: #d8eafc;
-  color: #1e87f0;
+  color: #1BA373;
 }
 /*
  * Success
@@ -3051,7 +3096,7 @@ select.uk-form-width-xsmall {
   border-radius: 500px;
   vertical-align: middle;
   /* 1 */
-  background: #1e87f0;
+  background: #1BA373;
   color: #fff !important;
   font-size: 11px;
   /* 2 */
@@ -3072,7 +3117,7 @@ select.uk-form-width-xsmall {
 .uk-label {
   display: inline-block;
   padding: 0 10px;
-  background: #1e87f0;
+  background: #1BA373;
   line-height: 1.5;
   font-size: 0.875rem;
   color: #fff;
@@ -3377,7 +3422,7 @@ select.uk-form-width-xsmall {
 /* Focus */
 .uk-search-default .uk-search-input:focus {
   background-color: rgba(0, 0, 0, 0);
-  border-color: #1e87f0;
+  border-color: #1BA373;
 }
 /*
  * Icon
@@ -4387,7 +4432,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-notification-message-primary {
-  color: #1e87f0;
+  color: #1BA373;
 }
 /*
  * Success
@@ -7453,8 +7498,8 @@ ul.uk-nav-sub {
   /* 3 */
   display: inline-block;
   /* 4 */
-  background-color: #1e87f0;
-  background-image: linear-gradient(90deg, #1e87f0 0%, #411ef0 100%);
+  background-color: #1BA373;
+  background-image: linear-gradient(90deg, #1BA373 0%, #15845d 100%);
 }
 /* Alignment modifiers
  ========================================================================== */
