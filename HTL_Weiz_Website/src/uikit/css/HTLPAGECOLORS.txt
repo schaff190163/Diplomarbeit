@@ -1,0 +1,15 @@
+background: #F8F8F8
+midgrey: #bbb
+darkgrey: #666
+htlblue: #065272
+htlgreen: #1BA373
+htlaccentgreen: #a2f2d6
+
+branches
+    wiorange: #F49712
+    etyellow: #FFD962
+    itblue: #112D69
+    mbblue: #0D5873
+    atblue: #4B96D1
+    utgreen: #00943C
+    mtred: #E63023

@@ -1,7 +1,6 @@
 <template>
-    <div class="imprint-container uk-background-muted ">
-    <div class="uk-child-width-expand@s" uk-grid>
-
+    <div class="padtop">
+    <div class="padleftright padbot uk-child-width-expand@s" uk-grid uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
         <div>
             <h4>Kontakt</h4>
             <ul class="uk-list uk-list-collapse">
@@ -46,8 +45,8 @@
                 <li>Vertrauenslehrer</li>
             </ul>
         </div>
-
     </div>
+    <div class="padleftright ifooter">Copyright HTL Weiz 2023 | <router-link to="/imprint" class="imprintlink">Impressum und Datenschutz</router-link></div>
     </div>
 </template>
 
@@ -64,18 +63,11 @@ export default {
 
 <style>
 /* Styles for this component */
-.imprint-container {
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+.ifooter {
+    background-color: #1BA373ff;
+    color: #F8F8F8ff;
 }
-@media (max-width: 640px) {
-  .imprint-container {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  }
+.imprintlink {
+    color: #D7D7D7ff;
 }
 </style>

@@ -1,36 +1,31 @@
 <template>
-  <div class="uk-background-muted">
+  <div class="uk-background-muted ">
     <NavBar></NavBar>
     <div class="wihero uk-background-width-1-1"></div>
     <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
       data-src="/src/assets/images/at_hero.png" uk-img></div>
     <h1 class="uk-text-lead zweigheading">Maschinenbau - Automatisierungstechnik</h1>
-    <QuickFacts class="zweigpadding" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Abschluss der 8. Schulstufe" standort="Fürstenfeld"></QuickFacts>
+    <QuickFacts class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Abschluss der 8. Schulstufe" standort="Fürstenfeld"></QuickFacts>
     <AbteilungsText></AbteilungsText>
-    <AuszeichnungsRow></AuszeichnungsRow>
-    <Imprint></Imprint>
+    <FooterMerge></FooterMerge>
   </div>
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import Imprint from "@/components/Imprint.vue";
-import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
-import Banner from "@/components/Banner.vue";
-import QuickFacts from "@/components/QuickFacts.vue";
-import AbteilungsText from "@/components/AbteilungsText.vue";
-import AvCard from "@/components/AvCard.vue";
+import NavBar from "../components/NavBar.vue";
+import QuickFacts from "../components/QuickFacts.vue";
+import AbteilungsText from "../components/AbteilungsText.vue";
+import AvCard from "../components/AvCard.vue";
+import FooterMerge from "../components/FooterMerge.vue";
 
 export default {
   name: 'AtView',
   components: {
     NavBar,
-    Imprint,
-    AuszeichnungsRow,
-    Banner,
     QuickFacts,
     AbteilungsText,
     AvCard,
+    FooterMerge,
   },
 };
 </script>
@@ -40,7 +35,7 @@ export default {
   font-size: 40px;
   padding-left: 100px;
 }
-.zweigpadding {
+.padleftright {
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -48,10 +43,6 @@ export default {
   .zweigheading {
   font-size: 30px;
   padding-left: 35px;
-  }
-  .zweigpadding {
-  padding-left: 35px;
-  padding-right: 35px;
   }
 }
 </style>

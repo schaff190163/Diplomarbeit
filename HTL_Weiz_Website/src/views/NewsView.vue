@@ -1,50 +1,52 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <!-- Render the fetched data here -->
-    <div v-if="posts.length > 0">
+    <div class="padleftright padtopbot padnav grid-containersv">
       <div v-for="post in posts" :key="post.id">
-        <h2>{{ post.title.rendered }}</h2>
-        <div v-html="post.content.rendered"></div>
+        <PostCard :post="post"></PostCard>
       </div>
+      <FooterMerge></FooterMerge>
     </div>
-    <PostCard></PostCard>
-    <AuszeichnungsRow></AuszeichnungsRow>
-    <Imprint></Imprint>
   </div>
 </template>
 
 <script lang="ts">
-import NavBar from "@/components/NavBar.vue";
-import Imprint from "@/components/Imprint.vue";
-import AuszeichnungsRow from "@/components/AuszeichnungsRow.vue";
-import PostCard from "@/components/PostCard.vue";
-import { fetchPosts } from "@/api"; // Import your fetchPosts function
+import NavBar from "../components/NavBar.vue";
+import PostCard from "../components/PostCard.vue";
+import FooterMerge from "../components/FooterMerge.vue";
+import { Api } from "../api";
+import type { Post } from "../api";
 
 export default {
-  name: 'NewsView',
+  name: "NewsView",
   components: {
     NavBar,
-    Imprint,
-    AuszeichnungsRow,
-    PostCard
-},
+    PostCard,
+    FooterMerge,
+  },
   data() {
     return {
-      posts: [] as Posts[], // Explicitly define the type as Posts[]
+      posts: [] as Post[], // Specify the type here
     };
   },
-  async mounted() {
-    try {
-      const posts = await fetchPosts() as Posts[]; // Type assertion here
+  created() {
+    const api = new Api();
+    api.getPosts().then((posts: Post[]) => {
       this.posts = posts;
-    } catch (error) {
-      console.error(error);
-    }
-  },
+    });
+  }
 };
 </script>
 
 <style>
-/* Styles for this component */
+.padnav {
+  padding-top: 100px;
+}
+
+.grid-containersv {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 50px;
+  position: relative;
+}
 </style>

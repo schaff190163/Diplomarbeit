@@ -1,38 +1,52 @@
 import axios from "axios";
 
-export interface Posts {
+const authAxios = axios.create({
+  baseURL: "https://dev.htlweiz.at/wp-json/wp/v2",
+  auth: {
+    username: 'vue_js',
+    password: 'Qz9H02D8g5Z37av8ToxTJX5k',
+  },
+});
+
+export interface Post {
   id: number;
   date: string;
-  title: {
-    rendered: string;
-  };
-  content: {
-    rendered: string;
-  };
+  date_gmt: string;
+  guid: { rendered: string };
+  modified: string;
+  modified_gmt: string;
+  slug: string;
+  status: string;
+  type: string;
+  link: string;
+  title: { rendered: string };
+  content: { rendered: string; protected: boolean };
+  excerpt: { rendered: string; protected: boolean };
+  author: number;
+  featured_media: number;
+  comment_status: string;
+  ping_status: string;
+  sticky: boolean;
+  template: string;
+  format: string;
+  meta: { footnotes: string };
+  categories: number[];
+  tags: string[];
+  acf: any[];
+  _links: any;
 }
 
-const baseURL = "https://dev.htlweiz.at/wp-json/wp/v2/posts/";
 
-const username = "vue_js";
-const password = "6OceAv#$81v7S27qCH1FPQMu";
+export class Api {
+  private axiosInstance = authAxios;
 
-export async function fetchPosts(): Promise<Posts[]> {
-  try {
-    const response = await axios.get(baseURL);
-    const posts: Posts[] = response.data.map((item: any) => ({
-      id: item.id,
-      date: item.date,
-      title: {
-        rendered: item.title.rendered,
-      },
-      content: {
-        rendered: item.content.rendered,
-      },
-    }));
-    return posts;
-  } catch (error) {
-    // Handle errors here
-    console.error("Error fetching posts:", error);
-    throw error;
+  async getPosts(): Promise<Post[]> {
+    const response = await this.axiosInstance.get("/posts");
+    return response.data as Post[];
+  }
+
+  async getPostById(id: number): Promise<Post> {
+    const response = await this.axiosInstance.get(`/posts/${id}`);
+    return response.data as Post;
   }
 }

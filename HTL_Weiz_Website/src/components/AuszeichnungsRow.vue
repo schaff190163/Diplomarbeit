@@ -1,38 +1,24 @@
 <template>
-  <div class="uk-grid-large uk-flex-center uk-width-auto@m azstyle" uk-grid>
-    <AuszeichnungsCard azname="Mint Gütesiegel" imgsrc="src/assets/images/mint.jpg"></AuszeichnungsCard>
-    <AuszeichnungsCard azname="Umweltzeichen" imgsrc="src/assets/images/umwelt.jpg"></AuszeichnungsCard>
-    <AuszeichnungsCard azname="Erasmus+ Projektschule" imgsrc="src/assets/images/erasmus.jpg"></AuszeichnungsCard>
-    <AuszeichnungsCard azname="Innovativste Schule" imgsrc="src/assets/images/inno.jpg"></AuszeichnungsCard>
-    <AuszeichnungsCard azname="Förderangebote" imgsrc="src/assets/images/förder.png"></AuszeichnungsCard>
+  <div class="uk-grid-large padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" uk-grid>
+  <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Mint Gütesiegel" imgsrc="/src/assets/images/mint.jpg"></SmallCard>
+  <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz führt seit 2002 das österreichische Umweltzeichen.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Umweltzeichen" imgsrc="/src/assets/images/umwelt.jpg"></SmallCard>
+  <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz ist regelmäßig an Erasmus+ Projekten beteiligt.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Erasmus+ Projektschule" imgsrc="/src/assets/images/erasmus.jpg"></SmallCard>
+  <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz wurde wiederholt mit dem Titel Innovativste Schule der Steiermark ausgezeichnet.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom" azname="Innovativste Schule" imgsrc="/src/assets/images/inno.jpg"></SmallCard>
+  <SmallCard class="uk-width-expand" uk-tooltip="title: S-6.1b COVID-19 - Unterrichtsbezogene Förderangebote; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Förderangebote" imgsrc="/src/assets/images/förder.png"></SmallCard>
   </div>
 </template>
 
 <script lang="ts">
-import AuszeichnungsCard from './AuszeichnungsCard.vue';
+import SmallCard from './SmallCard.vue';
 
 export default {
   name: 'AuszeichnungsRow',
   components: {
-    AuszeichnungsCard,
+    SmallCard,
   },
 };
 </script>
 
 <style>
 /* Styles for this component */
-.azstyle {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-@media (max-width: 640px) {
-  .azstyle {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  }
-}
 </style>

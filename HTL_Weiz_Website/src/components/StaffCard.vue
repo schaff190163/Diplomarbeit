@@ -4,7 +4,7 @@
       <div>
           <div class="uk-card uk-card-default uk-width-1-1">
               <div class="uk-card-media-top">
-                  <img src="src/assets/images/team/Blattner.jpg" width="1800" height="1200" alt="">
+                  <img src="" width="1800" height="1200" alt="">
               </div>
               <div class="uk-card-body">
                   <h3 class="uk-card-title">Heimo T. Blattner</h3>

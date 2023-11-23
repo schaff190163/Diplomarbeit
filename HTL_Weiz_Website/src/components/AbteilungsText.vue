@@ -1,5 +1,5 @@
 <template>
-  <div class="textgrid">
+  <div class="padtop padbot padleftright">
     <div>
       <h2 class="uk-text-large">Inhaltliche Schwerpunkte</h2>
       <p class="uk-text-default">
@@ -34,18 +34,4 @@ export default {
 
 <style>
 /* Styles for this component */
-.textgrid {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-@media (max-width: 640px) {
-  .textgrid {
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  }
-}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="dirspace">
+  <div>
     <div
       class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
       uk-grid
@@ -38,4 +38,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

@@ -1,12 +1,12 @@
 <template>
   <div class="image-container">
-    <img class="image uk-box-shadow-medium" :src="imgsrc" :alt="azname" />
+    <img class="image uk-box-shadow-medium roundedl" :src="imgsrc" :alt="azname" />
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'AuszeichnungsCard',
+  name: 'Small',
   props: {
     imgsrc: String,
     azname: String,
@@ -21,7 +21,7 @@ export default {
   justify-content: center;
 }
 .image {
-  width: 120px;
-  height: 120px;
-}</style>
-
+  max-width: 110px;
+  max-height: 110px;
+}
+</style>
