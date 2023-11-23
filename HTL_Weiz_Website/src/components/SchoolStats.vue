@@ -28,7 +28,6 @@ export default {
 <style>
 .sscentered-row {
   display: flex;
-  background-color: #1BA373ff;
   padding-top: 20px;
   padding-bottom: 20px;
   justify-content: center;

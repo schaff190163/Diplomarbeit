@@ -1,5 +1,5 @@
 <template>
-  <div class="dirspace">
+  <div class="dirspace roundedl">
   <div class="uk-child-width-1-2@m" uk-grid>
       <div>
           <div class="uk-card uk-card-default uk-width-1-1">

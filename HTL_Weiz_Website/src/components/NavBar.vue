@@ -9,27 +9,14 @@
                 <div class=".uk-navbar-center">
                   <ul class="uk-navbar-nav">
                       <button class="uk-button uk-button-default navsmallscreen" type="button" uk-toggle="target: #offcanvas-nav"><span uk-icon="icon: menu; ratio: 2"></span></button>
-                      <li>
-                        <router-link class="uk-logo" to="/">
-                          <img
-                            src="/src/assets/images/htl_logo.svg"
-                            width="100"
-                          />
-                        </router-link>
-                      </li>
+                      <li><router-link class="uk-logo" to="/"><img src="/src/assets/images/htl_logo.svg" width="100"/></router-link></li>
                       <li class="navbigscreen">
                         <a href="#">Aktuelles</a>
                         <div class="uk-navbar-dropdown">
                           <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li>
-                              <router-link to="/schulveranstaltungen"
-                                >Schulveranstaltungen</router-link
-                              >
-                            </li>
+                            <li><router-link to="/schulveranstaltungen">Schulveranstaltungen</router-link></li>
                             <li><router-link to="/news">News</router-link></li>
-                            <li>
-                              <router-link to="/erasmus">Erasmus+</router-link>
-                            </li>
+                            <li><router-link to="/erasmus">Erasmus+</router-link></li>
                           </ul>
                         </div>
                       </li>
@@ -37,90 +24,34 @@
                         <a href="#">Ausbildung</a>
                         <div class="uk-navbar-dropdown">
                           <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li>
-                              <router-link to="/wi"
-                                >Wirtschaftsingenieure</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/et">Elektrotechnik</router-link>
-                            </li>
-                            <li>
-                              <router-link to="/it"
-                                >Informationstechnologie</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/ut"
-                                >Maschinenbau - Umwelttechnik</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/mb"
-                                >Maschinenbau - Anlagentechnik</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/at"
-                                >Maschinenbau -
-                                Automatisierungstechnik</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/awi"
-                                >Abendschule - Wirtschaftsingenieure</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/mt"
-                                >Fachschule - Mechatronik</router-link
-                              >
-                            </li>
+                            <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
+                            <li><router-link to="/et">Elektrotechnik</router-link></li>
+                            <li><router-link to="/it">Informationstechnologie</router-link></li>
+                            <li><router-link to="/ut">Maschinenbau - Umwelttechnik</router-link></li>
+                            <li><router-link to="/mb">Maschinenbau - Anlagentechnik</router-link></li>
+                            <li><router-link to="/at">Maschinenbau -Automatisierungstechnik</router-link></li>
+                            <li><router-link to="/awi">Abendschule - Wirtschaftsingenieure</router-link></li>
+                            <li><router-link to="/mt">Fachschule - Mechatronik</router-link></li>
                           </ul>
                         </div>
                       </li>
                       <li class="navbigscreen"><router-link to="/team">Team</router-link></li>
-                      <li class="navbigscreen">
-                        <router-link to="/ansprechpartner"
-                          >AnsprechpartnerInnen</router-link
-                        >
-                      </li>
+                      <li class="navbigscreen"><router-link to="/ansprechpartner">AnsprechpartnerInnen</router-link></li>
                       <li class="navbigscreen">
                         <a href="#">Services</a>
                         <div class="uk-navbar-dropdown">
                           <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li>
-                              <router-link to="/students"
-                                >SchülerInnen</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/teachers"
-                                >LehrerInnen</router-link
-                              >
-                            </li>
-                            <li>
-                              <router-link to="/parents">Eltern</router-link>
-                            </li>
-                            <li>
-                              <router-link to="/anmeldung">Anmeldung</router-link>
-                            </li>
+                            <li><router-link to="/students">SchülerInnen</router-link></li>
+                            <li><router-link to="/teachers">LehrerInnen</router-link></li>
+                            <li><router-link to="/parents">Eltern</router-link></li>
+                            <li><router-link to="/anmeldung">Anmeldung</router-link></li>
                           </ul>
                         </div>
                       </li>
                       <div class="uk-margin navbigscreen">
                         <form class="uk-search uk-search-default ">
-                          <a
-                            href=""
-                            class="uk-search-icon-flip"
-                            uk-search-icon
-                          ></a>
-                          <input
-                            class="uk-search-input nbrounded uk-margin-left roundedl"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                          />
+                          <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                          <input class="uk-search-input nbrounded uk-margin-left roundedl" type="search" placeholder="Search" aria-label="Search"/>
                         </form>
                       </div>
                     </ul>
@@ -130,115 +61,42 @@
             </nav>
           </div>
         </div>
-      </div>
-      <div id="offcanvas-nav" uk-offcanvas="mode: push" class="navsmallscreen">
-      <div class="uk-offcanvas-bar">
-        <ul class="uk-navbar-nav">
-                          <div class="uk-margin">
-                            <form class="uk-search uk-search-default ">
-                              <a
-                                href=""
-                                class="uk-search-icon-flip"
-                                uk-search-icon
-                              ></a>
-                              <input
-                                class="uk-search-input nbrounded uk-margin-left roundedl"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                              />
-                            </form>
-                          </div>
-                        <li>
-                          <a href="#">Aktuelles</a>
-                            <ul class="uk-nav uk-dropdown-nav">
-                              <li>
-                                <router-link to="/schulveranstaltungen"
-                                  >Schulveranstaltungen</router-link
-                                >
-                              </li>
-                              <li><router-link to="/news">News</router-link></li>
-                              <li>
-                                <router-link to="/erasmus">Erasmus+</router-link>
-                              </li>
-                            </ul>
-                        </li>
-                        <li>
-                          <a href="#">Ausbildung</a>
-                            <ul class="uk-nav uk-dropdown-nav">
-                              <li>
-                                <router-link to="/wi"
-                                  >Wirtschaftsingenieure</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/et">Elektrotechnik</router-link>
-                              </li>
-                              <li>
-                                <router-link to="/it"
-                                  >Informationstechnologie</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/ut"
-                                  >Maschinenbau - Umwelttechnik</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/mb"
-                                  >Maschinenbau - Anlagentechnik</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/at"
-                                  >Maschinenbau -
-                                  Automatisierungstechnik</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/awi"
-                                  >Abendschule - Wirtschaftsingenieure</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/mt"
-                                  >Fachschule - Mechatronik</router-link
-                                >
-                              </li>
-                            </ul>
-                        </li>
-                        <li><router-link to="/team">Team</router-link></li>
-                        <li>
-                          <router-link to="/ansprechpartner"
-                            >AnsprechpartnerInnen</router-link
-                          >
-                        </li>
-                        <li>
-                          <a href="#">Services</a>
-                            <ul class="uk-nav uk-dropdown-nav">
-                              <li>
-                                <router-link to="/students"
-                                  >SchülerInnen</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/teachers"
-                                  >LehrerInnen</router-link
-                                >
-                              </li>
-                              <li>
-                                <router-link to="/parents">Eltern</router-link>
-                              </li>
-                              <li>
-                                <router-link to="/anmeldung">Anmeldung</router-link>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
-      </div>
+      <div id="offcanvas-nav" uk-offcanvas="mode: push; overlay: true" class="navsmallscreen">
+          <div class="uk-offcanvas-bar uk-flex uk-flex-column offcanvasstyle">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+              <li class="uk-active"><a href="#">Aktuelles</a></li>
+
+              <li class="uk-parent">
+                <a href="#">Ausbildung</a>
+                <ul class="uk-nav-sub uk-nav-default">
+                  <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
+                  <li><router-link to="/et">Elektrotechnik</router-link></li>
+                  <li><router-link to="/it">Informationstechnologie</router-link></li>
+                  <li><router-link to="/ut">Maschinenbau - Umwelttechnik</router-link></li>
+                  <li><router-link to="/mb">Maschinenbau - Anlagentechnik</router-link></li>
+                  <li><router-link to="/at">Maschinenbau - Automatisierungstechnik</router-link></li>
+                  <li><router-link to="/awi">Abendschule - Wirtschaftsingenieure</router-link></li>
+                  <li><router-link to="/mt">Fachschule - Mechatronik</router-link></li>
+                </ul>
+              </li>
+              <li><router-link to="/team">Team</router-link></li>
+              <li><router-link to="/ansprechpartner">AnsprechpartnerInnen</router-link></li>
+              <li class="uk-parent">
+                <a href="#">Services</a>
+                <ul class="uk-nav-sub uk-nav-default">
+                  <li><router-link to="/students">SchülerInnen</router-link></li>
+                  <li><router-link to="/teachers">LehrerInnen</router-link></li>
+                  <li><router-link to="/parents">Eltern</router-link></li>
+                  <li><router-link to="/anmeldung">Anmeldung</router-link></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
   </div>
-      <div style="height: 80px;"></div>
-    </div>
+  <div style="height: 80px;"></div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -255,28 +113,28 @@ export default {
 <style>
 /* Styles for this component */
 .img-logo {
-  height: auto;
+  height: auto !important;
 }
 .nbrounded {
-  border-radius: 50px;
+  border-radius: 50px !important;
 }
-.navsmallscreen {
-  background-color: #E8E8E8;
+.offcanvasstyle {
+  background-color: #F8F8F8;
 }
 @media (max-width: 640px){
   .img-logo{
-    height: 400px;
+    height: 400px !important;
   }
 }
 @media (max-width: 1075px){
   .navbigscreen {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 1075px) {
   .navsmallscreen {
-    display: none;
+    display: none !important;
   }
 }
 </style>
