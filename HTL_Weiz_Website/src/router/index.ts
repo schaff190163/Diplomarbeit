@@ -122,6 +122,12 @@ const router = createRouter({
       name: 'imprint',
 
       component: () => import(/* webpackChunkName: "search" */"../views/ImprintData.vue")
+    },
+    {
+      path: '/e2mily',
+      name: 'e2mily',
+
+      component: () => import(/* webpackChunkName: "search" */"../views/E2milyView.vue")
     }
   ]
 })

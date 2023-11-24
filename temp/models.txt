@@ -1,0 +1,60 @@
+<template>
+  <div class="uk-height-viewport uk-position-relative uk-overflow-hidden">
+    <div class="hei uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-background-center-center uk-light"
+    data-src="/src/assets/images/e2mily-model.png" uk-img>
+      <div class="uk-position-center">
+        <div class="uk-flex uk-flex-column uk-align-center uk-gap-large">
+          <div class="uk-text-bold uk-text-center uk-heading-large uk-margin-remove">E²MILY - GT</div>
+          <div class="uk-flex uk-flex-column uk-gap-medium">
+            <p class="uk-text uk-margin-remove">
+              Beschleunigung: 0 - 40km/h in 4,34 Sekunden
+              <br />
+              Höchstgeschwindigkeit: 40km/h
+              <br />
+              Lorem ipsum: 345,23m
+            </p>
+            <p class="uk-text uk-margin-remove">
+              Beschleunigung: 0 - 40km/h in 4,34 Sekunden
+              <br />
+              Höchstgeschwindigkeit: 40km/h
+              <br />
+              Lorem ipsum: 345,23m
+            </p>
+            <p class="uk-text uk-margin-remove">
+              Beschleunigung: 0 - 40km/h in 4,34 Sekunden
+              <br />
+              Höchstgeschwindigkeit: 40km/h
+              <br />
+              Lorem ipsum: 345,23m
+            </p>
+            <p class="uk-text uk-margin-remove">
+              Beschleunigung: 0 - 40km/h in 4,34 Sekunden
+              <br />
+              Höchstgeschwindigkeit: 40km/h
+              <br />
+              Lorem ipsum: 345,23m
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="uk-position-bottom-center uk-margin-bottom-large">
+        <Frame />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import Frame from "./Frame.vue";
+
+export default {
+  name: "Box",
+  components: {
+    Frame,
+  },
+};
+</script>
+
+<style>
+/* Custom styles might not be needed or may need adjustments based on UIkit classes */
+</style>
