@@ -1,12 +1,13 @@
 <template>
-  <div class="uk-background-muted">
+  <div>
     <NavBar></NavBar>
+    <h1 class="padleftright">News an der HTL Weiz</h1>
     <div class="padleftright padtopbot padnav grid-containersv">
       <div v-for="post in posts" :key="post.id">
         <PostCard :post="post"></PostCard>
       </div>
-      <FooterMerge></FooterMerge>
     </div>
+    <FooterMerge></FooterMerge>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import FooterMerge from "../components/FooterMerge.vue";
 import { Api } from "../api";
 import type { Post } from "../api";
 
+
 export default {
   name: "NewsView",
   components: {
@@ -26,15 +28,17 @@ export default {
   },
   data() {
     return {
-      posts: [] as Post[], // Specify the type here
+      posts: [] as Post[],
     };
   },
-  created() {
+  async created() {
     const api = new Api();
-    api.getPosts().then((posts: Post[]) => {
-      this.posts = posts;
-    });
-  }
+    try {
+      this.posts = await api.getPosts();
+    } catch (error) {
+      console.error('Error in NewsView created:', error);
+    }
+  },
 };
 </script>
 

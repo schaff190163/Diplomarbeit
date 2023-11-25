@@ -1,15 +1,13 @@
 <template>
   <div class="uk-card uk-card-default">
     <div class="uk-card-header">
-     <div class="uk-grid-small uk-flex-middle" uk-grid>
-       <div class="uk-width-auto">
-         <h3 class="uk-card-title uk-text-large">{{ post && post.title }}</h3>
-       </div>
-     </div>
+      <div class="uk-grid-small uk-flex-middle" uk-grid>
+        <div class="uk-width-auto">
+          <h3 class="uk-card-title uk-text-large" v-html="decodeEntities(post.title.rendered)"></h3>
+        </div>
+      </div>
     </div>
-    <div class="uk-card-body">
-      <div>{{ post.content }}</div>
-    </div>
+    <div class="uk-card-body" v-html="decodeEntities(post.content.rendered)"></div>
     <div class="uk-position-relative uk-visible-toggle uk-light padbotpost" tabindex="-1" uk-slider="center: true">
       <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
         <li class="uk-width-3-4">
@@ -34,10 +32,15 @@ export default {
       type: Object,
       default: () => ({})
     }
-  }
+  },
+  methods: {
+    decodeEntities(html: string): string {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      return doc.documentElement.textContent || '';
+    },
+  },
 };
 </script>
-
 
 <style>
 .padbotpost {

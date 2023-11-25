@@ -65,7 +65,16 @@
           <div class="uk-offcanvas-bar uk-flex uk-flex-column offcanvasstyle">
             <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
               <li class="uk-active"><a href="#">Aktuelles</a></li>
-
+              <ul class="uk-nav-sub uk-nav-default">
+                    <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
+                    <li><router-link to="/et">Elektrotechnik</router-link></li>
+                    <li><router-link to="/it">Informationstechnologie</router-link></li>
+                    <li><router-link to="/ut">Maschinenbau - Umwelttechnik</router-link></li>
+                    <li><router-link to="/mb">Maschinenbau - Anlagentechnik</router-link></li>
+                    <li><router-link to="/at">Maschinenbau - Automatisierungstechnik</router-link></li>
+                    <li><router-link to="/awi">Abendschule - Wirtschaftsingenieure</router-link></li>
+                    <li><router-link to="/mt">Fachschule - Mechatronik</router-link></li>
+                  </ul>
               <li class="uk-parent">
                 <a href="#">Ausbildung</a>
                 <ul class="uk-nav-sub uk-nav-default">
