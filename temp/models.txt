@@ -58,3 +58,44 @@ export default {
 <style>
 /* Custom styles might not be needed or may need adjustments based on UIkit classes */
 </style>
+
+
+
+
+
+
+
+
+
+<template>
+  <div class="uk-container">
+    <div class="uk-text-center">
+      <h1>News</h1>
+    </div>
+    <div class="uk-card uk-card-default uk-card-body">
+      <div class="uk-grid">
+        <div>
+          <img class="uk-width-1-1" src="rectangle-9.png" alt="Rectangle" />
+        </div>
+        <div>
+          <div class="uk-flex uk-flex-column">
+            <p class="uk-text-bold">11.11.2011</p>
+            <p class="uk-text-large">E²MILY - GT<br />IM GREENROOM DES PROJECT 1</p>
+          </div>
+          <p class="uk-text-muted">
+            Im Green Room von Project 1 konnten die Besucher:innen auf dem Red Bull Ring zwei innovative und
+            nachhaltige Projekte im Bereich Motorsport unter die Lupe nehmen.
+          </p>
+          <p class="uk-text-muted">
+            Eines davon war unser E-Kart E2MILY-GT. Daneben präsentierte Project 1 das „inklusive eKart“, das mit dem
+            System SpaceDrive II und Steuerelementen von Paravan ausgestattet ist.
+          </p>
+          <p class="uk-text-muted">
+            Die Fahr- und Lenkbefehle werden elektrisch über einen zwei- oder vier-wege Joystick übertragen.
+          </p>
+          <a href="#" class="uk-link-muted">Mehr Lesen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

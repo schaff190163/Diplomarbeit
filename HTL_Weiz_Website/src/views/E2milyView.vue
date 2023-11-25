@@ -4,6 +4,7 @@
         <Navbar></Navbar>
         <Landing></Landing>
         <Models></Models>
+        <News></News>
         <Footer></Footer>
     </div>
   </div>
@@ -12,7 +13,7 @@
 <script lang="ts">
 import Footer from "../components/e2mily/Footer.vue";
 import Models from "../components/e2mily/Models.vue";
-//import News from "../components/e2mily/News.vue";
+import News from "../components/e2mily/News.vue";
 //import Team from "../components/e2mily/Team.vue";
 import Navbar from "../components/e2mily/E2milyNavbar.vue";
 //import Contact from "../components/e2mily/Contact.vue"
@@ -23,7 +24,7 @@ export default {
   components: {
     Footer,
     Models,
-    //News,
+    News,
     //Team,
     Navbar,
     //Contact,
