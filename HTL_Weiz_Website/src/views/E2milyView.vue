@@ -2,12 +2,12 @@
   <div class="body">
     <div class="">
         <Navbar></Navbar>
-        <Landing></Landing>
-        <Models></Models>
+        <Landing id="landing"></Landing>
+        <Models id="model"></Models>
         <News></News>
-        <Team></Team>
-        <Sponsor></Sponsor>
-        <Contact></Contact>
+        <Team id="team"></Team>
+        <Sponsor id="sponsor"></Sponsor>
+        <Contact id="contact"></Contact>
         <Footer></Footer>
     </div>
   </div>

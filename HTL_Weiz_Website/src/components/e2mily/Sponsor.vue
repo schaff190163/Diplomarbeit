@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-padding-large">
+  <div class="uk-padding">
     <div class="">
       <div class="uk-width-expand@m">
         <div class="uk-text-center uk-margin-large-bottom">

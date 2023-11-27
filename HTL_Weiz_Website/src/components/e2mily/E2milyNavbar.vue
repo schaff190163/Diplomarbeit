@@ -10,23 +10,23 @@
                   <ul class="uk-navbar-nav">
                     <li>
                       <router-link to="/e2mily" class="uk-logo">
-                        <img src="/src/assets/images/e2mily-logo.png" width="100" />
+                        <a href="#landing" uk-scroll><img src="/src/assets/images/e2mily-logo.png" width="100" /></a>
                       </router-link>
                     </li>
                     <li class="navbigscreen">
-                      <a>E²MILY</a>
+                      <a href="#model" uk-scroll>E²MILY</a>
                     </li>
                     <li class="navbigscreen">
-                      <a>News</a>
+                      <a href="#news" uk-scroll>News</a>
                     </li>
                     <li class="navbigscreen">
-                      <a>Team</a>
+                      <a href="#team" uk-scroll>Team</a>
                     </li>
                     <li class="navbigscreen">
-                      <a>Sponsoring</a>
+                      <a href="#sponsor" uk-scroll>Sponsoring</a>
                     </li>
                     <li class="navbigscreen">
-                      <a>Kontakt</a>
+                      <a href="#contact" uk-scroll>Kontakt</a>
                     </li>
                   </ul>
                 </div>
