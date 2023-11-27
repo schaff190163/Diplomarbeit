@@ -48,3 +48,47 @@ export default {
 <style scoped>
 /* Add any additional styling specific to this component */
 </style>
+
+
+
+
+
+
+
+<div class="uk-container uk-padding">
+    <div class="uk-card uk-card-default uk-card-body">
+      <div class="uk-position-relative">
+        <div class="uk-flex uk-flex-center uk-flex-wrap uk-margin-large-top">
+          <div class="uk-card uk-card-default uk-card-body uk-margin">
+            <div class="uk-card-badge uk-label">MAX MUSTERMANN</div>
+            <div class="uk-card-title">5AHET</div>
+          </div>
+
+          <div class="uk-card uk-card-default uk-card-body uk-margin">
+            <div class="uk-card-badge uk-label">HERBERT STEINER</div>
+            <div class="uk-card-title">5AHET</div>
+          </div>
+
+          <div class="uk-card uk-card-default uk-card-body uk-margin">
+            <p class="uk-text-large uk-text-bold uk-margin-remove">
+              <span class="uk-text-primary">Harry Potter, </span>
+              <span>5AHET</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Include the Frame component here with the appropriate UIKit classes -->
+        <!-- Ensure that Frame.vue is also updated with UIKit styles -->
+        <Frame
+          class="uk-position-absolute uk-position-bottom uk-position-right uk-margin"
+          div-class-name="uk-card uk-card-default uk-card-body"
+          ellipse-class-name="uk-card-badge uk-label"
+          ellipse-class-name-override="uk-card-title"
+        />
+
+        <div class="uk-position-center uk-text-large uk-text-bold uk-text-primary">
+          UNSER TEAM
+        </div>
+      </div>
+    </div>
+  </div>

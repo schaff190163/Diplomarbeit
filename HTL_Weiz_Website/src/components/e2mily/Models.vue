@@ -1,26 +1,34 @@
 <template>
-  <div class="uk-padding">
-    <div uk-grid>
-      <div class="uk-width-expand@m">
-        <div class="uk-text-center">
-          <h1>E²MILY Models</h1>
-        </div>
-      </div>
-      <div class="uk-width-1-1@s uk-margin">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
-          <div class="uk-card-media-left uk-cover-container">
-            <img src="/src/assets/images/e2mily-model.png" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-          </div>
-          <div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">E²MILY - GT</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+  <div class="uk-position-relative uk-visible-toggle uk-dark uk-padding" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+    <ul class="uk-slider-items uk-grid">
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="/src/assets/images/e2mily-model-edited.png" width="1920" height="1080" alt="">
+                <div class="uk-position-center-right uk-margin-large-right">
+                    <h2 uk-slider-parallax="x: 100,-100">E²MILY - GT</h2>
+                    <p uk-slider-parallax="x: 200,-200"><b class="uk-text-bold">Höchstgeschwindigkeit: </b>37km/h</p>
+                    <p uk-slider-parallax="x: 200,-200"><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
+                    <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                    <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="/src/assets/images/e2mily-model-edited.png" width="1920" height="1080" alt="">
+                <div class="uk-position-center-right uk-margin-large-right">
+                    <h2 uk-slider-parallax="x: 100,-100">E²MILY - One</h2>
+                    <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                    <p uk-slider-parallax="x: 200,-200"><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
+                    <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                    <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-dark" href uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-dark" href uk-slidenav-next uk-slider-item="next"></a>
   </div>
 </template>
 
@@ -36,17 +44,4 @@ export default {
 </script>
 
 <style scoped>
-.title {
-  text-align: center;
-}
-
-/* Adjustments for the card layout */
-.uk-card-media-left {
-  width: 50%; /* Set the width of the media container */
-}
-
-.uk-card-media-left img {
-  max-width: 100%;
-  height: auto;
-}
 </style>

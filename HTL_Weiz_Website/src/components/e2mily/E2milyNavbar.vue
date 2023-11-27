@@ -25,6 +25,9 @@
                     <li class="navbigscreen">
                       <a>Sponsoring</a>
                     </li>
+                    <li class="navbigscreen">
+                      <a>Kontakt</a>
+                    </li>
                   </ul>
                 </div>
               </div>
