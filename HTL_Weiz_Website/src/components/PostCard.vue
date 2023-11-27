@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-card uk-card-default">
+  <div class="uk-card uk-card-default roundedl">
     <div class="uk-card-header">
       <div class="uk-grid-small uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
@@ -7,19 +7,7 @@
         </div>
       </div>
     </div>
-    <div class="uk-card-body" v-html="decodeEntities(post.content.rendered)"></div>
-    <div class="uk-position-relative uk-visible-toggle uk-light padbotpost" tabindex="-1" uk-slider="center: true">
-      <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
-        <li class="uk-width-3-4">
-          <div class="uk-cover-container">
-            <img :src="post.imageSrc" alt="" uk-cover>
-            <div class="uk-position-center uk-panel"></div>
-          </div>
-        </li>
-      </ul>
-      <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous
-        uk-slider-item="previous"></a>
-      <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next uk-slider-item="next"></a>
+    <div class="uk-card-body" v-html="decodeEntities(post.content.rendered)">
     </div>
   </div>
 </template>
@@ -30,8 +18,14 @@ export default {
   props: {
     post: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
+  },
+  computed: {
+    postImageSrc(): string | null {
+      const matches = this.post.content.rendered.match(/<img[^>]+src="([^">]+)"/);
+      return matches ? matches[1] : null;
+    },
   },
   methods: {
     decodeEntities(html: string): string {
@@ -43,7 +37,8 @@ export default {
 </script>
 
 <style>
-.padbotpost {
-  padding-bottom: 20px;
-}
-</style>
+.uk-cover-small {
+  max-width: 100%;
+  max-height: 300px;
+  padding: 20px;
+}</style>

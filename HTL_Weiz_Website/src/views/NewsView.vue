@@ -2,7 +2,7 @@
   <div>
     <NavBar></NavBar>
     <h1 class="padleftright">News an der HTL Weiz</h1>
-    <div class="padleftright padtopbot padnav grid-containersv">
+    <div class="padleftright padtopbot grid-containersv">
       <div v-for="post in posts" :key="post.id">
         <PostCard :post="post"></PostCard>
       </div>
@@ -43,10 +43,6 @@ export default {
 </script>
 
 <style>
-.padnav {
-  padding-top: 100px;
-}
-
 .grid-containersv {
   display: grid;
   grid-template-columns: repeat(1, 1fr);

@@ -3,7 +3,7 @@
     <NavBar></NavBar>
     <div class="wihero uk-background-width-1-1"></div>
     <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-      data-src="/src/assets/images/mb_hero.png" uk-img></div>
+      data-src="/public/images/mb_hero.png" uk-img></div>
     <h1 class="uk-text-lead zweigheading">Maschinenbau - Anlagentechnik</h1>
     <QuickFacts class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts>
     <AbteilungsText></AbteilungsText>

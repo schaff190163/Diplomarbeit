@@ -9,7 +9,7 @@
                 <div class=".uk-navbar-center">
                   <ul class="uk-navbar-nav">
                       <button class="uk-button uk-button-default navsmallscreen" type="button" uk-toggle="target: #offcanvas-nav"><span uk-icon="icon: menu; ratio: 2"></span></button>
-                      <li><router-link class="uk-logo" to="/"><img src="/src/assets/images/htl_logo.svg" width="100"/></router-link></li>
+                      <li><router-link class="uk-logo" to="/"><img src="/public/images/htl_logo.svg" width="100"/></router-link></li>
                       <li class="navbigscreen">
                         <a href="#">Aktuelles</a>
                         <div class="uk-navbar-dropdown">
@@ -44,7 +44,6 @@
                             <li><router-link to="/students">SchülerInnen</router-link></li>
                             <li><router-link to="/teachers">LehrerInnen</router-link></li>
                             <li><router-link to="/parents">Eltern</router-link></li>
-                            <li><router-link to="/anmeldung">Anmeldung</router-link></li>
                           </ul>
                         </div>
                       </li>
@@ -62,9 +61,15 @@
           </div>
         </div>
       <div id="offcanvas-nav" uk-offcanvas="mode: push; overlay: true" class="navsmallscreen">
-          <div class="uk-offcanvas-bar uk-flex uk-flex-column offcanvasstyle">
-            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-              <li class="uk-active"><a href="#">Aktuelles</a></li>
+          <div class="uk-offcanvas-bar offcanvasstyle">
+            <ul class="uk-nav uk-nav-primary uk-margin-auto-vertical">
+              <li class="uk-active"><a href="#">Aktuelles</a>
+              <ul class="uk-nav-sub uk-nav-default">
+                <li><router-link to="/schulveranstaltungen">Schulveranstaltungen</router-link></li>
+                <li><router-link to="/news">News</router-link></li>
+                <li><router-link to="/erasmus">Erasmus+</router-link></li>
+              </ul>
+              </li>
               <ul class="uk-nav-sub uk-nav-default">
                     <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
                     <li><router-link to="/et">Elektrotechnik</router-link></li>
@@ -96,7 +101,6 @@
                   <li><router-link to="/students">SchülerInnen</router-link></li>
                   <li><router-link to="/teachers">LehrerInnen</router-link></li>
                   <li><router-link to="/parents">Eltern</router-link></li>
-                  <li><router-link to="/anmeldung">Anmeldung</router-link></li>
                 </ul>
               </li>
             </ul>
@@ -129,7 +133,9 @@ export default {
 }
 .offcanvasstyle {
   background-color: #F8F8F8;
+  color: #333; /* Set a dark text color */
 }
+
 @media (max-width: 640px){
   .img-logo{
     height: 400px !important;
