@@ -3,6 +3,7 @@
     <NavBar></NavBar>
     <HeroSection></HeroSection>
     <div class="lape">
+      <router-link to="/e2mily" style="color: aliceblue;">provisorischer Link zu e2mily</router-link>
       <SchoolStats></SchoolStats>
       <h1 class="head padleftright uk-text-light padbot">Ausbildungsmöglichkeiten an der HTL Weiz</h1>
     <div class="grid-container padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300">

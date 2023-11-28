@@ -1,6 +1,7 @@
 import axios from 'axios';
+var WPApiHandler = require('wpapihandler');
 
-const BASE_URL = 'https://dev.htlweiz.at/wordpress/wp-json';
+const BASE_URL = 'https://dev.htlweiz.at/wordpress';
 
 export interface Post {
   id: number;
@@ -22,4 +23,5 @@ export class Api {
       return [];
     }
   }
+
 }
