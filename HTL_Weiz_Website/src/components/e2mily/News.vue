@@ -1,8 +1,8 @@
 <template>
-  <div class="uk-section">
+  <div class="">
     <div class="uk-padding">
       <div class="uk-width-expand@m">
-        <div class="uk-text-center uk-padding">
+        <div class="uk-text-center uk-margin-bottom">
           <h1 id="news">News</h1>
         </div>
       </div>

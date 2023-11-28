@@ -9,9 +9,9 @@
                 <div class="uk-navbar-center">
                   <ul class="uk-navbar-nav">
                     <li>
-                      <router-link to="/e2mily" class="uk-logo">
-                        <a href="#landing" uk-scroll><img src="/src/assets/images/e2mily-logo.png" width="100" /></a>
-                      </router-link>
+                      <a href="#landing" uk-scroll>
+                        <img src="/src/assets/images/e2mily-logo.png" width="100" />
+                      </a>
                     </li>
                     <li class="navbigscreen">
                       <a href="#model" uk-scroll>E²MILY</a>
@@ -26,7 +26,7 @@
                       <a href="#sponsor" uk-scroll>Sponsoring</a>
                     </li>
                     <li class="navbigscreen">
-                      <a href="#contact" uk-scroll>Kontakt</a>
+                      <a href="/e2mily/contact" uk-scroll>Kontakt</a>
                     </li>
                   </ul>
                 </div>

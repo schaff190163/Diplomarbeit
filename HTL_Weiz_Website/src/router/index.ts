@@ -128,6 +128,12 @@ const router = createRouter({
       name: 'e2mily',
 
       component: () => import(/* webpackChunkName: "search" */"../views/E2milyView.vue")
+    },
+    {
+      path: '/e2mily/contact',
+      name: 'e2mily_contact',
+
+      component: () => import(/* webpackChunkName: "search" */"../views/E2milyContact.vue")
     }
   ]
 })

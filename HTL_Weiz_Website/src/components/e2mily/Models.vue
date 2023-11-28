@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <div class="uk-position-relative uk-visible-toggle uk-dark uk-padding" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
       <ul class="uk-slider-items uk-grid uk-padding">
           <li class="uk-width-3-4">
