@@ -1,6 +1,7 @@
 <template>
   <div>
       <AuszeichnungsRow></AuszeichnungsRow>
+      <GeoRow></GeoRow>
       <Imprint></Imprint>
   </div>
 </template>

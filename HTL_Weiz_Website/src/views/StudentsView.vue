@@ -1,10 +1,10 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-      <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/src/assets/images/students.png" uk-img></div>
+      <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/images/students.png" uk-img></div>
       <div class="st-cont padleftright padtop padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
-      <h1 uk-scrollspy-class="uk-animation-slide-bottom">Informationen für Schülerinnen und Schüler</h1>
-      <div uk-scrollspy-class="uk-animation-slide-bottom">
+      <h1 >Informationen für Schülerinnen und Schüler</h1>
+      <div>
         <h2>Software für Schülerinnen und Schüler</h2>
         <button class="uk-text-bold uk-button uk-button-link" uk-tooltip="title: https://www.office.com/; delay: 500" href="https://www.office.com/">Office 365 Anmeldung</button>
         <p>Allen Schülerinnen und Schülern steht für die Zeit an der HTL Weiz Microsoft Office 365 kostenlos zur
@@ -16,7 +16,7 @@
           gratis downloaden und installieren. Die Anmeldung erfolgt mit dem Office 365 Account. Um zur angebotenen
           Software zu gelangen, muss aus dem Menübereich Alle Dienste der Dienst Education Software gewählt werden.</p>
       </div>
-      <div class="dl" uk-scrollspy-class="uk-animation-slide-bottom">
+      <div class="dl" >
         <h2>Downloads und weitere Informationen</h2>
         <div class="button-grid">
           <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">Entschuldigung</button>
