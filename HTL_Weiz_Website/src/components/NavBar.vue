@@ -9,7 +9,7 @@
                 <div class=".uk-navbar-center">
                   <ul class="uk-navbar-nav">
                       <button class="uk-button uk-button-default navsmallscreen" type="button" uk-toggle="target: #offcanvas-nav"><span uk-icon="icon: menu; ratio: 2"></span></button>
-                      <li><router-link class="uk-logo" to="/"><img src="/public/images/htl_logo.svg" width="100"/></router-link></li>
+                      <li><router-link class="uk-logo" to="/"><img src="/images/htl_logo.svg" width="100"/></router-link></li>
                       <li class="navbigscreen">
                         <a href="#">Aktuelles</a>
                         <div class="uk-navbar-dropdown">

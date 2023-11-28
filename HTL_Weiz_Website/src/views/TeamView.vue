@@ -7,12 +7,12 @@
     <DirektionCard class="padleftright padtop padbot"></DirektionCard>
     <h1 class="teamheading">Abteilungsvorstände</h1>
     <div class="grid-containerav padleftright padtop padbot">
-      <AvCard avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc="/public/images/team/Macher.jpg"></AvCard>
-      <AvCard avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc="/public/images/team/Deimel.jpg"></AvCard>
-      <AvCard avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc="/public/images/team/Hierz.jpg"></AvCard>
-      <AvCard avname="Bernhard Pertl" avsubtitle="Abteilungsvorstand " imgsrc="/public/images/team/Pertl.jpg"></AvCard>
-      <AvCard avname="Heimo T. Blattner" avsubtitle="Abteilungsvorstand " imgsrc="/public/images/team/Blattner.jpg"></AvCard>
-      <AvCard avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc="/public/images/team/Hoellerbauer.jpg"></AvCard>
+      <AvCard avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Macher.jpg"></AvCard>
+      <AvCard avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Deimel.jpg"></AvCard>
+      <AvCard avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Hierz.jpg"></AvCard>
+      <AvCard avname="Bernhard Pertl" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Pertl.jpg"></AvCard>
+      <AvCard avname="Heimo T. Blattner" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Blattner.jpg"></AvCard>
+      <AvCard avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Hoellerbauer.jpg"></AvCard>
     </div>
     <h1 class="teamheading">Lehrpersonal</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
