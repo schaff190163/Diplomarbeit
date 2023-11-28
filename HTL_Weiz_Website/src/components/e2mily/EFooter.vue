@@ -9,7 +9,7 @@
       <div>ipsum</div>
     </div>
     <div>
-      <img class="uk-position-center" alt="Emily logo" src="/src/assets/images/e2mily-logo.png" />
+      <img class="uk-position-center" alt="Emily logo" src="/images/e2mily-logo.png" />
     </div>
     <div class="text-wrapper2 uk-position-center-right uk-padding-large uk-text-right">
       <div>Impressum</div>
@@ -21,6 +21,14 @@
     </div>
   </footer>
 </template>
+
+<script lang="ts">
+/* import ... from ...; */
+
+export default {
+  name: 'EFooter',
+};
+</script>
 
 <style>
 .footer {

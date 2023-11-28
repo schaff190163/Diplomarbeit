@@ -121,19 +121,19 @@ const router = createRouter({
       path: '/imprint',
       name: 'imprint',
 
-      component: () => import(/* webpackChunkName: "search" */"../views/ImprintData.vue")
+      component: () => import(/* webpackChunkName: "imprint" */"../views/ImprintData.vue")
     },
     {
       path: '/e2mily',
       name: 'e2mily',
 
-      component: () => import(/* webpackChunkName: "search" */"../views/E2milyView.vue")
+      component: () => import(/* webpackChunkName: "e2mily" */"../views/E2milyView.vue")
     },
     {
       path: '/e2mily/contact',
       name: 'e2mily_contact',
 
-      component: () => import(/* webpackChunkName: "search" */"../views/E2milyContact.vue")
+      component: () => import(/* webpackChunkName: "e2milycontact" */"../views/E2milyContact.vue")
     }
   ]
 })

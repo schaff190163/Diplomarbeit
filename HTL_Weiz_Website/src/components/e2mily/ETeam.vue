@@ -11,7 +11,7 @@
           <li>
             <div class="uk-card uk-card-default uk-padding-remove-left">
               <div class="uk-card-media-top">
-                <img src="/src/assets/images/team/Macher.jpg" alt="">
+                <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">Harald Macher 1</h3>
@@ -23,7 +23,7 @@
           <li>
             <div class="uk-card uk-card-default uk-padding-remove-left">
               <div class="uk-card-media-top">
-                <img src="/src/assets/images/team/Macher.jpg" alt="">
+                <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">Harald Macher 1</h3>
@@ -35,7 +35,7 @@
           <li>
             <div class="uk-card uk-card-default uk-padding-remove-left">
               <div class="uk-card-media-top">
-                <img src="/src/assets/images/team/Macher.jpg" alt="">
+                <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">Harald Macher 1</h3>
@@ -47,7 +47,7 @@
           <li>
             <div class="uk-card uk-card-default uk-padding-remove-left">
               <div class="uk-card-media-top">
-                <img src="/src/assets/images/team/Macher.jpg" alt="">
+                <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">Harald Macher 1</h3>
@@ -59,7 +59,7 @@
           <li>
             <div class="uk-card uk-card-default uk-padding-remove-left">
               <div class="uk-card-media-top">
-                <img src="/src/assets/images/team/Macher.jpg" alt="">
+                <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">Harald Macher 1</h3>
@@ -71,7 +71,7 @@
           <li>
             <div class="uk-card uk-card-default uk-padding-remove-left">
               <div class="uk-card-media-top">
-                <img src="/src/assets/images/team/Macher.jpg" alt="">
+                <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">Harald Macher 1</h3>
@@ -82,21 +82,21 @@
           </li>
         </ul>
 
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next uk-slider-item="next"></a>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+/* import ... from ...; */
 
 export default {
-  name: "Box",
-  components: {
-  },
+  name: 'ETeam',
 };
 </script>
+
 
 <style scoped>
 /* Add scoped attribute to style tag to ensure styles are scoped to this component */

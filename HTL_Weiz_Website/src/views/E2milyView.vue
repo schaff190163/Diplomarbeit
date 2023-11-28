@@ -1,39 +1,38 @@
 <template>
   <div class="body">
     <div class="">
-        <Navbar></Navbar>
-        <Landing id="landing"></Landing>
-        <Models id="model"></Models>
-        <News></News>
-        <Team id="team"></Team>
-        <Sponsor id="sponsor"></Sponsor>
-        <Contact id="contact"></Contact>
-        <Footer></Footer>
+        <ENavbar></ENavbar>
+        <ELanding id="landing"></ELanding>
+        <EModels id="model"></EModels>
+        <ENews></ENews>
+        <ETeam id="team"></ETeam>
+        <ESponsor id="sponsor"></ESponsor>
+        <EFooter></EFooter>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Footer from "../components/e2mily/Footer.vue";
-import Models from "../components/e2mily/Models.vue";
-import News from "../components/e2mily/News.vue";
-import Team from "../components/e2mily/Team.vue";
-import Navbar from "../components/e2mily/E2milyNavbar.vue";
-//import Contact from "../components/e2mily/Contact.vue"
-import Landing from "../components/e2mily/Landing.vue"
-import Sponsor from "../components/e2mily/Sponsor.vue"
+import EFooter from "../components/e2mily/EFooter.vue";
+import EModels from "../components/e2mily/EModels.vue";
+import ENews from "../components/e2mily/ENews.vue";
+import ETeam from "../components/e2mily/ETeam.vue";
+import ENavbar from "../components/e2mily/ENavbar.vue";
+//import Contact from "../components/e2mily/EContact.vue"
+import ELanding from "../components/e2mily/ELanding.vue"
+import ESponsor from "../components/e2mily/ESponsor.vue"
 
 export default {
   name: "E2mily",
   components: {
-    Footer,
-    Models,
-    News,
-    Team,
-    Navbar,
-    //Contact,
-    Landing,
-    Sponsor,
+    EFooter,
+    EModels,
+    ENews,
+    ETeam,
+    ENavbar,
+    //EContact,
+    ELanding,
+    ESponsor,
   },
 };
 </script>

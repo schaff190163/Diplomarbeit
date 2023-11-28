@@ -13,7 +13,7 @@
           <div class="uk-panel">
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding" uk-grid>
               <div class="uk-card-media-left uk-cover-container">
-                <img src="/src/assets/images/e2mily-projectgreen.jpg" class="uk-position-cover" uk-cover>
+                <img src="/images/e2mily-projectgreen.jpg" class="uk-position-cover" uk-cover>
               </div>
               <div>
                 <div class="uk-card-body uk-text-left">
@@ -39,7 +39,7 @@
           <div class="uk-panel">
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding" uk-grid>
               <div class="uk-card-media-left uk-cover-container">
-                <img src="/src/assets/images/e2mily-projectgreen.jpg" class="uk-position-cover" uk-cover>
+                <img src="/images/e2mily-projectgreen.jpg" class="uk-position-cover" uk-cover>
               </div>
               <div>
                 <div class="uk-card-body uk-text-left">
@@ -65,7 +65,7 @@
           <div class="uk-panel">
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding" uk-grid>
               <div class="uk-card-media-left uk-cover-container">
-                <img src="/src/assets/images/e2mily-projectgreen.jpg" class="uk-position-cover" uk-cover>
+                <img src="/images/e2mily-projectgreen.jpg" class="uk-position-cover" uk-cover>
               </div>
               <div>
                 <div class="uk-card-body uk-text-left">
@@ -89,8 +89,8 @@
 
       </ul>
 
-      <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-dark" href uk-slidenav-previous uk-slider-item="previous"></a>
-      <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-dark" href uk-slidenav-next uk-slider-item="next"></a>
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-dark" uk-slidenav-previous uk-slider-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-dark" uk-slidenav-next uk-slider-item="next"></a>
 
     </div>
   </div>

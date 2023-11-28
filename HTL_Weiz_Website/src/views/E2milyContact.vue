@@ -1,18 +1,18 @@
 <template>
     <div>
-     <Navbar></Navbar>
+     <ENavbar></ENavbar>
     </div>
   </template>
   
   <script lang="ts">
   /* import ... from ...; */
-import Navbar from "../components/e2mily/E2milyNavbar.vue";
+import ENavbar from "../components/e2mily/ENavbar.vue";
 
   
   export default {
     name: 'EmptyComponent',
     components: {
-      Navbar,
+      ENavbar,
     },
   };
   </script>

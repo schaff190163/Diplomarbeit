@@ -10,7 +10,7 @@
                   <ul class="uk-navbar-nav">
                     <li>
                       <a href="#landing" uk-scroll>
-                        <img src="/src/assets/images/e2mily-logo.png" width="100" />
+                        <img src="/images/e2mily-logo.png" width="100" />
                       </a>
                     </li>
                     <li class="navbigscreen">

@@ -20,13 +20,9 @@
 </template>
 
 <script lang="ts">
-import Frame from "./Frame.vue";
 
 export default {
   name: 'EmptyComponent',
-  components: {
-    Frame
-  },
 };
 </script>
 

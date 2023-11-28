@@ -23,6 +23,14 @@
     </div>
   </template>
   
+<script lang="ts">
+/* import ... from ...; */
+
+export default {
+  name: 'EContact',
+};
+</script>
+
   <style>
   .box {
     height: 1110px;

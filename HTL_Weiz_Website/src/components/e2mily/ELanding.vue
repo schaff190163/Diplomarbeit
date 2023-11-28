@@ -1,6 +1,6 @@
 <template>
   <div class="hei uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-background-center-center uk-light" 
-    data-src="/src/assets/images/e2mily-landing.jpg" uk-img>
+    data-src="/images/e2mily-landing.jpg" uk-img>
     <div>
       <h2 class="landingtext text-position-center">E²MILY</h2>
     </div>
@@ -8,8 +8,10 @@
 </template>
 
 <script lang="ts">
+/* import ... from ...; */
+
 export default {
-  name: 'HeroSection',
+  name: 'ELanding',
 };
 </script>
 

@@ -2,9 +2,16 @@
     <div class="frame">
       <div v-for="index in 3" :key="index" class="ellipse"></div>
     </div>
-  </template>
+ </template>
   
-  <!-- MyComponent.vue -->
+<script lang="ts">
+/* import ... from ...; */
+
+export default {
+  name: 'EFrame',
+};
+</script>
+
 
 <style scoped>
 :root {
