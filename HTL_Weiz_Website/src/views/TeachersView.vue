@@ -6,14 +6,14 @@
       <h1>Informationen für Lehrerinnen und Lehrer</h1>
       <p>Startpunkt mit den wichtigsten Links und Informationen für Lehrerinnen und Lehrer der HTL Weiz. Für die Verwendung von eingeschränkten Bereichen wie dem Schulverwaltungstool müssen sich Lehrer zuerst registrieren und ein Benutzerkonto angelegt und vom Administrator aktiviert werden.</p>
         <div class="button-grid gridtopsp">
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">WebUntis</button>
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">Sokrates</button>
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">Schulveranstaltungen</button>
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">Office 365</button>
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">Portal Austria</button>
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">Formulare</button>
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">Sokrates Bund</button>
-          <button class="uk-button uk-button-default" uk-tooltip="title: ---; delay: 500" href="...">HTL Weiz Root Certificate</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">WebUntis</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">Sokrates</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">Schulveranstaltungen</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">Office 365</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">Portal Austria</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">Formulare</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">Sokrates Bund</button>
+          <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">HTL Weiz Root Certificate</button>
         </div>
     </div>
     <FooterMerge></FooterMerge>

@@ -21,7 +21,7 @@ export default {
   justify-content: center;
 }
 .image {
-  max-width: 110px;
-  max-height: 110px;
+  max-width: 100px;
+  max-height: 100px;
 }
 </style>

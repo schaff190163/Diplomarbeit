@@ -1,32 +1,11 @@
 <template>
-    <div class="uk-grid-large padtop padleftright qldiv" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500"
-        uk-grid>
-        <SmallCard class="uk-width-expand"
-            uk-tooltip="title: Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet; delay: 500"
-            uk-scrollspy-class="uk-animation-slide-bottom" azname="Mint Gütesiegel" imgsrc="/images/mint.jpg">
-        </SmallCard>
-        <div class="separator"><hr class="uk-divider-vertical"></div>
-        <SmallCard class="uk-width-expand"
-            uk-tooltip="title: Die HTL Weiz führt seit 2002 das österreichische Umweltzeichen.; delay: 500"
-            uk-scrollspy-class="uk-animation-slide-bottom" azname="Umweltzeichen" imgsrc="/images/umwelt.jpg">
-        </SmallCard>
-        <div class="separator"><hr class="uk-divider-vertical"></div>
-        <SmallCard class="uk-width-expand"
-            uk-tooltip="title: Die HTL Weiz ist regelmäßig an Erasmus+ Projekten beteiligt.; delay: 500"
-            uk-scrollspy-class="uk-animation-slide-bottom" azname="Erasmus+ Projektschule"
-            imgsrc="/images/erasmus.jpg">
-        </SmallCard>
-        <div class="separator"><hr class="uk-divider-vertical"></div>
-        <SmallCard class="uk-width-expand"
-            uk-tooltip="title: Die HTL Weiz wurde wiederholt mit dem Titel Innovativste Schule der Steiermark ausgezeichnet.; delay: 500"
-            uk-scrollspy-class="uk-animation-slide-bottom" azname="Innovativste Schule" imgsrc="/images/inno.jpg">
-        </SmallCard>
-        <div class="separator"><hr class="uk-divider-vertical"></div>
-        <SmallCard class="uk-width-expand"
-            uk-tooltip="title: S-6.1b COVID-19 - Unterrichtsbezogene Förderangebote; delay: 500"
-            uk-scrollspy-class="uk-animation-slide-bottom" azname="Förderangebote" imgsrc="/images
-            /förder.png">
-        </SmallCard>
+    <div>
+        <div class="qlgrid padleftright padtop padbot">
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Team der HTL Weiz; delay: 500"><router-link to="/team" class="qllink">Team</router-link></button>
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Schüler; delay: 500"><router-link to="/students" class="qllink">SchülerInnen</router-link></button>
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Eltern und erziehungsberechtigte; delay: 500"><router-link to="/parents" class="qllink">Eltern</router-link></button>
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Lehrpersonal; delay: 500"><router-link to="/teachers" class="qllink">LehrerInnen</router-link></button>
+        </div>
     </div>
 </template>
 
@@ -42,7 +21,24 @@ export default {
 </script>
 
 <style>/* Styles for this component */
-.qldiv {
-  display: flex;
+.qlgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.qllink {
+    color: #F8F8F8;
+}
+
+@media (max-width: 900px) {
+    .qlgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .qlgrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 </style>

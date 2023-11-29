@@ -16,7 +16,6 @@
                           <ul class="uk-nav uk-navbar-dropdown-nav">
                             <li><router-link to="/schulveranstaltungen">Schulveranstaltungen</router-link></li>
                             <li><router-link to="/news">News</router-link></li>
-                            <li><router-link to="/erasmus">Erasmus+</router-link></li>
                           </ul>
                         </div>
                       </li>
@@ -36,7 +35,7 @@
                         </div>
                       </li>
                       <li class="navbigscreen"><router-link to="/team">Team</router-link></li>
-                      <li class="navbigscreen"><router-link to="/ansprechpartner">AnsprechpartnerInnen</router-link></li>
+                      <li class="navbigscreen"><router-link to="/partner">Partner</router-link></li>
                       <li class="navbigscreen">
                         <a href="#">Services</a>
                         <div class="uk-navbar-dropdown">
@@ -67,19 +66,8 @@
               <ul class="uk-nav-sub uk-nav-default">
                 <li><router-link to="/schulveranstaltungen">Schulveranstaltungen</router-link></li>
                 <li><router-link to="/news">News</router-link></li>
-                <li><router-link to="/erasmus">Erasmus+</router-link></li>
               </ul>
               </li>
-              <ul class="uk-nav-sub uk-nav-default">
-                    <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
-                    <li><router-link to="/et">Elektrotechnik</router-link></li>
-                    <li><router-link to="/it">Informationstechnologie</router-link></li>
-                    <li><router-link to="/ut">Maschinenbau - Umwelttechnik</router-link></li>
-                    <li><router-link to="/mb">Maschinenbau - Anlagentechnik</router-link></li>
-                    <li><router-link to="/at">Maschinenbau - Automatisierungstechnik</router-link></li>
-                    <li><router-link to="/awi">Abendschule - Wirtschaftsingenieure</router-link></li>
-                    <li><router-link to="/mt">Fachschule - Mechatronik</router-link></li>
-                  </ul>
               <li class="uk-parent">
                 <a href="#">Ausbildung</a>
                 <ul class="uk-nav-sub uk-nav-default">
@@ -94,7 +82,7 @@
                 </ul>
               </li>
               <li><router-link to="/team">Team</router-link></li>
-              <li><router-link to="/ansprechpartner">AnsprechpartnerInnen</router-link></li>
+              <li><router-link to="/partner">Partner</router-link></li>
               <li class="uk-parent">
                 <a href="#">Services</a>
                 <ul class="uk-nav-sub uk-nav-default">

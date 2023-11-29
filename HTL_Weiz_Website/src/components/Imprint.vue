@@ -46,7 +46,12 @@
             </ul>
         </div>
     </div>
-    <div class="padleftright ifooter">Copyright HTL Weiz 2023 | <router-link to="/imprint" class="imprintlink">Impressum und Datenschutz</router-link></div>
+    <div class="padleftright ifooter">
+        Copyright HTL Weiz 2023 | 
+        <router-link to="/imprint" class="imprintlink">Impressum und Datenschutz</router-link>
+        |
+        <router-link to="/e2mily" class="imprintlink">E2MILY</router-link>
+    </div>
     </div>
 </template>
 

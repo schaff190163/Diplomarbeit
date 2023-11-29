@@ -5,7 +5,7 @@
     <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
       data-src="/images/at_hero.png" uk-img></div>
     <h1 class="uk-text-lead zweigheading">Maschinenbau - Automatisierungstechnik</h1>
-    <QuickFacts class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Abschluss der 8. Schulstufe" standort="Fürstenfeld"></QuickFacts>
+    <QuickFacts class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="positiver Abschluss der 8. Schulstufe" standort="Fürstenfeld"></QuickFacts>
     <AbteilungsText></AbteilungsText>
     <FooterMerge></FooterMerge>
   </div>

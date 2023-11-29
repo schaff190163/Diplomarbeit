@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-grid-large padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" uk-grid>
+  <div class="azgrid padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" uk-grid>
   <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Mint Gütesiegel" imgsrc="/images/mint.jpg"></SmallCard>
   <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz führt seit 2002 das österreichische Umweltzeichen.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Umweltzeichen" imgsrc="/images/umwelt.jpg"></SmallCard>
   <SmallCard class="uk-width-expand" uk-tooltip="title: Die HTL Weiz ist regelmäßig an Erasmus+ Projekten beteiligt.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Erasmus+ Projektschule" imgsrc="/images/erasmus.jpg"></SmallCard>
@@ -21,4 +21,9 @@ export default {
 
 <style>
 /* Styles for this component */
+.azgrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
 </style>

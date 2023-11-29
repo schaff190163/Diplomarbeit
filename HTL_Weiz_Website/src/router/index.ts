@@ -22,12 +22,6 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "news" */"../views/NewsView.vue")
     },
     {
-      path: '/Erasmus',
-      name: 'erasmus',
-
-      component: () => import(/* webpackChunkName: "erasmus" */"../views/ErasmusView.vue")
-    },
-    {
       path: '/wi',
       name: 'wi',
 
@@ -82,10 +76,10 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "team" */"../views/TeamView.vue")
     },
     {
-      path: '/Ansprechpartner',
-      name: 'ansprechpartner',
+      path: '/Partner',
+      name: 'partner',
 
-      component: () => import(/* webpackChunkName: "ansprechpartner" */"../views/AnsprechpartnerView.vue")
+      component: () => import(/* webpackChunkName: "partner" */"../views/PartnerView.vue")
     },
     {
       path: '/Students',
