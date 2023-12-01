@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="qlgrid padleftright padtop padbot">
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Team der HTL Weiz; delay: 500"><router-link to="/team" class="qllink">Team</router-link></button>
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Schüler; delay: 500"><router-link to="/students" class="qllink">SchülerInnen</router-link></button>
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Eltern und erziehungsberechtigte; delay: 500"><router-link to="/parents" class="qllink">Eltern</router-link></button>
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Lehrpersonal; delay: 500"><router-link to="/teachers" class="qllink">LehrerInnen</router-link></button>
+              <button class="uk-button uk-button-primary uk-button-large roundedl" uk-tooltip="title: Team der HTL Weiz; delay: 500"><router-link to="/team" class="qllink">Team</router-link></button>
+              <button class="uk-button uk-button-primary uk-button-large roundedl" uk-tooltip="title: Service für Schüler; delay: 500"><router-link to="/students" class="qllink">SchülerInnen</router-link></button>
+              <button class="uk-button uk-button-primary uk-button-large roundedl" uk-tooltip="title: Service für Eltern und erziehungsberechtigte; delay: 500"><router-link to="/parents" class="qllink">Eltern</router-link></button>
+              <button class="uk-button uk-button-primary uk-button-large roundedl" uk-tooltip="title: Service für Lehrpersonal; delay: 500"><router-link to="/teachers" class="qllink">LehrerInnen</router-link></button>
         </div>
     </div>
 </template>

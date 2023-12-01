@@ -1,5 +1,4 @@
 import axios from 'axios';
-var WPApiHandler = require('wpapihandler');
 
 const BASE_URL = 'https://dev.htlweiz.at/wordpress';
 

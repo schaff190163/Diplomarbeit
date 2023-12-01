@@ -4,8 +4,9 @@
     <HeroSection></HeroSection>
     <div class="gradient">
       <SchoolStats></SchoolStats>
+      <Seasonals stext="Melden Sie sich jetzt an für das Schuljahr 2024/25!" sbuttontext="Anmelden"></Seasonals>
     </div>
-    <h1 class="padleftright uk-text-light padbot">Ausbildungsmöglichkeiten an der HTL Weiz</h1>
+    <h1 class="padleftright uk-text-light padbot mpheading">Ausbildungsmöglichkeiten an der HTL Weiz</h1>
     <div class="grid-container padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300">
     <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-medium" title="Wirtschaftsingineure" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc = "/images/logo_wi_250.png" detailsrc = "/wi"></AbteilungsCard>
     <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-medium" title="Elektrotechnik" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc = "/images/logo_et_250.png" detailsrc = "/et"></AbteilungsCard>
@@ -16,9 +17,9 @@
     <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-medium" title="Maschinenbau - Umwelttechnik" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc = "/images/logo_ut_250.png" detailsrc = "/ut"></AbteilungsCard>
     <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-medium" title="Fachschule - Mechatronik" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc = "/images/logo_mt_250.png" detailsrc = "/mt"></AbteilungsCard>
     </div>
-    <h1 class="padleftright uk-text-light padbot">Quick Links</h1>
+    <h1 class="padleftright uk-text-light padbot mpheading">Quick Links</h1>
     <QuickLinks></QuickLinks>
-    <h1 class="padleftright uk-text-light padbot">Terminkalender</h1>
+    <h1 class="padleftright uk-text-light padbot mpheading">Terminkalender</h1>
     <Calendar></Calendar>
     <FooterMerge></FooterMerge>
   </div>
@@ -31,6 +32,7 @@ import Calendar from "../components/Calendar.vue";
 import SchoolStats from "../components/SchoolStats.vue";
 import FooterMerge from "../components/FooterMerge.vue";
 import QuickLinks from "../components/QuickLinks.vue";
+import Seasonals from "../components/Seasonals.vue";
 
 export default {
   name: 'HomeView',
@@ -42,6 +44,7 @@ export default {
     SchoolStats,
     FooterMerge,
     QuickLinks,
+    Seasonals,
   },
 };
 </script>
