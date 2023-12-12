@@ -16,6 +16,12 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "schulveranstaltungen" */"../views/SchulveranstaltungenView.vue")
     },
     {
+      path: '/Schulveranstaltungen/Edit',
+      name: 'editschulveranstaltungen',
+
+      component: () => import(/* webpackChunkName: "editschulveranstaltungen" */"../views/EditSchulverantaltungen.vue")
+    },
+    {
       path: '/News',
       name: 'news',
 
@@ -128,7 +134,7 @@ const router = createRouter({
       name: 'e2mily_contact',
 
       component: () => import(/* webpackChunkName: "e2milycontact" */"../views/E2milyContact.vue")
-    }
+    },
   ]
 })
 

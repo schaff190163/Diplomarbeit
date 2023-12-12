@@ -4,7 +4,6 @@
     <HeroSection></HeroSection>
     <div class="gradient">
       <SchoolStats></SchoolStats>
-      <Seasonals stext="Melden Sie sich jetzt an für das Schuljahr 2024/25!" sbuttontext="Anmelden"></Seasonals>
     </div>
     <h1 class="padleftright uk-text-light padbot mpheading">Ausbildungsmöglichkeiten an der HTL Weiz</h1>
     <div class="grid-container padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300">
