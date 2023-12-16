@@ -103,8 +103,8 @@
                     </li>
                   </ul>
 
-                  <a class="uk-position-center-left uk-position-small" uk-slidenav-previous uk-slider-item="previous"></a>
-                  <a class="uk-position-center-right uk-position-small" uk-slidenav-next uk-slider-item="next"></a>
+                  <a class="uk-position-center-left uk-position-small acolor" uk-slidenav-previous uk-slider-item="previous"></a>
+                  <a class="uk-position-center-right uk-position-small acolor" uk-slidenav-next uk-slider-item="next"></a>
 
                 </div>
               </li>
@@ -129,4 +129,13 @@ export default {
 .back_color {
   background-color: rgb(226, 226, 226);
 }
+
+.acolor {
+  color: #b3b3b3;
+}
+
+.acolor:hover {
+  color: #cecece;
+}
+
 </style>

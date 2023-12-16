@@ -1,11 +1,11 @@
 <template>
   <div class="uk-background-default uk-padding uk-padding-remove-bottom">
     <div class="uk-position-relative uk-dark">
-      <ul class="uk-subnav uk-subnav-pill uk-flex-center uk-margin-bottom" uk-switcher="animation: uk-animation-fade">
+      <ul class="uk-subnav uk-subnav-pill uk-flex-center" uk-switcher="animation: uk-animation-fade">
         <li><a href="#">E²mily GT</a></li>
         <li><a href="#">E²mily ONE</a></li>
       </ul>
-      <ul class="uk-switcher">
+      <ul class="uk-switcher uk-margin-large-top">
           <li class="uk-width-1">
               <div class="">
                   <img src="/images/e2mily-model-editedv2.png" width="1920" height="800" alt="">

@@ -1,27 +1,24 @@
 <template>
-    <div class="box">
-      <div class="contact">
-        <div class="frame">
-          <img class="rectangle" alt="Rectangle" src="rectangle-12.png" />
-          <div class="div">
-            <div class="text-wrapper">KONTAKT</div>
-            <p class="harald-macher">
-              <span class="span">
-                Harald Macher
-                <br />
-              </span>
-              <span class="text-wrapper-2">
-                <br />
-                Telefonnummer: 93957382048
-                <br />
-                Email: macher@htlweiz.at
-              </span>
-            </p>
+  <div class="uk-padding">
+    <h1 class="uk-margin-large-top uk-text-center ">Kontakt</h1>
+    <div class="uk-margin-xlarge-left uk-margin-medium-top uk-margin-xlarge-right">
+      <div
+        class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin roundedl" uk-grid>
+        <div class="uk-card-media-left uk-cover-container uk-width-1-3">
+          <img src="/images/team/Macher.jpg" uk-cover />
+          <canvas width="600" height="800"></canvas>
+        </div>
+        <div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">AV DI Harald Macher</h3>
+            <p>Telefonnummer: +43 50248-043</p>
+            <p>Email: </p>
           </div>
         </div>
       </div>
     </div>
-  </template>
+  </div>
+</template>
   
 <script lang="ts">
 /* import ... from ...; */

@@ -99,5 +99,13 @@ export default {
 
 
 <style scoped>
-/* Add scoped attribute to style tag to ensure styles are scoped to this component */
+
+.acolor {
+  color: #b3b3b3;
+}
+
+.acolor:hover {
+  color: #cecece;
+}
+
 </style>
