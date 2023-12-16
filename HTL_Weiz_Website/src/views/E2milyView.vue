@@ -4,7 +4,7 @@
         <ENavbar></ENavbar>
         <ELanding id="landing"></ELanding>
         <EModels id="model"></EModels>
-        <ENews></ENews>
+        <ENews id="news"></ENews>
         <ETeam id="team"></ETeam>
         <ESponsor id="sponsor"></ESponsor>
         <EFooter></EFooter>
@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import EFooter from "../components/e2mily/EFooter.vue";
-import EModels from "../components/e2mily/EModels.vue";
+import EModels from "../components/e2mily/EModels_v2.vue";
 import ENews from "../components/e2mily/ENews.vue";
 import ETeam from "../components/e2mily/ETeam.vue";
 import ENavbar from "../components/e2mily/ENavbar.vue";

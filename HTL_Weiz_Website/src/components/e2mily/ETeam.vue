@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-padding">
+  <div class="uk-padding uk-background-default">
     <div class="uk-width-expand@m">
       <div class="uk-text-center uk-padding">
         <h1>Team</h1>
@@ -14,7 +14,7 @@
                 <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
-                <h3 class="uk-card-title">Harald Macher 1</h3>
+                <h3 class="uk-card-title">Harald Macher</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
               <div class="uk-card-badge uk-label">3AHET</div>
@@ -26,7 +26,7 @@
                 <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
-                <h3 class="uk-card-title">Harald Macher 1</h3>
+                <h3 class="uk-card-title">Harald Macher</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
               <div class="uk-card-badge uk-label">3AHET</div>
@@ -38,7 +38,7 @@
                 <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
-                <h3 class="uk-card-title">Harald Macher 1</h3>
+                <h3 class="uk-card-title">Harald Macher</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
               <div class="uk-card-badge uk-label">3AHET</div>
@@ -50,7 +50,7 @@
                 <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
-                <h3 class="uk-card-title">Harald Macher 1</h3>
+                <h3 class="uk-card-title">Harald Macher</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
               <div class="uk-card-badge uk-label">3AHET</div>
@@ -62,7 +62,7 @@
                 <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
-                <h3 class="uk-card-title">Harald Macher 1</h3>
+                <h3 class="uk-card-title">Harald Macher</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
               <div class="uk-card-badge uk-label">3AHET</div>
@@ -74,7 +74,7 @@
                 <img src="/images/team/Macher.jpg" alt="">
               </div>
               <div class="uk-card-body">
-                <h3 class="uk-card-title">Harald Macher 1</h3>
+                <h3 class="uk-card-title">Harald Macher</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
               <div class="uk-card-badge uk-label">3AHET</div>
@@ -82,8 +82,8 @@
           </li>
         </ul>
 
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next uk-slider-item="next"></a>
+        <a class="uk-position-center-left uk-position-small" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small" uk-slidenav-next uk-slider-item="next"></a>
       </div>
     </div>
   </div>
