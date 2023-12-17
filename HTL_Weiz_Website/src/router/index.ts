@@ -128,6 +128,12 @@ const router = createRouter({
       name: 'e2mily_contact',
 
       component: () => import(/* webpackChunkName: "e2milycontact" */"../views/E2milyContact.vue")
+    },
+    {
+      path: '/e2mily/api',
+      name: 'e2mily_api',
+
+      component: () => import(/* webpackChunkName: "e2milycontact" */"../components/e2mily/ENews_apiTest.vue")
     }
   ]
 })
