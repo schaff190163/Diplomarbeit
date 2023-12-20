@@ -15,8 +15,6 @@
 import NavBar from "../components/NavBar.vue";
 import PostCard from "../components/PostCard.vue";
 import FooterMerge from "../components/FooterMerge.vue";
-import { Api } from "../api";
-import type { Post } from "../api";
 
 
 export default {
@@ -28,13 +26,21 @@ export default {
   },
   data() {
     return {
-      posts: [] as Post[],
+      posts: [] as WPApiHandler.Post[],
     };
   },
   async created() {
-    const api = new Api();
+    const wpa = new WPApiHandler('https://dev.htlweiz.at/wordpress', {
+      Authorization: 'Basic dnVlX2pzOnJYaFcgbGg2cSB3dXV2IGQzQzUgSUtyWCBZTWtJ',
+    });
+
     try {
-      this.posts = await api.getPosts();
+      const response = await wpa.get_posts();
+      if (response.status === 200) {
+        this.posts = response.data;
+      } else {
+        console.error('Error fetching posts:', response.error);
+      }
     } catch (error) {
       console.error('Error in NewsView created:', error);
     }
