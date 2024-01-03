@@ -115,7 +115,7 @@ const router = createRouter({
       path: '/aufnahmeverfahren',
       name: 'aufnahmeverfahren',
 
-      component: () => import(/* webpackChunkName: "imprint" */"../views/aufnahme/Aufnahmeverfahren.vue")
+      component: () => import(/* webpackChunkName: "imprint" */"../views/aufnahme/AufnahmeVerfahren.vue")
     },
     {
       path: '/vorteilehtl',
@@ -127,7 +127,7 @@ const router = createRouter({
       path: '/kennenlernangebote',
       name: 'kennenlernangebote',
 
-      component: () => import(/* webpackChunkName: "imprint" */"../views/aufnahme/Kennenlernangebote.vue")
+      component: () => import(/* webpackChunkName: "imprint" */"../views/aufnahme/KennenlernAngebote.vue")
     },
     {
       path: '/schnuppern',
