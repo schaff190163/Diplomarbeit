@@ -106,6 +106,12 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "imprint" */"../views/unsereschule/ElternVerein.vue")
     },
     {
+      path: '/sga',
+      name: 'sga',
+
+      component: () => import(/* webpackChunkName: "imprint" */"../views/unsereschule/SGA.vue")
+    },
+    {
       path: '/warumwir',
       name: 'warumwir',
 
