@@ -17,7 +17,7 @@
                   <p> Im Green Room von Project 1 konnten die Besucher:innen auf dem Red Bull Ring zwei innovative und
                     nachhaltige Projekte im Bereich Motorsport unter die Lupe nehmen. Eines davon war unser E-Kart E2MILY-GT.
                   </p>
-                  <a href="#" class="linkcolor">Mehr Lesen</a>
+                  <a href="#modal-example" class="linkcolor" uk-toggle>Mehr Lesen</a>
                 </div>
               </div>
             </div>
@@ -75,6 +75,15 @@
 
     </div>
   </div>
+
+  <div id="modal-example" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-padding">
+      <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <h2 class="uk-modal-title"></h2>
+    </div>
+</div>
+
+
 </template>
 
 <script lang="ts">

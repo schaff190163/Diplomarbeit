@@ -12,7 +12,7 @@
         <div class="uk-width-expand@m">
             <ul id="component-tab-left" class="uk-switcher">
               <li>
-                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
                   <ul class="uk-slider-items uk-flex-center uk-grid">
                     <li>
                       <div class="uk-panel">
@@ -44,7 +44,7 @@
               </li>
 
               <li>
-                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
                   <ul class="uk-slider-items uk-flex-center uk-grid">
                     <li>
                       <div class="uk-panel">

@@ -9,35 +9,28 @@
   </div>
 </template>
 
-<script lang="ts">
-import { WPApiHandler } from 'wpapihandler';
+<script>
+  import { WPApiHandler } from 'wpapihandler';
 
-const url = 'https://dev.htlweiz.at/wordpress';
-const headers = {
-  "Content-Type": "application/json",
-  "Authorization": "Basic d3BhcGloYW5kbGVyOkd5NmQgWFFDdSBIWERHIG5KWnQgT3MwVyBGRUNB"
-};
+  const url = 'https://dev.htlweiz.at/wordpress';
+  const headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Basic d3BhcGloYW5kbGVyOm1vZ2tpOC1zYXp2eWotaHVjcVVi"
+  };
 
-export default {
-  data() {
-    return {
-      post_title: '',
-      post_content: '',
-    };
-  },
-  async mounted() {
-    const wpa = new WPApiHandler(url, headers);
-    try {
-      const connection = await wpa.get_posts('1550');
-      this.post_title = connection.data.title.rendered;
-      this.post_content = connection.data.content.rendered;
-    } catch (error) {
-      console.error('Error fetching data:', error);
+  const wpa = new WPApiHandler(url, headers);
+  let post = await wpa.get_posts('1910');
+
+  export default {
+    data () {
+      return {
+        post_title: post[0].title,
+        post_content: post[0].content,
+      }
     }
-  },
-};
-
+  }
 </script>
+
 
 <style scoped>
 .container {
