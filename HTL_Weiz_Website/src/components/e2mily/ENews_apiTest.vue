@@ -1,7 +1,12 @@
 <template>
-  <h1>Test</h1>
-  <h1 v-html="post_title"></h1>
-  <div v-html="post_content"></div>
+  <div class="uk-padding uk-background-default">
+    <div class="uk-margin-xlarge-left uk-margin-medium-top uk-margin-xlarge-right">
+      <div class="uk-card uk-card-default uk-card-body">
+        <h3 class="uk-card-title" v-html="post_title"></h3>
+        <div v-html="post_content"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -10,7 +15,7 @@ import { WPApiHandler } from 'wpapihandler';
 const url = 'https://dev.htlweiz.at/wordpress';
 const headers = {
   "Content-Type": "application/json",
-  "Authorization": "d3BhcGloYW5kbGVyOkd5NmQgWFFDdSBIWERHIG5KWnQgT3MwVyBGRUNB"
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkd5NmQgWFFDdSBIWERHIG5KWnQgT3MwVyBGRUNB"
 };
 
 export default {
