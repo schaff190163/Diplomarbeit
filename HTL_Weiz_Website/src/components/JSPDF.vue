@@ -33,7 +33,6 @@
                             Download PDF
                         </button>
                     </div>
-                    
                 </div>
             </div>
         </div>
