@@ -3,11 +3,11 @@
     <div class="uk-card-header">
       <div class="uk-grid-small uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
-          <h3 class="uk-card-title uk-text-large" v-html="decodeEntities(post.title.rendered)"></h3>
+          <h3 class="uk-card-title uk-text-large" v-html="decodeEntities(post.title)"></h3>
         </div>
       </div>
     </div>
-    <div class="uk-card-body" v-html="decodeEntities(post.content.rendered)">
+    <div class="uk-card-body" v-html="decodeEntities(post.content)">
     </div>
   </div>
 </template>

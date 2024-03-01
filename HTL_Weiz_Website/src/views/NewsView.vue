@@ -15,9 +15,6 @@
 import NavBar from "../components/NavBar.vue";
 import PostCard from "../components/PostCard.vue";
 import FooterMerge from "../components/FooterMerge.vue";
-import { Api } from "../api";
-import type { Post } from "../api";
-
 
 export default {
   name: "NewsView",
@@ -25,21 +22,32 @@ export default {
     NavBar,
     PostCard,
     FooterMerge,
-  },
-  data() {
-    return {
-      posts: [] as Post[],
-    };
-  },
-  async created() {
-    const api = new Api();
-    try {
-      this.posts = await api.getPosts();
-    } catch (error) {
-      console.error('Error in NewsView created:', error);
-    }
-  },
+  }
 };
+</script>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { WPApiHandler, type Post } from 'wpapihandler';
+
+const posts = ref<Post[]>([]);
+
+const url = 'https://dev.htlweiz.at/wordpress';
+const headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
+};
+
+console.log('Init WPApiHandler');
+const wp = new WPApiHandler(url, headers);
+
+wp.get_posts()
+  .then((response: Post[]) => {
+    posts.value = response;
+  })
+  .catch((error: Error) => {
+    console.error('Error:', error);
+  });
 </script>
 
 <style>
