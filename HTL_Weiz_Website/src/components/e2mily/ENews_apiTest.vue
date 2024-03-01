@@ -15,7 +15,7 @@
   const url = 'https://dev.htlweiz.at/wordpress';
   const headers = {
     "Content-Type": "application/json",
-    "Authorization": "Basic d3BhcGloYW5kbGVyOm1vZ2tpOC1zYXp2eWotaHVjcVVi"
+    "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
   };
 
   const wpa = new WPApiHandler(url, headers);
