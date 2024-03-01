@@ -77,15 +77,18 @@
   </div>
 
   <div id="modal-example" class="uk-modal-full" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body uk-padding">
-      <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-        <h2 class="uk-modal-title"></h2>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-grid-collapse uk-child-width-1-1@s" uk-grid>
+            <div class="uk-background-cover uk-height-medium" style="background-image: url('/images/e2mily-projectgreen.jpg');"></div>
+            <div class="uk-padding-large">
+                <h1>E²MILY - GT im Greenroom des Project 1</h1>
+                <p>Im Green Room von Project 1 konnten die Besucher:innen auf dem Red Bull Ring zwei innovative und nachhaltige Projekte im Bereich Motorsport unter die Lupe nehmen. Eines davon war unser E-Kart E2MILY-GT. Daneben präsentierte Project 1 das „inklusive eKart“, das mit dem System SpaceDrive II und Steuerelementen von Paravan ausgestattet ist. Die Fahr- und Lenkbefehle werden elektrisch über einen zwei- oder vier-wege Joystick übertragen. So haben auch Menschen, die eine herkömmliche Lenkung nicht bedienen können, die Möglichkeit, am eKart-Sport teilzunehmen. Quellen: https://media.bmwm2cup.com/de/</p>
+            </div>
+        </div>
     </div>
-</div>
-
-
+  </div>
 </template>
-
 <script lang="ts">
 export default {
   name: 'Box',
