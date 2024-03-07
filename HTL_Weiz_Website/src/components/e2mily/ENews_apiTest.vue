@@ -19,7 +19,11 @@
   };
 
   const wpa = new WPApiHandler(url, headers);
-  let post = await wpa.get_posts('1910');
+
+  const tag_id = await wpa.get_tag_slug('emily');
+  //console.log(tag_id);
+
+  let post = await wpa.get_posts(tag_id);
 
   export default {
     data () {

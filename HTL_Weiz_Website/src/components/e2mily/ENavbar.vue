@@ -25,9 +25,6 @@
                     <li class="navbigscreen">
                       <a href="#sponsor" uk-scroll>Sponsoring</a>
                     </li>
-                    <li class="navbigscreen">
-                      <a href="/e2mily/contact" uk-scroll>Kontakt</a>
-                    </li>
                   </ul>
                 </div>
               </div>

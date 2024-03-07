@@ -1,72 +1,23 @@
 <template>
-  <div class="uk-background-muted uk-padding">
+  <div class="uk-background-muted uk-padding" id="news">
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
       <ul class="uk-slider-items uk-grid">
-
-        <li class="uk-width-1-3">
-          <div class="uk-panel">
-            <div class="uk-card uk-card-default">
-              <div class="uk-card-media-top">
-                <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/images/e2mily-projectgreen.jpg" uk-img>
-                </div>
-              </div>
-              <div class="uk-card-body uk-text-left">
-                <p class="uk-text-bold uk-padding-remove-bottom">11.11.2011</p>
-                <p class="uk-card-title uk-padding-remove-top">E²MILY - GT im Greenroom des Project 1</p>
-                <div>
-                  <p> Im Green Room von Project 1 konnten die Besucher:innen auf dem Red Bull Ring zwei innovative und
-                    nachhaltige Projekte im Bereich Motorsport unter die Lupe nehmen. Eines davon war unser E-Kart E2MILY-GT.
-                  </p>
-                  <a href="#modal-example" class="linkcolor" uk-toggle>Mehr Lesen</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="uk-width-1-3">
-          <div class="uk-panel">
-            <div class="uk-card uk-card-default">
-              <div class="uk-card-media-top">
-                <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/images/e2mily-projectgreen.jpg" uk-img>
-                </div>
-              </div>
-              <div class="uk-card-body uk-text-left">
-                <p class="uk-text-bold uk-padding-remove-bottom">11.11.2011</p>
-                <p class="uk-card-title uk-padding-remove-top">E²MILY - GT im Greenroom des Project 1</p>
-                <div>
-                  <p> Im Green Room von Project 1 konnten die Besucher:innen auf dem Red Bull Ring zwei innovative und
-                    nachhaltige Projekte im Bereich Motorsport unter die Lupe nehmen. Eines davon war unser E-Kart E2MILY-GT.
-                  </p>
-                  <a href="#" class="linkcolor">Mehr Lesen</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
         
-        <li class="uk-width-1-3">
+        <li v-for="post in posts" :key="post.id" class="uk-width-1-3">
           <div class="uk-panel">
             <div class="uk-card uk-card-default">
               <div class="uk-card-media-top">
-                <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/images/e2mily-projectgreen.jpg" uk-img>
-                </div>
+                <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" :data-src="post.image" uk-img></div>
               </div>
               <div class="uk-card-body uk-text-left">
-                <p class="uk-text-bold uk-padding-remove-bottom">11.11.2011</p>
-                <p class="uk-card-title uk-padding-remove-top">E²MILY - GT im Greenroom des Project 1</p>
-                <div>
-                  <p> Im Green Room von Project 1 konnten die Besucher:innen auf dem Red Bull Ring zwei innovative und
-                    nachhaltige Projekte im Bereich Motorsport unter die Lupe nehmen. Eines davon war unser E-Kart E2MILY-GT.
-                  </p>
-                  <a href="#" class="linkcolor">Mehr Lesen</a>
-                </div>
+                <p class="uk-text-bold uk-padding-remove-bottom">{{ post.date }}</p>
+                <p class="uk-card-title">{{ post.title }}</p>
+                <div v-html="post.truncatedContent"></div>
+                <a @click="openModal(post)" class="linkcolor" href="#">Mehr Lesen</a>
               </div>
             </div>
           </div>
         </li>
-
-       
 
       </ul>
 
@@ -77,23 +28,63 @@
   </div>
 
   <div id="modal-example" class="uk-modal-full" uk-modal>
-    <div class="uk-modal-dialog">
-        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-        <div class="uk-grid-collapse uk-child-width-1-1@s" uk-grid>
-            <div class="uk-background-cover uk-height-medium" style="background-image: url('/images/e2mily-projectgreen.jpg');"></div>
-            <div class="uk-padding-large">
-                <h1>E²MILY - GT im Greenroom des Project 1</h1>
-                <p>Im Green Room von Project 1 konnten die Besucher:innen auf dem Red Bull Ring zwei innovative und nachhaltige Projekte im Bereich Motorsport unter die Lupe nehmen. Eines davon war unser E-Kart E2MILY-GT. Daneben präsentierte Project 1 das „inklusive eKart“, das mit dem System SpaceDrive II und Steuerelementen von Paravan ausgestattet ist. Die Fahr- und Lenkbefehle werden elektrisch über einen zwei- oder vier-wege Joystick übertragen. So haben auch Menschen, die eine herkömmliche Lenkung nicht bedienen können, die Möglichkeit, am eKart-Sport teilzunehmen. Quellen: https://media.bmwm2cup.com/de/</p>
-            </div>
-        </div>
+    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle uk-height-viewport" v-if="selectedPost">
+      <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+      <div class="uk-padding-large">
+        <h1>{{ selectedPost.title }}</h1>
+        <div v-html="selectedPost.content"></div>
+      </div>
     </div>
   </div>
 </template>
-<script lang="ts">
+
+
+<script>
+import { WPApiHandler } from 'wpapihandler';
+
+const url = 'https://dev.htlweiz.at/wordpress';
+const headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
+};
+
+const wpa = new WPApiHandler(url, headers);
+
 export default {
-  name: 'Box',
+  data() {
+    return {
+      posts: [],
+      selectedPost: null
+    };
+  },
+  async mounted() {
+    const tagId = await wpa.get_tag_slug('emily');
+    const posts = await wpa.get_posts(tagId);
+
+    // Truncate content for each post
+    posts.forEach(post => {
+      post.truncatedContent = this.truncateContent(post.content, 100);
+    });
+
+    this.posts = posts;
+  },
+  methods: {
+    truncateContent(content, maxLength) {
+      if (content.length <= maxLength) {
+        return content;
+      } else {
+        const truncatedContent = content.substr(0, content.lastIndexOf(' ', maxLength));
+        return truncatedContent + '...';
+      }
+    },
+    openModal(post) {
+      this.selectedPost = post;
+      UIkit.modal('#modal-example').show();
+    }
+  }
 };
 </script>
+
 
 <style scoped>
 
