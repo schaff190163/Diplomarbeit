@@ -22,11 +22,16 @@ export default {
   components: {
     NavBar,
     PostCard,
+import { WPApiHandler } from 'wpapihandler';
+
+export default {
+  name: 'News',
+  components: {
     Footer,
   },
   data() {
     return {
-      posts: [] as WPApiHandler.Post[],
+      posts: [],
     };
   },
   async created() {
@@ -46,6 +51,17 @@ export default {
     }
   },
 };
+
+console.log('Init WPApiHandler');
+const wp = new WPApiHandler(url, headers);
+
+wp.get_posts()
+  .then((response: Post[]) => {
+    posts.value = response;
+  })
+  .catch((error: Error) => {
+    console.error('Error:', error);
+  });
 </script>
 
 <style>
