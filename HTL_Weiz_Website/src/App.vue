@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view /> 
   </div>
 </template>
 
@@ -45,6 +45,10 @@ export default defineComponent({
     padding-left: 35px !important;
     padding-right: 35px !important;
   }
+}
+
+.mpheading{
+  font-size: clamp(1rem, 10vw, 2rem); 
 }
 
 @media (min-width: 1500px) {

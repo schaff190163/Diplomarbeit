@@ -12,7 +12,10 @@
     }
   ],
   "compilerOptions": {
-    "types": ["vite/client"]
-    // Other compiler options as needed
+    "types": ["vite/client"],
+    "baseUrl": "./",
+    "paths": {
+      "wpapihandler": ["./node_modules/wpapihandler/dist/index.d.ts"]
+    }
   }
 }
