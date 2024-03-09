@@ -114,10 +114,10 @@
   </div>
   <div id="offcanvas-nav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar">
-      <ul class="uk-nav uk-nav-default">
-        <li class="navsmallscreen uk-parent uk-light">
-          <a href="#">Unsere Schule</a>
-          <ul class="uk-nav-sub">
+      <ul class="uk-nav uk-nav-default" uk-accordion="multiple: true">
+        <li class="navsmallscreen uk-light">
+          <a class="uk-accordion-title" href="#">Unsere Schule</a>
+            <div class="uk-accordion-content">
             <li><router-link to="/warumwir">Warum wir?</router-link></li>
             <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
             <li><router-link to="/et">Elektrotechnik</router-link></li>
@@ -126,11 +126,11 @@
             <li><router-link to="/mb">Maschinenbau - Anlagentechnik</router-link></li>
             <li><router-link to="/at">Maschinenbau - Automatisierungstechnik</router-link></li>
             <li><router-link to="/mt">Fachschule - Mechatronik</router-link></li>
-          </ul>
+            </div>
         </li>
         <li class="navsmallscreen uk-parent uk-light">
-          <a href="#">Ausbildung 14+</a>
-          <ul class="uk-nav-sub">
+          <a class="uk-accordion-title" href="#">Ausbildung 14+</a>
+          <div class="uk-accordion-content">
             <li><router-link to="/team">Team</router-link></li>
             <li><router-link to="/team#verwaltung">Verwaltung</router-link></li>
             <li><router-link to="/team#schülerinnenvertretung">SchülerInnenvertretung</router-link></li>
@@ -139,43 +139,43 @@
             <li><router-link to="/sga">SGA</router-link></li>
             <li><a href="https://www.absolventen-htlweiz.at/">Absolventenverein</a></li>
             <li><a href="https://www.ttz-weiz.at/index.php/ttz-lern-center-weiz">TTZ</a></li>
-          </ul>
+          </div>
         </li>
         <li class="navsmallscreen uk-parent">
-          <a href="#">Ausbildung 18+</a>
-          <ul class="uk-nav-sub">
+          <a class="uk-accordion-title" href="#">Ausbildung 18+</a>
+          <div class="uk-accordion-content">
             <li><router-link to="/awi">Abendschule - Wirtschaftsingineure</router-link></li>
             <li><a href="http://www.ttz-weiz.net/index.php?option=com_content&task=section&id=4&Itemid=26">Individuelle Kurse TTZ</a></li>
-          </ul>
+          </div>
         </li>
         <li class="navsmallscreen uk-parent">
-          <a href="#">Aufnahme</a>
-          <ul class="uk-nav-sub">
+          <a class="uk-accordion-title" href="#">Aufnahme</a>
+          <div class="uk-accordion-content">
             <li><router-link to="/aufnahmeverfahren">Aufnahmeverfahren</router-link></li>
             <li><router-link to="/vorteilehtl">Vorteile einer HTL Ausbildung</router-link></li>
             <li><router-link to="/kennenlernangebote">Kennenlernangebote</router-link></li>
             <li><router-link to="/schnuppern">Schnuppern</router-link></li>
             <li><router-link to="/tagderoffenentuer">Tag der offenen Tür</router-link></li>
-          </ul>
+          </div>
         </li>
         <li class="navsmallscreen uk-parent">
-          <a href="#">Aktuelles</a>
-          <ul class="uk-nav-sub">
+          <a class="uk-accordion-title" href="#">Aktuelles</a>
+          <div class="uk-accordion-content">
             <li><router-link to="/news">Schulveranstaltungen</router-link></li>
             <li><router-link to="/news">News</router-link></li>
-          </ul>
+          </div>
         </li>
         <li class="navsmallscreen uk-parent">
-          <a href="#">Services</a>
-          <ul class="uk-nav-sub">
+          <a class="uk-accordion-title" href="#">Services</a>
+          <div class="uk-accordion-content">
             <li><router-link to="/parents">Eltern</router-link></li>
             <li><router-link to="/students">SchülerInnen</router-link></li>
             <li><router-link to="/teachers">LehrerInnen</router-link></li>
-          </ul>
+          </div>
         </li>
         <li class="navsmallscreen uk-parent">
-          <a href="#">Rat & Hilfe</a>
-          <ul class="uk-nav-sub">
+          <a class="uk-accordion-title" href="#">Rat & Hilfe</a>
+          <div class="uk-accordion-content">
             <li><router-link to="/team">Sekretariat</router-link></li>
             <li><router-link to="/team">Bildungsberatung</router-link></li>
             <li><router-link to="/team">Mädchenbeauftragte</router-link></li>
@@ -184,7 +184,7 @@
             <li><router-link to="/team">Schulpsychologe</router-link></li>
             <li><router-link to="/team">Jugendcoaching</router-link></li>
             <li><router-link to="/team">Notfallnummern</router-link></li>
-          </ul>
+          </div>
         </li>
       </ul>
     </div>
@@ -203,18 +203,6 @@
 </script>
 
 <style>
-  /* Styles for this component */
-  .img-logo {
-    height: auto !important;
-  }
-  .nbrounded {
-    border-radius: 50px !important;
-  }
-  @media (max-width: 640px){
-    .img-logo{
-      height: 400px !important;
-    }
-  }
   @media (max-width: 1075px){
     .navbigscreen {
       display: none !important;
