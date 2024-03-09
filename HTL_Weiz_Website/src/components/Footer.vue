@@ -15,7 +15,6 @@
                     <li>Mo - Do: 16:45 - 21:30 (Abendschule)</li>
                 </ul>
           </div>
-
           <div>
                 <h4>Fürstenfeld</h4>
                 <ul class="uk-list uk-list-collapse">
@@ -64,7 +63,6 @@ export default {
     background-color: #1BA373;
     color: #F8F8F8;
 }
-
 .imprintlink{
     color: #F8F8F8;
 }

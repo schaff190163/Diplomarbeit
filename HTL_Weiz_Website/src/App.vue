@@ -20,7 +20,7 @@ export default defineComponent({
 }
 
 .padbot {
-  padding-bottom: 25px !important;
+  padding-bottom: 20px !important;
 }
 
 .padleftright {
@@ -38,7 +38,7 @@ export default defineComponent({
   }
 
   .padbot {
-    padding-bottom: 10px !important;
+    padding-bottom: 8px !important;
   }
 
   .padleftright {

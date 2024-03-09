@@ -1,10 +1,8 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <h1 class="teamheading" id="team">Das Team der HTL Weiz</h1>
-    <p class="padleftright">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     <h1 class="teamheading" id="direktion">Direktion</h1>
-    <Card_Direktion lass="padleftright padtop padbot"></Card_Direktion>
+    <Card_Direktion class="padleftright padtop padbot"></Card_Direktion>
     <h1 class="teamheading" id="abteilungsvorstaende">Abteilungsvorstände</h1>
     <div class="grid-containerav padleftright padtop padbot">
       <Card_Abteilungsvorstand avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Macher.jpg"></Card_Abteilungsvorstand>
@@ -50,7 +48,6 @@ export default {
 .teamheading {
   font-size: 40px;
   padding-left: 100px;
-  padding-top: 90px;
 }
 .grid-containerav {
   display: grid;
