@@ -15,18 +15,13 @@
 import NavBar from "../../components/NavBar.vue";
 import PostCard from "../../components/PostCard.vue";
 import Footer from "../../components/Footer.vue";
-
-
-export default {
-  name: "News",
-  components: {
-    NavBar,
-    PostCard,
 import { WPApiHandler } from 'wpapihandler';
 
 export default {
   name: 'News',
   components: {
+    NavBar,
+    PostCard,
     Footer,
   },
   data() {
@@ -53,22 +48,12 @@ export default {
 };
 
 console.log('Init WPApiHandler');
-const wp = new WPApiHandler(url, headers);
+const wp = new WPApiHandler('url', 'headers');
 
 wp.get_posts()
-  .then((response: Post[]) => {
-    posts.value = response;
+  .then((response) => {
+    this.posts = response;
   })
-  .catch((error: Error) => {
+  .catch((error) => {
     console.error('Error:', error);
   });
-</script>
-
-<style>
-.grid-containersv {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 50px;
-  position: relative;
-}
-</style>

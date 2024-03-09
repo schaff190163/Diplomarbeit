@@ -14,14 +14,14 @@
                         <a href="#">Unsere Schule</a>
                         <div class="uk-navbar-dropdown">
                           <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><router-link to="/team">Team</router-link></li>
-                            <li><router-link to="/team">Verwaltung</router-link></li>
-                            <li><a href="https://www.ttz-weiz.at/index.php/ttz-lern-center-weiz">TTZ</a></li>
-                            <li><router-link to="/team">SchülerInnenvertretung</router-link></li>
+                            <li><router-link to="/team#team">Team</router-link></li>
+                            <li><router-link to="/team#verwaltung">Verwaltung</router-link></li>
+                            <li><router-link to="/team#schülerinnenvertretung">SchülerInnenvertretung</router-link></li>
                             <li><router-link to="/elternverein">Elternverein</router-link></li>
-                            <li><a href="https://www.absolventen-htlweiz.at/">Absolventenverein</a></li>
                             <li><router-link to="/partner">Partner</router-link></li>
                             <li><router-link to="/sga">SGA</router-link></li>
+                            <li><a href="https://www.absolventen-htlweiz.at/">Absolventenverein</a></li>
+                            <li><a href="https://www.ttz-weiz.at/index.php/ttz-lern-center-weiz">TTZ</a></li>
                           </ul>
                         </div>
                       </li>

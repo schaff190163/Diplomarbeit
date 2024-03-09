@@ -160,7 +160,20 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "e2milycontact" */"../views/E2milyContact.vue")
     },
 
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({ el: to.hash })
+        }, 300)
+      })
+    } else if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { left: 0, top: 0 }
+    }
+  }
 })
 
 export default router;
