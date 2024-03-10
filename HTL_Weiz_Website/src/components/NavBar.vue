@@ -188,8 +188,8 @@
         </li>
       </ul>
     </div>
-  <div style="height: 80px;"></div>
   </div>
+  <div style="height: 80px;"></div>
 </template>
 
 <script lang="ts">

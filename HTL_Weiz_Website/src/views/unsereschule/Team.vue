@@ -4,16 +4,31 @@
     <h1 class="teamheading" id="direktion">Direktion</h1>
     <Card_Direktion class="padleftright padtop padbot"></Card_Direktion>
     <h1 class="teamheading" id="abteilungsvorstaende">Abteilungsvorstände</h1>
-    <div class="grid-containerav padleftright padtop padbot">
-      <Card_Abteilungsvorstand avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Macher.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Deimel.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Hierz.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Bernhard Pertl" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Pertl.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Heimo T. Blattner" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Blattner.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Hoellerbauer.jpg"></Card_Abteilungsvorstand>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <Card_Staff name="Harald Macher" title="AV DI " short="MH" imgsrc="/images/team/Macher.jpg"></Card_Staff>
+      <Card_Staff name="Christian Deimel" title="B.Ed." short="dei" imgsrc="/images/team/Deimel.jpg"></Card_Staff>
+      <Card_Staff name="Josef Hierz" title="Ing. B.Ed." short="hie" imgsrc="/images/team/Hierz.jpg"></Card_Staff>
+      <Card_Staff name="Bernhard Pertl" title="AV DI" short="PE" imgsrc="/images/team/Pertl.jpg"></Card_Staff>
+      <Card_Staff name="Heimo T. Blattner" title="AV DI" short="BL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Wolfgang Höllerbauer" title="FOL OSR Dipl.-Päd." short="hoe" imgsrc="/images/team/Hoellerbauer.jpg"></Card_Staff>
     </div>
     <h1 class="teamheading" id="lehrpersonal">Lehrpersonal</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
     </div>
     <h1 class="teamheading" id="verwaltung">Verwaltung</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
@@ -28,7 +43,6 @@
 <script lang="ts">
 import NavBar from "../../components/NavBar.vue";
 import Card_Direktion from "../../components/Card_Direktion.vue";
-import Card_Abteilungsvorstand from "../../components/Card_Abteilungsvorstand.vue";
 import Card_Staff from "../../components/Card_Staff.vue" 
 import Footer from "../../components/Footer.vue";
 
@@ -37,7 +51,6 @@ export default {
   components: {
     NavBar,
     Card_Direktion,
-    Card_Abteilungsvorstand,
     Card_Staff,
     Footer,
 },
@@ -49,25 +62,18 @@ export default {
   font-size: 40px;
   padding-left: 100px;
 }
-.grid-containerav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  position: relative;
-}
 .grid-containerstaff {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   position: relative;
 }
-.nodarstello {
-  display: none;
-}
-@media only screen and (max-width : 640px) {
-  .grid-containerav {
-  grid-template-columns: repeat(1, 1fr);
+@media only screen and (max-width : 1200px) {
+  .grid-containerstaff {
+  grid-template-columns: repeat(2, 1fr);
   }
+}
+@media only screen and (max-width : 940px) {
   .grid-containerstaff {
   grid-template-columns: repeat(1, 1fr);
   }
