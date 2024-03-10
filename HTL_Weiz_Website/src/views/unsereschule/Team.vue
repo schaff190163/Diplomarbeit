@@ -78,7 +78,7 @@ export default {
   grid-template-columns: repeat(1, 1fr);
   }
   .teamheading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-left:0px;
   text-align: center;
   }

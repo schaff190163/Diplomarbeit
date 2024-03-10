@@ -115,21 +115,8 @@
   <div id="offcanvas-nav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar">
       <ul class="uk-nav uk-nav-default" uk-accordion="multiple: true">
-        <li class="navsmallscreen uk-light">
-          <a class="uk-accordion-title" href="#">Unsere Schule</a>
-            <div class="uk-accordion-content">
-            <li><router-link to="/warumwir">Warum wir?</router-link></li>
-            <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
-            <li><router-link to="/et">Elektrotechnik</router-link></li>
-            <li><router-link to="/it">Informationstechnologie</router-link></li>
-            <li><router-link to="/ut">Maschinenbau - Umwelttechnik</router-link></li>
-            <li><router-link to="/mb">Maschinenbau - Anlagentechnik</router-link></li>
-            <li><router-link to="/at">Maschinenbau - Automatisierungstechnik</router-link></li>
-            <li><router-link to="/mt">Fachschule - Mechatronik</router-link></li>
-            </div>
-        </li>
         <li class="navsmallscreen uk-parent uk-light">
-          <a class="uk-accordion-title" href="#">Ausbildung 14+</a>
+          <a class="uk-accordion-title" href="#">Unsere Schule</a>
           <div class="uk-accordion-content">
             <li><router-link to="/team">Team</router-link></li>
             <li><router-link to="/team#verwaltung">Verwaltung</router-link></li>
@@ -140,6 +127,19 @@
             <li><a href="https://www.absolventen-htlweiz.at/">Absolventenverein</a></li>
             <li><a href="https://www.ttz-weiz.at/index.php/ttz-lern-center-weiz">TTZ</a></li>
           </div>
+        </li>
+        <li class="navsmallscreen uk-light">
+          <a class="uk-accordion-title" href="#">Ausbildung 14+</a>
+            <div class="uk-accordion-content">
+            <li><router-link to="/warumwir">Warum wir?</router-link></li>
+            <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
+            <li><router-link to="/et">Elektrotechnik</router-link></li>
+            <li><router-link to="/it">Informationstechnologie</router-link></li>
+            <li><router-link to="/ut">Maschinenbau - Umwelttechnik</router-link></li>
+            <li><router-link to="/mb">Maschinenbau - Anlagentechnik</router-link></li>
+            <li><router-link to="/at">Maschinenbau - Automatisierungstechnik</router-link></li>
+            <li><router-link to="/mt">Fachschule - Mechatronik</router-link></li>
+            </div>
         </li>
         <li class="navsmallscreen uk-parent">
           <a class="uk-accordion-title" href="#">Ausbildung 18+</a>
