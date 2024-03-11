@@ -17,7 +17,7 @@
     "vite-plugin-vue2": "^2.0.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
-    "wpapihandler": "^1.0.6"
+    "wpapihandler": "^1.3.0"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.0",

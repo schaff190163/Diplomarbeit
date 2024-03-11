@@ -3,109 +3,24 @@
     <div uk-grid>
         <div class="uk-width-auto@m">
             <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
-                <li><a href="#">Hauptsponsor</a></li>
-                <li><a href="#">Platin</a></li>
-                <li><a href="#">Gold</a></li>
-                <li><a href="#">Silber</a></li>
+                <li v-for="(level, index) in levels" :key="index" @click="selectLevel(index)">
+                  <a href="#">{{ level }}</a>
+                </li>
             </ul>
         </div>
         <div class="uk-width-expand@m">
             <ul id="component-tab-left" class="uk-switcher">
-              <li>
-                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
+              <li v-for="level in levels">
+                <div v-if="selectedLevel === levels.indexOf(level)" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
                   <ul class="uk-slider-items uk-flex-center uk-grid">
-                    <li>
+                    <li v-for="partner in filteredPartners" :key="partner.id">
                       <div class="uk-panel">
-                        <img src="/images/sponsor/amt_sponsor.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/rosendahl_sponsor.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/evon_sponsor.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/unger_sponsor.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/woodsolutions_sponsor.png" width="200" height="200" alt="">
+                        <div class="logo-container">
+                          <img class="logo" :src="partner.logo" alt="">
+                        </div>
                       </div>
                     </li>
                   </ul>
-                </div>
-              </li>
-
-              <li>
-                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
-                  <ul class="uk-slider-items uk-flex-center uk-grid">
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/AMAG_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/antonpaar_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/binder_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/BR_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/FranzMorrat_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/isabellenhuette_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/MAGNA_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/SBG_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/tectos_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/voltlabor_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                    <li>
-                      <div class="uk-panel">
-                        <img src="/images/sponsor/platin/Zeiss_platin.png" width="200" height="200" alt="">
-                      </div>
-                    </li>
-                  </ul>
-
-                  <a class="uk-position-center-left uk-position-small acolor" uk-slidenav-previous uk-slider-item="previous"></a>
-                  <a class="uk-position-center-right uk-position-small acolor" uk-slidenav-next uk-slider-item="next"></a>
-
                 </div>
               </li>
             </ul>
@@ -114,28 +29,54 @@
   </div>
 </template>
 
-<script lang="ts">
-/* import ... from ...; */
+<script>
+import { WPApiHandler } from 'wpapihandler';
 
 export default {
-  name: 'ESponsor',
+  data() {
+    return {
+      partners: [],
+      levels: ["Hauptsponsor", "Platin", "Gold", "Silber"],
+      selectedLevel: 0
+    };
+  },
+  async mounted() {
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
+    };
+    const url = 'https://dev.htlweiz.at/wordpress';
+    const wpa = new WPApiHandler(url, headers);
+    try {
+      this.partners = await wpa.get_partners('emily');
+    } catch (error) {
+      console.error('Error fetching partners:', error);
+    }
+  },
+  computed: {
+    filteredPartners() {
+      return this.partners.filter(partner => partner.level === this.levels[this.selectedLevel]);
+    }
+  },
+  methods: {
+    selectLevel(index) {
+      this.selectedLevel = index;
+    }
+  }
 };
 </script>
 
-
 <style scoped>
-/* Add scoped attribute to style tag to ensure styles are scoped to this component */
-
-.back_color {
-  background-color: rgb(226, 226, 226);
+.logo-container {
+  width: 175px;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.acolor {
-  color: #b3b3b3;
+.logo {
+  max-width: 100%;
+  max-height: 100%;
 }
-
-.acolor:hover {
-  color: #cecece;
-}
-
 </style>

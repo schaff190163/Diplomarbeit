@@ -13,7 +13,7 @@
                 <p class="uk-text-bold uk-padding-remove-bottom">{{ post.date }}</p>
                 <p class="uk-card-title">{{ post.title }}</p>
                 <div v-html="post.truncatedContent"></div>
-                <a @click="openModal(post)" class="linkcolor" href="#">Mehr Lesen</a>
+                <a href="#modal-example" class="linkcolor" uk-toggle>Mehr Lesen</a>
               </div>
             </div>
           </div>
@@ -58,8 +58,7 @@ export default {
     };
   },
   async mounted() {
-    const tagId = await wpa.get_tag_slug('emily');
-    const posts = await wpa.get_posts(tagId);
+    const posts = await wpa.get_posts(undefined, ['emily'])
 
     // Truncate content for each post
     posts.forEach(post => {
@@ -77,10 +76,6 @@ export default {
         return truncatedContent + '...';
       }
     },
-    openModal(post) {
-      this.selectedPost = post;
-      UIkit.modal('#modal-example').show();
-    }
   }
 };
 </script>

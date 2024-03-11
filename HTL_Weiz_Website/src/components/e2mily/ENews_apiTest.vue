@@ -1,78 +1,42 @@
 <template>
-  <div class="uk-padding uk-background-default">
-    <div class="uk-margin-xlarge-left uk-margin-medium-top uk-margin-xlarge-right">
-      <div class="uk-card uk-card-default uk-card-body">
-        <h3 class="uk-card-title" v-html="post_title"></h3>
-        <div v-html="post_content"></div>
-      </div>
-    </div>
+  <div class="container">
+    <img v-for="pt in partners" :key="pt.id" :src="pt.logo" width="200" height="200" alt="">
+    <p>{{ partners[1] }}</p>
   </div>
 </template>
 
 <script>
-  import { WPApiHandler } from 'wpapihandler';
+import { WPApiHandler } from 'wpapihandler';
 
-  const url = 'https://dev.htlweiz.at/wordpress';
-  const headers = {
-    "Content-Type": "application/json",
-    "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
-  };
+// Define headers before using them
+const headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
+};
 
-  const wpa = new WPApiHandler(url, headers);
+// Define URL after headers
+const url = 'https://dev.htlweiz.at/wordpress';
 
-  const tag_id = await wpa.get_tag_slug('emily');
-  //console.log(tag_id);
+// Create an instance of WPApiHandler with URL and headers
+const wpa = new WPApiHandler(url, headers);
+const partners = await wpa.get_partners('emily');
 
-  let post = await wpa.get_posts(tag_id);
 
-  export default {
-    data () {
-      return {
-        post_title: post[0].title,
-        post_content: post[0].content,
-      }
+
+export default {
+  data () {
+    return {
+      partners,
     }
-  }
+  },
+}
 </script>
-
 
 <style scoped>
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-}
-
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.post-content {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #666;
-}
-
-.post-content p {
-  margin-bottom: 10px;
-}
-
-.post-content a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.post-content a:hover {
-  text-decoration: underline;
-}
-
-.post-content img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
 }
 
 /* Add CSS to adjust list style */
