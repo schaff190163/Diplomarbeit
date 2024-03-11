@@ -7,7 +7,7 @@
         <PostCard :post="post"></PostCard>
       </div>
     </div>
-    <FooterMerge></FooterMerge>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -15,45 +15,46 @@
 import NavBar from "../../components/NavBar.vue";
 import PostCard from "../../components/PostCard.vue";
 import Footer from "../../components/Footer.vue";
-import { WPApiHandler } from 'wpapihandler';
 
 export default {
-  name: 'News',
+  name: "News",
   components: {
     NavBar,
     PostCard,
     Footer,
-  },
-  data() {
-    return {
-      posts: [],
-    };
-  },
-  async created() {
-    const wpa = new WPApiHandler('https://dev.htlweiz.at/wordpress', {
-      Authorization: 'Basic dnVlX2pzOnJYaFcgbGg2cSB3dXV2IGQzQzUgSUtyWCBZTWtJ',
-    });
+  }
+};
+</script>
 
-    try {
-      const response = await wpa.get_posts();
-      if (response.status === 200) {
-        this.posts = response.data;
-      } else {
-        console.error('Error fetching posts:', response.error);
-      }
-    } catch (error) {
-      console.error('Error in NewsView created:', error);
-    }
-  },
+<script setup lang="ts">
+import { ref } from 'vue';
+import { WPApiHandler, type Post } from 'wpapihandler';
+
+const posts = ref<Post[]>([]);
+
+const url = 'https://dev.htlweiz.at/wordpress';
+const headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
 };
 
 console.log('Init WPApiHandler');
-const wp = new WPApiHandler('url', 'headers');
+const wp = new WPApiHandler(url, headers);
 
 wp.get_posts()
-  .then((response) => {
-    this.posts = response;
+  .then((response: Post[]) => {
+    posts.value = response;
   })
-  .catch((error) => {
+  .catch((error: Error) => {
     console.error('Error:', error);
   });
+</script>
+
+<style>
+.grid-containersv {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 50px;
+  position: relative;
+}
+</style>

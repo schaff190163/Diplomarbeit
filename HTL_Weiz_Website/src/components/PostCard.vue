@@ -7,7 +7,7 @@
         </div>
       </div>
     </div>
-    <div class="uk-card-body" v-html="decodeEntities(post.content)">
+    <div class="uk-card-body" v-html="post.content">
     </div>
   </div>
 </template>

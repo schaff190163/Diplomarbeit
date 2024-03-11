@@ -30,8 +30,6 @@
 </template>
 
 <script lang="ts">
-import UIkit from 'uikit';
-
 export default {
   name: "Card_Direktion",
   props: {
