@@ -4,7 +4,7 @@
     <h1 class="padleftright">News an der HTL Weiz</h1>
     <div class="padleftright padtop padbot grid-containersv">
       <div v-for="post in posts" :key="post.id">
-        <PostCard v-if="post" :post="post"></PostCard>
+        <Card_Post v-if="post" :post="post"></Card_Post>
       </div>
       <div v-if="loading=true" class="loader-container uk-position-center"><Loader></Loader></div>
     </div>
@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import NavBar from "../../components/NavBar.vue";
-import PostCard from "../../components/PostCard.vue";
+import Card_Post from "../../components/Card_Post.vue";
 import Footer from "../../components/Footer.vue";
 import Loader from "../../components/Loader.vue";
 
@@ -22,7 +22,7 @@ export default {
   name: "News",
   components: {
     NavBar,
-    PostCard,
+    Card_Post,
     Footer,
     Loader,
   }
@@ -82,4 +82,4 @@ update_posts();
     gap: 15px;
   }
 }
-</style>
+</style>../../components/Card_Post.vue

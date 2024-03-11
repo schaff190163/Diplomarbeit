@@ -37,3 +37,4 @@ export default {
   position: relative;
 }
 </style>
+../../components/Card_Post.vue

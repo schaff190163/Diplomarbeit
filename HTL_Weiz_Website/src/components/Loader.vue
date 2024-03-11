@@ -1,10 +1,13 @@
 <template>
-    <div class="loader"></div>
+    <div style="height: 150px;" class="padtop padbot">
+        <div class="loader"></div>
+    </div>
 </template>
 
 <script lang="ts">
     export default {
         name: "Loader",
+    }
 </script>
 
 <style>

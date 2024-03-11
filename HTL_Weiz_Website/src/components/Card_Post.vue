@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="uk-inline roundedl" @click="openModal">
-      <img src="/images/team/Gottfried_Purkarthofer.jpg" class="roundedl" width="1800" height="1200" alt="">
+      <img src="/images/hero_people.png" class="roundedl" width="1800" height="1200" alt="">
       <div class="gradient uk-position-cover roundedl"></div>
       <div class="uk-overlay uk-position-bottom uk-light">
         <h3 class="uk-card-title" v-html="decodeEntities(post.title)"></h3>
@@ -20,7 +20,7 @@
 
 <script lang="ts">
 export default {
-  name: 'PostCard',
+  name: 'Card_Post',
   props: {
     post: {
       type: Object,
