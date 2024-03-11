@@ -1,15 +1,21 @@
 <template>
-  <div class="uk-card uk-card-default roundedl">
-    <div class="uk-card-header">
-      <div class="uk-grid-small uk-flex-middle" uk-grid>
-        <div class="uk-width-auto">
-          <h3 class="uk-card-title uk-text-large" v-html="decodeEntities(post.title)"></h3>
+    <div>
+      <div class="uk-inline roundedl" @click="openModal">
+        <img src="/images/team/Gottfried_Purkarthofer.jpg" class="roundedl" width="1800" height="1200" alt="">
+        <div class="gradient uk-position-cover roundedl"></div>
+        <div class="uk-overlay uk-position-bottom uk-light">
+          <h3 class="uk-card-title" v-html="decodeEntities(post.title)"></h3>
+          <div class="uk-text-light" v-html="decodeEntities(limitContent(post.content))"></div>
         </div>
       </div>
     </div>
-    <div class="uk-card-body" v-html="post.content">
+    <div :id="post.id" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical roundedl">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3>Title of Modal</h3>
+        <p>hellohellohello</p>
+      </div>
     </div>
-  </div>
 </template>
 
 <script lang="ts">
@@ -32,13 +38,25 @@ export default {
       const doc = new DOMParser().parseFromString(html, 'text/html');
       return doc.documentElement.textContent || '';
     },
-  },
+    limitContent(content: string): string {
+      const words = content.split(' ');
+      if (words.length > 20) {
+        return words.slice(0, 20).join(' ') + '...';
+      }
+      return content;
+    },
+    openModal() {
+      if (this.post && this.post.id) {
+        UIkit.modal('#' + this.post.id).show();
+      } else {
+        console.warn("Post data or id is not available");
+      }
+    }
 };
 </script>
 
 <style>
-.uk-cover-small {
-  max-width: 100%;
-  max-height: 300px;
-  padding: 20px;
-}</style>
+  .gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(34, 30, 30));
+  }
+</style>
