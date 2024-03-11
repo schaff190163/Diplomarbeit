@@ -4,8 +4,9 @@
     <h1 class="padleftright">News an der HTL Weiz</h1>
     <div class="padleftright padtop padbot grid-containersv">
       <div v-for="post in posts" :key="post.id">
-        <PostCard :post="post"></PostCard>
+        <PostCard v-if="post" :post="post"></PostCard>
       </div>
+      <div v-if="loading=true" class="loader-container uk-position-center"><Loader></Loader></div>
     </div>
     <Footer></Footer>
   </div>
@@ -15,6 +16,7 @@
 import NavBar from "../../components/NavBar.vue";
 import PostCard from "../../components/PostCard.vue";
 import Footer from "../../components/Footer.vue";
+import Loader from "../../components/Loader.vue";
 
 export default {
   name: "News",
@@ -22,6 +24,7 @@ export default {
     NavBar,
     PostCard,
     Footer,
+    Loader,
   }
 };
 </script>
@@ -31,6 +34,7 @@ import { ref } from 'vue';
 import { WPApiHandler, type Post } from 'wpapihandler';
 
 const posts = ref<Post[]>([]);
+const loading = ref<boolean>(false);
 
 const url = 'https://dev.htlweiz.at/wordpress';
 const headers = {
@@ -41,20 +45,41 @@ const headers = {
 console.log('Init WPApiHandler');
 const wp = new WPApiHandler(url, headers);
 
-wp.get_posts()
-  .then((response: Post[]) => {
-    posts.value = response;
-  })
-  .catch((error: Error) => {
-    console.error('Error:', error);
-  });
+function update_posts(){
+  loading.value = true;
+  wp.get_posts()
+    .then((response: Post[]) => {
+      posts.value = response;
+    })
+    .catch((error: Error) => {
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+}
+update_posts();
 </script>
 
 <style>
 .grid-containersv {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   position: relative;
+}
+.loader-container {
+  text-align: center;
+  margin-top: 50px;
+}
+@media screen and (max-width: 1320px) {
+  .grid-containersv {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1320px) {
+  .grid-containersv {
+    gap: 15px;
+  }
 }
 </style>

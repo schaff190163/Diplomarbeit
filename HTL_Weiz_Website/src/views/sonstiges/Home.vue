@@ -2,9 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <Hero_Home></Hero_Home>
-    <div class="gradient">
-      <SchoolStats></SchoolStats>
-    </div>
+    <SchoolStats></SchoolStats>
     <h1 class="padleftright uk-text-light padbot mpheading">Ausbildungsmöglichkeiten an der HTL Weiz</h1>
     <div class="grid-container padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300">
     <Card_Abteilungen uk-scrollspy-class="uk-animation-slide-bottom-medium" title="Wirtschaftsingineure" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc = "/images/logo_wi_250.png" detailsrc = "/wi"></Card_Abteilungen>
@@ -55,14 +53,6 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   position: relative;
-}
-
-.gradient {
-  /*background-image: url('/images/gradient.svg');*/
-  background-color: #1BA373;
-  background-repeat: no-repeat;
-  background-position: center; 
-  background-size: cover;
 }
 
 @media (max-width: 1300px) {
