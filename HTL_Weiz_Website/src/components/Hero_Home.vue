@@ -1,8 +1,8 @@
 <template>
   <div class="hei uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-background-cover uk-background-center-center uk-light uk-box-shadow-medium"
-    data-src="/images/hero_people.png" uk-img>
-  <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
-  <h2 class="uk-text-light spruch">Gestalte deine Zukunft mit uns!</h2>
+    data-src="/images/hero_people.png" uk-img uk-parallax="bgy: -200">
+  <div uk-scrollspy="cls: uk-animation-fade; target < h2; delay: 600;">
+  <h2 class="uk-text-light spruch padleftright">Gestalte deine Zukunft mit uns!</h2>
   </div>
   </div>
 </template>

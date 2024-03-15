@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div class="padtop">
       <Row_Auszeichnungen></Row_Auszeichnungen>
-      <Row_BBB_GM></Row_BBB_GM>
       <div class="padtop imprintfooter">
-      <div class="padleftright padbot uk-child-width-expand@s" uk-grid uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
+      <div class="padleftright padbot uk-child-width-expand@s" uk-grid>
             <div>
                 <h4>Öffnungszeiten</h4>
                 <ul class="uk-list uk-list-collapse">

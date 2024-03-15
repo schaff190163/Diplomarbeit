@@ -47,7 +47,7 @@ a,
 a:hover,
 .uk-link:hover,
 .uk-link-toggle:hover .uk-link {
-  color: #1BA373;
+  color: #188961;
   text-decoration: underline;
 }
 /* Text-level semantics
@@ -485,7 +485,7 @@ a.uk-link-heading,
 a.uk-link-heading:hover,
 .uk-link-heading a:hover,
 .uk-link-toggle:hover .uk-link-heading {
-  color: #1BA373;
+  color: #188961;
   text-decoration: none;
 }
 /* Reset
@@ -2001,13 +2001,13 @@ select.uk-form-width-xsmall {
 }
 /* Hover */
 .uk-button-primary:hover {
-  background-color: #1BA373;
+  background-color: #188961;
   color: #fff;
 }
 /* OnClick + Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: #1BA373;
+  background-color: #188961;
   color: #fff;
 }
 /*

@@ -4,7 +4,7 @@
       <img src="/images/hero_people.png" class="roundedl" width="1800" height="1200" alt="">
       <div class="gradient uk-position-cover roundedl"></div>
       <div class="uk-overlay uk-position-bottom uk-light">
-        <h3 class="uk-card-title" v-html="decodeEntities(post.title)"></h3>
+        <h3 class="uk-card-title" v-html="decodeEntities(limitTitle(post.title))"></h3>
         <div class="uk-text-light" v-html="decodeEntities(limitContent(post.content))"></div>
       </div>
     </div>
@@ -38,10 +38,22 @@ export default {
       const doc = new DOMParser().parseFromString(html, 'text/html');
       return doc.documentElement.textContent || '';
     },
+    limitTitle(title: string): string {
+      if (title.length > 180) {
+        return title.slice(0, 180) + '...';
+      }
+      return title;
+    },
     limitContent(content: string): string {
-      const words = content.split(' ');
-      if (words.length > 20) {
-        return words.slice(0, 20).join(' ') + '...';
+      const screenWidth = window.innerWidth;
+      let limit = 200;
+      if (screenWidth < 640) {
+        limit = 50;
+      } else if (screenWidth < 1024) {
+        limit = 120;
+      }
+      if (content.length > limit) {
+        return content.slice(0, limit) + '...';
       }
       return content;
     },

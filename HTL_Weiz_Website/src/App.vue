@@ -16,11 +16,11 @@ export default defineComponent({
 
 <style>
 .padtop {
-  padding-top: 25px !important;
+  padding-top: 32px !important;
 }
 
 .padbot {
-  padding-bottom: 20px !important;
+  padding-bottom: 25px !important;
 }
 
 .padleftright {
@@ -30,6 +30,10 @@ export default defineComponent({
 
 .roundedl {
   border-radius: 18px !important;
+}
+
+.mpheading{
+  font-size: clamp(1rem, 10vw, 2rem); 
 }
 
 @media (max-width: 640px) {
@@ -42,13 +46,12 @@ export default defineComponent({
   }
 
   .padleftright {
-    padding-left: 35px !important;
-    padding-right: 35px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
-}
-
-.mpheading{
-  font-size: clamp(1rem, 10vw, 2rem); 
+  .mpheading{
+  font-size: clamp(1rem, 10vw, 1.5rem); 
+  }
 }
 
 @media (min-width: 1500px) {

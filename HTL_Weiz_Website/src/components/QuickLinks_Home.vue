@@ -1,10 +1,11 @@
 <template>
     <div>
-        <div class="qlgrid padleftright padtop padbot">
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Team der HTL Weiz; delay: 500"><router-link to="/team" class="qllink">Team</router-link></button>
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Schüler; delay: 500"><router-link to="/students" class="qllink">SchülerInnen</router-link></button>
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Eltern und erziehungsberechtigte; delay: 500"><router-link to="/parents" class="qllink">Eltern</router-link></button>
-              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Lehrpersonal; delay: 500"><router-link to="/teachers" class="qllink">LehrerInnen</router-link></button>
+        <h1 class="padleftright uk-text-light mpheading padtop">Quick Links</h1>
+        <div class="qlgrid padleftright padbot">
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Team der HTL Weiz; delay: 500" @click="navigateTo('/team')">Team</button>
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Schüler; delay: 500" @click="navigateTo('/students')">SchülerInnen</button>
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Eltern und erziehungsberechtigte; delay: 500" @click="navigateTo('/parents')">Eltern</button>
+              <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Lehrpersonal; delay: 500" @click="navigateTo('/teachers')">LehrerInnen</button>
         </div>
     </div>
 </template>
@@ -16,6 +17,11 @@ export default {
     name: 'QuickLinks_Home.vue',
     components: {
         SmallCard,
+    },
+    methods: {
+        navigateTo(route: string) {
+            this.$router.push(route);
+        },
     },
 };
 </script>

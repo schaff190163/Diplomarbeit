@@ -1,42 +1,40 @@
 <template>
     <div>
-      <div class="uk-inline roundedl">
-        <img :src="partner.logo" class="roundedl" width="" height="" :alt="partner.name">
-        <div class="uk-overlay uk-position-bottom uk-light">
-          <h3 class="uk-card-title" v-html="decodeEntities(partner.name)"></h3>
+        <div class="uk-card uk-card-body partnercard roundedl" @click="sendToURL" :uk-tooltip="'title: ' + partner.name + '; delay: 500'">
+            <img :src="partner.logo" class="uk-position-center logopad" width="" height="" :alt="partner.name">
         </div>
-      </div>
     </div>
-  </template>
-  
-  <script lang="ts">
-  export default {
+</template>
+
+<script lang="ts">
+export default {
     name: 'Card_Partner',
     props: {
-      partner: {
-        type: Object,
-        default: () => ({}),
-      },
+        partner: {
+            type: Object,
+            default: () => ({}),
+        },
     },
     methods: {
-      decodeEntities(html: string): string {
-        const doc = new DOMParser().parseFromString(html, 'text/html');
-        return doc.documentElement.textContent || '';
-      },
-      limitContent(content: string): string {
-        const words = content.split(' ');
-        if (words.length > 20) {
-          return words.slice(0, 20).join(' ') + '...';
-        }
-        return content;
-      },
+        sendToURL() {
+            window.location.href = this.partner.url;
+        },
     },
-  };
-  </script>
-  
-  <style scoped>
-    .gradient {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(34, 30, 30));
-    }
-  </style>
-  
+};
+</script>
+
+<style scoped>
+.partnercard{
+    width: calc(100px + 5vw);
+    height: calc(100px + 5vh);
+}
+.logopad{
+    padding: calc(3px + 0.5vh + 0.5vw);
+}
+.partnergrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    position: relative;
+}
+</style>

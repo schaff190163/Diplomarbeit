@@ -1,20 +1,20 @@
 <template>
-  <div class="azgrid padleftright padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" uk-grid>
-  <SmallCard uk-tooltip="title: Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Mint Gütesiegel" imgsrc="/images/mint.jpg"></SmallCard>
-  <SmallCard uk-tooltip="title: Die HTL Weiz führt seit 2002 das österreichische Umweltzeichen.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Umweltzeichen" imgsrc="/images/umwelt.jpg"></SmallCard>
-  <SmallCard uk-tooltip="title: Die HTL Weiz ist regelmäßig an Erasmus+ Projekten beteiligt.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Erasmus+ Projektschule" imgsrc="/images/erasmus.jpg"></SmallCard>
-  <SmallCard uk-tooltip="title: Die HTL Weiz wurde wiederholt mit dem Titel Innovativste Schule der Steiermark ausgezeichnet.; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom" azname="Innovativste Schule" imgsrc="/images/inno.jpg"></SmallCard>
-  <SmallCard uk-tooltip="title: S-6.1b COVID-19 - Unterrichtsbezogene Förderangebote; delay: 500" uk-scrollspy-class="uk-animation-slide-bottom-medium" azname="Förderangebote" imgsrc="/images/förder.png"></SmallCard>
+  <div class="azgrid padleftright padbot" uk-grid>
+  <Card_Small tooltipdesc="Die HTL Weiz ist mit dem MINT Gütesiegel ausgezeichnet" azname="Mint Gütesiegel" imgsrc="/images/mint.jpg"></Card_Small>
+  <Card_Small tooltipdesc="Die HTL Weiz führt seit 2002 das österreichische Umweltzeichen" azname="Umweltzeichen" imgsrc="/images/umwelt.jpg"></Card_Small>
+  <Card_Small tooltipdesc="Die HTL Weiz ist regelmäßig an Erasmus+ Projekten beteiligt" azname="Erasmus+ Projektschule" imgsrc="/images/erasmus.jpg"></Card_Small>
+  <Card_Small tooltipdesc="Die HTL Weiz wurde wiederholt mit dem Titel Innovativste Schule der Steiermark ausgezeichnet" azname="Innovativste Schule" imgsrc="/images/inno.jpg"></Card_Small>
+  <Card_Small tooltipdesc="S-6.1b COVID-19 - Unterrichtsbezogene Förderangebote" azname="Förderangebote" imgsrc="/images/förder.png"></Card_Small>
   </div>
 </template>
 
 <script lang="ts">
-import SmallCard from './Card_Small.vue';
+import Card_Small from './Card_Small.vue';
 
 export default {
   name: 'Row_Auszeichnungen',
   components: {
-    SmallCard,
+    Card_Small,
   },
 };
 </script>

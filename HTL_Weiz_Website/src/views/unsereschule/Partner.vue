@@ -3,8 +3,10 @@
     <NavBar></NavBar>
     <h1 class="padtop padbot padleftright">Partner</h1>
     <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
+    <div class="padtop padbot padleftright partnergrid">
     <div v-for="item in partner" :key="item.id">
       <Card_Partner v-if="item" :partner="item"></Card_Partner>
+    </div>
     </div>
     <Footer></Footer>
   </div>
@@ -61,4 +63,12 @@ function update_partners(){
 update_partners();
 </script>
 
-<style></style>
+<style>
+.partnergrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: calc(10vw - 40px);
+  justify-content: center;
+  align-content: center;
+}
+</style>

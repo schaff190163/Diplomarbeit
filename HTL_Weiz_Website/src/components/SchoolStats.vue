@@ -1,6 +1,6 @@
 <template>
   <div class="ssbg">
-    <div class="sscentered-row padleftright ssnanoscreen">
+    <div class="sscentered-row padleftright" uk-scrollspy="cls: uk-animation-fade; target < div; delay: 800;">
       <div class="sselement">
         <h1 style="color: #f8f8f8;">900+</h1>
         <p style="color: #f8f8f8;" class="uk-text-light">Schüler</p>
@@ -69,11 +69,6 @@ export default {
 }
 @media (max-width:640px) {
   .sssmallscreen {
-  display: none;
-  }
-}
-@media (max-width:400px) {
-  .ssnanoscreen {
   display: none;
   }
 }

@@ -5,9 +5,9 @@
         <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
           <nav class="uk-navbar-container" uk-navbar>
             <div class="uk-container">
-              <div class="uk-navbar-center">
+              <div class="uk-navbar">
                 <ul class="uk-navbar-nav">
-                  <button class="uk-button uk-button-default navsmallscreen" type="button" uk-toggle="target: #offcanvas-nav"><span uk-icon="icon: menu; ratio: 2"></span></button>
+                  <a class="uk-navbar-left uk-navbar-nav" uk-icon="icon: menu; ratio: 2" uk-toggle="target: #offcanvas-nav"></a>
                   <li><router-link class="uk-logo" to="/"><img src="/images/htl_logo.svg" width="100"/></router-link></li>
                   <li class="navbigscreen">
                     <div>
@@ -66,13 +66,7 @@
                               </div>
                             </li>
                             <li class="navbigscreen">
-                              <a href="#">Aktuelles</a>
-                              <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                  <li><router-link to="/news">Schulveranstaltungen</router-link></li>
-                                  <li><router-link to="/news">News</router-link></li>
-                                </ul>
-                              </div>
+                              <a><span><router-link to="/news">News</router-link></span></a>
                             </li>
                             <li class="navbigscreen">
                               <a href="#">Services</a>
@@ -117,7 +111,7 @@
       <ul class="uk-nav uk-nav-default" uk-accordion="multiple: true">
         <li class="navsmallscreen uk-parent uk-light">
           <a class="uk-accordion-title" href="#">Unsere Schule</a>
-          <div class="uk-accordion-content">
+          <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/team">Team</router-link></li>
             <li><router-link to="/team#verwaltung">Verwaltung</router-link></li>
             <li><router-link to="/team#schülerinnenvertretung">SchülerInnenvertretung</router-link></li>
@@ -130,7 +124,7 @@
         </li>
         <li class="navsmallscreen uk-light">
           <a class="uk-accordion-title" href="#">Ausbildung 14+</a>
-            <div class="uk-accordion-content">
+            <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/warumwir">Warum wir?</router-link></li>
             <li><router-link to="/wi">Wirtschaftsingenieure</router-link></li>
             <li><router-link to="/et">Elektrotechnik</router-link></li>
@@ -143,14 +137,14 @@
         </li>
         <li class="navsmallscreen uk-parent">
           <a class="uk-accordion-title" href="#">Ausbildung 18+</a>
-          <div class="uk-accordion-content">
+          <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/awi">Abendschule - Wirtschaftsingineure</router-link></li>
             <li><a href="http://www.ttz-weiz.net/index.php?option=com_content&task=section&id=4&Itemid=26">Individuelle Kurse TTZ</a></li>
           </div>
         </li>
         <li class="navsmallscreen uk-parent">
           <a class="uk-accordion-title" href="#">Aufnahme</a>
-          <div class="uk-accordion-content">
+          <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/aufnahmeverfahren">Aufnahmeverfahren</router-link></li>
             <li><router-link to="/vorteilehtl">Vorteile einer HTL Ausbildung</router-link></li>
             <li><router-link to="/kennenlernangebote">Kennenlernangebote</router-link></li>
@@ -160,14 +154,13 @@
         </li>
         <li class="navsmallscreen uk-parent">
           <a class="uk-accordion-title" href="#">Aktuelles</a>
-          <div class="uk-accordion-content">
-            <li><router-link to="/news">Schulveranstaltungen</router-link></li>
+          <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/news">News</router-link></li>
           </div>
         </li>
         <li class="navsmallscreen uk-parent">
           <a class="uk-accordion-title" href="#">Services</a>
-          <div class="uk-accordion-content">
+          <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/parents">Eltern</router-link></li>
             <li><router-link to="/students">SchülerInnen</router-link></li>
             <li><router-link to="/teachers">LehrerInnen</router-link></li>
@@ -175,7 +168,7 @@
         </li>
         <li class="navsmallscreen uk-parent">
           <a class="uk-accordion-title" href="#">Rat & Hilfe</a>
-          <div class="uk-accordion-content">
+          <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/team">Sekretariat</router-link></li>
             <li><router-link to="/team">Bildungsberatung</router-link></li>
             <li><router-link to="/team">Mädchenbeauftragte</router-link></li>

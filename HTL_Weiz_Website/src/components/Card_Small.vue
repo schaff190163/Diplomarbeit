@@ -1,6 +1,8 @@
 <template>
-  <div class="image-container">
-    <img class="image uk-box-shadow-medium roundedl" :src="imgsrc" :alt="azname" />
+  <div>
+    <div class="uk-card uk-card-body uk-card-default smallcard roundedl" :uk-tooltip="'title: ' + tooltipdesc + '; delay: 500'">
+      <img :src="imgsrc" class="uk-position-center logopad roundedl" width="" height="" :alt="azname">
+    </div>
   </div>
 </template>
 
@@ -10,18 +12,14 @@ export default {
   props: {
     imgsrc: String,
     azname: String,
+    tooltipdesc: String,
   },
 };
 </script>
 
 <style scoped>
-.image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.image {
-  max-width: 100px;
-  max-height: 100px;
+.smallcard{
+    width: calc(80px + 2vw);
+    height: calc(80px + 2vh);
 }
 </style>
