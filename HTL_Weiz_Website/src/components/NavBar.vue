@@ -7,7 +7,7 @@
             <div class="uk-container">
               <div class="uk-navbar">
                 <ul class="uk-navbar-nav">
-                  <a class="uk-navbar-left uk-navbar-nav" uk-icon="icon: menu; ratio: 2" uk-toggle="target: #offcanvas-nav"></a>
+                  <a class="uk-navbar-left uk-navbar-nav navsmallscreen" uk-icon="icon: menu; ratio: 2" uk-toggle="target: #offcanvas-nav"></a>
                   <li><router-link class="uk-logo" to="/"><img src="/images/htl_logo.svg" width="100"/></router-link></li>
                   <li class="navbigscreen">
                     <div>

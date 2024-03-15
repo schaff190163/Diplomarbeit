@@ -6,7 +6,7 @@
       <div v-for="post in posts" :key="post.id">
         <Card_Post v-if="post" :post="post"></Card_Post>
       </div>
-      <div v-if="loading=true" class="loader-container uk-position-center"><Loader></Loader></div>
+      <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
     </div>
     <Footer></Footer>
   </div>
@@ -51,13 +51,11 @@ function update_posts(){
     .then((response: Post[]) => {
       posts.value = response;
     })
-    .catch((error: Error) => {
-      console.error('Error:', error);
-    })
     .finally(() => {
       loading.value = false;
     });
 }
+
 update_posts();
 </script>
 
@@ -82,4 +80,4 @@ update_posts();
     gap: 15px;
   }
 }
-</style>../../components/Card_Post.vue
+</style>

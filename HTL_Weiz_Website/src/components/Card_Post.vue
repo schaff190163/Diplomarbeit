@@ -4,8 +4,8 @@
       <img src="/images/hero_people.png" class="roundedl" width="1800" height="1200" alt="">
       <div class="gradient uk-position-cover roundedl"></div>
       <div class="uk-overlay uk-position-bottom uk-light">
-        <h3 class="uk-card-title" v-html="decodeEntities(limitTitle(post.title))"></h3>
-        <div class="uk-text-light" v-html="decodeEntities(limitContent(post.content))"></div>
+        <h3 class="uk-card-title" v-html="decodeEntities(post.title)"></h3>
+        <div class="uk-text-light" v-html="decodeEntities(post.content)"></div>
       </div>
     </div>
     <div v-if="post && post.id" :id="post.id" class="uk-flex-top" uk-modal>
@@ -27,35 +27,10 @@ export default {
       default: () => ({}),
     },
   },
-  computed: {
-    postImageSrc(): string | null {
-      const matches = this.post.content.rendered.match(/<img[^>]+src="([^">]+)"/);
-      return matches ? matches[1] : null;
-    },
-  },
   methods: {
     decodeEntities(html: string): string {
       const doc = new DOMParser().parseFromString(html, 'text/html');
       return doc.documentElement.textContent || '';
-    },
-    limitTitle(title: string): string {
-      if (title.length > 180) {
-        return title.slice(0, 180) + '...';
-      }
-      return title;
-    },
-    limitContent(content: string): string {
-      const screenWidth = window.innerWidth;
-      let limit = 200;
-      if (screenWidth < 640) {
-        limit = 50;
-      } else if (screenWidth < 1024) {
-        limit = 120;
-      }
-      if (content.length > limit) {
-        return content.slice(0, limit) + '...';
-      }
-      return content;
     },
     openModal() {
       if (this.post && this.post.id) {
