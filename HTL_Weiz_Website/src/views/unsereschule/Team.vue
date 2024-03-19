@@ -3,38 +3,22 @@
     <NavBar></NavBar>
     <h1 class="teamheading" id="direktion">Direktion</h1>
     <Card_Direktion class="padleftright padtop padbot"></Card_Direktion>
+    <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
     <h1 class="teamheading" id="abteilungsvorstaende">Abteilungsvorstände</h1>
-    <div class="grid-containerstaff padleftright padtop padbot">
-      <Card_Staff name="Harald Macher" title="AV DI " short="MH" imgsrc="/images/team/Macher.jpg"></Card_Staff>
-      <Card_Staff name="Christian Deimel" title="B.Ed." short="dei" imgsrc="/images/team/Deimel.jpg"></Card_Staff>
-      <Card_Staff name="Josef Hierz" title="Ing. B.Ed." short="hie" imgsrc="/images/team/Hierz.jpg"></Card_Staff>
-      <Card_Staff name="Bernhard Pertl" title="AV DI" short="PE" imgsrc="/images/team/Pertl.jpg"></Card_Staff>
-      <Card_Staff name="Heimo T. Blattner" title="AV DI" short="BL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Wolfgang Höllerbauer" title="FOL OSR Dipl.-Päd." short="hoe" imgsrc="/images/team/Hoellerbauer.jpg"></Card_Staff>
+    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
+      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
     </div>
     <h1 class="teamheading" id="lehrpersonal">Lehrpersonal</h1>
-    <div class="grid-containerstaff padleftright padtop padbot">
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
-      <Card_Staff name="Robert Ulmer" title="DI" short="UL" imgsrc="/images/team/Blattner.jpg"></Card_Staff>
+    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
+      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
     </div>
     <h1 class="teamheading" id="verwaltung">Verwaltung</h1>
-    <div class="grid-containerstaff padleftright padtop padbot">
+    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
+      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
     </div>
     <h1 class="teamheading" id="schülerinnenvertretung">SchülerInnenvertretung</h1>
-    <div class="grid-containerstaff padleftright padtop padbot">
+    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
+      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
     </div>
     <Footer></Footer>
   </div>
@@ -43,8 +27,9 @@
 <script lang="ts">
 import NavBar from "../../components/NavBar.vue";
 import Card_Direktion from "../../components/Card_Direktion.vue";
-import Card_Staff from "../../components/Card_Staff.vue" 
+import Card_Staff from "../../components/Card_Staff.vue"; 
 import Footer from "../../components/Footer.vue";
+import Loader from "../../components/Loader.vue";
 
 export default {
   name: 'TeamView',
@@ -55,6 +40,40 @@ export default {
     Footer,
 },
 };
+</script>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { WPApiHandler, type Personnel } from 'wpapihandler';
+
+const personnel = ref<Personnel[]>([]);
+const loading = ref<boolean>(false);
+
+const url = 'https://dev.htlweiz.at/wordpress';
+const headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
+};
+
+console.log('Init WPApiHandler');
+const wp = new WPApiHandler(url, headers);
+
+function update_personnel(){
+  loading.value = true;
+
+  wp.get_personnel()
+    .then((response: Personnel[]) => {
+      personnel.value = response;
+    })
+    .catch((error: Error) => {
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+}
+
+update_personnel();
 </script>
 
 <style>
