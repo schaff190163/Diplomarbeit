@@ -13,7 +13,7 @@
                 <p class="uk-text-bold uk-padding-remove-bottom">{{ post.date }}</p>
                 <p class="uk-card-title">{{ post.title }}</p>
                 <div v-html="post.truncatedContent"></div>
-                <a href="#modal-example" class="linkcolor" uk-toggle>Mehr Lesen</a>
+                <a class="linkcolor" uk-toggle="target: #modal-example">Mehr Lesen</a>
               </div>
             </div>
           </div>
