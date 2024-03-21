@@ -1,6 +1,6 @@
 <template>
   <div class="hei uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-background-center-center uk-light" 
-    data-src="/images/e2mily-landingss.jpg" uk-img>
+    data-src="/images/e2mily-landing.jpg" uk-img>
     <div>
       <div class="uk-position-bottom-left uk-text-normal uk-padding">
         <h2> E²MILY </h2>

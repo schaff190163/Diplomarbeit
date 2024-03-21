@@ -134,6 +134,12 @@ const router = createRouter({
       name: 'e2mily_api',
 
       component: () => import(/* webpackChunkName: "e2milycontact" */"../components/e2mily/ENews_apiTest.vue")
+    },
+    {
+      path: '/fuerstenfeld',
+      name: 'Fürstenfeld',
+
+      component: () => import(/* webpackChunkName: "e2milycontact" */"../views/Fuerstenfeld.vue")
     }
   ]
 })

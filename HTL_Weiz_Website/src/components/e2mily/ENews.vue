@@ -13,7 +13,7 @@
                 <p class="uk-text-bold uk-padding-remove-bottom">{{ post.date }}</p>
                 <p class="uk-card-title">{{ post.title }}</p>
                 <div v-html="post.truncatedContent"></div>
-                <a class="linkcolor" uk-toggle="target: #modal-example">Mehr Lesen</a>
+                <a class="linkcolor" href="#" @click.prevent="openModal(post)">Mehr Lesen</a>
               </div>
             </div>
           </div>
@@ -75,6 +75,10 @@ export default {
         const truncatedContent = content.substr(0, content.lastIndexOf(' ', maxLength));
         return truncatedContent + '...';
       }
+    },
+    openModal(post) {
+      this.selectedPost = post;
+      UIkit.modal('#modal-example').show();
     },
   }
 };

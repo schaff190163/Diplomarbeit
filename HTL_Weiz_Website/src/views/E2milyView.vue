@@ -5,7 +5,7 @@
         <ELanding id="landing"></ELanding>
         <EModels id="model"></EModels>
         <ENews id="news"></ENews>
-        <ETeam id="team"></ETeam>
+        <ETeam class="padbot" id="team"></ETeam>
         <ESponsor id="sponsor"></ESponsor>
         <EFooter></EFooter>
     </div>

@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       partners: [],
-      levels: ["Hauptsponsor", "Platin", "Gold", "Silber"],
+      levels: ["hauptsponsor", "Platin", "Gold", "Silber"],
       selectedLevel: 0
     };
   },
@@ -49,6 +49,7 @@ export default {
     const wpa = new WPApiHandler(url, headers);
     try {
       this.partners = await wpa.get_partners('emily');
+      console.log(this.partners);
     } catch (error) {
       console.error('Error fetching partners:', error);
     }
