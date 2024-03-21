@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="padleftright uk-text-light mpheading padtop">Quick Links</h1>
-        <div class="qlgrid padleftright padbot">
+        <div class="qlgrid padleftright">
               <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Team der HTL Weiz; delay: 500" @click="navigateTo('/team')">Team</button>
               <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Schüler; delay: 500" @click="navigateTo('/students')">SchülerInnen</button>
               <button class="uk-button uk-button-primary roundedl" uk-tooltip="title: Service für Eltern und erziehungsberechtigte; delay: 500" @click="navigateTo('/parents')">Eltern</button>

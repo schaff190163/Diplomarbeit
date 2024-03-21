@@ -5,20 +5,28 @@
     <Card_Direktion class="padleftright padtop padbot"></Card_Direktion>
     <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
     <h1 class="teamheading" id="abteilungsvorstaende">Abteilungsvorstände</h1>
-    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
-      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in personnel" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
     </div>
     <h1 class="teamheading" id="lehrpersonal">Lehrpersonal</h1>
-    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
-      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in personnel" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
     </div>
     <h1 class="teamheading" id="verwaltung">Verwaltung</h1>
-    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
-      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in personnel" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
     </div>
     <h1 class="teamheading" id="schülerinnenvertretung">SchülerInnenvertretung</h1>
-    <div class="grid-containerstaff padleftright padtop padbot" v-if="!loading">
-      <Card_Staff v-for="member in personnel" :key="member.id" :personnel="member"></Card_Staff>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in personnel" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
     </div>
     <Footer></Footer>
   </div>
@@ -38,7 +46,7 @@ export default {
     Card_Direktion,
     Card_Staff,
     Footer,
-},
+  },
 };
 </script>
 
