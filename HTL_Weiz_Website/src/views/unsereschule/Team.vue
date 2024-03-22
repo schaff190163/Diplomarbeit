@@ -4,27 +4,27 @@
     <h1 class="teamheading" id="direktion">Direktion</h1>
     <Card_Direktion class="padleftright padtop padbot"></Card_Direktion>
     <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
-    <h1 class="teamheading" id="abteilungsvorstaende">Abteilungsvorstände</h1>
+    <h1 class="teamheading" id="abteilungsvorstaende">Leitungsteam</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
-      <div v-for="member in personnel" :key="member.id">
+      <div v-for="member in filteredAV('Abteilungsvorstand')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
     <h1 class="teamheading" id="lehrpersonal">Lehrpersonal</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
-      <div v-for="member in personnel" :key="member.id">
+      <div v-for="member in filteredDept('teacher')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
     <h1 class="teamheading" id="verwaltung">Verwaltung</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
-      <div v-for="member in personnel" :key="member.id">
+      <div v-for="member in filteredDept('verwaltung')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
     <h1 class="teamheading" id="schülerinnenvertretung">SchülerInnenvertretung</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
-      <div v-for="member in personnel" :key="member.id">
+      <div v-for="member in filteredDept('schülerinnenvertretung')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
@@ -72,6 +72,7 @@ function update_personnel(){
   wp.get_personnel()
     .then((response: Personnel[]) => {
       personnel.value = response;
+      console.log(personnel.value)
     })
     .catch((error: Error) => {
       console.error('Error:', error);
@@ -79,6 +80,14 @@ function update_personnel(){
     .finally(() => {
       loading.value = false;
     });
+}
+
+function filteredAV(tag: string): Personnel[] {
+  return personnel.value.filter((member: Personnel) => member.tags.includes(tag));
+}
+
+function filteredDept(department: string): Personnel[] {
+  return personnel.value.filter((member: Personnel) => member.department.includes(department.toLowerCase()));
 }
 
 update_personnel();

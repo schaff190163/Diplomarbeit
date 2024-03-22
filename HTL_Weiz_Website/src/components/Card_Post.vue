@@ -4,8 +4,8 @@
       <img src="/images/hero_people.png" class="roundedl" width="1800" height="1200" alt="">
       <div class="gradient uk-position-cover roundedl"></div>
       <div class="uk-overlay uk-position-bottom uk-light">
-        <h3 class="uk-card-title" v-html="decodeEntities(post.title)"></h3>
-        <div class="uk-text-light" v-html="decodeEntities(post.content)"></div>
+        <h3 class="uk-card-title" v-html="decodeEntities(limitTitle(post.title))"></h3>
+        <div class="uk-text-light" v-html="decodeEntities(limitContent(post.content))"></div>
       </div>
     </div>
     <div v-if="post && post.id" :id="post.id" class="uk-flex-top" uk-modal>
@@ -32,9 +32,21 @@ export default {
       const doc = new DOMParser().parseFromString(html, 'text/html');
       return doc.documentElement.textContent || '';
     },
+    limitTitle(title: string): string {
+      if (title.length > 50) {
+        return title.substring(0, 50) + '...';
+      }
+      return title;
+    },
+    limitContent(content: string): string {
+      if (content.length > 100) {
+        return content.substring(0, 100) + '...';
+      }
+      return content;
+    },
     openModal() {
       if (this.post && this.post.id) {
-        UIkit.modal('#' + this.post.id).show();
+        // UIkit.modal('#' + this.post.id).show();
       } else {
         console.warn("Post data or id is not available");
       }
