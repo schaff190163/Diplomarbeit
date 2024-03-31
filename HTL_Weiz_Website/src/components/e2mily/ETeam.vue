@@ -6,11 +6,12 @@
       </div>
     </div>
     <div class="uk-margin-right uk-margin-left">
-      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-        <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-grid">
+      <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
+        <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-grid uk-grid-match">
+          
           <li v-for="(personnel, index) in personnelList" :key="index">
             <div class="uk-card uk-card-default uk-padding-remove-left marg">
-              <div class="uk-card-media-top" :style="{ backgroundImage: 'url(' + personnel.image + ')' }"></div>
+              <div class="uk-card-media-top uk-height-medium" :style="{ backgroundImage: 'url(' + personnel.image + ')' }"></div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">{{ personnel.name }}</h3>
                 <p class="uk-text-truncate">{{ truncateDescription(personnel.description) }}</p>
@@ -29,7 +30,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { WPApiHandler } from 'wpapihandler';
 
 const url = 'https://dev.htlweiz.at/wordpress';
@@ -93,14 +94,13 @@ export default {
 
 <style scoped>
 .uk-card-media-top {
-  height: 300px; /* Adjust the height to your preference */
   background-size: cover;
   background-position: center;
 }
 
 .uk-card-body {
   max-height: 150px; /* Adjust the max-height to your preference */
-  overflow: hidden;
+  overflow: ;
 }
 
 .marg {
@@ -109,5 +109,21 @@ export default {
 
 .col {
   color: black;
+}
+
+@media (max-width: 960px) {
+  .uk-child-width-1-4@m {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .uk-child-width-1-4@m {
+    flex-basis: 100%;
+  }
+
+  .uk-card-media-top {
+    height: 200px; /* Adjust the height to your preference */
+  }
 }
 </style>

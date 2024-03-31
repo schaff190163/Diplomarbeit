@@ -1,11 +1,10 @@
 <template>
   <div class="uk-background-muted uk-padding" id="news">
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-      <ul class="uk-slider-items uk-grid">
+    <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
+      <ul class="uk-slider-items uk-grid uk-grid-match">
         
-        <li v-for="post in posts" :key="post.id" class="uk-width-1-3">
-          <div class="uk-panel">
-            <div class="uk-card uk-card-default">
+        <li v-for="post in posts" :key="post.id" class="uk-width-1-3@m">
+            <div class="uk-card uk-card-default marg">
               <div class="uk-card-media-top">
                 <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" :data-src="post.image" uk-img></div>
               </div>
@@ -13,16 +12,16 @@
                 <p class="uk-text-bold uk-padding-remove-bottom">{{ post.date }}</p>
                 <p class="uk-card-title">{{ post.title }}</p>
                 <div v-html="post.truncatedContent"></div>
+                <p></p>
                 <a class="linkcolor" href="#" @click.prevent="openModal(post)">Mehr Lesen</a>
               </div>
             </div>
-          </div>
         </li>
 
       </ul>
 
-      <a class="uk-position-center-left uk-position-small" uk-slidenav-previous uk-slider-item="previous"></a>
-      <a class="uk-position-center-right uk-position-small" uk-slidenav-next uk-slider-item="next"></a>
+      <a class="uk-position-center-left uk-position-small ite" uk-slidenav-previous uk-slider-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small ite" uk-slidenav-next uk-slider-item="next"></a>
 
     </div>
   </div>
@@ -77,10 +76,19 @@ export default {
   },
   methods: {
     truncateContent(content, maxLength) {
-      if (content.length <= maxLength) {
-        return content;
+      // Function to remove any HTML tags and convert headings to normal text
+      function stripHtmlTags(text) {
+        return text.replace(/<[^>]*>?/gm, '').replace(/(#+\s+)/g, '');
+      }
+
+      // Convert headings to normal text
+      const plainTextContent = stripHtmlTags(content);
+
+      // Truncate the content if it exceeds maxLength
+      if (plainTextContent.length <= maxLength) {
+        return plainTextContent;
       } else {
-        const truncatedContent = content.substr(0, content.lastIndexOf(' ', maxLength));
+        const truncatedContent = plainTextContent.substr(0, plainTextContent.lastIndexOf(' ', maxLength));
         return truncatedContent + '...';
       }
     },
@@ -124,4 +132,33 @@ export default {
   color: rgb(193, 193, 193);
 }
 
+.marg {
+  margin-bottom: 20px;
+}
+
+.ite {
+  color: black
+}
+
+.uk-card-media-top {
+  background-size: cover;
+  background-position: center;
+}
+
+.uk-card-body {
+  max-height: 250px; /* Adjust the max-height to your preference */
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .uk-width-1-3@m {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .uk-width-1-3@m {
+    flex-basis: 100%;
+  }
+}
 </style>
