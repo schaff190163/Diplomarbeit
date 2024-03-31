@@ -18,7 +18,6 @@ import EModels from "../components/e2mily/EModels_v2.vue";
 import ENews from "../components/e2mily/ENews.vue";
 import ETeam from "../components/e2mily/ETeam.vue";
 import ENavbar from "../components/e2mily/ENavbar.vue";
-//import Contact from "../components/e2mily/EContact.vue"
 import ELanding from "../components/e2mily/ELanding.vue"
 import ESponsor from "../components/e2mily/ESponsor.vue"
 
@@ -30,7 +29,6 @@ export default {
     ENews,
     ETeam,
     ENavbar,
-    //EContact,
     ELanding,
     ESponsor,
   },

@@ -60,12 +60,20 @@ export default {
   async mounted() {
     const posts = await wpa.get_posts(undefined, ['emily'])
 
-    // Truncate content for each post
+    // Truncate content for each post and extract image source
     posts.forEach(post => {
       post.truncatedContent = this.truncateContent(post.content, 100);
+      post.imageSrc = this.extractImageSrc(post.content); // New line to extract image src
+      post.title = this.decodeEntities(post.title); // Decode HTML entities in title
+    });
+
+    // Log the extracted image source links
+    posts.forEach(post => {
+      console.log('Image src for post with ID ' + post.id + ':', post.imageSrc);
     });
 
     this.posts = posts;
+    console.log("Posts retrieved:", posts);
   },
   methods: {
     truncateContent(content, maxLength) {
@@ -80,6 +88,19 @@ export default {
       this.selectedPost = post;
       UIkit.modal('#modal-example').show();
     },
+    extractImageSrc(content) {
+      const matches = content.match(/<img[^>]+src="([^">]+)"/);
+      return matches ? matches[1] : null;
+    },
+    decodeEntities(html) {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      return doc.documentElement.textContent || '';
+    },
+    replaceHTMLCharacters(text) {
+      return text.replace(/&#(\d+);/g, (match, dec) => {
+        return String.fromCharCode(dec);
+      });
+    }
   }
 };
 </script>
