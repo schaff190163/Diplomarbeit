@@ -2,7 +2,7 @@
   <div>
     <div class="sscentered-row padleftright">
       <div class="sselement">
-        <h1 style="color: #f8f8f8;">HTL Weiz - Standort Fürstenfeld</h1>
+        <h1 class="" style="color: #f8f8f8;">HTL Weiz - Standort Fürstenfeld</h1>
       </div>
     </div>
   </div>
@@ -17,8 +17,7 @@ export default {
 <style>
 .sscentered-row {
   display: flex;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 20px;
   justify-content: center;
   align-content: center;
 }
@@ -42,4 +41,3 @@ export default {
   }
 }
 </style>
-
