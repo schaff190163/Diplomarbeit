@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     openModal() {
-      // UIkit.modal(`#${this.personnel.short}`).show();
+      UIkit.modal(`#${this.personnel.short}`).show();
     }
   }
 };

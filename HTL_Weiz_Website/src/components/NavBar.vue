@@ -196,6 +196,9 @@
 </script>
 
 <style>
+.navsmalltext{
+  color: #6666;
+}
   @media (max-width: 1075px){
     .navbigscreen {
       display: none !important;

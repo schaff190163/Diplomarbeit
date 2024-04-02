@@ -46,7 +46,7 @@ export default {
     },
     openModal() {
       if (this.post && this.post.id) {
-        // UIkit.modal('#' + this.post.id).show();
+        UIkit.modal('#' + this.post.id).show();
       } else {
         console.warn("Post data or id is not available");
       }

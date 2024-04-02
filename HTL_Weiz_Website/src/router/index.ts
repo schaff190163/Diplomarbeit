@@ -159,7 +159,6 @@ const router = createRouter({
 
       component: () => import(/* webpackChunkName: "e2milycontact" */"../views/E2milyContact.vue")
     },
-
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

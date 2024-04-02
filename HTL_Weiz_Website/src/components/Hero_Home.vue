@@ -18,6 +18,7 @@
   height: calc(100vh - 220px);
 }
 .spruch {
+  color: #f8f8f8 !important;
   font-size: calc(5vw + 2vh - 20px);
 }
 

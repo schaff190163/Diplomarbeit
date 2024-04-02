@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     openModal() {
-      // UIkit.modal('#pu').show();
+      UIkit.modal('#pu').show();
     }
   }
 };
