@@ -154,9 +154,9 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "e2mily" */"../views/E2milyView.vue")
     },
     {
-      path: '/e2mily/contact',
-      name: 'e2mily_contact',
-
+      path: '/fuerstenfeld',
+      name: 'Fürstenfeld',
+  
       component: () => import(/* webpackChunkName: "e2milycontact" */"../views/E2milyContact.vue")
     },
   ],

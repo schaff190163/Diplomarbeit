@@ -4,8 +4,8 @@
         <ENavbar></ENavbar>
         <ELanding id="landing"></ELanding>
         <EModels id="model"></EModels>
-        <ENews></ENews>
-        <ETeam id="team"></ETeam>
+        <ENews id="news"></ENews>
+        <ETeam class="padbot" id="team"></ETeam>
         <ESponsor id="sponsor"></ESponsor>
         <EFooter></EFooter>
     </div>
@@ -14,13 +14,12 @@
 
 <script lang="ts">
 import EFooter from "../components/e2mily/EFooter.vue";
-import EModels from "../components/e2mily/EModels.vue";
-import ENews from "../components/e2mily/ENews.vue";
-import ETeam from "../components/e2mily/ETeam.vue";
-import ENavbar from "../components/e2mily/ENavbar.vue";
-//import Contact from "../components/e2mily/EContact.vue"
 import ELanding from "../components/e2mily/ELanding.vue"
+import EModels from "../components/e2mily/EModels.vue";
+import ENavbar from "../components/e2mily/ENavbar.vue";
+import ENews from "../components/e2mily/ENews.vue";
 import ESponsor from "../components/e2mily/ESponsor.vue"
+import ETeam from "../components/e2mily/ETeam.vue";
 
 export default {
   name: "E2mily",
@@ -30,7 +29,6 @@ export default {
     ENews,
     ETeam,
     ENavbar,
-    //EContact,
     ELanding,
     ESponsor,
   },

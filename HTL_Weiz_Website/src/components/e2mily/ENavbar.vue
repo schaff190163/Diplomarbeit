@@ -14,19 +14,16 @@
                       </a>
                     </li>
                     <li class="navbigscreen">
-                      <a href="#model" uk-scroll>E²MILY</a>
+                      <a href="#model" uk-scroll="offset: 20">E²MILY</a>
                     </li>
                     <li class="navbigscreen">
-                      <a href="#news" uk-scroll>News</a>
+                      <a href="#news" uk-scroll="offset: 20">News</a>
                     </li>
                     <li class="navbigscreen">
                       <a href="#team" uk-scroll>Team</a>
                     </li>
                     <li class="navbigscreen">
                       <a href="#sponsor" uk-scroll>Sponsoring</a>
-                    </li>
-                    <li class="navbigscreen">
-                      <a href="/e2mily/contact" uk-scroll>Kontakt</a>
                     </li>
                   </ul>
                 </div>
@@ -41,10 +38,10 @@
 
 <script lang="ts">
 export default {
-  // Your component logic goes here
+  name: 'ENavbar',
 };
+
 </script>
 
 <style>
-/* Your component styles go here */
 </style>

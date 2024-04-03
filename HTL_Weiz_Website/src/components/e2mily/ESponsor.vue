@@ -1,82 +1,84 @@
 <template>
   <div class="uk-padding">
-    <div class="">
-      <div class="uk-width-expand@m">
-        <div class="uk-text-center uk-margin-large-bottom">
-          <h1>Hauptsponsoren</h1>
+    <div uk-grid>
+        <div class="uk-width-auto@m">
+            <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+                <li v-for="(level, index) in levels" :key="index" @click="selectLevel(index)">
+                  <a href="#">{{ level }}</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </div>
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-      <ul class="uk-slider-items uk-flex-center uk-grid">
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="uk-panel">
-            <img src="/images/rosendahl.png" width="250" height="250" alt="">
-          </div>
-        </li>
-      </ul>
-
-      <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-dark" uk-slidenav-previous uk-slider-item="previous"></a>
-      <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-dark" uk-slidenav-next uk-slider-item="next"></a>
+        <div class="uk-width-expand@m">
+            <ul id="component-tab-left" class="uk-switcher">
+              <li v-for="level in levels">
+                <div v-if="selectedLevel === levels.indexOf(level)" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
+                  <ul class="uk-slider-items uk-flex-center uk-grid">
+                    <li v-for="partner in filteredPartners" :key="partner.id" class="uk-width-1-4@m"> <!-- Added class uk-width-1-4@m -->
+                      <div class="uk-panel">
+                        <div class="logo-container">
+                          <img class="logospons" :src="partner.logo" alt="">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+        </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-/* import ... from ...; */
+import { WPApiHandler } from 'wpapihandler';
 
 export default {
   name: 'ESponsor',
+  data() {
+    return {
+      partners: [],
+      levels: ["hauptsponsor", "Platin", "Gold", "Silber"],
+      selectedLevel: 0
+    };
+  },
+  async mounted() {
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
+    };
+    const url = 'https://dev.htlweiz.at/wordpress';
+    const wpa = new WPApiHandler(url, headers);
+    try {
+      this.partners = await wpa.get_partners('emily');
+      console.log(this.partners);
+    } catch (error) {
+      console.error('Error fetching partners:', error);
+    }
+  },
+  computed: {
+    filteredPartners() {
+      return this.partners.filter(partner => partner.level === this.levels[this.selectedLevel]);
+    }
+  },
+  methods: {
+    selectLevel(index) {
+      this.selectedLevel = index;
+    }
+  }
 };
 </script>
 
-
 <style scoped>
-/* Add scoped attribute to style tag to ensure styles are scoped to this component */
+.logo-container {
+  width: 175px;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.logospons {
+  max-width: 100%;
+  max-height: 100%;
+}
 </style>

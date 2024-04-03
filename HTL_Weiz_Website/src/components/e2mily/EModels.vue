@@ -1,47 +1,76 @@
 <template>
-  <div class="">
-    <div class="uk-position-relative uk-visible-toggle uk-dark uk-padding" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
-      <ul class="uk-slider-items uk-grid uk-padding">
-          <li class="uk-width-3-4">
-              <div class="uk-panel">
-                  <img src="/images/e2mily-model-edited.png" width="1920" height="1080" alt="">
-                  <div class="uk-position-center-right uk-margin-large-right">
-                      <h2 uk-slider-parallax="x: 100,-100">E²MILY - GT</h2>
-                      <p uk-slider-parallax="x: 200,-200"><b class="">Höchstgeschwindigkeit: </b>37km/h</p>
-                      <p uk-slider-parallax="x: 200,-200"><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
-                      <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
-                      <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
-                  </div>
-              </div>
-          </li>
-          <li class="uk-width-3-4">
-              <div class="uk-panel">
-                  <img src="/images/e2mily-model-edited.png" width="1920" height="1080" alt="">
-                  <div class="uk-position-center-right uk-margin-large-right">
-                      <h2 uk-slider-parallax="x: 100,-100">E²MILY - One</h2>
-                      <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
-                      <p uk-slider-parallax="x: 200,-200"><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
-                      <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
-                      <p uk-slider-parallax="x: 200,-200"><b>Höchstgeschwindigkeit: </b>37km/h</p>
-                  </div>
-              </div>
-          </li>
+  <div class="uk-background-default uk-padding uk-padding-remove-bottom">
+    <div class="uk-position-relative uk-dark">
+      <ul class="uk-subnav uk-subnav-pill uk-flex-center" uk-switcher="animation: uk-animation-fade">
+        <li><a href="#">E²mily GT</a></li>
+        <li><a href="#">E²mily ONE</a></li>
       </ul>
-
-      <a class="uk-position-center-left uk-position-small uk-dark" uk-slidenav-previous uk-slider-item="previous"></a>
-      <a class="uk-position-center-right uk-position-small uk-dark" uk-slidenav-next uk-slider-item="next"></a>
+      <ul class="uk-switcher hei">
+        <li class="uk-width-1">
+          <div class="uk-grid uk-child-width-expand" uk-grid>
+            <div>
+              <img src="/images/emilygt-2.jpg" width="1920" alt="">
+            </div>
+            <div class="uk-width-1-3@m uk-padding text">
+              <h2>E²MILY - GT</h2>
+              <div class="uk-margin-large-right textblock">
+                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                <p><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
+                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="uk-width-1">
+          <div class="uk-grid uk-child-width-expand" uk-grid>
+            <div>
+              <img src="/images/emilyone.jpg" width="1920" height="800" alt="">
+            </div>
+            <div class="uk-width-1-3@m uk-padding text">
+              <h2>E²MILY - One</h2>
+              <div class="uk-margin-large-right textblock">
+                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                <p><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
+                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-/* import ... from ...; */
 
 export default {
-  name: 'EFrame',
+  name: 'EModels',
 };
 </script>
 
-
 <style scoped>
+.uk-grid {
+  padding-left: calc(10vw);
+}
+
+.hei {
+  margin-top: 12vh;
+  height: 65vh;
+}
+
+@media (max-width: 640px) {
+  .hei {
+    margin-top: 0vh;
+    height: 75vh;
+  }
+  .uk-grid {
+    display: flex;
+    justify-content: center; 
+  }
+  .textblock {
+    line-height: 1.2;
+  } 
+}
 </style>
