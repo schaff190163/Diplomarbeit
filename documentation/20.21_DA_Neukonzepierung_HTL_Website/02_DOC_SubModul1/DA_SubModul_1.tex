@@ -1,0 +1,131 @@
+%
+%****************************************************************************************************
+%======================= B E G I N   D O C U M E N T   S E T T I N G S ========================
+%****************************************************************************************************
+%
+\documentclass[a4paper, 12pt, xcolor=dvipsnames]{scrartcl}	% Article als Modul
+\input{./../00_LATdef/UsePackages.tex}                    			% Input file für gemeinsame Package Definitionen
+%
+%--------------------Set data for document:
+\newcommand{\SYear}{2021/22}
+\newcommand{\SClass}{5AHET}
+\newcommand{\ADatum}{04. April 2022}
+\newcommand{\DAName}{E$^2$MILY - Elektrische Hardwaredokumentation}
+\newcommand{\DPLNameOnePre}{Vorname1}						% Diplomand 1 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameOneSur}{Nachname1}					% Diplomand 1 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameTwoPre}{Vorname2}						% Diplomand 2 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameTwoSur}{Nachname2}					% Diplomand 2 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameThreePre}{Vorname3}					% Diplomand 3 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameThreeSur}{Nachname3}				% Diplomand 3 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameFourPre}{Vorname4}					% Diplomand 4 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameFourSur}{Nachname4}					% Diplomand 4 als Variablenname, usage: \DPLName...
+\newcommand{\BNameOnePre}{Vorname1}							% Betreuer 1 als Variablenname, usage: \DPLName...
+\newcommand{\BNameOneSur}{Nachname1}						% Betreuer 1 als Variablenname, usage: \DPLName...
+\newcommand{\BNameTwoPre}{Vorname2}						% Betreuer 2 als Variablenname, usage: \DPLName...
+\newcommand{\BNameTwoSur}{Nachname2}						% Betreuer 2 als Variablenname, usage: \DPLName...
+%
+\setboolean{UseWm}{true} 												% Wasserzeichen einschalten
+%\newcommand{\WatermarkName}{Korrekturexemplar}		%Text für das Wasserzeichen
+%\newcommand{\WatermarkName}{01.01.2021}					%AlternativText für das Wasserzeichen
+\newcommand{\WatermarkName}{Template}						%AlternativText für das Wasserzeichen
+%
+%==============================S E T T I N G S ===================================
+%
+\input{./../00_LATdef/DocSettings.tex}                    				% Input file für gemeinsame dokumentenbezogene Definitionen
+%
+\begin{document}																%ab hier wird der Text im Hauptdokument übernommen
+% Verzeichnisse (to be commented out for compilation of main file):
+%
+%\tableofcontents 																%ACHTUNG: für die Gesamtcompilierung auskommentieren!!
+%\newpage 																		%ACHTUNG: für die Gesamtcompilierung auskommentieren!!
+%
+\changefont{pag}{m}{n}
+%
+%****************************************************************************************************
+%======================== B E G I N  S U B  D O C U M E N T  ==========================
+%****************************************************************************************************
+%
+\section{Projektmanagement}
+Um den zeitlichen Ablauf der Diplomarbeit zu planen und zu dokumentieren sind einigen Dokumente und Programme erforderlich.
+\begin{enumerate}																%Beginn Nummerierung
+	\item\textbf{WORD File:} Erstellen Sie ein Pflichtenheft laut Vorlage!
+	\item\textbf{EXCEL File:} Führen Sie eine Art Tagebuch über den Verlauf der DA mit den eingetragenen Meilensteinen.
+\end{enumerate}
+
+\section{Dokumentation der Diplomarbeit}							%Hauptüberschrift
+Erstellen Sie die Dokumentation entsprechend der Vorlagen der HTL-Weiz.\\
+\textbf{Wieder gilt:} Ein früher Beginn sichert den Erfolg! Folgende Punkte sind wichtig:
+\begin{enumerate}																%Beginn Nummerierung
+	\item\textbf{Dokumentstruktur:} Doppelseitig					% Aufzählung Eintrag
+	\item\textbf{Schriftart:} Arial 12										% Aufzählung Eintrag
+	\item\textbf{Zeilenabstand:} 1.15										% Aufzählung Eintrag
+\end{enumerate}
+
+\vspace{-0.6cm}																	% vertikaler Abstand
+
+\subsection{Zeichnungen}													%Subüberschrift
+Ich empfehle die Zeichnungen, die für die Dokumentation der DA notwendig sind, selbst und mit der Software \textbf{VISIO} zu zeichnen. Das Programm ist über das Office Paket für Sie gratis.\\
+Beginnen Sie schon früh mit dem Erstellen solcher Blockschaltbilder und technischer Zeichnungen, dann geht das Dokumentieren am Ende der DA umso schneller.\\
+\vspace{-0.6cm}																	% vertikaler Abstand
+
+\pagebreak
+
+\section{Konstruktion und Entwurf von Baugruppen}				%Hauptüberschrift
+\subsection{Berechnungen}													%Subüberschrift
+Führen Sie die für die \acs{DA} (hier steht in der Source nur die Abkürzung DA) notwendigen Berechnungen mit dem Programm \textbf{sMath} oder \textbf{SCILAB} durch. Beginnen Sie hier ebenfalls so früh wie möglich, um darin Routine zu bekommen. Eine Beschreibung für die Einführung in sMath und SCILAB ist vorhanden.
+\vspace{-0.6cm}																	% vertikaler Abstand
+
+\subsection{Simulation elektronischer Schaltungen}				%Subüberschrift
+Ein kostenloses und sehr flexibles Programm Simulationen elektrischer Schaltungen durchführen zu können ist \textbf{LT-Spice} von Linear Technology. Eine Beschreibung für die Einführung in die Simulationstechnik ist im Internet vorhanden.
+\vspace{-0.6cm}																	% vertikaler Abstand
+
+\subsection{Platinenlayout}													%Subüberschrift
+Für die professionelle und automatische Erstellung von Layouts wird das Programm \textbf{KiCad} verwendet. Eine Dokumentation ist ebenfalls vorhanden.\\
+Beachten Sie beim Entwurf des Layouts einer Schaltung Dokumente und Richtlinien, die Sie von mir bekommen. Darin werden Hinweise zum Entwurf, sowie das \textbf{EMV} und \textbf{ESD}-gerechte Leiterplattendesign behandelt.
+
+\section{Kommunikation}													%Hauptüberschrift
+\subsection{Schriftliche Korrespondenz}								%Subüberschrift
+Die schriftliche Kommunikation wird hauptsächlich über email oder TEAMS geführt. Beachten Sie folgende Punkte:
+\begin{enumerate}																%Beginn Nummerierung
+\item\textbf{Zieladresse:} Bitte senden Sie Ihre mails immer an: \textbf{eBergler@lr.htlweiz.at} - oftmals schreibe ich von anderen Adressen zurück. Verwenden Sie jedoch immer die HTL Addresse! Nur so ist es gewährleistet, dass ich die Nachricht so schnell als möglich bekomme.
+\item\textbf{Addressaten:} Schreiben Sie Ihre Nachricht immer an \textbf{ALLE} die an Ihrer DA beteiligt sind, damit stellen Sie sicher, dass jeder den gleichen Informationsstand hat. Meine Telefonnummer lautet: \textbf{0664 882 5 9797}.
+\end{enumerate}
+\textbf{Grundsätzlich:} Es werden keine Daten, Dokumente oder Files über email versendet $\to$ dazu gibt es Laufwerke in einer Cloud!\\
+ 
+
+\subsection{Datenaustausch}													%Subüberschrift
+Elektronische Daten werden \textbf{ausschließlich} über eine Ordnerstruktur in einer Cloud ausgetauscht. Dies dient der Sicherung der Datenkonsistenz und Übersichtlichkeit. 
+
+\section{Beurteilung der Diplomarbeit}										%Hauptüberschrift
+\subsection{Schriftliche und praktische Beurteilungskriterien der Arbeit}	%Subüberschrift
+\begin{enumerate}																	%Beginn Nummerierung
+	\item\textbf{Fachkompetenz:} Wie gut kennt sich der Diplomand im Fachgebiet aus!
+	\item\textbf{Methodenkompetenz:} Welche Methoden zur Problemlösung wurden gewählt!
+	\item\textbf{Selbstkompetenz:} Hier fließt Ihre Motivation und Termintreue ein!
+	\item\textbf{Sprachkompetenz:} Wie gut kann der Diplomand technische Zusammenhänge sprachlich richtig darstellen!
+	\item\textbf{Dokumentation:} Wie gut ist die Dokumentation der Arbeit ausgeführt!
+\end{enumerate}
+
+\subsection{Mündliche Beurteilungskriterien der Präsentation und Verteidigung}		%Subüberschrift
+\begin{enumerate}																	%Beginn Nummerierung
+	\item\textbf{Zeitliche Einteilung:} Sie können Ihre Diplomarbeit im vorgegebenen Zeitrahmen darstellen.
+	\item\textbf{Inhalt:} Die inhaltlich-fachliche Auseinandersetzung mit dem Thema ist in der erforderlichen Tiefe gegeben.
+	\item\textbf{Argumentation:} Sie können Ihre Standpunkte überzeugend argumentieren.
+	\item\textbf{Rethorik:} Der Kandidat kann seine Diplomarbeit in Standardsprache klar strukturiert und verständlich darstellen.
+	\item\textbf{Medienumgang:} Sie können mit zeitgemäßen Präsentationsmitteln umgehen.
+\end{enumerate}
+
+%----------------------------------------
+\Blindtext \lipsum[1-2]															%Blindtext zum Auffüllen mit unsinnigen Sätzen
+%----------------------------------------
+%
+\newpage																			%Seitenumbruch am Ende des Subkapitels
+%****************************************************************************************************
+%============================= E N D   S U B D O C U M E N T  ==========================
+%****************************************************************************************************
+%
+% Verzeichnisse (to be commented out for compilation of main file):
+%
+%\input{./../02_DOC_Main/DA_03_ADDendum.tex}				%ACHTUNG: für die Gesamtcompilierung auskommentieren!!
+%
+\end{document}

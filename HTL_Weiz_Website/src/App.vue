@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view /> 
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default defineComponent({
 
 <style>
 .padtop {
-  padding-top: 25px !important;
+  padding-top: 32px !important;
 }
 
 .padbot {
@@ -32,18 +32,25 @@ export default defineComponent({
   border-radius: 18px !important;
 }
 
+.mpheading{
+  font-size: clamp(1rem, 10vw, 2rem); 
+}
+
 @media (max-width: 640px) {
   .padtop {
     padding-top: 10px !important;
   }
 
   .padbot {
-    padding-bottom: 10px !important;
+    padding-bottom: 8px !important;
   }
 
   .padleftright {
-    padding-left: 35px !important;
-    padding-right: 35px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  .mpheading{
+  font-size: clamp(1rem, 10vw, 1.5rem); 
   }
 }
 
