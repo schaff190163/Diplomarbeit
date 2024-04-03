@@ -2,7 +2,7 @@
     <div class="uk-background-muted">
         <NavBar></NavBar>
         <h1>TagDerOffenenTür</h1>
-        <FooterMerge></FooterMerge>
+        <Footer></Footer>
     </div>
 </template>
 

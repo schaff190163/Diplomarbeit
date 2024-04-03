@@ -7,7 +7,7 @@
     <h1 class="uk-text-lead zweigheading">Abendschule - Wirtschaftsingenieure</h1>
     <QuickFacts class="padleftright" typ="Abendschule für Berufstätige" dauer="6 bzw. 8 Semester" abschluss="Reife- und Diplomprüfung" vorraussetzungen="Reifeprüfung AHS/BHS oder BRP oder Abschlussprüfung einer facheinschlägigen 3,5 oder 4 jährigen Fachschule oder Werkmeisterschule oder LAP" standort="Weiz"></QuickFacts>
     <AbteilungsText></AbteilungsText>
-    <FooterMerge></FooterMerge>
+    <Footer></Footer>
   </div>
 </template>
 

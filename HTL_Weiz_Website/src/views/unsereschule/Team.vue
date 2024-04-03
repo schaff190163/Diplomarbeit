@@ -1,21 +1,32 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <h1 class="teamheading">Das Team der HTL Weiz</h1>
-    <p class="padleftright">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <h1 class="teamheading">Direktion</h1>
-    <Card_Direktion lass="padleftright padtop padbot"></Card_Direktion>
-    <h1 class="teamheading">Abteilungsvorstände</h1>
-    <div class="grid-containerav padleftright padtop padbot">
-      <Card_Abteilungsvorstand avname="Harald Macher" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Macher.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Christian Deimel" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Deimel.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Josef Hierz" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Hierz.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Bernhard Pertl" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Pertl.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Heimo T. Blattner" avsubtitle="Abteilungsvorstand " imgsrc="/images/team/Blattner.jpg"></Card_Abteilungsvorstand>
-      <Card_Abteilungsvorstand avname="Wolfgang Höllerbauer" avsubtitle="Werkstättenleitung " imgsrc="/images/team/Hoellerbauer.jpg"></Card_Abteilungsvorstand>
-    </div>
-    <h1 class="teamheading">Lehrpersonal</h1>
+    <h1 class="teamheading" id="direktion">Direktion</h1>
+    <Card_Direktion class="padleftright padtop padbot"></Card_Direktion>
+    <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
+    <h1 class="teamheading" id="abteilungsvorstaende">Leitungsteam</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in filteredAV('Abteilungsvorstand')" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
+    </div>
+    <h1 class="teamheading" id="lehrpersonal">Lehrpersonal</h1>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in filteredDept('teacher')" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
+    </div>
+    <h1 class="teamheading" id="verwaltung">Verwaltung</h1>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in filteredDept('verwaltung')" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
+    </div>
+    <h1 class="teamheading" id="schülerinnenvertretung">SchülerInnenvertretung</h1>
+    <div class="grid-containerstaff padleftright padtop padbot">
+      <div v-for="member in filteredDept('schülerinnenvertretung')" :key="member.id">
+        <Card_Staff v-if="member" :personnel="member"></Card_Staff>
+      </div>
     </div>
     <Footer></Footer>
   </div>
@@ -24,33 +35,68 @@
 <script lang="ts">
 import NavBar from "../../components/NavBar.vue";
 import Card_Direktion from "../../components/Card_Direktion.vue";
-import Card_Abteilungsvorstand from "../../components/Card_Abteilungsvorstand.vue";
-import Card_Staff from "../../components/Card_Staff.vue" 
+import Card_Staff from "../../components/Card_Staff.vue"; 
 import Footer from "../../components/Footer.vue";
+import Loader from "../../components/Loader.vue";
 
 export default {
   name: 'TeamView',
   components: {
     NavBar,
     Card_Direktion,
-    Card_Abteilungsvorstand,
     Card_Staff,
     Footer,
-},
+  },
 };
+</script>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { WPApiHandler, type Personnel } from 'wpapihandler';
+
+const personnel = ref<Personnel[]>([]);
+const loading = ref<boolean>(false);
+
+const url = 'https://dev.htlweiz.at/wordpress';
+const headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
+};
+
+console.log('Init WPApiHandler');
+const wp = new WPApiHandler(url, headers);
+
+function update_personnel(){
+  loading.value = true;
+
+  wp.get_personnel()
+    .then((response: Personnel[]) => {
+      personnel.value = response;
+      console.log(personnel.value)
+    })
+    .catch((error: Error) => {
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+}
+
+function filteredAV(tag: string): Personnel[] {
+  return personnel.value.filter((member: Personnel) => member.tags.includes(tag));
+}
+
+function filteredDept(department: string): Personnel[] {
+  return personnel.value.filter((member: Personnel) => member.department.includes(department.toLowerCase()));
+}
+
+update_personnel();
 </script>
 
 <style>
 .teamheading {
   font-size: 40px;
   padding-left: 100px;
-  padding-top: 90px;
-}
-.grid-containerav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  position: relative;
 }
 .grid-containerstaff {
   display: grid;
@@ -58,18 +104,17 @@ export default {
   gap: 20px;
   position: relative;
 }
-.nodarstello {
-  display: none;
-}
-@media only screen and (max-width : 640px) {
-  .grid-containerav {
-  grid-template-columns: repeat(1, 1fr);
+@media only screen and (max-width : 1200px) {
+  .grid-containerstaff {
+  grid-template-columns: repeat(2, 1fr);
   }
+}
+@media only screen and (max-width : 940px) {
   .grid-containerstaff {
   grid-template-columns: repeat(1, 1fr);
   }
   .teamheading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-left:0px;
   text-align: center;
   }

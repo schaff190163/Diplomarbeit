@@ -1,16 +1,29 @@
 <template>
-  <div class="dirspace roundedl">
-  <div class="uk-child-width-1-2@m" uk-grid>
+  <div>
+    <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2 uk-margin roundedl" uk-grid @click="openModal">
+      <div class="uk-card-media-left uk-cover-container">
+        <img :src="personnel.image" alt="" uk-cover class="roundedl" :style="{ width: personnel.imageWidth, height: personnel.imageHeight }"/>
+        <canvas width="600" height="420"></canvas>
+      </div>
       <div>
-          <div class="uk-card uk-card-default uk-width-1-1">
-              <div class="uk-card-media-top">
-                  <img src="" width="1800" height="1200" alt="">
-              </div>
-              <div class="uk-card-body">
-                  <h3 class="uk-card-title">Heimo T. Blattner</h3>
-                  <p>Abteilungsvorstand</p>
-              </div>
-          </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">{{ personnel.name }}</h3>
+          <p>{{ personnel.title }}</p>
+          <div class="uk-card-badge uk-label">{{ personnel.short }}</div>
+          <a class="uk-button uk-button-text">Details</a>
+        </div>
+      </div>
+    </div>
+    <div :id="personnel.short" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical roundedl">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-badge uk-label">{{ personnel.short }}</div>
+        <h3>{{ personnel.name }}</h3>
+        <div class="uk-card-media-left uk-cover-container">
+        <img :src="personnel.image" alt="" uk-cover class="roundedl" />
+        <canvas width="30" height="200"></canvas>
+        </div>
+        <p>{{ personnel.title }}</p>
       </div>
     </div>
   </div>
@@ -20,10 +33,18 @@
 export default {
   name: "Card_Staff",
   props: {
-    imgsrc: String,
-    azname: String,
+    personnel: {
+        type: Object,
+        default: () => ({}),
+    },
   },
+  methods: {
+    openModal() {
+      UIkit.modal(`#${this.personnel.short}`).show();
+    }
+  }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

@@ -2,7 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/images/teachers.png" uk-img></div>
-    <div class="padleftright padtop padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+    <div class="padleftright padtop padbot">
       <h1>Informationen für Lehrerinnen und Lehrer</h1>
       <p>Startpunkt mit den wichtigsten Links und Informationen für Lehrerinnen und Lehrer der HTL Weiz. Für die Verwendung von eingeschränkten Bereichen wie dem Schulverwaltungstool müssen sich Lehrer zuerst registrieren und ein Benutzerkonto angelegt und vom Administrator aktiviert werden.</p>
         <div class="button-grid gridtopsp">
@@ -16,7 +16,7 @@
           <button class="uk-button uk-button-default roundedl" uk-tooltip="title: ---; delay: 500" href="...">HTL Weiz Root Certificate</button>
         </div>
     </div>
-    <FooterMerge></FooterMerge>
+    <Footer></Footer>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div class="uk-background-muted">
     <NavBar></NavBar>
     <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/images/parents.png" uk-img></div>
-    <div class="st-cont padleftright padtop padbot" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+    <div class="st-cont padleftright padtop padbot">
       <h1 >Informationen für Eltern und Erziehungsberechtigte</h1>
       <div class="sw einr">
         <div>
@@ -25,7 +25,7 @@
       </div>
     </div>
   </div>
-  <FooterMerge></FooterMerge>
+  <Footer></Footer>
 </template>
 
 <script lang="ts">

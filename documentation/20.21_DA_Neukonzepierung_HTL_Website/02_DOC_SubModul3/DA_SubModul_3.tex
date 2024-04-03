@@ -1,0 +1,448 @@
+%
+%****************************************************************************************************
+%======================= B E G I N   D O C U M E N T   S E T T I N G S ========================
+%****************************************************************************************************
+%
+\documentclass[a4paper, 12pt, xcolor=dvipsnames]{scrartcl}	% Article als Modul
+\input{./../00_LATdef/UsePackages.tex}                    			% Input file für gemeinsame Package Definitionen
+%
+%--------------------Set data for document:
+\newcommand{\SYear}{2021/22}
+\newcommand{\SClass}{5AHET}
+\newcommand{\ADatum}{04. April 2022}
+\newcommand{\DAName}{E$^2$MILY - Elektrische Hardwaredokumentation}
+\newcommand{\DPLNameOnePre}{Vorname1}						% Diplomand 1 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameOneSur}{Nachname1}					% Diplomand 1 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameTwoPre}{Vorname2}						% Diplomand 2 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameTwoSur}{Nachname2}					% Diplomand 2 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameThreePre}{Vorname3}					% Diplomand 3 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameThreeSur}{Nachname3}				% Diplomand 3 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameFourPre}{Vorname4}					% Diplomand 4 als Variablenname, usage: \DPLName...
+\newcommand{\DPLNameFourSur}{Nachname4}					% Diplomand 4 als Variablenname, usage: \DPLName...
+\newcommand{\BNameOnePre}{Vorname1}							% Betreuer 1 als Variablenname, usage: \DPLName...
+\newcommand{\BNameOneSur}{Nachname1}						% Betreuer 1 als Variablenname, usage: \DPLName...
+\newcommand{\BNameTwoPre}{Vorname2}						% Betreuer 2 als Variablenname, usage: \DPLName...
+\newcommand{\BNameTwoSur}{Nachname2}						% Betreuer 2 als Variablenname, usage: \DPLName...
+%
+\setboolean{UseWm}{true} 												% Wasserzeichen einschalten
+%\newcommand{\WatermarkName}{Korrekturexemplar}		%Text für das Wasserzeichen
+%\newcommand{\WatermarkName}{01.01.2021}					%AlternativText für das Wasserzeichen
+\newcommand{\WatermarkName}{Template}						%AlternativText für das Wasserzeichen
+%
+%==============================S E T T I N G S ===================================
+%
+\input{./../00_LATdef/DocSettings.tex}                    				% Input file für gemeinsame dokumentenbezogene Definitionen
+%
+\begin{document}																%ab hier wird der Text im Hauptdokument übernommen
+% Verzeichnisse (to be commented out for compilation of main file):
+%
+%\tableofcontents 																%ACHTUNG: für die Gesamtcompilierung auskommentieren!!
+%\newpage 																		%ACHTUNG: für die Gesamtcompilierung auskommentieren!!
+%
+\changefont{pag}{m}{n}
+%
+%****************************************************************************************************
+%======================== B E G I N  S U B  D O C U M E N T  ==========================
+%****************************************************************************************************
+%
+\section{Diverses}
+
+\subsection{Rahmen}
+
+\fbox{\parbox[0cm][8mm][c]{0cm}{}Hoher Rahmen um einen ganz normalen Text.}\\
+
+\fcolorbox{red}{white}{\parbox[0cm][8mm][c]{0cm}{}Ein hoher roter Rahmen um einen ganz normalen Text.}\\
+
+\fbox{Rahmen um einen ganz normalen Text.}\\
+
+\fcolorbox{red}{white}{Ein roter Rahmen um einen ganz normalen Text.}\\
+
+%----------------------------------------
+\Blindtext \lipsum[1-1]	%Blindtext zum Auffüllen mit unsinnigen Sätzen
+%----------------------------------------
+
+\pagebreak
+
+\section{Labor oder CPE}
+%---------- BEGIN  A u f z ä h l u n g   n u m e r a l  BLAU
+\begingroup
+\setlength{\LTleft}{-20cm plus -1fill}
+\setlength{\LTright}{\LTleft}
+	\begin{longtable}[h!]{p{1cm}p{1cm}p{14cm}}
+\rowcolor{htl!20}
+\multicolumn{3}{l}{\textbf{Sie sollten für diese Übung folgende Vorkenntnisse haben:}}\\
+& \dots&Theorie über Ablaufsteuerungen\\
+& \dots&Wissen über Zustandsdiagramme und Ablaufketten\\
+& \dots&SPS Sprache Ablaufsteuerung\\
+&&\\
+\rowcolor{htl!20}
+\multicolumn{3}{l}{\textbf{Sie lernen in dieser Übung:}}\\
+& \dots& Aufgabenstellungen in einem Zustandsdiagramm abzubilden\\
+& \dots& wie ein Problem mit einer Ablaufsteuerung gelöst werden kann\\
+\end{longtable}
+\endgroup
+%----------END  A u f z ä h l u n g   n u m e r a l  BLAU
+%
+%============================== SECTION AUFZÄHLUNGEN
+%
+\section{Aufzählungen}
+%
+%================== S U B S E C T I O N
+%
+\subsection{Punktual}
+%---------- BEGIN  A u f z ä h l u n g   p u n k t u a l  m u l t i c o l u m n   l i n e a r 
+\begingroup
+	\setlength{\LTleft}{-20cm plus -1fill}
+	\setlength{\LTright}{\LTleft}
+	\begin{longtable}[h!]{p{1.0cm}p{3.0cm}p{9.0cm}}
+		\rowcolor{orange!10}
+		\multicolumn{3}{l}{\textbf{\parbox[0pt][2em][c]{0cm}{}Aufzählungspunkte mit Spalten linear, Zeilen eingefärbt:}}\\
+		\rowcolor{orange!2}
+		\includegraphics[width=12pt]{CrossOr} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 1.\\
+		\rowcolor{orange!6}
+		\includegraphics[width=12pt]{CrossGn}&\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 2.\\
+		\rowcolor{orange!2}
+		\includegraphics[width=12pt]{CrossVi} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 1.\\
+	\end{longtable}
+\endgroup
+%---------- END  A u f z ä h l u n g   p u n k t u a l   m u l t i c o l u m n   l i n e a r 
+%
+%================== S U B S E C T I O N
+%
+\subsection{Numeral}
+%---------- BEGIN  A u f z ä h l u n g   n u m e r a l  m u l t i c o l u m n   l i n e a r 
+\begingroup
+\setlength{\LTleft}{-20cm plus -1fill}
+\setlength{\LTright}{\LTleft}
+	\begin{longtable}[h!]{p{1.0cm}p{3.0cm}p{9.0cm}}
+		\rowcolor{orange!10}
+		\multicolumn{3}{l}{\textbf{\parbox[0pt][2em][c]{0cm}{}Aufzählungsnummerierung mit Spalten linear, Zeilen eingefärbt:}}\\
+		\rowcolor{orange!2}
+		\includegraphics[width=3mm]{OneOr} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 1.\\
+		\rowcolor{orange!6}
+		\includegraphics[width=3mm]{TwoOr}&\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 2.\\
+		\rowcolor{orange!2}
+		\includegraphics[width=3mm]{ThreeOr} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 3.\\
+		\rowcolor{orange!6}
+		\includegraphics[width=3mm]{FourOr}&\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 4.\\
+		\rowcolor{orange!2}
+		\includegraphics[width=3mm]{FiveOr} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 5.\\
+		\rowcolor{orange!6}
+		\includegraphics[width=3mm]{SixOr}&\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 6.\\
+		\rowcolor{orange!2}
+		\includegraphics[width=3mm]{SevenOr} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 7.\\
+		\rowcolor{orange!6}
+		\includegraphics[width=3mm]{EightOr}&\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 8.\\
+		\rowcolor{orange!2}
+		\includegraphics[width=3mm]{NineOr} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 9.\\
+	\end{longtable}
+\endgroup
+%---------- END  A u f z ä h l u n g   n u m e r a l   m u l t i c o l u m n   l i n e a r 
+%---------- BEGIN  A u f z ä h l u n g   n u m e r a l  m u l t i c o l u m n   l i n e a r 
+\begingroup
+	\setlength{\LTleft}{-20cm plus -1fill}
+	\setlength{\LTright}{\LTleft}
+	\begin{longtable}[h!]{p{1.0cm}p{3.0cm}p{9.0cm}}
+		\rowcolor{orange!10}
+		\multicolumn{3}{l}{\textbf{\parbox[0pt][2em][c]{0cm}{}Aufzählungsnummerierung mit Spalten linear, Zeilen eingefärbt:}}\\
+		\rowcolor{orange!2}
+		\includegraphics[width=3mm]{OneVi} &\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 1.\\
+		\rowcolor{orange!6}
+		\includegraphics[width=3mm]{TwoGn}&\textcolor{red!100} {\large\textbf{Schülertext}} &\dots Beschreibung 2.\\
+	\end{longtable}
+\endgroup
+%---------- END  A u f z ä h l u n g   n u m e r a l   m u l t i c o l u m n   l i n e a r 
+\subsection{OK und NOK}
+%---------- BEGIN  T a b e l l e   m i t   O K   u n d   N O K
+\begin{center}
+	\begin{tabular}{m{3.0cm}m{1.0cm}m{1.0cm}m{1.0cm}m{1.0cm}m{1.0cm}} 
+		&\textbf{A} &\textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} \\ 
+		\textbf{Text 1:} & \includegraphics[width=0.8cm]{OK} &  & &  &  \\
+		\textbf{Text 2:} &  & \includegraphics[width=0.8cm]{NOK} & \includegraphics[width=0.8cm]{OK} & \includegraphics[width=0.8cm]{OK} & \includegraphics[width=0.8cm]{NOK} \\ 
+	\end{tabular}
+\end{center}
+%---------- END  T a b e l l e   m i t   O K   u n d   N O K
+
+%
+%================== S U B S E C T I O N
+%
+\subsection{Multi Table}
+%---------- BEGIN  A u f z ä h l u n g    m u l t i t a b l e
+%========================================
+\vspace{0.5cm}
+\begin{longtable}[h!]{p{0.5cm}p{5.2cm}p{9.8cm}}
+	\large\textbf{(1)}& \textcolor{red!100} {\large\textbf{Schülertext 1:}}&
+\end{longtable}
+%========================================
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{1.0cm}p{14.5cm}}
+	&\textcolor{red!100} {\textbf{Eingerückt 1:}}
+\end{longtable}
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{2.0cm}p{13.5cm}}
+	&Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung. 
+\end{longtable}
+%========================================
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{1.0cm}p{14.5cm}}
+	&\textcolor{red!100} {\textbf{Eingerückt 2:}}
+\end{longtable}
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{2.0cm}p{13.5cm}}
+	&Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung.
+\end{longtable}
+%========================================
+\vspace{0.5cm}
+\begin{longtable}[h!]{p{0.5cm}p{5.2cm}p{9.8cm}}
+	\large\textbf{(2)}& \textcolor{red!100} {\large\textbf{Schülertext 2:}}&
+\end{longtable}
+%========================================
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{1.0cm}p{14.5cm}}
+	&\textcolor{red!100} {\textbf{Eingerückt 1:}}
+\end{longtable}
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{2.0cm}p{13.5cm}}
+	&Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung. 
+\end{longtable}
+%========================================
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{1.0cm}p{14.5cm}}
+	&\textcolor{red!100} {\textbf{Eingerückt 2:}}
+\end{longtable}
+\vspace{-0.5cm}
+\begin{longtable}[h!]{p{2.0cm}p{13.5cm}}
+	&Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung.
+\end{longtable}
+%---------- END  A u f z ä h l u n g    m u l t i t a b l e
+
+%
+%============================== SECTION SUBSECTIONS
+%
+
+\section{Subsections}
+%
+%================== S U B S E C T I O N
+%
+\subsection{Table in Subsection}
+%---------- BEGIN  T a b l e   in  S u b s e c t i o n 
+\begin{figure}[h!]
+	\begin{minipage}{0.6\textwidth}
+		\begin {center}
+		\begin{tabular}{|p{2.0cm}|p{3.0cm}|p{1.2cm}|p{1.2cm}|} \hline 
+			\textbf{\parbox[0pt][2em][c]{0cm}{}Dezimal$_{10}$} & \textbf{Hexadezimal$_{16}$} & \textbf{Oktal$_{8}$} & \textbf{Dual$_{2}$}\\ \hline 
+			0 & 0 & 0 & 0000\\ \hline 
+			1 & 1 & 1 & 0001\\ \hline 	
+			2 & 2 & 2 & 0010\\ \hline 
+			3 & 3 & 3 & 0011\\ \hline 
+		\end{tabular}
+		\end {center}
+    \end{minipage}%\hfill
+    \begin{minipage}{0.4\textwidth}
+	\linespread {1.25}\changefont{pag}{m}{n}
+	Beschreibung Beschreibung Beschreibung Beschreibung.\\
+      \caption{Bildbeschreibung Bildbeschreibung Bildbeschreibung.}
+	\label{fig:table}
+    \end{minipage}
+\end{figure}
+%---------- END  T a b l e   in  S u b s e c t i o n
+
+%
+%================== S U B S E C T I O N
+%
+\subsection{Text und Graphik in Subsection}
+%---------- BEGIN  T e x t   and  G r a p h i k   in  S u b s e c t i o n 
+\begin{figure}[h!]
+    	\begin{minipage}{0.6\textwidth}
+		\begin {center}
+		\vspace{0.0cm}
+		\centering
+		\hspace{-1.0cm}\includegraphics[width=0.8\linewidth]{SecKz_ModKz_Pic_AA}		
+		\end {center}
+    \end{minipage}%\hfill
+    \begin{minipage}{0.4\textwidth}
+		\linespread {1.25}\changefont{pag}{m}{n}
+		Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung.\\
+     		\caption{Bildbeschreibung Bildbeschreibung Bildbeschreibung.}
+		\label{fig:SecKz_ModKz_Pic_BB}
+    \end{minipage}
+\end{figure}
+%---------- END  T e x t   and  G r a p h i k    in  S u b s e c t i o n
+\pagebreak
+
+%
+%============================== SECTION FORMELN
+%
+\section{Formeln}
+%
+%================== S U B S E C T I O N
+%
+\subsection{Lange Formeln}
+
+%----------------------------------------
+\lipsum[1-2]\\
+%----------------------------------------
+
+%---------- BEGIN   F o r m e l k a s t e n     l a n g
+\begin{tabular}[!h]{m{16.4cm}}
+	\rowcolor{htl!20}
+	Für für eine lange Formel gilt für eine Größe in der Einheit:\\
+% Formel:
+\color{htl!100}
+\begin{center}\large{}\vspace*{-0.2cm}$\begin{aligned}[c]%
+%==========
+R_{\vartheta 2} &=R_{\vartheta 1} \cdot \left[1+\alpha _{\vartheta 1} \cdot (\vartheta _{2} -\vartheta_1)\right]\\
+R_{\vartheta 2} &=R_{20} \cdot \left[1+\alpha _{20} \cdot (\vartheta _{2} -20^{^\circ } C)+\beta_{20} \cdot (\vartheta _{2} -20^{^\circ } C)^2\right]\\
+%==========
+\end{aligned}$\end{center}
+% Erklärung der Formel:
+\color{black!70}\changefont{cmr}{m}{it}\begin{spacing}{0.6}\small{\begin{tabbing}
+%==========
+------\= -------\=-----------------\= \kill %endet mit \kill
+$\alpha_{20}$ \>\dots\>linearer Temperaturkoeffizient bei 20$^\circ$C\\
+$\beta_{20}$ \>\dots\>quadratischer Temperaturkoeffizient bei 20$^\circ$C\\
+$\alpha_{\vartheta 1}$ \>\dots\>linearer Temperaturkoeffizient bei $\vartheta 1$\\
+$\beta_{\vartheta 1}$ \>\dots\>quadratischer Temperaturkoeffizient bei $\vartheta 1$\\
+$\vartheta_1$ \>\dots\>1. Temperatur des Widerstandes\\
+$\vartheta_2$ \>\dots\>2. Temperatur des Widerstandes\\
+%==========
+\end{tabbing}}\end{spacing}
+\vspace{-1.8cm}
+\end{tabular}
+%---------- END   F o r m e l k a s t e n      l a n g
+
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.\\
+
+\subsection{Kurze Formeln}
+%----------------------------------------
+\Blindtext
+%----------------------------------------
+$~$\\													%das ist ein unsichtbares Leerzeichen!
+
+%---------- BEGIN   F o r m e l k a s t e n
+\begingroup
+	\begin{tabular}[!h]{m{6.0cm}m{10.0cm}}
+	\rowcolor{htl!20}
+	\multicolumn{2}{l}{Für für eine kurze Formel gilt für eine Größe in der Einheit:}\\
+% Formel:
+\color{htl!100}
+\begin{center}
+\large{}\vspace*{-0.2cm}
+	$\begin{aligned}[c]%
+%==========
+U_{T} &=\frac{k\cdot T}{q}\approx{26mV}\\
+r_{BE} &=\frac{U_{T}}{I_{B}}=\frac{\beta}{S}\\
+%==========
+	\end{aligned}$
+\end{center}
+% Erklärung der Formel:
+&\color{black!70}\changefont{cmr}{m}{it}\begin{spacing}{0.6}\small{\begin{tabbing}
+%==========
+------\= -------\=-----------------\= \kill %endet mit \kill
+$U_{T}$ \>\dots\>Temperaturspannung $\approx$26mV\\
+k \>\dots\>  Boltzmann Konst. k = 1,38$\cdot$10${}^{-23 }$J\textbf{/}K\\
+T \>\dots\>  absolute Temperatur in K\\
+q \>\dots\>  Einheitsladung mit 1.602$\cdot$10${}^{-}$${}^{19}$${}^{ }$As\\
+$r_{BE}$ \>\dots\>  differentieller Basis- Emitterwiderstand\\
+$I_{B}$ \>\dots\>  Basisstrom des Transistors\\
+${\mathbf \beta }$ \>\dots\>  Stromverstärkung des Transistors
+%==========
+\end{tabbing}}\end{spacing}
+\vspace*{-1.6cm}
+	\end{tabular}
+\endgroup\\
+%---------- END   F o r m e l k a s t e n
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
+\pagebreak
+
+%
+%============================== SECTION GRAPHIK 
+%
+\section{Graphik}
+%
+%================== S U B S E C T I O N
+%
+\subsection{Wrap Graphik}
+%
+%---------- BEGIN  W r a p   G r a p h i k
+\begin{wrapfigure}[10]{l}{0.45\textwidth} 
+	\vspace{-0.5cm}
+%\centering
+	\includegraphics[width=0.9\linewidth]{SecKz_ModKz_Pic_AA}		
+	\hspace{-0.0cm}\caption{Bildunterschrift Wrap Graphik Bildunterschrift Wrap Graphik Bildunterschrift Wrap Graphik Bildunterschrift Wrap Graphik .}
+	\label{fig:SecKz_ModKz_Pic_AA}
+\end{wrapfigure}
+%---------- END  W r a p   G r a p h i k
+%
+Beschreibung in Bild \ref{fig:SecKz_ModKz_Pic_AA} Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung Beschreibung.
+\vspace{2.9cm}
+
+%
+%================== S U B S E C T I O N
+%
+\subsection{Block Graphik}
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.\\
+
+%
+%---------- BEGIN  B l o c k   G r a p h i k  
+\begin{figure}[h!] 
+	\vspace{-0.5cm}
+%	\centering
+	\hspace{-0.0cm}\includegraphics[width=0.25\textwidth]{SecKz_ModKz_Pic_AA}
+      \caption{Bildunterschrift Block Graphik Bildunterschrift Block Graphik Bildunterschrift Block Graphik Bildunterschrift Block Graphik.}
+	\label{fig:SecKz_ModKz_Pic_AAb}
+\end{figure}
+%---------- END  B l o c k   G r a p h i k 
+%
+%----------------------------------------
+In Bild \ref{fig:SecKz_ModKz_Pic_AAb} \Blindtext \lipsum[1-2]	%Blindtext zum Auffüllen mit unsinnigen Sätzen
+%----------------------------------------
+%
+\pagebreak
+
+%
+%============================== SECTION TABELLEN 
+%
+\section{Tabellen}
+
+\begin{center}
+\begin{tabular}{|p{0.9in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|} \hline 
+\multicolumn{2}{|p{1in}|}{} & \multicolumn{2}{|p{0.9in}|}{\textbf{gemessen}} & \multicolumn{3}{|p{1.0in}|}{\textbf{berechnet}} \\ \hline 
+\textbf{}\textbf{Mess} & \textbf{f} & \textbf{u${}_{es}$} & \textbf{u${}_{as}$}  & \textbf{A${}_{CL}$} & \textbf{A${}_{CL}$} & \textbf{$\varphi$} \\ \hline 
+\textbf{}\textbf{Nr.:} &\textbf{[Hz]} & \textbf{[mV]} & \textbf{[mV]} & \textbf{[-]} & \textbf{[db]}  & \textbf{[${}^\circ$]} \\ \hline 
+1 & 1k &  &  &  & &  \\ \hline 
+$\dots$& $\dots$& $\dots$& $\dots$&$\dots$&$\dots$&$\dots$ \\ \hline 
+10 & 1M &  &  &  &  &\\ \hline 
+\end{tabular}
+\end{center}
+%
+%============================== SECTION LERNZIELKONTROLLE 
+%
+
+\section{Glossar oder Acronymverzeichnis}
+Dies ist ein Text mit einer Abkürzung. Sie können die Buchstabenkombinationen (Kurzzeichen oder Abkürzungen) in der Dokumentation Ihrer \acs{DA} mit einem Befehl aufrufen. Zum Beispiel nehmen wir \acs{ESD}. Im File DA\_04\_ACR.tex muss der entsprechende Eintrag gemacht werden.
+
+\section{PDF Einbindung}
+PDF Dokumente können in vielen Gestalten eingebunden sein. Um Platz zu sparen kann man auch 2 A4 Seiten auf A5 verkleinern und quer auf dem Blatt darstellen!\\
+
+Es können bestimmte Seiten auch ausgelassen werden.\\
+
+Achtung Sonderzeichen, wie griechische Symbole können im Preview sonderbar aussehen. Im ACROBAT READER sollte die Darstellung aber wieder in Ordnung sein.
+
+%---------- BEGIN  I N C L U D E       P D F
+\includepdf[pages={1-6}, nup=1x2, landscape=true]{SecKz_ModKz_Pic_BB.pdf} 
+%---------- END  I N C L U D E       P D F
+%
+%****************************************************************************************************
+%============================= E N D   S U B D O C U M E N T  ==========================
+%****************************************************************************************************
+%
+% Verzeichnisse (to be commented out for compilation of main file):
+%Im Addendum ist der sogenannte Anhang dargestellt. Beim Verfassen der Dokumentation ist dieser Teil vielleicht noch
+%nicht notwendig.
+%\input{./../02_DOC_Main/DA_03_ADDendum.tex}				%ACHTUNG: für die Gesamtcompilierung auskommentieren!!
+%Wenn das Addendum auskommentiert ist, dann werden die Zitate im Dokument auch nicht richtig dargestellt.
+%Nichts desto Trotz gibt es den Eintrag im Main Dokument auch.
+\end{document}
+
+

@@ -6,7 +6,7 @@
           <img class="" width="40" height="40" :src="imgsrc">
         </div>
         <div class="uk-width-expand">
-          <h3 class="uk-card-title .uk-text-default uk-margin-remove-bottom">{{ title }}</h3>
+          <h3 class="uk-card-title uk-margin-remove-bottom atcardtitle">{{ title }}</h3>
         </div>
       </div>
     </div>
@@ -46,9 +46,9 @@ export default defineComponent({
 </script>
 
 <style>
-@media (max-width: 350px){
-  .uk-card-title{
-    font-size:1rem;
+@media screen and (max-width: 640px){
+  .atcardtitle{
+  font-size: calc(12px + 1vw) !important;
   }
 }
 </style>

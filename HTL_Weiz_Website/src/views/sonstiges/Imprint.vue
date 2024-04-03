@@ -33,7 +33,7 @@
                 der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen,
                 dass Markenzeichen nicht durch Rechte Dritter geschützt sind.</p>
         </div>
-        <FooterMerge></FooterMerge>
+        <Footer></Footer>
 </div></template>
 
 <script lang="ts">
