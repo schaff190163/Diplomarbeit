@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div style="background-color: #4B96D1;">
     <div class="sscentered-row padleftright">
       <div class="sselement">
-        <h1 class="" style="color: #f8f8f8;">HTL Weiz - Standort Fürstenfeld</h1>
+        <h1 style="color: #f8f8f8;">HTL Weiz - Standort Fürstenfeld</h1>
       </div>
     </div>
   </div>
@@ -10,7 +10,7 @@
 
 <script lang="ts">
 export default {
-  name: 'Schoolstats',
+  name: 'FSchoolstats',
 };
 </script>
 

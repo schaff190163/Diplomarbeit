@@ -11,26 +11,13 @@
 </script>
 
 <style>
-.hero {
-  height: calc(100vh - 200px);
-}
-.spruch {
-  font-size: calc(5vw + 2vh - 20px);
+.hei {
+  height: calc(85vh);
 }
 
-@media (min-width: 1500px) {
-  .spruch {
-    font-size: calc(4vw + 1vh - 20px);
-  }
-}
-
-@media (max-width: 600px) {
-  .spruch {
-    font-size: calc(4vw + 1vh);
-  }
-  
-  .hero {
-    height: calc(70vh - 200px); /* Adjust height for smaller screens */
+@media (max-width: 600px) {  
+  .hei {
+    height: calc(65vh);
   }
 }
 </style>

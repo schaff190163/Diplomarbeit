@@ -6,14 +6,14 @@
         <li v-for="post in posts" :key="post.id" class="uk-width-1-3@m">
             <div class="uk-card uk-card-default marg">
               <div class="uk-card-media-top">
-                <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" :data-src="post.image" uk-img></div>
+                <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" :data-src="post.imageSrc" uk-img></div>
               </div>
               <div class="uk-card-body uk-text-left">
                 <p class="uk-text-bold uk-padding-remove-bottom">{{ post.date }}</p>
                 <p class="uk-card-title">{{ post.title }}</p>
                 <div v-html="post.truncatedContent"></div>
                 <p></p>
-                <a class="linkcolor" href="#" @click.prevent="openModal(post)">Mehr Lesen</a>
+                <a class="linkcolor marg" href="#" @click.prevent="openModal(post)">Mehr Lesen</a>
               </div>
             </div>
         </li>
@@ -38,7 +38,7 @@
 </template>
 
 
-<script>
+<script lang="ts">
 import { WPApiHandler } from 'wpapihandler';
 
 const url = 'https://dev.htlweiz.at/wordpress';
@@ -50,6 +50,7 @@ const headers = {
 const wpa = new WPApiHandler(url, headers);
 
 export default {
+  name: 'ENews',
   data() {
     return {
       posts: [],
@@ -61,12 +62,11 @@ export default {
 
     // Truncate content for each post and extract image source
     posts.forEach(post => {
-      post.truncatedContent = this.truncateContent(post.content, 100);
-      post.imageSrc = this.extractImageSrc(post.content); // New line to extract image src
-      post.title = this.decodeEntities(post.title); // Decode HTML entities in title
+      post.truncatedContent = this.truncateContent(post.content, 100, post.title, 25);
+      post.imageSrc = this.extractImageSrcList(post.content)[0];
+      post.title = this.decodeEntities(post.title); 
     });
 
-    // Log the extracted image source links
     posts.forEach(post => {
       console.log('Image src for post with ID ' + post.id + ':', post.imageSrc);
     });
@@ -75,20 +75,25 @@ export default {
     console.log("Posts retrieved:", posts);
   },
   methods: {
-    truncateContent(content, maxLength) {
-      // Function to remove any HTML tags and convert headings to normal text
+    truncateContent(content, maxLength, title, tlenght) {
       function stripHtmlTags(text) {
         return text.replace(/<[^>]*>?/gm, '').replace(/(#+\s+)/g, '');
       }
-
-      // Convert headings to normal text
       const plainTextContent = stripHtmlTags(content);
+      var add = 0;
+      var new_maxLength = maxLength
+ 
+      if (title.length >= tlenght) {
+        var add = title.length % 2;
+      }
+      if (title.length > 100) {
+        new_maxLength = maxLength - 40
+      }
 
-      // Truncate the content if it exceeds maxLength
-      if (plainTextContent.length <= maxLength) {
+      if ((plainTextContent.length + add) <= new_maxLength) {
         return plainTextContent;
       } else {
-        const truncatedContent = plainTextContent.substr(0, plainTextContent.lastIndexOf(' ', maxLength));
+        const truncatedContent = plainTextContent.substr(0, plainTextContent.lastIndexOf(' ', new_maxLength - add));
         return truncatedContent + '...';
       }
     },
@@ -96,18 +101,21 @@ export default {
       this.selectedPost = post;
       UIkit.modal('#modal-example').show();
     },
-    extractImageSrc(content) {
-      const matches = content.match(/<img[^>]+src="([^">]+)"/);
-      return matches ? matches[1] : null;
+    extractImageSrcList(content) {
+      const matches = content.match(/<img[^>]+src="([^">]+)"/g);
+      if (!matches) return null;
+      
+      const srcList = [];
+      for (const match of matches) {
+        const src = match.match(/src="([^">]+)"/)[1];
+        srcList.push(src);
+      }
+      console.log(srcList)
+      return srcList;
     },
     decodeEntities(html) {
       const doc = new DOMParser().parseFromString(html, 'text/html');
       return doc.documentElement.textContent || '';
-    },
-    replaceHTMLCharacters(text) {
-      return text.replace(/&#(\d+);/g, (match, dec) => {
-        return String.fromCharCode(dec);
-      });
     }
   }
 };
@@ -115,14 +123,6 @@ export default {
 
 
 <style scoped>
-
-.section {
-  height: 750px;
-}
-
-.maindiv {
-  background-color: rgb(226, 226, 226);
-}
 
 .linkcolor {
   color: #666666;
@@ -143,22 +143,12 @@ export default {
 .uk-card-media-top {
   background-size: cover;
   background-position: center;
+  height: 30vh;
 }
 
 .uk-card-body {
-  max-height: 250px; /* Adjust the max-height to your preference */
+  max-height: 40vh;
   overflow: hidden;
 }
 
-@media (max-width: 960px) {
-  .uk-width-1-3@m {
-    flex-basis: 50%;
-  }
-}
-
-@media (max-width: 640px) {
-  .uk-width-1-3@m {
-    flex-basis: 100%;
-  }
-}
 </style>

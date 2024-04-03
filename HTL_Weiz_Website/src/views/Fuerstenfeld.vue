@@ -7,39 +7,34 @@
     </div>
     <h1 class="padleftright uk-text-light padbot">Maschinenbau - Automatisierungstechnik</h1>
     <div class="grid-container padleftright padbot uk-padding-small" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 50">
-      <FAbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Inhaltliche Schwerpunkte" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></FAbteilungsCard>
-      <FAbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Persönliche Eigenschaften" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></FAbteilungsCard>
-      <FAbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Karriereaussichten" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></FAbteilungsCard>
+      <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Inhaltliche Schwerpunkte" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></AbteilungsCard>
+      <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Persönliche Eigenschaften" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></AbteilungsCard>
+      <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Karriereaussichten" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></AbteilungsCard>
     </div>
     <Footer class="padtop"></Footer>
   </div>
 </template>
 
 <script lang="ts">
-import FNavBar from "../components/fuerstenfeld/FNavBar.vue";
-import FAbteilungsCard from "../components/fuerstenfeld/FAbteilungsCard.vue";
-import FHeroSection from "../components/fuerstenfeld/FHeroSection.vue"
-import Calendar from "../components/Calendar.vue";
-import FSchoolStats from "../components/fuerstenfeld/FSchoolStats.vue";
+import AbteilungsCard from "../components/AbteilungsCard.vue";
 import Footer from "../components/fuerstenfeld/FFooter.vue";
-import QuickLinks from "../components/QuickLinks.vue";
+import FHeroSection from "../components/fuerstenfeld/FHeroSection.vue"
+import FNavBar from "../components/fuerstenfeld/FNavBar.vue";
+import FSchoolStats from "../components/fuerstenfeld/FSchoolStats.vue";
 
 export default {
   name: 'HomeView',
   components: {
     FNavBar,
-    FAbteilungsCard,
+    AbteilungsCard,
     FHeroSection,
-    Calendar,
     FSchoolStats,
     Footer,
-    QuickLinks,
   },
 };
 </script>
 
 <style>
-/* Styles for this component */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -47,13 +42,6 @@ export default {
   position: relative;
 }
 
-.gradient_f {
-  /*background-image: url('/images/gradient.svg');*/
-  background-color: #4B96D1;
-  background-repeat: no-repeat;
-  background-position: center; 
-  background-size: cover;
-}
 
 @media (max-width: 1300px) {
   .grid-container {

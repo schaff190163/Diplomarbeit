@@ -13,10 +13,10 @@
               <li v-for="level in levels">
                 <div v-if="selectedLevel === levels.indexOf(level)" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
                   <ul class="uk-slider-items uk-flex-center uk-grid">
-                    <li v-for="partner in filteredPartners" :key="partner.id">
+                    <li v-for="partner in filteredPartners" :key="partner.id" class="uk-width-1-4@m"> <!-- Added class uk-width-1-4@m -->
                       <div class="uk-panel">
                         <div class="logo-container">
-                          <img class="logo" :src="partner.logo" alt="">
+                          <img class="logospons" :src="partner.logo" alt="">
                         </div>
                       </div>
                     </li>
@@ -29,10 +29,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { WPApiHandler } from 'wpapihandler';
 
 export default {
+  name: 'ESponsor',
   data() {
     return {
       partners: [],
@@ -76,7 +77,7 @@ export default {
   align-items: center;
 }
 
-.logo {
+.logospons {
   max-width: 100%;
   max-height: 100%;
 }

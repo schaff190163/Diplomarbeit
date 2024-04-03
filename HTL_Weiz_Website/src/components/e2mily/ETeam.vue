@@ -14,9 +14,7 @@
               <div class="uk-card-media-top uk-height-medium" :style="{ backgroundImage: 'url(' + personnel.image + ')' }"></div>
               <div class="uk-card-body">
                 <h3 class="uk-card-title">{{ personnel.name }}</h3>
-                <p class="uk-text-truncate">{{ truncateDescription(personnel.description) }}</p>
-                <!-- Ensure 4 lines of content -->
-                <template v-for="i in 4 - countLines(personnel.description)">&nbsp;<br></template>
+                <p class="uk-text-truncate">{{ personnel.description }}</p>
               </div>
               <div class="uk-card-badge uk-label">{{ personnel.department }}</div>
             </div>
@@ -30,7 +28,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { WPApiHandler } from 'wpapihandler';
 
 const url = 'https://dev.htlweiz.at/wordpress';
@@ -57,39 +55,15 @@ export default {
         name: person.name,
         description: person.description,
         image: person.image,
-        department: person.department, // Add department field
+        department: person.department,
       }));
 
       console.log("Personnel retrieved:", personnel);
     } catch (error) {
       console.error("Error retrieving personnel:", error);
     }
-  },
-  methods: {
-    truncateDescription(description) {
-      const charCount = 20; // Adjust this value to your desired character count
-      let result = '';
-      let count = 0;
-
-      for (let i = 0; i < description.length; i++) {
-        count++;
-
-        if ((description[i] === ';' || description[i] === ' ') && count > charCount) {
-          result += '\n';
-          count = 0;
-        }
-
-        result += description[i];
-      }
-      description = result
-      return description;
-    },
-    countLines(description) {
-      // Count the number of lines in the description
-      return description ? description.split(/\r\n|\r|\n/).length : 0;
-    }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -99,8 +73,8 @@ export default {
 }
 
 .uk-card-body {
-  max-height: 150px; /* Adjust the max-height to your preference */
-  overflow: ;
+  max-height: 80vh; 
+  overflow: hidden;
 }
 
 .marg {
@@ -111,19 +85,7 @@ export default {
   color: black;
 }
 
-@media (max-width: 960px) {
-  .uk-child-width-1-4@m {
-    flex-basis: 50%;
-  }
-}
-
-@media (max-width: 640px) {
-  .uk-child-width-1-4@m {
-    flex-basis: 100%;
-  }
-
-  .uk-card-media-top {
-    height: 200px; /* Adjust the height to your preference */
-  }
+.uk-card-media-top {
+    height: 40vh;
 }
 </style>

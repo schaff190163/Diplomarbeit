@@ -38,10 +38,10 @@
 
 <script lang="ts">
 export default {
-  // Your component logic goes here
+  name: 'ENavbar',
 };
+
 </script>
 
 <style>
-/* Your component styles go here */
 </style>

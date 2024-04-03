@@ -14,12 +14,12 @@
 
 <script lang="ts">
 import EFooter from "../components/e2mily/EFooter.vue";
-import EModels from "../components/e2mily/EModels_v2.vue";
-import ENews from "../components/e2mily/ENews.vue";
-import ETeam from "../components/e2mily/ETeam.vue";
-import ENavbar from "../components/e2mily/ENavbar.vue";
 import ELanding from "../components/e2mily/ELanding.vue"
+import EModels from "../components/e2mily/EModels.vue";
+import ENavbar from "../components/e2mily/ENavbar.vue";
+import ENews from "../components/e2mily/ENews.vue";
 import ESponsor from "../components/e2mily/ESponsor.vue"
+import ETeam from "../components/e2mily/ETeam.vue";
 
 export default {
   name: "E2mily",

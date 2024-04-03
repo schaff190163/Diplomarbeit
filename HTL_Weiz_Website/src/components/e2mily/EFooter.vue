@@ -1,5 +1,5 @@
 <template>
-    <footer class="uk-background-secondary uk-height-medium" uk-sticky="position: bottom">
+    <footer class="uk-background-secondary uk-height-medium fheight" uk-sticky="position: bottom">
     <div class="text-wrapper uk-position-center-left uk-padding-large">
       <div>Impressum</div>
       <div>Link 1</div>
@@ -17,7 +17,6 @@
 </template>
 
 <script lang="ts">
-/* import ... from ...; */
 
 export default {
   name: 'EFooter',
@@ -25,23 +24,20 @@ export default {
 </script>
 
 <style>
-.footer {
-  position: relative;
-  height: 100px;
-}
-
 .text-wrapper {
   color: #ffffff;
   font-family: "Inter-Regular", Helvetica;
   text-align: left;
 }
 
-
-
 .text-wrapper2 {
   color: #ffffff;
   font-family: "Inter-Regular", Helvetica;
   text-align: right;
+}
+
+.fheight {
+  height: 30vh;
 }
 
 @media (max-width: 575px) {
