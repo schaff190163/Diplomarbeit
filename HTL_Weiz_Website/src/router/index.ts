@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, } from 'vue-router';
 import HomeView from '../views/sonstiges/Home.vue';
+import Team from '../views/unsereschule/Team.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -68,6 +69,54 @@ const router = createRouter({
       name: 'team',
 
       component: () => import(/* webpackChunkName: "team" */"../views/unsereschule/Team.vue")
+    },
+    {
+      path: '/Team/Sekretariat',
+      name: 'team-sekretariat',
+      component: Team,
+      props: { tag: 'Sekretariat' }
+    },
+    {
+      path: '/Team/Bildungsberatung',
+      name: 'team-bildungsberatung',
+      component: Team,
+      props: { tag: 'Bildungsberatung' }
+    },
+    {
+      path: '/Team/Mädchenbeauftragte',
+      name: 'team-mädchenbeauftragte',
+      component: Team,
+      props: { tag: 'Mädchenbeauftragte' }
+    },
+    {
+      path: '/Team/VertrauenslehrerInnen',
+      name: 'team-vertrauenslehrerinnen',
+      component: Team,
+      props: { tag: 'VertrauenslehrerInnen' }
+    },
+    {
+      path: '/Team/Schularzt',
+      name: 'team-schularzt',
+      component: Team,
+      props: { tag: 'Schularzt' }
+    },
+    {
+      path: '/Team/Schulpsychologe',
+      name: 'team-schulpsychologe',
+      component: Team,
+      props: { tag: 'Schulpsychologe' }
+    },
+    {
+      path: '/Team/Jugendcoaching',
+      name: 'team-jugendcoaching',
+      component: Team,
+      props: { tag: 'Jugendcoaching' }
+    },
+    {
+      path: '/Team/Notfallnummern',
+      name: 'team-notfallnummern',
+      component: Team,
+      props: { tag: 'Notfallnummern' }
     },
     {
       path: '/Partner',
@@ -157,7 +206,7 @@ const router = createRouter({
       path: '/fuerstenfeld',
       name: 'Fürstenfeld',
   
-      component: () => import(/* webpackChunkName: "e2milycontact" */"../views/Fuerstenfeld.vue")
+      component: () => import(/* webpackChunkName: "fuerstenfeld" */"../views/Fuerstenfeld.vue")
     },
   ],
   scrollBehavior(to, from, savedPosition) {

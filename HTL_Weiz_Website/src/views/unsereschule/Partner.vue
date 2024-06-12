@@ -1,14 +1,27 @@
 <template>
+  <!-- Main container with background -->
   <div class="uk-background-muted">
+
+    <!-- Navigation bar component -->
     <NavBar></NavBar>
+
+    <!-- Title for the Partner section -->
     <h1 class="padtop padbot padleftright">Partner</h1>
+
+    <!-- Loader component displayed while data is being loaded -->
     <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
+
+    <!-- Container for partner cards with padding -->
     <div class="padtop padbot padleftright partnergrid">
-    <div v-for="item in partner" :key="item.id">
-      <Card_Partner v-if="item" :partner="item"></Card_Partner>
+      <!-- Loop through partner data and display partner cards -->
+      <div v-for="item in partner" :key="item.id">
+        <Card_Partner v-if="item" :partner="item"></Card_Partner>
+      </div>
     </div>
-    </div>
+
+    <!-- Footer component -->
     <Footer></Footer>
+
   </div>
 </template>
 
@@ -19,7 +32,9 @@ import Footer from "../../components/Footer.vue";
 import Loader from "../../components/Loader.vue";
 
 export default {
+  // Component name
   name: "News",
+  // Imported components
   components: {
     NavBar,
     Card_Partner,
@@ -33,21 +48,26 @@ export default {
 import { ref } from 'vue';
 import { WPApiHandler, type Partner } from 'wpapihandler';
 
+// Define reactive variables
 const partner = ref<Partner[]>([]);
 const loading = ref<boolean>(false);
 
+// WordPress API URL and headers
 const url = 'https://dev.htlweiz.at/wordpress';
 const headers = {
   "Content-Type": "application/json",
   "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
 };
 
+// Initialize WPApiHandler
 console.log('Init WPApiHandler');
 const wp = new WPApiHandler(url, headers);
 
+// Function to update partner data
 function update_partners(){
   loading.value = true;
 
+  // Fetch partner data from WordPress API
   wp.get_partners('htlweiz')
     .then((response: Partner[]) => {
       partner.value = response;
@@ -60,11 +80,13 @@ function update_partners(){
     });
 }
 
+// Call update_partners function to fetch data on component mount
 update_partners();
 </script>
 
 <style>
 .partnergrid {
+  /* Styling for grid layout */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: calc(10vw - 40px);

@@ -8,7 +8,7 @@
               <div class="uk-navbar">
                 <ul class="uk-navbar-nav">
                   <a class="uk-navbar-left uk-navbar-nav navsmallscreen" uk-icon="icon: menu; ratio: 2" uk-toggle="target: #offcanvas-nav"></a>
-                  <li><router-link class="uk-logo" to="/"><img src="/images/htl_logo.svg" width="100"/></router-link></li>
+                  <li><router-link class="uk-logo" to="/"><img src="/images/htl_logo.svg" width="100"/><img src="/images/logo_ff.png" width = "60"></router-link></li>
                   <li class="navbigscreen">
                     <div>
                       <nav class="uk-navbar-container" uk-navbar>
@@ -82,14 +82,12 @@
                               <a href="#">Rat & Hilfe</a>
                               <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                  <li><router-link to="/team">Sekretariat</router-link></li>
-                                  <li><router-link to="/team">Bildungsberatung</router-link></li>
-                                  <li><router-link to="/team">Mädchenbeauftragte</router-link></li>
-                                  <li><router-link to="/team">VertrauenslehrerInnen</router-link></li>
-                                  <li><router-link to="/team">Schularzt</router-link></li>
-                                  <li><router-link to="/team">Schulpsychologe</router-link></li>
-                                  <li><router-link to="/team">Jugendcoaching</router-link></li>
-                                  <li><router-link to="/team">Notfallnummern</router-link></li>
+                                  <li><router-link :to="{ path: '/team', query: { tag: 'Sekretariat' } }">Sekretariat</router-link></li>
+                                  <li><router-link :to="{ path: '/team', query: { tag: 'Bildungsberatung' } }">Bildungsberatung</router-link></li>
+                                  <li><router-link :to="{ path: '/team', query: { tag: 'Mädchenbeauftragte' } }">Mädchenbeauftragte</router-link></li>
+                                  <li><router-link :to="{ path: '/team', query: { tag: 'VertrauenslehrerInnen' } }">VertrauenslehrerInnen</router-link></li>
+                                  <li><router-link :to="{ path: '/team', query: { tag: 'Schularzt' } }">Schularzt</router-link></li>
+                                  <li><router-link :to="{ path: '/team', query: { tag: 'Schulpsychologe' } }">Schulpsychologe</router-link></li>
                                 </ul>
                               </div>
                             </li>

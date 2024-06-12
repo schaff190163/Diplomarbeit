@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="uk-card uk-card-body uk-card-default smallcard roundedl" :uk-tooltip="'title: ' + tooltipdesc + '; delay: 500'">
+    <div class="uk-card uk-card-body smallcard roundedl" :uk-tooltip="'title: ' + tooltipdesc + '; delay: 500'">
       <img :src="imgsrc" class="uk-position-center logopad roundedl" width="" height="" :alt="azname">
     </div>
   </div>

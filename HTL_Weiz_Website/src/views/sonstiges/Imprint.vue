@@ -34,20 +34,23 @@
                 dass Markenzeichen nicht durch Rechte Dritter geschützt sind.</p>
         </div>
         <Footer></Footer>
-</div></template>
+</div>
+</template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { useHead } from '@vueuse/head';
 import Footer from "../../components/Footer.vue";
 import NavBar from "../../components/NavBar.vue";
 
-export default {
-    name: 'Imprint',
-    components: {
-        NavBar,
-        Footer,
-    },
-};
+useHead({
+  title: 'Impressum - HTL Weiz',
+  meta: [
+    { name: 'description', content: 'Impressum der HTL Weiz: Kontaktinformationen, Verantwortlichkeiten, Datenschutzerklärung, Haftungsausschluss, und Urheberrecht.' },
+    { name: 'keywords', content: 'HTL Weiz, Impressum, Kontakt, Direktor, Aufsichtsbehörde, Datenschutzerklärung, Haftungsausschluss, Urheberrecht' }
+  ]
+});
 </script>
+
 
 <style>
 </style>
