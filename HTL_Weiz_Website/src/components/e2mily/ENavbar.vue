@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="uk-position-relative">
+    <div class="uk-position-relative body">
       <div class="uk-position-top">
         <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light;">
           <nav class="uk-navbar-container" uk-navbar>
@@ -35,13 +35,15 @@
     </div>
   </div>
 </template>
-
 <script lang="ts">
 export default {
   name: 'ENavbar',
 };
 
 </script>
-
 <style>
+
+.body {
+  max-width: 100vw;
+}
 </style>

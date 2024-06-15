@@ -36,4 +36,11 @@ export default {
 </script>
 
 <style>
+
+* {
+  /* This rule adds a red outline to all elements that exceed their container's dimensions */
+  /* outline: 2px solid red; */
+
+}
+
 </style>

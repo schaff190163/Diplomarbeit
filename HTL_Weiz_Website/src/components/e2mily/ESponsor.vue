@@ -1,19 +1,19 @@
 <template>
   <div class="uk-padding">
     <div uk-grid>
-        <div class="uk-width-auto@m">
+        <div class="uk-width-1-4@m uk-width-1-3@s uk-width-1-2 uk-flex uk-flex-column">
             <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
                 <li v-for="(level, index) in levels" :key="index" @click="selectLevel(index)">
                   <a href="#">{{ level }}</a>
                 </li>
             </ul>
         </div>
-        <div class="uk-width-expand@m">
+        <div class="uk-width-expand@m uk-width-2-3@s uk-width-1-1">
             <ul id="component-tab-left" class="uk-switcher">
-              <li v-for="level in levels">
+              <li v-for="level in levels" :key="level">
                 <div v-if="selectedLevel === levels.indexOf(level)" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000">
-                  <ul class="uk-slider-items uk-flex-center uk-grid">
-                    <li v-for="partner in filteredPartners" :key="partner.id" class="uk-width-1-4@m"> <!-- Added class uk-width-1-4@m -->
+                  <ul class="uk-slider-items uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid">
+                    <li v-for="partner in filteredPartners" :key="partner.id">
                       <div class="uk-panel">
                         <div class="logo-container">
                           <img class="logospons" :src="partner.logo" alt="">
