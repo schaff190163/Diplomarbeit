@@ -157,7 +157,7 @@ const router = createRouter({
       path: '/fuerstenfeld',
       name: 'Fürstenfeld',
   
-      component: () => import(/* webpackChunkName: "e2milycontact" */"../views/E2milyContact.vue")
+      component: () => import(/* webpackChunkName: "e2milycontact" */"../views/Fuerstenfeld.vue")
     },
   ],
   scrollBehavior(to, from, savedPosition) {

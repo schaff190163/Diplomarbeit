@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import AbteilungsCard from "../components/AbteilungsCard.vue";
+import AbteilungsCard from "../components/fuerstenfeld/FAbteilungsCard.vue";
 import Footer from "../components/fuerstenfeld/FFooter.vue";
 import FHeroSection from "../components/fuerstenfeld/FHeroSection.vue"
 import FNavBar from "../components/fuerstenfeld/FNavBar.vue";
