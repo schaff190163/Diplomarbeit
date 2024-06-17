@@ -1,6 +1,7 @@
 <template>
   <div>
     <NavBar></NavBar>
+    <HeaderBanner></HeaderBanner>
     <div class="padleftright">
       <h1>Elternverein der HTL Weiz</h1>
       <p>Der Elternverein (EV) an der Schule ist ein wichtiges Bindeglied zwischen den LehrerInnen, SchülerInnen und den Eltern in allen Belangen des Schulalltags.</p>
@@ -80,6 +81,7 @@ import { useHead } from '@vueuse/head';
 import Footer from "../../components/Footer.vue";
 import NavBar from "../../components/NavBar.vue";
 import DownloadPdfButton from "../../components/DownloadPdfButton.vue";
+import HeaderBanner from '../../components/HeaderBanner.vue';
 
 export default {
   name: 'ElternVerein',
@@ -87,6 +89,7 @@ export default {
     NavBar,
     Footer,
     DownloadPdfButton,
+    HeaderBanner,
   },
   setup() {
     useHead({

@@ -1,7 +1,7 @@
 <template>
   <div class="uk-background-muted">
     <NavBar></NavBar>
-    <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="/images/parents.png" uk-img></div>
+    <HeaderBanner></HeaderBanner>
     <div class="st-cont padleftright padtop padbot">
       <h1>Informationen für Eltern und Erziehungsberechtigte</h1>
       <div class="sw einr">
@@ -44,6 +44,7 @@ import { useHead } from '@vueuse/head';
 import Footer from "../../components/Footer.vue";
 import NavBar from "../../components/NavBar.vue";
 import DownloadPdfButton from '../../components/DownloadPdfButton.vue';
+import HeaderBanner from "../../components/HeaderBanner.vue";
 
 // Set metadata
 useHead({
@@ -61,6 +62,8 @@ export default {
   components: {
     NavBar,
     Footer,
+    DownloadPdfButton,
+    HeaderBanner,
   },
 };
 </script>

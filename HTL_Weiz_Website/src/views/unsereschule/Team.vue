@@ -2,7 +2,7 @@
   <div>
     <!-- Navigation bar component -->
     <NavBar></NavBar>
-
+    <HeaderBanner></HeaderBanner>
     <!-- Title for the Direktion section -->
     <h1 class="teamheading" id="direktion">Direktion</h1>
 
@@ -64,6 +64,7 @@ import Card_Direktion from "../../components/Card_Direktion.vue";
 import Card_Staff from "../../components/Card_Staff.vue"; 
 import Footer from "../../components/Footer.vue";
 import Loader from "../../components/Loader.vue";
+import HeaderBanner from '../../components/HeaderBanner.vue';
 
 export default {
   name: 'TeamView',
