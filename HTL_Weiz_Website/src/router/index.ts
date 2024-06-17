@@ -26,7 +26,7 @@ const router = createRouter({
       path: '/et',
       name: 'et',
 
-      component: () => import(/* webpackChunkName: "wi" */"../views/14/WI.vue")
+      component: () => import(/* webpackChunkName: "wi" */"../views/14/ET.vue")
     },
     {
       path: '/it',

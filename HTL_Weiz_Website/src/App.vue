@@ -82,7 +82,7 @@ th, h1, h2, h3, h4, h5, h6, p, td{
   height: auto;
 }
 
-.hero-img {
+.zweig-img {
   width: 100%;
   height: auto;
   object-fit: cover; /* Ensures the image covers the container without being distorted */
@@ -90,13 +90,13 @@ th, h1, h2, h3, h4, h5, h6, p, td{
 }
 
 @media (max-width: 800px) {
-  .hero-img {
+  .zweig-img {
     height: 40vh; /* Adjust this if you want a different height on smaller screens */
   }
 }
 
 @media (max-width: 530px) {
-  .hero-img {
+  .zweig-img {
     height: 27vh; /* Adjust this if you want a different height on smaller screens */
   }
 }

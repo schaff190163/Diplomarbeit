@@ -2,7 +2,7 @@
   <div>
     <NavBar></NavBar>
     <div class="uk-background-width-1-1"></div>
-    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-light hero-imagez">
+    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-light">
       <img src="/images/HTL_Page/wide/hero_et.png" alt="Hero Image" class="zweig-img">
     </div>
     <h1 class="uk-text-lead zweigheading padleftright">Elektrotechnik</h1>
