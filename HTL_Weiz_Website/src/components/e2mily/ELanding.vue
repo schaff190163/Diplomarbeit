@@ -1,6 +1,6 @@
 <template>
   <div class="body hei uk-flex uk-flex-center uk-flex-middle uk-light" :style="{ backgroundImage: backgroundImage }" uk-height-viewport>
-    <video v-if="videoPlaying || videoPaused" ref="video" class="video uk-background-cover uk-background-center-center" :muted="isMuted" @ended="onVideoEnded" src="https://download1500.mediafire.com/1il7rmro1ewgDSiJeudgioaMS3FYoeD0zW2bsAdIaJ7-HOj0dHPt10nsVK06GrQjdFnX2EUYU2BgJ0pXoSaCozZj65NQJB0ko249eNIiJ6d0Ad1kYEmZwSfVo0p8ZLoQX165hv6kSZwF8f6MGZvgxO3JkzRi8Ur_NOsNeRFZCGnFWA/oxjfqj1fb49nfry/ZeroEmissionChallenge.mp4"></video>
+    <video v-if="videoPlaying || videoPaused" ref="video" class="video uk-background-cover uk-background-center-center" :muted="isMuted" @ended="onVideoEnded" src="https://a.dropoverapp.com/cloud/download/379f77aa-9ed9-427d-864b-5fc7d08fead4/dfafd14a-323b-4081-ae1d-91eaf369dafc"></video>
     <div class="uk-position-bottom-left uk-text-normal uk-padding gradient">
       <h2> E²MILY </h2>
       <p>Economic - Electromechanical Innovation Launched by Youngsters</p>
@@ -12,7 +12,10 @@
         <a class="si-stop uk-margin-small-left" @click="stopVideo"></a>
         <a v-if="isMuted" class="si-volume-mute uk-margin-small-left" @click="toggleSound"></a>
         <a v-else class="si-volume-up uk-margin-small-left" @click="toggleSound"></a>
-        <a class="si-fullscreen uk-margin-small-left" @click="toggleFullscreen"></a>
+        <!-- <a class="si-fullscreen uk-margin-small-left" @click="toggleFullscreen"></a> -->
+      </div>
+      <div class="playintrovid" >
+        <a href="https://a.dropoverapp.com/cloud/download/379f77aa-9ed9-427d-864b-5fc7d08fead4/dfafd14a-323b-4081-ae1d-91eaf369dafc" >Play Introduction Video</a>
       </div>
     </div>
   </div>
@@ -147,6 +150,20 @@ export default defineComponent({
 .hei {
   background-position: center;
 }
+
+@media (max-width: 640px) {
+  .icon-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .playintrovid {
+    display: none;
+  }
+}
+
+
 
 
 .body {

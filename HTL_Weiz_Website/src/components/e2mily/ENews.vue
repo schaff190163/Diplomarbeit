@@ -4,7 +4,7 @@
       <div class="uk-position-relative">
         <div class="uk-slider-container margl">
           
-          <ul class="uk-slider-items uk-margin-top uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-3@l uk-child-width-1-4@xl uk-grid-match">
+          <ul class="padbot uk-slider-items uk-margin-top uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-3@l uk-child-width-1-4@xl uk-grid-match">
             <li v-for="post in posts" :key="post.id">
               <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top margbot">
@@ -23,6 +23,10 @@
 
           <a class="uk-position-center-left-out" href uk-slidenav-previous uk-slider-item="previous"></a>
           <a class="uk-position-center-right-out" href uk-slidenav-next uk-slider-item="next"></a>
+          <div class="uk-padding-small uk-margin-top mobilebuttons"> 
+            <a class="uk-position-bottom-right uk-margin-medium-right" href uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-bottom-right" href uk-slidenav-next uk-slider-item="next"></a>
+          </div>
 
         </div>
       </div>
@@ -137,6 +141,18 @@ export default {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .uk-card-media-top {
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+  }
+  .uk-card-body {
+    max-height: 38vh;
+    overflow: hidden;
+  }
+  .mobilebuttons {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -149,20 +165,20 @@ export default {
   .margbot {
     margin-bottom: 20px;
   }
+  .uk-card-media-top {
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+  }
+  .uk-card-body {
+    max-height: 39vh;
+    overflow: hidden;
+  }
 }
 
 .ite {
   color: black;
 }
 
-.uk-card-media-top {
-  background-size: cover;
-  background-position: center;
-  height: 30vh;
-}
 
-.uk-card-body {
-  max-height: 38vh;
-  overflow: hidden;
-}
 </style>

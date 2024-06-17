@@ -17,6 +17,10 @@
           </ul>
           <a class="uk-position-center-left-out" href uk-slidenav-previous uk-slider-item="previous"></a>
           <a class="uk-position-center-right-out" href uk-slidenav-next uk-slider-item="next"></a>
+          <div class="uk-padding-small uk-margin-top mobilebuttons"> 
+            <a class="uk-position-bottom-right uk-margin-medium-right uk-margin-bottom" href uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-bottom-right uk-margin-bottom" href uk-slidenav-next uk-slider-item="next"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -84,6 +88,9 @@ export default {
   .margl {
     margin-left: 20px;
     margin-right: 2%;
+  }
+  .mobilebuttons {
+    display: none;
   }
 }
 
