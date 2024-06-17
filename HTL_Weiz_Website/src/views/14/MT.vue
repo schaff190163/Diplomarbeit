@@ -1,15 +1,17 @@
 <template>
-  <div class="uk-background-muted">
+  <div>
     <NavBar></NavBar>
-    <div class="wihero uk-background-width-1-1"></div>
-    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-      data-src="/public/images/mt_hero.png" uk-img></div>
-    <h1 class="uk-text-lead zweigheading">Fachschule - Mechatronik</h1>
-    <QuickFacts class="padleftright" typ="Fachschule" dauer="3,5 Jahre" abschluss="Diplomprüfung" vorraussetzungen="positiver Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts>
+    <div class="uk-background-width-1-1"></div>
+    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-light hero-imagez">
+      <img src="/images/HTL_Page/wide/hero_mt.png" alt="Hero Image" class="zweig-img">
+    </div>
+    <h1 class="uk-text-lead zweigheading padleftright">Maschinenbau - Mechatronik</h1>
+    <QuickFacts_Abteilungen class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="positiver Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts_Abteilungen>
     <AbteilungsText></AbteilungsText>
     <FooterMerge></FooterMerge>
   </div>
 </template>
+
 
 <script lang="ts">
 import NavBar from "../../components/NavBar.vue";
@@ -29,14 +31,7 @@ export default {
 </script>
 
 <style>
-.zweigheading {
-  font-size: 40px;
-  padding-left: 100px;
-}
-@media (max-width: 640px) {
-  .zweigheading {
-  font-size: 30px;
-  padding-left: 35px;
-  }
-}
+
 </style>
+
+

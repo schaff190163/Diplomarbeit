@@ -4,11 +4,11 @@
     <h1>Warum Wir?</h1>
   </div>
   <Footer/>
-</template>
+</template> 
 
 <script lang="ts">
-import NavBar from '@/components/NavBar.vue';
-import Footer from '@/components/Footer.vue';
+import NavBar from '../../components/NavBar.vue';
+import Footer from '../../components/Footer.vue';
 
 export default {
   name: 'Elternverein',

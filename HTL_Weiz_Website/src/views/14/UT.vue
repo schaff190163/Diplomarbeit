@@ -1,15 +1,17 @@
 <template>
-  <div class="uk-background-muted">
+  <div>
     <NavBar></NavBar>
-    <div class="wihero uk-background-width-1-1"></div>
-    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-      data-src="/images/ut_hero.png" uk-img></div>
-    <h1 class="uk-text-lead zweigheading">Maschinenbau - Umwelttechnik</h1>
-    <QuickFacts class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="positiver Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts>
+    <div class="uk-background-width-1-1"></div>
+    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-light hero-imagez">
+      <img src="/images/HTL_Page/wide/hero_it.png" alt="Hero Image" class="zweig-img">
+    </div>
+    <h1 class="uk-text-lead zweigheading padleftright">Maschinenbau - Umwelttechnik</h1>
+    <QuickFacts_Abteilungen class="padleftright" typ="HTL Tagesschule" dauer="5 Jahre" abschluss="Reife- und Diplomprüfung" vorraussetzungen="positiver Abschluss der 8. Schulstufe" standort="Weiz"></QuickFacts_Abteilungen>
     <AbteilungsText></AbteilungsText>
+    <FooterMerge></FooterMerge>
   </div>
-  <FooterMerge></FooterMerge>
 </template>
+
 
 <script lang="ts">
 import NavBar from "../../components/NavBar.vue";
@@ -18,7 +20,7 @@ import AbteilungsText from "../../components/AbteilungsText.vue";
 import Footer from "../../components/Footer.vue";
 
 export default {
-  name: 'AWI',
+  name: 'UT',
   components: {
     NavBar,
     QuickFacts_Abteilungen,
@@ -29,14 +31,7 @@ export default {
 </script>
 
 <style>
-.zweigheading {
-  font-size: 40px;
-  padding-left: 100px;
-}
-@media (max-width: 640px) {
-  .zweigheading {
-  font-size: 30px;
-  padding-left: 35px;
-  }
-}
+
 </style>
+
+
