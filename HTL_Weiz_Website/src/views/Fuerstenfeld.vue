@@ -26,7 +26,7 @@ export default {
   name: 'HomeView',
   components: {
     FNavBar,
-    AbteilungsCard,
+    Card_Abteilungen,
     FHeroSection,
     FSchoolStats,
     Footer,
