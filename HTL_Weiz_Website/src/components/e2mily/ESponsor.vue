@@ -32,11 +32,17 @@
 <script lang="ts">
 import { WPApiHandler } from 'wpapihandler';
 
+interface Partner {
+  id: number;
+  level: string;
+  logo: string;
+}
+
 export default {
   name: 'ESponsor',
   data() {
     return {
-      partners: [],
+      partners: [] as Partner[],
       levels: ["hauptsponsor", "Platin", "Gold", "Silber"],
       selectedLevel: 0
     };
@@ -49,7 +55,7 @@ export default {
     const url = 'https://dev.htlweiz.at/wordpress';
     const wpa = new WPApiHandler(url, headers);
     try {
-      this.partners = await wpa.get_partners('emily');
+      this.partners = await wpa.get_partners('emily') as Partner[];
       console.log(this.partners);
     } catch (error) {
       console.error('Error fetching partners:', error);
@@ -61,7 +67,7 @@ export default {
     }
   },
   methods: {
-    selectLevel(index) {
+    selectLevel(index: number) {
       this.selectedLevel = index;
     }
   }
