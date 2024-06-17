@@ -11,22 +11,19 @@
                   <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" :data-src="post.imageSrc" uk-img></div>
                 </div>
                 <div class="uk-card-body uk-text-left">
-                  <p class="uk-text-bold uk-padding-remove-bottom">{{ post.date }}</p>
                   <p class="uk-card-title">{{ post.title }}</p>
                   <div v-html="post.truncatedContent"></div>
                   <p></p>
-                  <a class="linkcolor marg" href="#" @click.prevent="openModal(post)">Mehr Lesen</a>
+                  <a class="linkcolor marg" @click.prevent="openModal(post)">Mehr Lesen</a>
                 </div>
               </div>
             </li>
           </ul>
-
-          <!-- Slider navigation controls -->
-          <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+          <a class="uk-position-center-left-out" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right-out" uk-slidenav-next uk-slider-item="next"></a>
           <div class="uk-padding-small uk-margin-top mobilebuttons"> 
-            <a class="uk-position-bottom-right uk-margin-medium-right" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-bottom-right" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            <a class="uk-position-bottom-right uk-margin-medium-right" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-bottom-right" uk-slidenav-next uk-slider-item="next"></a>
           </div>
 
         </div>
@@ -38,6 +35,7 @@
 
 <script lang="ts">
 import { WPApiHandler } from 'wpapihandler';
+import type { Post as WPPost } from 'wpapihandler';
 
 const url = 'https://dev.htlweiz.at/wordpress';
 const headers = {
@@ -47,34 +45,45 @@ const headers = {
 
 const wpa = new WPApiHandler(url, headers);
 
+interface Post extends WPPost {
+  date: string;
+  imageSrc?: string;
+  truncatedContent?: string;
+}
+
 export default {
   name: 'ENews',
   data() {
     return {
-      posts: [],
-      selectedPost: null
+      posts: [] as Post[],
+      selectedPost: null as Post | null
     };
   },
   async mounted() {
     try {
-      const posts = await wpa.get_posts(undefined, ['emily']);
+      const posts = await wpa.get_posts(undefined, ['emily']) as WPPost[];
 
       // Truncate content for each post and extract image source
       posts.forEach(post => {
-        post.truncatedContent = this.truncateContent(post.content, 100, post.title, 25);
-        post.imageSrc = this.extractImageSrcList(post.content)[0];
-        post.title = this.decodeEntities(post.title); 
+        const postWithDate: Post = {
+          ...post,
+          date: new Date().toISOString(), // Assign an appropriate date value
+          truncatedContent: this.truncateContent(post.content, 100, post.title, 25),
+          imageSrc: this.extractImageSrcList(post.content)[0],
+          title: this.decodeEntities(post.title)
+        };
+
+        this.posts.push(postWithDate);
       });
 
-      this.posts = posts;
-      console.log("Posts retrieved:", posts);
+      console.log("Posts retrieved:", this.posts);
     } catch (error) {
       console.error("Error retrieving posts:", error);
     }
   },
   methods: {
-    truncateContent(content, maxLength, title, tlenght) {
-      function stripHtmlTags(text) {
+    truncateContent(content: string, maxLength: number, title: string, tlenght: number): string {
+      function stripHtmlTags(text: string): string {
         return text.replace(/<[^>]*>?/gm, '').replace(/(#+\s+)/g, '');
       }
       const plainTextContent = stripHtmlTags(content);
@@ -95,18 +104,23 @@ export default {
         return truncatedContent + '...';
       }
     },
-    openModal(post) {
-      // Implement modal functionality if required
-      console.log("Modal opened for:", post);
+    openModal(post: Post) {
+      this.selectedPost = post;
+      UIkit.modal('#modal-example').show();
     },
-    extractImageSrcList(content) {
+    extractImageSrcList(content: string): string[] {
       const matches = content.match(/<img[^>]+src="([^">]+)"/g);
-      if (!matches) return null;
-      
-      const srcList = matches.map(match => match.match(/src="([^">]+)"/)[1]);
+      if (!matches) return [];
+      const srcList: string[] = [];
+      for (const match of matches) {
+        const src = match.match(/src="([^">]+)"/);
+        if (src) {
+          srcList.push(src[1]);
+        }
+      }
       return srcList;
     },
-    decodeEntities(html) {
+    decodeEntities(html: string): string {
       const doc = new DOMParser().parseFromString(html, 'text/html');
       return doc.documentElement.textContent || '';
     }
@@ -126,7 +140,7 @@ export default {
 @media (min-width: 640px) {
   .margl {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 2%;
   }
   .uk-card-media-top {
     background-size: cover;

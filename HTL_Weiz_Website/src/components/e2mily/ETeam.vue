@@ -15,11 +15,11 @@
               </div>
             </li>
           </ul>
-          <a class="uk-position-center-left-out" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-position-center-right-out" href uk-slidenav-next uk-slider-item="next"></a>
+          <a class="uk-position-center-left-out" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right-out" uk-slidenav-next uk-slider-item="next"></a>
           <div class="uk-padding-small uk-margin-top mobilebuttons"> 
-            <a class="uk-position-bottom-right uk-margin-medium-right uk-margin-bottom" href uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-bottom-right uk-margin-bottom" href uk-slidenav-next uk-slider-item="next"></a>
+            <a class="uk-position-bottom-right uk-margin-medium-right uk-margin-bottom" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-bottom-right uk-margin-bottom" uk-slidenav-next uk-slider-item="next"></a>
           </div>
         </div>
       </div>
@@ -29,6 +29,14 @@
 
 <script lang="ts">
 import { WPApiHandler } from 'wpapihandler';
+
+interface Personnel {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  department: string;
+}
 
 const url = 'https://dev.htlweiz.at/wordpress';
 const headers = {
@@ -42,14 +50,14 @@ export default {
   name: 'ETeam',
   data() {
     return {
-      personnelList: [],
+      personnelList: [] as Personnel[],
     };
   },
   async mounted() {
     try {
-      const personnel = await wpa.get_personnel(undefined, ['emily']);
+      const personnel = await wpa.get_personnel();
 
-      this.personnelList = personnel.map(person => ({
+      this.personnelList = personnel.map((person: any) => ({
         slug: person.slug,
         name: person.name,
         description: person.description,
@@ -57,14 +65,13 @@ export default {
         department: person.department,
       }));
 
-      console.log("Personnel retrieved:", personnel);
+      console.log("Personnel retrieved:", this.personnelList);
     } catch (error) {
       console.error("Error retrieving personnel:", error);
     }
   }
 }
 </script>
-
 <style scoped>
 .uk-card-media-top {
   background-size: cover;
@@ -100,12 +107,6 @@ export default {
   }
   .uk-position-center-right-out {
     display: none;
-  }
-}
-
-@media (min-width: 1700px) {
-  .uk-child-width-1-4@xl {
-    width: 25%; /* Four items per row on screens wider than 1700px */
   }
 }
 
