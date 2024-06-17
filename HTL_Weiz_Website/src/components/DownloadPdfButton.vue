@@ -4,8 +4,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'DownloadFileButton',
   props: {
     pdfUrl: {
@@ -33,9 +35,9 @@ export default {
       document.body.removeChild(link);
     }
   }
-}
+});
 </script>
 
-<style>
+<style scoped>
 /* Add any necessary styles here */
 </style>

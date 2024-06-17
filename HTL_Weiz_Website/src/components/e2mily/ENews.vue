@@ -21,23 +21,14 @@
             </li>
           </ul>
 
-          <a class="uk-position-center-left-out" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-position-center-right-out" href uk-slidenav-next uk-slider-item="next"></a>
+          <!-- Slider navigation controls -->
+          <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
           <div class="uk-padding-small uk-margin-top mobilebuttons"> 
-            <a class="uk-position-bottom-right uk-margin-medium-right" href uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-bottom-right" href uk-slidenav-next uk-slider-item="next"></a>
+            <a class="uk-position-bottom-right uk-margin-medium-right" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-bottom-right" href="#" uk-slidenav-next uk-slider-item="next"></a>
           </div>
 
-        </div>
-      </div>
-    </div>
-
-    <div id="modal-example" class="uk-modal-full" uk-modal>
-      <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle uk-height-viewport" v-if="selectedPost">
-        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-        <div class="uk-padding-large">
-          <h1>{{ selectedPost.title }}</h1>
-          <div v-html="selectedPost.content"></div>
         </div>
       </div>
     </div>
@@ -87,11 +78,11 @@ export default {
         return text.replace(/<[^>]*>?/gm, '').replace(/(#+\s+)/g, '');
       }
       const plainTextContent = stripHtmlTags(content);
-      var add = 0;
-      var new_maxLength = maxLength;
+      let add = 0;
+      let new_maxLength = maxLength;
  
       if (title.length >= tlenght) {
-        var add = title.length % 2;
+        add = title.length % 2;
       }
       if (title.length > 100) {
         new_maxLength = maxLength - 40;
@@ -105,18 +96,14 @@ export default {
       }
     },
     openModal(post) {
-      this.selectedPost = post;
-      UIkit.modal('#modal-example').show();
+      // Implement modal functionality if required
+      console.log("Modal opened for:", post);
     },
     extractImageSrcList(content) {
       const matches = content.match(/<img[^>]+src="([^">]+)"/g);
       if (!matches) return null;
       
-      const srcList = [];
-      for (const match of matches) {
-        const src = match.match(/src="([^">]+)"/)[1];
-        srcList.push(src);
-      }
+      const srcList = matches.map(match => match.match(/src="([^">]+)"/)[1]);
       return srcList;
     },
     decodeEntities(html) {
@@ -156,9 +143,7 @@ export default {
 }
 
 @media (max-width: 640px) {
-  .uk-position-center-left-out {
-    display: none;
-  }
+  .uk-position-center-left-out,
   .uk-position-center-right-out {
     display: none;
   }
@@ -179,6 +164,4 @@ export default {
 .ite {
   color: black;
 }
-
-
 </style>

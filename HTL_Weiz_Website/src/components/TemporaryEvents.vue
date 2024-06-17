@@ -5,7 +5,7 @@
     </h1>
     <div>
       <div v-for="event in events" :key="event.id" class="padbot"  @click="openModal(event)">
-      <button class=" uk-button roundedl uk-button-primary uk-width-expand" :uk-tooltip="`title: ${event.title}; delay: 500`">
+      <button class=" uk-button roundedl uk-button-default uk-width-expand" :uk-tooltip="`title: ${event.title}; delay: 500`">
         {{ event.title }}
       </button>
     </div>

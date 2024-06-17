@@ -43,7 +43,7 @@
 import { useHead } from '@vueuse/head';
 import Footer from "../../components/Footer.vue";
 import NavBar from "../../components/NavBar.vue";
-import DownloadPdfButton from '@/components/DownloadPdfButton.vue';
+import DownloadPdfButton from '../../components/DownloadPdfButton.vue';
 
 // Set metadata
 useHead({

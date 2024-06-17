@@ -14,8 +14,8 @@
         <a v-else class="si-volume-up uk-margin-small-left" @click="toggleSound"></a>
         <!-- <a class="si-fullscreen uk-margin-small-left" @click="toggleFullscreen"></a> -->
       </div>
-      <div class="playintrovid" >
-        <a href="https://a.dropoverapp.com/cloud/download/379f77aa-9ed9-427d-864b-5fc7d08fead4/dfafd14a-323b-4081-ae1d-91eaf369dafc" >Play Introduction Video</a>
+      <div class="playintrovid">
+        <a href="https://a.dropoverapp.com/cloud/download/379f77aa-9ed9-427d-864b-5fc7d08fead4/dfafd14a-323b-4081-ae1d-91eaf369dafc">Play Introduction Video</a>
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@ export default defineComponent({
     this.setBackgroundImage(); // Set initial background image based on screen width
     window.addEventListener('resize', this.setBackgroundImage); // Update background image on window resize
   },
-  destroyed() {
+  beforeDestroy() { // Use 'beforeDestroy' instead of 'destroyed'
     window.removeEventListener('resize', this.setBackgroundImage); // Remove resize event listener on component destroy
   },
   methods: {
@@ -67,7 +67,6 @@ export default defineComponent({
         this.videoPlaying = false;
         this.videoPaused = true;
       }
-      
     },
     stopVideo() {
       const videoElement = this.$refs.video as HTMLVideoElement;
@@ -89,10 +88,10 @@ export default defineComponent({
       const videoElement = this.$refs.video as HTMLVideoElement;
       if (videoElement.requestFullscreen) {
         videoElement.requestFullscreen();
-      } else if (videoElement.webkitRequestFullscreen) { /* Safari */
-        videoElement.webkitRequestFullscreen();
-      } else if (videoElement.msRequestFullscreen) { /* IE11 */
-        videoElement.msRequestFullscreen();
+      } else if ((videoElement as any).webkitRequestFullscreen) { /* Safari */
+        (videoElement as any).webkitRequestFullscreen();
+      } else if ((videoElement as any).msRequestFullscreen) { /* IE11 */
+        (videoElement as any).msRequestFullscreen();
       }
     }
   }
@@ -162,9 +161,6 @@ export default defineComponent({
     display: none;
   }
 }
-
-
-
 
 .body {
   width: 100vw;
