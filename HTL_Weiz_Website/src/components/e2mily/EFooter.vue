@@ -2,9 +2,6 @@
     <footer class="uk-background-secondary uk-height-medium fheight" uk-sticky="position: bottom">
     <div class="text-wrapper uk-position-center-left uk-padding-large">
       <div>Impressum</div>
-      <div>Link 1</div>
-      <div>Link 2</div>
-      <div>Link 3</div>
     </div>
     <div class="logo">
       <img class="uk-position-center" alt="Emily logo" src="/images/e2mily-logo.png" />

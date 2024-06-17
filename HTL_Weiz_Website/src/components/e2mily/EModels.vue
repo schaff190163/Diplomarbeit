@@ -5,35 +5,33 @@
         <li><a href="#">E²mily GT</a></li>
         <li><a href="#">E²mily ONE</a></li>
       </ul>
-      <ul class="uk-switcher hei">
-        <li class="uk-width-1">
+      <ul class="uk-switcher">
+        <li class="uk-width-1-1">
           <div class="uk-grid uk-child-width-expand" uk-grid>
             <div>
-              <img src="/images/emilygt-2.jpg" width="1920" alt="">
+              <img class="imagewid" src="/images/emilygt-2.jpg" alt="">
             </div>
-            <div class="uk-width-1-3@m uk-padding text">
-              <h2>E²MILY - GT</h2>
+            <div class="uk-width-1-3@m uk-padding text centerverti">
               <div class="uk-margin-large-right textblock">
+                <h2>E²MILY - GT</h2>
                 <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
                 <p><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
-                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
-                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                <!-- Other content -->
               </div>
             </div>
           </div>
         </li>
-        <li class="uk-width-1">
+        <li class="uk-width-1-1">
           <div class="uk-grid uk-child-width-expand" uk-grid>
             <div>
-              <img src="/images/emilyone.jpg" width="1920" height="800" alt="">
+              <img class="imagewid" src="/images/emilyone.jpg" alt="">
             </div>
-            <div class="uk-width-1-3@m uk-padding text">
-              <h2>E²MILY - One</h2>
+            <div class="uk-width-1-3@m uk-padding text centerverti">
               <div class="uk-margin-large-right textblock">
+                <h2>E²MILY - ONE</h2>
                 <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
                 <p><b>Beschleunigung: </b>0 - 100 in 2.3 Sekunden</p>
-                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
-                <p><b>Höchstgeschwindigkeit: </b>37km/h</p>
+                <!-- Other content -->
               </div>
             </div>
           </div>
@@ -44,33 +42,36 @@
 </template>
 
 <script lang="ts">
-
 export default {
   name: 'EModels',
 };
 </script>
 
 <style scoped>
-.uk-grid {
-  padding-left: calc(10vw);
-}
 
 .hei {
-  margin-top: 12vh;
+  margin-top: 5vh;
   height: 65vh;
 }
 
 @media (max-width: 640px) {
   .hei {
     margin-top: 0vh;
-    height: 75vh;
-  }
-  .uk-grid {
-    display: flex;
-    justify-content: center; 
+    height: 65vh;
   }
   .textblock {
     line-height: 1.2;
-  } 
+  }
+}
+
+.centerverti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagewid {
+  max-width: 100%; /* Ensure images don't exceed their container */
+  height: auto; /* Maintain aspect ratio */
 }
 </style>
