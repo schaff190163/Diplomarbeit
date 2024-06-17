@@ -1,28 +1,27 @@
 <template>
-  <div class="uk-padding uk-background-default marg">
-    <div class="uk-width-expand@m">
-      <div class="uk-text-center uk-padding">
-        <h1>Team</h1>
-      </div>
-    </div>
-    <div class="uk-margin-right uk-margin-left">
-      <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
-        <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-grid uk-grid-match">
-          
-          <li v-for="(personnel, index) in personnelList" :key="index">
-            <div class="uk-card uk-card-default uk-padding-remove-left marg">
-              <div class="uk-card-media-top uk-height-medium" :style="{ backgroundImage: 'url(' + personnel.image + ')' }"></div>
-              <div class="uk-card-body">
-                <h3 class="uk-card-title">{{ personnel.name }}</h3>
-                <p class="uk-text-truncate">{{ personnel.description }}</p>
+  <div class="uk-padding uk-background-default">
+    <div uk-slider tabindex="-1">
+      <div class="uk-position-relative">
+        <div class="uk-slider-container margl">
+          <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid uk-grid-match uk-child-width-1-4@xl">
+            <li v-for="(personnel, index) in personnelList" :key="index">
+              <div class="uk-card uk-card-default uk-padding-remove-left marg">
+                <div class="uk-card-media-top uk-height-medium" :style="{ backgroundImage: 'url(' + personnel.image + ')' }"></div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">{{ personnel.name }}</h3>
+                  <p class="uk-text-truncate">{{ personnel.description }}</p>
+                </div>
+                <div class="uk-card-badge uk-label">{{ personnel.department }}</div>
               </div>
-              <div class="uk-card-badge uk-label">{{ personnel.department }}</div>
-            </div>
-          </li>
-        </ul>
-
-        <a class="uk-position-center-left uk-position-small col" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small col" uk-slidenav-next uk-slider-item="next"></a>
+            </li>
+          </ul>
+          <a class="uk-position-center-left-out" href uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right-out" href uk-slidenav-next uk-slider-item="next"></a>
+          <div class="uk-padding-small uk-margin-top mobilebuttons"> 
+            <a class="uk-position-bottom-right uk-margin-medium-right uk-margin-bottom" href uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-bottom-right uk-margin-bottom" href uk-slidenav-next uk-slider-item="next"></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -73,7 +72,7 @@ export default {
 }
 
 .uk-card-body {
-  max-height: 80vh; 
+  max-height: 80vh;
   overflow: hidden;
 }
 
@@ -85,7 +84,32 @@ export default {
   color: black;
 }
 
+@media (min-width: 640px) {
+  .margl {
+    margin-left: 20px;
+    margin-right: 2%;
+  }
+  .mobilebuttons {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .uk-position-center-left-out {
+    display: none;
+  }
+  .uk-position-center-right-out {
+    display: none;
+  }
+}
+
+@media (min-width: 1700px) {
+  .uk-child-width-1-4@xl {
+    width: 25%; /* Four items per row on screens wider than 1700px */
+  }
+}
+
 .uk-card-media-top {
-    height: 40vh;
+  height: 40vh;
 }
 </style>

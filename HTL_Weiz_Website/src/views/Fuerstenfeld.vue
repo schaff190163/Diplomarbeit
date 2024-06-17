@@ -6,17 +6,17 @@
       <FSchoolStats></FSchoolStats>
     </div>
     <h1 class="padleftright uk-text-light padbot">Maschinenbau - Automatisierungstechnik</h1>
-    <div class="grid-container padleftright padbot uk-padding-small" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 50">
-      <Card_Abteilungen uk-scrollspy-class="uk-animation-slide-bottom-small" title="Inhaltliche Schwerpunkte" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></Card_Abteilungen>
-      <Card_Abteilungen uk-scrollspy-class="uk-animation-slide-bottom-small" title="Persönliche Eigenschaften" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></Card_Abteilungen>
-      <Card_Abteilungen uk-scrollspy-class="uk-animation-slide-bottom-small" title="Karriereaussichten" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></Card_Abteilungen>
+    <div class="grid-container padleftright padbot uk-padding-small" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 30">
+      <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Inhaltliche Schwerpunkte" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></AbteilungsCard>
+      <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Persönliche Eigenschaften" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></AbteilungsCard>
+      <AbteilungsCard uk-scrollspy-class="uk-animation-slide-bottom-small" title="Karriereaussichten" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed..." imgsrc="/images/logo_at_250.png" detailsrc="/at"></AbteilungsCard>
     </div>
     <Footer class="padtop"></Footer>
   </div>
 </template>
 
 <script lang="ts">
-import Card_Abteilungen from "../components/Card_Abteilungen.vue";
+import AbteilungsCard from "../components/fuerstenfeld/FAbteilungsCard.vue";
 import Footer from "../components/fuerstenfeld/FFooter.vue";
 import FHeroSection from "../components/fuerstenfeld/FHeroSection.vue"
 import FNavBar from "../components/fuerstenfeld/FNavBar.vue";
