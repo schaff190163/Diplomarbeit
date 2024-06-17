@@ -1,5 +1,5 @@
 <template>
-  <div class="padtop">
+    <div class="padtop">
       <Row_Auszeichnungen></Row_Auszeichnungen>
       <div class="padtop imprintfooter">
       <div class="padleftright padbot uk-child-width-expand@s" uk-grid>
@@ -40,7 +40,7 @@
           <router-link to="/e2mily" class="imprintlink">E2MILY</router-link>
       </div>
       </div>
-  </div>
+    </div>
 </template>
 
 <script lang="ts">

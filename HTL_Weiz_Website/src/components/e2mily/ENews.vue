@@ -19,7 +19,6 @@
               </div>
             </li>
           </ul>
-
           <a class="uk-position-center-left-out" uk-slidenav-previous uk-slider-item="previous"></a>
           <a class="uk-position-center-right-out" uk-slidenav-next uk-slider-item="next"></a>
           <div class="uk-padding-small uk-margin-top mobilebuttons"> 
@@ -27,16 +26,6 @@
             <a class="uk-position-bottom-right" uk-slidenav-next uk-slider-item="next"></a>
           </div>
 
-        </div>
-      </div>
-    </div>
-
-    <div id="modal-example" class="uk-modal-full" uk-modal>
-      <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle uk-height-viewport" v-if="selectedPost">
-        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-        <div class="uk-padding-large">
-          <h1>{{ selectedPost.title }}</h1>
-          <div v-html="selectedPost.content"></div>
         </div>
       </div>
     </div>
@@ -122,7 +111,6 @@ export default {
     extractImageSrcList(content: string): string[] {
       const matches = content.match(/<img[^>]+src="([^">]+)"/g);
       if (!matches) return [];
-      
       const srcList: string[] = [];
       for (const match of matches) {
         const src = match.match(/src="([^">]+)"/);
@@ -169,9 +157,7 @@ export default {
 }
 
 @media (max-width: 640px) {
-  .uk-position-center-left-out {
-    display: none;
-  }
+  .uk-position-center-left-out,
   .uk-position-center-right-out {
     display: none;
   }
@@ -192,6 +178,4 @@ export default {
 .ite {
   color: black;
 }
-
-
 </style>

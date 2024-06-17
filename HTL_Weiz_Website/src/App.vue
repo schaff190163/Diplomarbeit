@@ -4,13 +4,16 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { useHead } from '@vueuse/head';
 
-export default defineComponent({
-  name: 'App',
-  mounted() {
-  },
+// Set metadata
+useHead({
+  title: 'HTL Weiz',
+  meta: [
+    { name: 'description', content: 'Welcome to the HTL Weiz website. Stay updated with the latest news, events, and educational opportunities at HTL Weiz.' },
+    { name: 'keywords', content: 'HTL Weiz, education, news, events, technology, engineering' }
+  ]
 });
 </script>
 
@@ -20,7 +23,7 @@ export default defineComponent({
 }
 
 .padbot {
-  padding-bottom: 25px !important;
+  padding-bottom: 32px !important;
 }
 
 .padleftright {
@@ -32,7 +35,7 @@ export default defineComponent({
   border-radius: 18px !important;
 }
 
-.mpheading{
+.mpheading {
   font-size: clamp(1rem, 10vw, 2rem); 
 }
 
@@ -49,8 +52,9 @@ export default defineComponent({
     padding-left: 40px !important;
     padding-right: 40px !important;
   }
-  .mpheading{
-  font-size: clamp(1rem, 10vw, 1.5rem); 
+  
+  .mpheading {
+    font-size: clamp(1rem, 10vw, 1.5rem); 
   }
 }
 
@@ -59,5 +63,8 @@ export default defineComponent({
     padding-left: calc(20% - 150px) !important;
     padding-right: calc(20% - 150px) !important;
   }
+}
+th, h1, h2, h3, h4, h5, h6, p, td{
+  word-break: break-word;
 }
 </style>

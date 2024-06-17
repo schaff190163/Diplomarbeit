@@ -1,34 +1,60 @@
 <template>
-  <div class="uk-background-muted">
+  <div>
+    <!-- Navigation bar component -->
     <NavBar></NavBar>
+
+    <!-- Title for the Direktion section -->
     <h1 class="teamheading" id="direktion">Direktion</h1>
+
+    <!-- Card for the Direktion -->
     <Card_Direktion class="padleftright padtop padbot"></Card_Direktion>
-    <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
-    <h1 class="teamheading" id="abteilungsvorstaende">Leitungsteam</h1>
+
+    <!-- Loader component displayed while data is being loaded -->
+    <div v-if="loading" class="loader-container uk-position-center padleftright uk-width-extend"><Loader></Loader></div>
+
+    <!-- Search bar -->
+    <div class="uk-margin padlr">
+      <form class="uk-search uk-search-large" @submit.prevent="searchPersonnel">
+        <span uk-search-icon></span>
+        <input v-model="searchTerm" class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+
+    <!-- Leitungsteam section -->
+    <h1 v-if="filteredAV('Abteilungsvorstand').length > 0" class="teamheading" id="abteilungsvorstaende">Leitungsteam</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
       <div v-for="member in filteredAV('Abteilungsvorstand')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
-    <h1 class="teamheading" id="lehrpersonal">Lehrpersonal</h1>
+
+    <!-- Lehrpersonal section -->
+    <h1 v-if="filteredDept('teacher').length > 0" class="teamheading" id="lehrpersonal">Lehrpersonal</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
       <div v-for="member in filteredDept('teacher')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
-    <h1 class="teamheading" id="verwaltung">Verwaltung</h1>
+
+    <!-- Verwaltung section -->
+    <h1 v-if="filteredDept('verwaltung').length > 0" class="teamheading" id="verwaltung">Verwaltung</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
       <div v-for="member in filteredDept('verwaltung')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
-    <h1 class="teamheading" id="schülerinnenvertretung">SchülerInnenvertretung</h1>
+
+    <!-- SchülerInnenvertretung section -->
+    <h1 v-if="filteredDept('schülerinnenvertretung').length > 0" class="teamheading" id="schülerinnenvertretung">SchülerInnenvertretung</h1>
     <div class="grid-containerstaff padleftright padtop padbot">
       <div v-for="member in filteredDept('schülerinnenvertretung')" :key="member.id">
         <Card_Staff v-if="member" :personnel="member"></Card_Staff>
       </div>
     </div>
+
+    <!-- Footer component -->
     <Footer></Footer>
+
   </div>
 </template>
 
@@ -56,6 +82,7 @@ import { WPApiHandler, type Personnel } from 'wpapihandler';
 
 const personnel = ref<Personnel[]>([]);
 const loading = ref<boolean>(false);
+const searchTerm = ref<string>('');
 
 const url = 'https://dev.htlweiz.at/wordpress';
 const headers = {
@@ -63,23 +90,23 @@ const headers = {
   "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
 };
 
-console.log('Init WPApiHandler');
 const wp = new WPApiHandler(url, headers);
 
-function update_personnel(){
+async function updatePersonnel(search?: string): Promise<void> {
   loading.value = true;
 
-  wp.get_personnel()
-    .then((response: Personnel[]) => {
-      personnel.value = response;
-      console.log(personnel.value)
-    })
-    .catch((error: Error) => {
-      console.error('Error:', error);
-    })
-    .finally(() => {
-      loading.value = false;
-    });
+  try {
+    personnel.value = await wp.get_personnel(search);
+    console.log(personnel.value);
+  } catch (error) {
+    console.error('Error:', error);
+  } finally {
+    loading.value = false;
+  }
+}
+
+function searchPersonnel(): void {
+  updatePersonnel(searchTerm.value);
 }
 
 function filteredAV(tag: string): Personnel[] {
@@ -90,7 +117,7 @@ function filteredDept(department: string): Personnel[] {
   return personnel.value.filter((member: Personnel) => member.department.includes(department.toLowerCase()));
 }
 
-update_personnel();
+updatePersonnel();
 </script>
 
 <style>
