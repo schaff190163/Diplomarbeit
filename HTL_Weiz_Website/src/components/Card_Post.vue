@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="uk-inline roundedl uk-width-expand" @click="openModal">
-      <img src="../../public/images/e2mily-landing-new2.png" height="550" class="roundedl" alt="">
+      <img src="../../public/images/e2mily-landing-new2.png" height="550" class="roundedl uk-box-shadow-medium" alt="">
       <div class="gradient uk-position-cover roundedl"></div>
       <div class="uk-overlay uk-position-bottom uk-light">
         <h3 class="uk-card-title" v-html="decodeEntities(limitTitle(post.title))"></h3>

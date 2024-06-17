@@ -64,4 +64,7 @@ useHead({
     padding-right: calc(20% - 150px) !important;
   }
 }
+th, h1, h2, h3, h4, h5, h6, p, td{
+  word-break: break-word;
+}
 </style>

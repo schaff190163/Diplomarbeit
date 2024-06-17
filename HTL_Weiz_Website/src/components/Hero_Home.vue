@@ -24,7 +24,7 @@
 
 @media (min-width: 1500px) {
   .spruch {
-    font-size: calc(4vw + 1vh - 20px);
+    font-size: calc(4vw + 1vh - 30px);
   }
 }
 
