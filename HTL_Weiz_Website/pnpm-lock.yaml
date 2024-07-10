@@ -17,12 +17,12 @@ dependencies:
   jspdf:
     specifier: ^2.5.1
     version: 2.5.1
-  less:
-    specifier: ^4.2.0
-    version: 4.2.0
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.1.6)(vue@3.4.29)
+  uikit:
+    specifier: ^3.21.6
+    version: 3.21.6
   vite-plugin-vue2:
     specifier: ^2.0.3
     version: 2.0.3(vite@4.5.3)(vue-template-compiler@2.7.16)(vue@3.4.29)
@@ -67,6 +67,12 @@ devDependencies:
   jsdom:
     specifier: ^22.1.0
     version: 22.1.0
+  less:
+    specifier: ^4.2.0
+    version: 4.2.0
+  less-loader:
+    specifier: ^12.2.0
+    version: 12.2.0(less@4.2.0)
   npm-run-all:
     specifier: ^4.1.5
     version: 4.1.5
@@ -2806,6 +2812,22 @@ packages:
       html2canvas: 1.4.1
     dev: false
 
+  /less-loader@12.2.0(less@4.2.0):
+    resolution: {integrity: sha512-MYUxjSQSBUQmowc0l5nPieOYwMzGPUaTzB6inNW/bdPEG9zOL3eAAD1Qw5ZxSPk7we5dMojHwNODYMV1hq4EVg==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      less: ^3.5.0 || ^4.0.0
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      less: 4.2.0
+    dev: true
+
   /less@4.2.0:
     resolution: {integrity: sha512-P3b3HJDBtSzsXUl0im2L7gTO5Ubg8mEN6G8qoTS77iXxXX4Hvu4Qj540PZDvQ8V6DmX6iXo98k7Md0Cm1PrLaA==}
     engines: {node: '>=6'}
@@ -3747,6 +3769,10 @@ packages:
   /ufo@1.5.3:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
     dev: true
+
+  /uikit@3.21.6:
+    resolution: {integrity: sha512-2ffEVZ+oOmqnNdn5EYEjgP82/NBj0cFbaVIyt5zhl7cuSGyTijV/2nguA/wlDmd1AnDum6JrV3qjbDP95L602w==}
+    dev: false
 
   /unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}

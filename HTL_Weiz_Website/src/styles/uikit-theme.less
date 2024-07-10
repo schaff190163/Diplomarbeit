@@ -1,0 +1,15 @@
+/* uikit-theme.less */
+@import "../node_modules/uikit/src/less/uikit.theme.less";
+
+/* Custom color variables */
+@global-primary-color: #1BA373;
+@global-secondary-color: #065272;
+
+/* Override UIKit variables */
+@button-primary-background: @global-primary-color;
+@button-primary-border-color: @global-primary-color;
+
+@link-color: @global-primary-color;
+@link-hover-color: darken(@global-primary-color, 10%);
+
+/* Add other overrides as needed */

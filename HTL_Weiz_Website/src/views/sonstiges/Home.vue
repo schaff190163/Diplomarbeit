@@ -11,6 +11,9 @@
     <!-- School statistics section -->
     <SchoolStats></SchoolStats>
 
+    <!-- Temporary events section -->
+    <TemporaryEvents></TemporaryEvents>
+
     <!-- Education opportunities section -->
     <div>
       <h1 class="padleftright mpheading padtop">
@@ -30,14 +33,8 @@
       </div>
     </div>
 
-    <!-- Temporary events section -->
-    <TemporaryEvents></TemporaryEvents>
-
     <!-- Quick links section -->
     <QuickLinks_Home></QuickLinks_Home>
-
-    <!-- Calendar section -->
-    <Kalender></Kalender>
 
     <!-- Footer component -->
     <Footer></Footer>

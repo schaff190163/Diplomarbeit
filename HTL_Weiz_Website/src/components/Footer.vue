@@ -38,6 +38,8 @@
           <router-link to="/imprint" class="imprintlink">Impressum und Datenschutz</router-link>
           |
           <router-link to="/e2mily" class="imprintlink">E2MILY</router-link>
+          |
+          <router-link to="/fuerstenfeld" class="imprintlink">Fürstenfeld</router-link>
       </div>
       </div>
     </div>

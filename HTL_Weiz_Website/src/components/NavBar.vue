@@ -66,7 +66,13 @@
                               </div>
                             </li>
                             <li class="navbigscreen">
-                              <a><span><router-link to="/news">News</router-link></span></a>
+                              <a href="#">Aktuelles</a>
+                              <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                  <li><router-link to="/news">News</router-link></li>
+                                  <li><router-link to="/news">Erasmus</router-link></li>
+                                </ul>
+                              </div>
                             </li>
                             <li class="navbigscreen">
                               <a href="#">Services</a>
@@ -154,6 +160,7 @@
           <a class="uk-accordion-title" href="#">Aktuelles</a>
           <div class="uk-accordion-content uk-nav-sub">
             <li><router-link to="/news">News</router-link></li>
+            <li><router-link to="/news">Erasmus</router-link></li>
           </div>
         </li>
         <li class="navsmallscreen uk-parent">
