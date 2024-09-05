@@ -1,12 +1,12 @@
 <template>
   <div class="padtop padleftright">
-    <div class="azgrid" uk-grid>
-    <div class="uk-card uk-card-body bbbgmcard roundedl" uk-tooltip="title: BusBahnBim Routenplaner; delay: 500" @click="sendToBBB">
-    <img src="/images/bbb_logo.png" alt="BusBahnBim Routenplaner">
-    </div>
-    <div class="uk-card uk-card-body bbbgmcard roundedl" uk-tooltip="title: Google Maps Standort HTL Weiz; delay: 500" @click="sendToGM">
-    <img src="/images/gm_logo.svg" alt="BusBahnBim Routenplaner">
-    </div>
+    <div class="uk-grid-small uk-flex-center" uk-grid>
+      <div class="uk-card uk-card-body" uk-tooltip="title: BusBahnBim Routenplaner; delay: 500" @click="sendToBBB">
+        <img src="/images/bbb_logo.png" style="height: 37px;" alt="BusBahnBim Routenplaner">
+      </div>
+      <div class="uk-card uk-card-body" uk-tooltip="title: Google Maps Standort HTL Weiz; delay: 500" @click="sendToGM">
+        <img src="/images/gm_logo.png" style="height: 37px;" alt="Google Maps Standort HTL Weiz">
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +24,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-</style>

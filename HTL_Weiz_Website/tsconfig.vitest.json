@@ -3,14 +3,13 @@
   "exclude": [],
   "compilerOptions": {
     "composite": true,
-    "lib": [],
+    "lib": ["ESNext", "DOM"], 
     "types": ["node", "jsdom"]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/components/HeaderBanner.vue" 
+    "src/**/*.vue"
   ]
 }

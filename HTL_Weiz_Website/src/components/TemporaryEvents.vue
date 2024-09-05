@@ -4,19 +4,14 @@
       <span class="uk-text-light">Wichtige Aktuelle Informationen</span>
     </h1>
     <div>
-      <div v-for="event in events" :key="event.id" class="padbot"  @click="openModal(event)">
-      <button class=" uk-button roundedl uk-button-default uk-width-expand" :uk-tooltip="`title: ${event.title}; delay: 500`">
-        {{ event.title }}
-      </button>
-    </div>
-    </div>
-
-    <div id="event-modal" uk-modal>
-      <div class="uk-modal-dialog uk-modal-body roundedl">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <h2 class="uk-modal-title">{{ selectedEvent.title }}</h2>
-        <p v-html="selectedEvent.content"></p>
-        <img :src="selectedEvent.image" alt="Event Image" class="uk-width-1-1 roundedl">
+      <div v-for="event in events" :key="event.id" class="padbot">
+        <button 
+          class="uk-button roundedl uk-button-primary uk-width-expand" 
+          :uk-tooltip="`title: ${event.title}; delay: 500`" 
+          @click="navigateToEvent(event)"
+        >
+          {{ event.title }}
+        </button>
       </div>
     </div>
   </div>
@@ -30,7 +25,6 @@ export default {
   name: 'TemporaryEvents',
   setup() {
     const events = ref<Event[]>([]);
-    const selectedEvent = ref<Event>({ id: 0, title: '', content: '', image: '', active: false });
 
     const url = 'https://dev.htlweiz.at/wordpress';
     const headers = {
@@ -38,22 +32,24 @@ export default {
       "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
     };
 
-    console.log('Init WPApiHandler');
     const wp = new WPApiHandler(url, headers);
 
     const fetchEvents = async () => {
       try {
         const response = await wp.get_events();
         events.value = response;
-        console.log(events.value);
       } catch (error) {
         console.error('Error fetching events:', error);
       }
     };
 
-    const openModal = (event: Event) => {
-      selectedEvent.value = event;
-      UIkit.modal('#event-modal').show();
+    const navigateToEvent = (event: Event) => {
+      const url = event.content.trim();
+      if (url.startsWith('http')) {
+        window.location.href = url;
+      } else {
+        console.warn('No valid URL found in event content.');
+      }
     };
 
     onMounted(() => {
@@ -62,18 +58,8 @@ export default {
 
     return {
       events,
-      selectedEvent,
-      openModal,
+      navigateToEvent,
     };
   },
 };
 </script>
-
-<style>
-/* Add necessary styles here */
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>

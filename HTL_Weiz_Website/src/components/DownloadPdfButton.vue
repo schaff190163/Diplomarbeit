@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="uk-button uk-width-expand uk-button-default roundedl" @click="downloadFile">{{ buttonLabel }}</button>
+    <button class="uk-button uk-width-expand uk-button-default roundedl" @click="downloadFile">{{ buttonLabel }} <span uk-icon="download"></span></button>
   </div>
 </template>
 

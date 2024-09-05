@@ -49,6 +49,10 @@ useHead({
   object-fit: cover;
   object-position: center;
 }
+.loader-container {
+    text-align: center;
+    margin-top: 50px;
+  }
 @media (max-width: 640px) {
   .padtop {
     padding-top: 10px !important;
