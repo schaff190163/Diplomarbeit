@@ -3,26 +3,25 @@
     <NavBar></NavBar>
     <HeaderBanner></HeaderBanner>
     <div class="padleftright">
-      <h1>Elternverein der HTL Weiz</h1>
-      <p>Der Elternverein (EV) an der Schule ist ein wichtiges Bindeglied zwischen den LehrerInnen, SchülerInnen und den Eltern in allen Belangen des Schulalltags.</p>
-      <p>Durch die Bezahlung des EV-Mitgliedsbeitrages sind Sie automatisch Mitglied im EV und durch den Beitrag von 7 € sichern Sie sich ein Exemplar des Jahresberichts am Ende des Schuljahres.</p>
-      <p>Wenn mehrere Kinder einer Familie im gleichen Jahr in der Schule eingeschrieben sind, so ist der Mitgliedsbeitrag nur einmal (vom ältesten Schüler) zu bezahlen. Die jüngeren mögen dies bitte ihrem Klassenvorstand (KV) bekanntgeben.</p>
-      <p>Mit den finanziellen Mitteln werden diverse Aktionen in der Schule oder Projektarbeiten im Rahmen von Freigegenständen gefördert. An SchülerInnen von sozial schwächeren Familien oder in besonderen Härtefällen wird zu Ausflügen, Exkursionen, Sommer- oder Wintersportwochen und Sprachwochen auf Antrag ein Zuschuss gewährt. Anträge sind mit dem unten angeführten Formular über den KV an den EV einzubringen.</p>
+      <!-- Display the post title -->
+      <h1>{{ post?.title }}</h1>
+
+      <!-- Display the post content -->
+      <p v-html="post?.content"></p>
+
+      <!-- Loader displayed while data is being fetched -->
+      <div v-if="loading" class="loader-container uk-position-center">
+        <Loader></Loader>
+      </div>
+
+      <!-- Download button for Elternverein PDF -->
       <DownloadPdfButton 
         button-label="Zuschuss Elternverein Download" 
         pdf-url="/files/20160217ElternvereinZuschuss.pdf" 
         pdf-file-name="Elternverein_Zuschuss.pdf">
       </DownloadPdfButton>
-      <p>Weiters sind alle SchülerInnen durch eine Kollektivunfallversicherung bei der Generali Versicherungs AG versichert in der Schule, auf dem direkten Schulweg oder bei Schulveranstaltungen. Im Ereignisfall bitte Kontaktaufnahme über den EV.</p>
-      <p>Alle Mitglieder sind bei den EV Sitzungen willkommen und herzlich eingeladen! Sie finden jeweils am Abend des Elternsprechtags um 18:00 Uhr statt. Die nächsten Termine finden Sie in der Rubrik "Termine". </p>
-      <p>Sollten Sie noch Fragen oder Anregungen haben - wir freuen uns über Ihr Email.</p>
-      <h3>Kontaktadresse:</h3>
-      <ul>
-        <li>Elternverein der HTL Weiz</li>
-        <li>Dr. Karl-Widdmann Straße 40</li>
-        <li>8160 Weiz</li>
-      </ul>
-      <hr>
+
+      <!-- Table with contact details -->
       <table class="uk-table uk-table-divider">
         <thead>
           <tr>
@@ -76,30 +75,52 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { ref } from 'vue';
 import { useHead } from '@vueuse/head';
-import Footer from "../../components/Footer.vue";
 import NavBar from "../../components/NavBar.vue";
+import Footer from "../../components/Footer.vue";
 import DownloadPdfButton from "../../components/DownloadPdfButton.vue";
 import HeaderBanner from '../../components/HeaderBanner.vue';
+import Loader from "../../components/Loader.vue";
+import { WPApiHandler, type Post } from 'wpapihandler';
 
-export default {
-  name: 'ElternVerein',
-  components: {
-    NavBar,
-    Footer,
-    DownloadPdfButton,
-    HeaderBanner,
-  },
-  setup() {
-    useHead({
-      title: 'Elternverein der HTL Weiz',
-      meta: [
-        { name: 'description', content: 'Informationen und Kontakt zum Elternverein der HTL Weiz.' },
-      ],
-    });
-  },
+// State for storing the post and loading status
+const post = ref<Post | null>(null);
+const loading = ref<boolean>(false);
+
+// WordPress API setup
+const url = 'https://dev.htlweiz.at/wordpress';
+const headers = {
+  "Content-Type": "application/json",
+  "Authorization": "Basic d3BhcGloYW5kbGVyOkp5cXZpbS1ndXBkdTEtZ3Vydm9y"
 };
+const wp = new WPApiHandler(url, headers);
+
+// Fetch the post tagged with "elternverein"
+function fetch_elternverein_post() {
+  loading.value = true;
+  wp.get_posts(undefined, ['elternverein'])
+    .then((response: Post[]) => {
+      if (response.length > 0) {
+        post.value = response[0];
+
+        // Set the page metadata
+        useHead({
+          title: post.value.title,
+          meta: [
+            { name: 'description', content: post.value.excerpt.replace(/<[^>]+>/g, '') || 'Elternverein der HTL Weiz' }
+          ]
+        });
+      }
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+}
+
+// Initial fetch of the "Elternverein" post
+fetch_elternverein_post();
 </script>
 
 <style>

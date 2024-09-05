@@ -119,6 +119,12 @@ const router = createRouter({
       props: { tag: 'Notfallnummern' }
     },
     {
+      path: '/post/:id',
+      name: 'PostView',
+      component: () => import(/* webpackChunkName: "partner" */"../views/aktuelles/PostView.vue"),
+      props: true,
+    },
+    {
       path: '/Partner',
       name: 'partner',
 
@@ -155,12 +161,6 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "imprint" */"../views/unsereschule/ElternVerein.vue")
     },
     {
-      path: '/sga',
-      name: 'sga',
-
-      component: () => import(/* webpackChunkName: "imprint" */"../views/unsereschule/SGA.vue")
-    },
-    {
       path: '/warumwir',
       name: 'warumwir',
 
@@ -195,18 +195,6 @@ const router = createRouter({
       name: 'tagderoffenentuer',
 
       component: () => import(/* webpackChunkName: "imprint" */"../views/aufnahme/TagDerOffenenTür.vue")
-    },
-    {
-      path: '/e2mily',
-      name: 'e2mily',
-
-      component: () => import(/* webpackChunkName: "e2mily" */"../views/E2milyView.vue")
-    },
-    {
-      path: '/fuerstenfeld',
-      name: 'Fürstenfeld',
-  
-      component: () => import(/* webpackChunkName: "fuerstenfeld" */"../views/Fuerstenfeld.vue")
     },
   ],
   scrollBehavior(to, from, savedPosition) {

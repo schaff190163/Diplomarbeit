@@ -36,6 +36,8 @@
     <!-- Quick links section -->
     <QuickLinks_Home></QuickLinks_Home>
 
+    <Row_BBB_GM></Row_BBB_GM>
+
     <!-- Footer component -->
     <Footer></Footer>
 
@@ -58,7 +60,6 @@ useHead({
 import NavBar from "../../components/NavBar.vue";
 import Card_Abteilungen from "../../components/Card_Abteilungen.vue";
 import Hero_Home from "../../components/Hero_Home.vue";
-import Kalender from "../../components/Kalender.vue";
 import SchoolStats from "../../components/SchoolStats.vue";
 import Footer from "../../components/Footer.vue";
 import QuickLinks_Home from "../../components/QuickLinks_Home.vue";

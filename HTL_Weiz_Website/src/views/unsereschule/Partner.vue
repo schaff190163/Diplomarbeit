@@ -6,13 +6,13 @@
     <NavBar></NavBar>
 
     <!-- Title for the Partner section -->
-    <h1 class="padtop padbot padleftright">Partner</h1>
+    <h1 class="padtop padleftright">Partner der HTL Weiz</h1>
 
     <!-- Loader component displayed while data is being loaded -->
     <div v-if="loading" class="loader-container uk-position-center"><Loader></Loader></div>
 
     <!-- Container for partner cards with padding -->
-    <div class="padtop padbot padleftright partnergrid">
+    <div class="padbot padleftright partnergrid">
       <!-- Loop through partner data and display partner cards -->
       <div v-for="item in partner" :key="item.id">
         <Card_Partner v-if="item" :partner="item"></Card_Partner>
